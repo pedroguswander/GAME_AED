@@ -110,7 +110,7 @@ workspace (workspaceName)
     location "../"
     configurations { "Debug", "Release", "Debug_RGFW", "Release_RGFW"}
     platforms { "x64", "x86", "ARM64"}
-
+    
     defaultplatform ("x64")
 
     filter "configurations:Debug or Debug_RGFW"
@@ -166,6 +166,7 @@ if (downloadRaylib) then
         includedirs { "../include" }
 
         links {"raylib"}
+        links {"curl", "cjson"}
 
         cdialect "C17"
         cppdialect "C++17"

@@ -1,0 +1,1 @@
+/*strcpy(prompt,"Faca uma questao de historia do brasil com letra a, b, c, d e");*/

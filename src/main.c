@@ -1,54 +1,52 @@
-/*
-Raylib example file.
-This is an example main file for a simple raylib project.
-Use this as a starting point or replace it with your code.
-
-by Jeffery Myers is marked with CC0 1.0. To view a copy of this license, visit https://creativecommons.org/publicdomain/zero/1.0/
-
-*/
-
 #include "raylib.h"
-
-#include "resource_dir.h"	// utility header for SearchAndSetResourceDir
+#include "resource_dir.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <curl/curl.h>
+#include <cjson/cJSON.h>
+#include "api.h"
 
 int main ()
 {
-	// Tell the window to use vsync and work on high DPI displays
-	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
+	const char* api_key = "";
+	char prompt[1024];
 
-	// Create the window and OpenGL context
+	strcpy(prompt,"de oi para os meus amigos rapido e direto");
+	char* response = ask_gemini(api_key, prompt);
+
+	cJSON *json = cJSON_Parse(response);
+	cJSON *candidates = cJSON_GetObjectItemCaseSensitive(json,"candidates");
+	cJSON *first_candidate = cJSON_GetArrayItem(candidates, 0);
+	cJSON *content = cJSON_GetObjectItemCaseSensitive(first_candidate, "content");
+	cJSON *parts = cJSON_GetObjectItemCaseSensitive(content,"parts");
+	cJSON *first_part = cJSON_GetArrayItem(parts, 0);
+	cJSON *text = cJSON_GetObjectItemCaseSensitive(first_part, "text");
+
+	char actualText[1000];
+	strcpy(actualText, text->valuestring);
+
 	InitWindow(1280, 800, "Hello Raylib");
 
-	// Utility function from resource_dir.h to find the resources folder and set it as the current working directory so we can load from it
-	SearchAndSetResourceDir("resources");
+	while (!WindowShouldClose())
+    {
 
-	// Load a texture from the resources directory
-	Texture wabbit = LoadTexture("wabbit_alpha.png");
-	
-	// game loop
-	while (!WindowShouldClose())		// run the loop untill the user presses ESCAPE or presses the Close button on the window
-	{
-		// drawing
 		BeginDrawing();
 
-		// Setup the back buffer for drawing (clear color and depth buffers)
 		ClearBackground(BLACK);
 
-		// draw some text using the default font
 		DrawText("Hello Raylib", 200,200,20,WHITE);
 
-		// draw our texture to the screen
-		DrawTexture(wabbit, 400, 200, WHITE);
-		
-		// end the frame and get ready for the next one  (display frame, poll input, etc...)
+		if(text) {
+            DrawText(actualText, 300, 400, 32, WHITE);
+        } else {
+            printf("Erro ao obter resposta da API.\n");
+        }
+
 		EndDrawing();
 	}
 
-	// cleanup
-	// unload our texture so it can be cleaned up
-	UnloadTexture(wabbit);
 
-	// destroy the window and cleanup the OpenGL context
 	CloseWindow();
 	return 0;
 }
