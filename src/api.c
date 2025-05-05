@@ -28,7 +28,7 @@ static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, voi
 }
 
 // Função para enviar prompt para a API do Gemini e obter resposta
-char* ask_gemini(const char* api_key, const char* prompt) {
+char* ask_gemini(const char* prompt) {
     CURL *curl;
     CURLcode res;
     struct MemoryStruct chunk;
@@ -46,7 +46,7 @@ char* ask_gemini(const char* api_key, const char* prompt) {
         
         // Monta a URL com a chave da API
         char full_url[512];
-        snprintf(full_url, sizeof(full_url), "%s?key=%s", url, api_key);
+        snprintf(full_url, sizeof(full_url), "%s?key=%s", url, API_KEY);
         
         // Monta o corpo da requisição JSON
         char json_body[2048];

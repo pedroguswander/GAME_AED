@@ -6,46 +6,62 @@
 #include <curl/curl.h>
 #include <cjson/cJSON.h>
 #include "api.h"
+#include "prompt.h"
 
 int main ()
 {
-	const char* api_key = "";
-	char prompt[1024];
+	float screenWidth = 1280;
+	float screenHeigth = 800;
+	bool goToAnwser = false;
 
-	strcpy(prompt,"de oi para os meus amigos rapido e direto");
-	char* response = ask_gemini(api_key, prompt);
+	Question _newQuestion = addQuestion();
 
-	cJSON *json = cJSON_Parse(response);
-	cJSON *candidates = cJSON_GetObjectItemCaseSensitive(json,"candidates");
-	cJSON *first_candidate = cJSON_GetArrayItem(candidates, 0);
-	cJSON *content = cJSON_GetObjectItemCaseSensitive(first_candidate, "content");
-	cJSON *parts = cJSON_GetObjectItemCaseSensitive(content,"parts");
-	cJSON *first_part = cJSON_GetArrayItem(parts, 0);
-	cJSON *text = cJSON_GetObjectItemCaseSensitive(first_part, "text");
+	Rectangle _statmentRec = {0, 0, strlen(_newQuestion.statement)*16, 16};
+	Rectangle _optionARec = {0, 50, strlen(_newQuestion.statement)*16, 16};
+	Rectangle _optionBRec = {0, 100, strlen(_newQuestion.statement)*16, 16};
+	Rectangle _optionCRec = {0, 150, strlen(_newQuestion.statement)*16, 16};
+	Rectangle _optionDRec = {0, 200, strlen(_newQuestion.statement)*16, 16};
 
-	char actualText[1000];
-	strcpy(actualText, text->valuestring);
+	Rectangle _anwserRec = {0, 0, strlen(_newQuestion.statement)*16, 16};
 
-	InitWindow(1280, 800, "Hello Raylib");
+	InitWindow(screenWidth, screenHeigth, "Hello Raylib");
 
 	while (!WindowShouldClose())
-    {
+	{
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+		{
+			goToAnwser = true;
+		}
 
 		BeginDrawing();
 
 		ClearBackground(BLACK);
+		if (!goToAnwser)
+		{
+			DrawRectangleRec(_statmentRec, RED);
+			DrawText(_newQuestion.statement, _statmentRec.x, _statmentRec.y, 16, WHITE);
 
-		DrawText("Hello Raylib", 200,200,20,WHITE);
+			DrawRectangleRec(_optionARec, BLUE);
+			DrawText(_newQuestion.optionA, _optionARec.x, _optionARec.y, 16, WHITE);
 
-		if(text) {
-            DrawText(actualText, 300, 400, 32, WHITE);
-        } else {
-            printf("Erro ao obter resposta da API.\n");
-        }
+			DrawRectangleRec(_optionBRec, GREEN);
+			DrawText(_newQuestion.optionB, _optionBRec.x, _optionBRec.y, 16, WHITE);
+
+			DrawRectangleRec(_optionCRec, YELLOW);
+			DrawText(_newQuestion.optionC, _optionCRec.x , _optionCRec.y, 16, WHITE);
+
+			DrawRectangleRec(_optionDRec, PURPLE);
+			DrawText(_newQuestion.optionD, _optionDRec.x, _optionDRec.y, 16, WHITE);
+		}
+
+		else
+		{
+			DrawRectangleRec(_anwserRec, RED);
+			DrawText(_newQuestion.anwser, _anwserRec.x, _anwserRec.y, 16, WHITE);
+		}
 
 		EndDrawing();
 	}
-
 
 	CloseWindow();
 	return 0;

@@ -9,6 +9,8 @@
 		"**/*.exe": true,
 	},
 	"files.associations": {
-		"cjson.h": "c"
+		"cjson.h": "c",
+		"prompt.h": "c",
+		"string.h": "c"
 	}
 }
