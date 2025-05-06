@@ -19,4 +19,6 @@ typedef struct Option
 } Option;
 
 Question createQuestion(char *statement, char *optionA, char *optionB, char *optionC,char *optionD, char *anwser);
+void drawQuestion(Option *options, Question question);
+
 #endif
