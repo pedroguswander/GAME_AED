@@ -8,7 +8,7 @@ Question createQuestion(char *statement, char *optionA, char *optionB, char *opt
         .optionB = optionB,
         .optionC = optionC,
         .optionD = optionD,
-        .anwser = answer
+        .answer = answer
     };
 
     return question;

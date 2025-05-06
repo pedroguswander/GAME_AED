@@ -8,61 +8,125 @@
 #include "api.h"
 #include "prompt.h"
 
-int main ()
+typedef struct Temp {
+    Rectangle rect;
+    char optionAnswer[2];
+} Temp;
+
+typedef enum {    
+    QUESTION_SCREEN=0,
+    ANSWER_SCREEN=1,
+} GameState;
+
+GameState _state = QUESTION_SCREEN;
+bool _gotItRight = false;
+int _currentQuestion = 0;
+
+void checkIfAnswerIsRight(Temp *temp, Question question);
+void drawQuestion(Temp *options, Question question);
+
+int main() {
+    const int screenWidth = 1280;
+    const int screenHeight = 800;
+
+    Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
+
+    InitWindow(screenWidth, screenHeight, "Quiz Game");
+
+    //Question question = addQuestion();
+    Question questions[2];
+    for (int i = 0; i < 2; i++)
+    {
+        questions[i] = addQuestion();
+    }
+
+    Temp options[4];
+    char *labels[] = { "A", "B", "C", "D" };
+    Rectangle optionRects[4];
+    int startY = 100;
+
+    for (int i = 0; i < 4; i++) {
+        optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40 };
+        options[i].rect = optionRects[i];
+        strcpy(options[i].optionAnswer, labels[i]);
+    }
+
+    while (!WindowShouldClose()) {
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _state == QUESTION_SCREEN) {
+            checkIfAnswerIsRight(options, questions[_currentQuestion]);
+        }
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
+            _state = QUESTION_SCREEN;
+            _gotItRight = false;
+            if(_currentQuestion >= 2) { _currentQuestion = 0;}
+            else { _currentQuestion++; }
+        }
+
+        BeginDrawing();
+        ClearBackground(BLACK);
+
+        switch (_state)
+        {
+            case QUESTION_SCREEN:
+                drawQuestion(options, questions[_currentQuestion]);
+                break;
+                
+            case ANSWER_SCREEN: //drawAnswer
+                DrawText("Gabarito:", 50, 100, 28, YELLOW);
+                DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
+
+                if (_gotItRight) {
+                    DrawText("ACERTOU!", 50, 200, 40, GREEN);
+                } else {
+                    DrawText("ERROU!", 50, 200, 40, RED);
+                }
+                DrawRectangleRec(nextQuestionButton, RED);
+                break;
+        }
+
+        EndDrawing();
+    }
+
+    CloseWindow();
+    return 0;
+}
+
+void checkIfAnswerIsRight(Temp *temp, Question question) {
+    Vector2 mouse = GetMousePosition();
+    _state = ANSWER_SCREEN;
+    _gotItRight = false;
+
+    for (int i = 0; i < 4; i++) {
+        if (CheckCollisionPointRec(mouse, temp[i].rect)) {
+            if (strcmp(temp[i].optionAnswer, question.answer) == 0) {
+                _gotItRight = true;
+            }
+            return;
+        }
+    }
+}
+
+void drawQuestion(Temp *options, Question question)
 {
-	float screenWidth = 1280;
-	float screenHeigth = 800;
-	bool goToAnwser = false;
+    DrawText(question.statement, 0, 0, 32, WHITE);
 
-	Question _newQuestion = addQuestion();
-
-	Rectangle _statmentRec = {0, 0, strlen(_newQuestion.statement)*16, 16};
-	Rectangle _optionARec = {0, 50, strlen(_newQuestion.statement)*16, 16};
-	Rectangle _optionBRec = {0, 100, strlen(_newQuestion.statement)*16, 16};
-	Rectangle _optionCRec = {0, 150, strlen(_newQuestion.statement)*16, 16};
-	Rectangle _optionDRec = {0, 200, strlen(_newQuestion.statement)*16, 16};
-
-	Rectangle _anwserRec = {0, 0, strlen(_newQuestion.statement)*16, 16};
-
-	InitWindow(screenWidth, screenHeigth, "Hello Raylib");
-
-	while (!WindowShouldClose())
-	{
-		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
-		{
-			goToAnwser = true;
-		}
-
-		BeginDrawing();
-
-		ClearBackground(BLACK);
-		if (!goToAnwser)
-		{
-			DrawRectangleRec(_statmentRec, RED);
-			DrawText(_newQuestion.statement, _statmentRec.x, _statmentRec.y, 16, WHITE);
-
-			DrawRectangleRec(_optionARec, BLUE);
-			DrawText(_newQuestion.optionA, _optionARec.x, _optionARec.y, 16, WHITE);
-
-			DrawRectangleRec(_optionBRec, GREEN);
-			DrawText(_newQuestion.optionB, _optionBRec.x, _optionBRec.y, 16, WHITE);
-
-			DrawRectangleRec(_optionCRec, YELLOW);
-			DrawText(_newQuestion.optionC, _optionCRec.x , _optionCRec.y, 16, WHITE);
-
-			DrawRectangleRec(_optionDRec, PURPLE);
-			DrawText(_newQuestion.optionD, _optionDRec.x, _optionDRec.y, 16, WHITE);
-		}
-
-		else
-		{
-			DrawRectangleRec(_anwserRec, RED);
-			DrawText(_newQuestion.anwser, _anwserRec.x, _anwserRec.y, 16, WHITE);
-		}
-
-		EndDrawing();
-	}
-
-	CloseWindow();
-	return 0;
+    for (int i = 0; i < 4; i++) { //funcao
+        Color rectColor = DARKGRAY;
+        if (CheckCollisionPointRec(GetMousePosition(), options[i].rect)) {
+            rectColor = LIGHTGRAY;
+        }
+    
+        DrawRectangleRec(options[i].rect, rectColor);
+    
+        const char *optionText;
+        switch (i) {
+            case 0: optionText = question.optionA; break;
+            case 1: optionText = question.optionB; break;
+            case 2: optionText = question.optionC; break;
+            case 3: optionText = question.optionD; break;
+        }
+    
+        DrawText(optionText, options[i].rect.x + 10, options[i].rect.y + 10, 20, WHITE);
+    }
 }
