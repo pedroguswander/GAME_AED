@@ -7,6 +7,7 @@
 #include <cjson/cJSON.h>
 #include "api.h"
 #include "prompt.h"
+#include "score.h"
 
 typedef struct Temp {
     Rectangle rect;
@@ -59,25 +60,30 @@ int main() {
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
             _state = QUESTION_SCREEN;
             _gotItRight = false;
-            if(_currentQuestion >= 2) { _currentQuestion = 0;}
+            if(_currentQuestion >= 2) { _currentQuestion = 0; resetScore();}
             else { _currentQuestion++; }
         }
 
         BeginDrawing();
+
         ClearBackground(BLACK);
+
+        drawScore(2);
 
         switch (_state)
         {
+
             case QUESTION_SCREEN:
                 drawQuestion(options, questions[_currentQuestion]);
                 break;
-                
+
             case ANSWER_SCREEN: //drawAnswer
                 DrawText("Gabarito:", 50, 100, 28, YELLOW);
                 DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
 
                 if (_gotItRight) {
                     DrawText("ACERTOU!", 50, 200, 40, GREEN);
+
                 } else {
                     DrawText("ERROU!", 50, 200, 40, RED);
                 }
@@ -101,6 +107,7 @@ void checkIfAnswerIsRight(Temp *temp, Question question) {
         if (CheckCollisionPointRec(mouse, temp[i].rect)) {
             if (strcmp(temp[i].optionAnswer, question.answer) == 0) {
                 _gotItRight = true;
+                addScore(1);
             }
             return;
         }
