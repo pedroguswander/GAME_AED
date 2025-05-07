@@ -5,5 +5,6 @@
 void drawScore(int numberOfQuestions);
 void addScore(int points);
 void resetScore();
+int getScore();
 
 #endif

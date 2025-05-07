@@ -3,12 +3,12 @@
 #include <curl/curl.h>
 #include <cjson/cJSON.h>
 
-Question addQuestion(void)
+Question addQuestion(char *topic, const char theme[100])
 {
     char* jsonFormatado = lerJsonDeFormatacao("exemplo_questao.json");
     char prompt[4096];
     snprintf(prompt, sizeof(prompt),
-        "Crie uma nova questão sobre sistemas operacionais no formato JSON idêntico ao seguinte exemplo:\n\n%s. Não inclua ```json ```", jsonFormatado);
+        "Crie uma nova questão sobre %s com o assunto %s no formato JSON idêntico ao seguinte exemplo:\n\n%s. Não inclua ```json ```", topic, theme,  jsonFormatado);
     char *promptEscapado = escapar_json(prompt);
 
     char* response = ask_gemini(promptEscapado);

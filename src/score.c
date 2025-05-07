@@ -14,6 +14,11 @@ void resetScore()
     _score = 0;
 }
 
+int getScore()
+{
+    return _score;
+}
+
 void drawScore(int numberOfQuestions)
 {
     const char *_scoreText = TextFormat("SCORE: %d/%d", _score, numberOfQuestions);

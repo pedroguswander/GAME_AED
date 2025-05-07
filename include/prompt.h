@@ -5,8 +5,9 @@
 #include "question.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "topics.h"
 
-Question addQuestion(void);
+Question addQuestion(char* topic, const char theme[100]);
 char* lerJsonDeFormatacao(const char* nome_arquivo);
 char* escapar_json(const char* input);
 

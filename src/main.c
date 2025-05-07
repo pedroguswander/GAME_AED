@@ -9,15 +9,19 @@
 #include "prompt.h"
 #include "score.h"
 #include "question.h"
+#include "topics.h"
 
 typedef enum {    
     QUESTION_SCREEN=0,
     ANSWER_SCREEN=1,
+    FINAL_SCORE_SCREEN=2,
 } GameState;
 
 GameState _state = QUESTION_SCREEN;
+char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
 bool _gotItRight = false;
 int _currentQuestion = 0;
+
 
 void checkIfAnswerIsRight(Option *options, Question question);
 
@@ -26,13 +30,15 @@ int main() {
     const int screenHeight = 800;
 
     Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
+    const char (*themes)[100] = getThemesOfTopic(_current_topic);
+
 
     InitWindow(screenWidth, screenHeight, "Quiz Game");
 
-    Question questions[2];
-    for (int i = 0; i < 2; i++)
+    Question questions[5];
+    for (int i = 0; i < 5; i++)
     {
-        questions[i] = addQuestion();
+        questions[i] = addQuestion(_current_topic, themes[i]);
     }
 
     Option options[4];
@@ -53,17 +59,21 @@ int main() {
         }
 
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
-            _state = QUESTION_SCREEN;
+            if (_currentQuestion >= 4) { // Mudar de 2 para 4 (0-4 = 5 questões)
+                _state = FINAL_SCORE_SCREEN;
+            } else {
+                _state = QUESTION_SCREEN;
+                _currentQuestion++;
+            }
             _gotItRight = false;
-            if(_currentQuestion >= 2) { _currentQuestion = 0; resetScore();}
-            else { _currentQuestion++; }
         }
 
         BeginDrawing();
 
         ClearBackground(BLACK);
+        DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
 
-        drawScore(2);
+        drawScore(5);
         //
         switch (_state)
         {
@@ -85,6 +95,16 @@ int main() {
                 }
                 DrawRectangleRec(nextQuestionButton, RED);
                 DrawText("CONTINUAR",nextQuestionButton.x+5,nextQuestionButton.y+5, 16 ,WHITE);
+                break;
+
+            case FINAL_SCORE_SCREEN:
+                DrawText("QUIZ CONCLUÍDO!", screenWidth/2 - MeasureText("QUIZ CONCLUÍDO!", 40)/2, 100, 40, YELLOW);
+                DrawText(TextFormat("Pontuação Final: %d/%d", getScore(), 5), 
+                        screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
+                
+                // Botão para reiniciar
+                DrawRectangleRec(nextQuestionButton, GREEN);
+                DrawText("JOGAR NOVAMENTE", nextQuestionButton.x+5, nextQuestionButton.y+5, 16, WHITE);
                 break;
         }
 

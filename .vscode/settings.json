@@ -11,6 +11,9 @@
 	"files.associations": {
 		"cjson.h": "c",
 		"prompt.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"stdlib.h": "c",
+		"stdio.h": "c",
+		"curl.h": "c"
 	}
 }
