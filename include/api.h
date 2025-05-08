@@ -12,7 +12,7 @@ struct MemoryStruct {
     size_t size;
 };
 
-#define API_KEY ""
+#define API_KEY "AIzaSyCY4gFwF4sGOIVyhI5U8nHpBkce8YETqa0"
 
 char* ask_gemini(const char* prompt);
 static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp);
