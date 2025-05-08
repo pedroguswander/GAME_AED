@@ -1,0 +1,4 @@
+lopes 12
+medina 14
+daniel 6
+rogrigo 7

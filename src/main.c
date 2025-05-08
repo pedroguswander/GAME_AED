@@ -34,10 +34,9 @@ void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
 
 int main() {
-    
+    PlayerScore *buffer = NULL;
     const int screenWidth = 1280;
     const int screenHeight = 800;
-
     const char *topics[] = {
         "Algoritmos e Estruturas de Dados",
         "INFRA_SO",
