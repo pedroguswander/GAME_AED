@@ -11,17 +11,26 @@
 #include "question.h"
 #include "topics.h"
 #include <pthread.h>
+#include "hall.h"
 
 typedef enum {
-    MAIN_MENU_SCREEN = 0,
-    TOPIC_SELECTION_SCREEN = 1,
-    LOADING_SCREEN = 2,
-    QUESTION_SCREEN = 3,
-    ANSWER_SCREEN = 4,
-    FINAL_SCORE_SCREEN = 5,
-} GameState;
+    TOPIC_SELECTION_SCREEN =0,
+    LOADING_SCREEN = 1,
+    QUESTION_SCREEN = 2,
+    ANSWER_SCREEN = 3,
+    FINAL_SCORE_SCREEN = 4,
+} QuizScreen;
 
-GameState _state = MAIN_MENU_SCREEN;
+typedef enum {
+    MAIN_MENU=0,
+    QUIZ_MODE=1,
+    TABULEIRO_MODE=2,
+    HALL_OF_FAME=3,
+    CREDITS=4
+} MenuOption;
+
+MenuOption _menuOption = MAIN_MENU;
+QuizScreen _quizScreen = 0;
 char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
 bool _gotItRight = false;
 bool _quizLoaded = false;
@@ -34,7 +43,7 @@ void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
 
 int main() {
-    PlayerScore *buffer = NULL;
+
     const int screenWidth = 1280;
     const int screenHeight = 800;
     const char *topics[] = {
@@ -77,18 +86,20 @@ int main() {
 
     while (!WindowShouldClose()) {
         //UPTADE
-        if (_state == MAIN_MENU_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+
+        if (_menuOption == MAIN_MENU && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             Vector2 mouse = GetMousePosition();
             for (int i = 0; i < 4; i++) {
                 if (CheckCollisionPointRec(mouse, mainMenuButtons[i])) {
                     switch(i) {
                         case 0: // Modo Normal
-                            _state = TOPIC_SELECTION_SCREEN;
+                            _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
                             // Implementar depois
                             break;
                         case 2: // Hall da Fama
+                            _menuOption = HALL_OF_FAME;
                             // Implementar depois
                             break;
                         case 3: // Créditos
@@ -98,56 +109,64 @@ int main() {
                 }
             }
         }
-        
 
-        if (_state == TOPIC_SELECTION_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-            for (int i = 0; i < 4; i++) { //uptadeTopics
-                if (CheckCollisionPointRec(GetMousePosition(), topicButtons[i])) {
-                    _current_topic = (char *)topics[i];
-                    resetScore();
-                    _currentQuestion = 0;
-                    _loadingFinished = false;
-                    _state = LOADING_SCREEN;
-                    
-                    // Cria uma thread para carregar perguntas
-                    pthread_create(&loaderThread, NULL, loadQuestionsThread, (void *)_current_topic);
-                    break;
+        if (_menuOption == HALL_OF_FAME) {
+            uptadeHallOfFame();
+        }
+        
+        if (_menuOption == QUIZ_MODE) {
+            if (_quizScreen == TOPIC_SELECTION_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+                for (int i = 0; i < 4; i++) { //uptadeTopics
+                    if (CheckCollisionPointRec(GetMousePosition(), topicButtons[i])) {
+                        _current_topic = (char *)topics[i];
+                        resetScore();
+                        _currentQuestion = 0;
+                        _loadingFinished = false;
+                        _quizScreen = LOADING_SCREEN;
+                        
+                        // Cria uma thread para carregar perguntas
+                        pthread_create(&loaderThread, NULL, loadQuestionsThread, (void *)_current_topic);
+                        break;
+                    }
                 }
             }
-        }
+        
 
-        if (_state == LOADING_SCREEN)
-        {
-            if (_loadingFinished) {
-                _state = QUESTION_SCREEN;
+            if (_quizScreen == LOADING_SCREEN)
+            {
+                if (_loadingFinished) {
+                    _quizScreen = QUESTION_SCREEN;
+                }
             }
-        }
 
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _state == QUESTION_SCREEN) {
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
             checkIfAnswerIsRight(options, questions[_currentQuestion]);
         }
 
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
-            if (_state == FINAL_SCORE_SCREEN) {
-                _state = TOPIC_SELECTION_SCREEN;
-            } else if (_state == ANSWER_SCREEN) {
+            if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
+                _quizScreen = TOPIC_SELECTION_SCREEN;
+                _menuOption = MAIN_MENU;
+                saveScore("Nataniel");
+            } else if (_quizScreen == ANSWER_SCREEN) {
                 _currentQuestion++;
                 if (_currentQuestion >= 5) {
-                    _state = FINAL_SCORE_SCREEN;
+                    _quizScreen = FINAL_SCORE_SCREEN;
                 } else {
-                    _state = QUESTION_SCREEN;
+                    _quizScreen = QUESTION_SCREEN;
                 }
                 _gotItRight = false;
             }
         }
+    }
 
         BeginDrawing();
 
         ClearBackground(BLACK);
 
-        switch (_state)
+        switch (_menuOption)
         {
-            case MAIN_MENU_SCREEN:
+            case MAIN_MENU:
                 DrawText("MENU PRINCIPAL", screenWidth/2 - MeasureText("MENU PRINCIPAL", 40)/2, 80, 40, YELLOW);
                 for (int i = 0; i < 4; i++) {
                     DrawRectangleRec(mainMenuButtons[i], DARKGRAY);
@@ -155,67 +174,71 @@ int main() {
                 }
                 break;
 
-            case TOPIC_SELECTION_SCREEN:
-            DrawText("Selecione um Tópico", screenWidth/2 - MeasureText("Selecione um Tópico", 30)/2, 50, 30, YELLOW);
-            for (int i = 0; i < 4; i++) {
-                DrawRectangleRec(topicButtons[i], GRAY);
-                DrawText(topics[i], topicButtons[i].x + 10, topicButtons[i].y + 15, 20, BLACK);
-            }
-            break;
-
-            case LOADING_SCREEN:
-            DrawText("Carregando perguntas da IA...", screenWidth/2 - 200, screenHeight/2, 30, WHITE);
-    
-            break;
-
-            case QUESTION_SCREEN:
-                drawScore(5);
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                drawQuestion(options, questions[_currentQuestion]);
-                break;
-
-            case ANSWER_SCREEN:
-                drawScore(5);
-                //adicionar função drawAnswer em outro arquivo
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                DrawText("Gabarito:", 50, 100, 28, YELLOW);
-                DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
-
-                if (_gotItRight) {
-                    DrawText("ACERTOU!", 50, 200, 40, GREEN);
-
-                } else {
-                    DrawText("ERROU!", 50, 200, 40, RED);
-                }
-                DrawRectangleRec(nextQuestionButton, RED);
-                DrawText("CONTINUAR",nextQuestionButton.x+5,nextQuestionButton.y+5, 16 ,WHITE);
-                break;
-
-            case FINAL_SCORE_SCREEN:
-                drawScore(5);
-                DrawText("QUIZ CONCLUÍDO!", screenWidth/2 - MeasureText("QUIZ CONCLUÍDO!", 40)/2, 100, 40, YELLOW);
-                DrawText(TextFormat("Pontuação Final: %d/%d", getScore(), 5), 
-                        screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
+                case QUIZ_MODE:
+                    switch (_quizScreen) {
+                        case TOPIC_SELECTION_SCREEN:
+                            DrawText("Selecione um Tópico", screenWidth/2 - MeasureText("Selecione um Tópico", 30)/2, 50, 30, YELLOW);
+                            for (int i = 0; i < 4; i++) {
+                                DrawRectangleRec(topicButtons[i], GRAY);
+                                DrawText(topics[i], topicButtons[i].x + 10, topicButtons[i].y + 15, 20, BLACK);
+                            }
+                            break;
                 
-                // Botão para reiniciar
-                DrawRectangleRec(nextQuestionButton, GREEN);
-                DrawText("JOGAR NOVAMENTE", nextQuestionButton.x+5, nextQuestionButton.y+5, 16, WHITE);
-                break;
-        }
+                        case LOADING_SCREEN:
+                            DrawText("Carregando perguntas da IA...", screenWidth/2 - 200, screenHeight/2, 30, WHITE);
+                            break;
+                
+                        case QUESTION_SCREEN:
+                            drawScore(5);
+                            DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
+                            drawQuestion(options, questions[_currentQuestion]);
+                            break;
+                
+                        case ANSWER_SCREEN:
+                            drawScore(5);
+                            DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
+                            DrawText("Gabarito:", 50, 100, 28, YELLOW);
+                            DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
+                            DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRight ? GREEN : RED);
+                            DrawRectangleRec(nextQuestionButton, RED);
+                            DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+                            break;
+                
+                        case FINAL_SCORE_SCREEN:
+                            drawScore(5);
+                            DrawText("QUIZ CONCLUÍDO!", screenWidth/2 - MeasureText("QUIZ CONCLUÍDO!", 40)/2, 100, 40, YELLOW);
+                            DrawText(TextFormat("Pontuação Final: %d/5", getScore()), 
+                                    screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
+                            DrawRectangleRec(nextQuestionButton, GREEN);
+                            DrawText("JOGAR NOVAMENTE", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+                            break;
+                    }
+                    break;
 
-        EndDrawing();
+        case HALL_OF_FAME:
+            drawHallOfFame();
+            break;
+
+        default:
+            break;
+
     }
 
-    if (_state == LOADING_SCREEN) {
+    EndDrawing();
+
+    if (_quizScreen == LOADING_SCREEN) {
         pthread_join(loaderThread, NULL);
     }
+
+}
     CloseWindow();
     return 0;
+
 }
 
 void checkIfAnswerIsRight(Option *options, Question question) {
     Vector2 mouse = GetMousePosition();
-    _state = ANSWER_SCREEN;
+    _quizScreen = ANSWER_SCREEN;
     _gotItRight = false;
 
     for (int i = 0; i < 4; i++) {

@@ -1,4 +1,6 @@
-lopes 12
 medina 14
-daniel 6
+lopes 12
 rogrigo 7
+daniel 6
+Nataniel 2
+reginaldo 0

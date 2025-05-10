@@ -7,6 +7,6 @@ extern const char INFRA_SO_THEMES[2][100];
 extern const char POO_THEMES[2][100];
 extern const char HIST_BR_THEMES[2][100];
 
-const char (*getThemesOfTopic(char *topic))[100];
+const char (*getThemesOfTopic(const char *topic))[100];
 
 #endif

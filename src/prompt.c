@@ -3,7 +3,7 @@
 #include <curl/curl.h>
 #include <cjson/cJSON.h>
 
-Question addQuestion(char *topic, const char theme[100])
+Question addQuestion(const char *topic, const char theme[100])
 {
     char* jsonFormatado = lerJsonDeFormatacao("exemplo_questao.json");
     char prompt[4096];

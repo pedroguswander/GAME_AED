@@ -5,6 +5,7 @@ typedef struct PlayerScore
 {
     char nome[50];
     int score;
+    int existe;
 } PlayerScore;
 
 //void resetScore(void);
@@ -16,5 +17,6 @@ void addScore(int points);
 void resetScore();
 int getScore();
 void saveScore(char *name);
+void ordernarScore(int current_number_of_players);
 PlayerScore* loadScores();
 #endif
