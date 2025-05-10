@@ -1,4 +1,5 @@
 #include "raylib.h"
+#include "raymath.h"
 #include "resource_dir.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +13,8 @@
 #include "topics.h"
 #include <pthread.h>
 #include "hall.h"
+#include "time.h"
+#include "string.h"
 
 typedef enum {
     TOPIC_SELECTION_SCREEN =0,
@@ -19,6 +22,7 @@ typedef enum {
     QUESTION_SCREEN = 2,
     ANSWER_SCREEN = 3,
     FINAL_SCORE_SCREEN = 4,
+    TABULEIRO_QUESTION_SCREEN = 5 
 } QuizScreen;
 
 typedef enum {
@@ -29,6 +33,32 @@ typedef enum {
     CREDITS=4
 } MenuOption;
 
+typedef enum {
+    QUESTION=0,
+    BOSS=1,
+    SPECIAL_EVENT=2,
+} TileType;
+
+typedef struct {
+    Vector2 position;
+    Vector2 prevPosition;
+    int currentTile;
+    int prevTile;
+} Player;
+
+typedef struct {
+    Vector2 position;
+    TileType type;
+    char topic[100];
+} Tile;
+
+#define TILE_DISTANCE 150
+
+int _rool = 0;
+int acertou;
+Question tileQuestion = {0};
+
+Tile _tiles[3] = {0};
 MenuOption _menuOption = MAIN_MENU;
 QuizScreen _quizScreen = 0;
 char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
@@ -38,20 +68,24 @@ int _currentQuestion = 0;
 Question questions[5];
 pthread_t loaderThread;
 bool _loadingFinished = false;
+const char *topics[] = {
+    "Algoritmos e Estruturas de Dados",
+    "INFRA_SO",
+    "POO",
+    "Historia do Brasil"
+    };
+
 
 void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
+void loadQuestionThread(void *arg);
+const char* getTileTopic(char *topic);
 
 int main() {
 
     const int screenWidth = 1280;
     const int screenHeight = 800;
-    const char *topics[] = {
-        "Algoritmos e Estruturas de Dados",
-        "INFRA_SO",
-        "POO",
-        "Historia do Brasil"
-    };
+
     
     Rectangle topicButtons[4];
     for (int i = 0; i < 4; i++) {
@@ -69,6 +103,35 @@ int main() {
         mainMenuButtons[i] = (Rectangle){ screenWidth/2 - 200, 200 + i*100, 400, 60 };
     }
 
+    const char* tileLabels[3] = {
+        "Inicio",
+        "Casa AED",
+        "Casa INFRA SO"
+    };
+
+    for (int i = 0; i < 3; i ++)
+    {
+        _tiles[i].position = (Vector2) {200+(TILE_DISTANCE*i), 600};
+        _tiles[i].type = QUESTION;
+        strcpy(_tiles[i].topic, tileLabels[i]); 
+    }
+
+    Rectangle tileRects[3] = {
+        {_tiles[0].position.x - 50, _tiles[0].position.y - 50, 100, 100},
+        {_tiles[1].position.x - 50, _tiles[1].position.y - 50, 100, 100},
+        {_tiles[2].position.x - 50, _tiles[2].position.y - 50, 100, 100}
+    };
+
+    Player player = {
+        _tiles->position,
+        (Vector2) {0,0},
+        0,
+        0
+    };
+
+    int targetTile = 0;
+    bool isMoving = false;
+
     Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
 
     InitWindow(screenWidth, screenHeight, "Quiz Game");
@@ -84,6 +147,8 @@ int main() {
         strcpy(options[i].answer, labels[i]);
     }
 
+    srand(time(NULL)); 
+
     while (!WindowShouldClose()) {
         //UPTADE
 
@@ -96,7 +161,7 @@ int main() {
                             _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
-                            // Implementar depois
+                            _menuOption = TABULEIRO_MODE;
                             break;
                         case 2: // Hall da Fama
                             _menuOption = HALL_OF_FAME;
@@ -130,7 +195,6 @@ int main() {
                     }
                 }
             }
-        
 
             if (_quizScreen == LOADING_SCREEN)
             {
@@ -159,6 +223,68 @@ int main() {
             }
         }
     }
+
+    if (_menuOption == TABULEIRO_MODE)
+        {
+        if (!isMoving && IsKeyPressed(KEY_SPACE)) { //lidarcomJogada()
+                _rool = rand() % 3 + 1; // 1 a 3
+                targetTile = player.currentTile + _rool;
+                if (targetTile > 2) targetTile = 2;
+                player.prevPosition = player.position;
+                player.prevTile = player.currentTile;
+                isMoving = true;
+            }
+
+            if (isMoving) {
+                Vector2 targetPos = _tiles[targetTile].position;
+                Vector2 direction = Vector2Subtract(targetPos, player.position);
+                float distance = Vector2Length(direction);
+                if (distance < 2.0f) {
+                    player.position = targetPos;
+                    player.currentTile = targetTile;
+                    isMoving = false;
+                    //new question = Addquestion
+                    pthread_create(&loaderThread, NULL, loadQuestionThread, 
+                    (void *)getTileTopic(_tiles[player.currentTile].topic));
+
+                    _quizScreen = TABULEIRO_QUESTION_SCREEN;
+   
+
+                    if (!_gotItRight)
+                    {
+                        targetPos = player.prevPosition;
+                        targetTile = player.prevTile;
+                        isMoving = true;
+                    }
+
+                    /*acertou = rand() % 2;
+                    if (!acertou)
+                    {
+                        targetPos = player.prevPosition;
+                        targetTile = player.prevTile;
+                        isMoving = true;
+                    }*/
+
+                } else {
+                    direction = Vector2Normalize(direction);
+                    player.position.x += direction.x * 5;
+                    player.position.y += direction.y * 5;
+                }
+            }
+    }
+
+    if (_quizScreen == TABULEIRO_QUESTION_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+    checkIfAnswerIsRight(options, tileQuestion);
+    
+    if (_gotItRight) {
+        _quizScreen = -1; // nenhum screen ativo, volta ao tabuleiro
+    } else {
+        player.position = player.prevPosition;
+        player.currentTile = player.prevTile;
+        _quizScreen = -1;
+    }
+}
+
 
         BeginDrawing();
 
@@ -218,7 +344,30 @@ int main() {
         case HALL_OF_FAME:
             drawHallOfFame();
             break;
+        
+        case TABULEIRO_MODE:
 
+            if (_quizScreen == TABULEIRO_QUESTION_SCREEN) {
+             drawQuestion(options, tileQuestion);
+            }
+
+            else {
+            DrawText("MODO TABULEIRO - Pressione SPACE para rolar o dado", 20, 20, 20, DARKGRAY);
+            DrawText(TextFormat("DADO %d", _rool), 20, 40, 20, DARKGRAY);
+            DrawText(TextFormat("%d", acertou), 20, 60, 20, DARKGRAY);
+
+            // Desenhar casas
+            for (int i = 0; i < 3; i++) {
+                DrawRectangleRec(tileRects[i], LIGHTGRAY);
+                DrawRectangleLinesEx(tileRects[i], 2, DARKGRAY);
+                DrawText(tileLabels[i], tileRects[i].x + 10, tileRects[i].y + 40, 16, BLACK);
+            }
+
+            // Desenhar jogador
+            DrawCircleV(player.position, 20, RED);
+            }
+            break;
+        
         default:
             break;
 
@@ -252,6 +401,21 @@ void checkIfAnswerIsRight(Option *options, Question question) {
     }
 }
 
+void loadQuestionThread(void *arg)
+{    
+    const char *topic = (const char *)arg;
+    const char (*themes)[100] = getThemesOfTopic(topic);
+
+    //tema aleatorio
+
+    tileQuestion = addQuestion(topic, themes[0]);
+
+
+    _loadingFinished = true;
+    return NULL;
+
+}
+
 void *loadQuestionsThread(void *arg) {
     const char *topic = (const char *)arg;
     const char (*themes)[100] = getThemesOfTopic(topic);
@@ -261,5 +425,19 @@ void *loadQuestionsThread(void *arg) {
     }
 
     _loadingFinished = true;
+    return NULL;
+}
+
+const char* getTileTopic(char *topic)
+{
+    if (strcmp(topic, "Casa AED") == 0)
+    {
+        return topics[0];
+    }
+    else if (strcmp(topic, "Casa INFRA_SO") == 0)
+    {
+        return topics[1];
+    }
+
     return NULL;
 }
