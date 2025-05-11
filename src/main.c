@@ -15,6 +15,7 @@
 #include "hall.h"
 #include "time.h"
 #include "string.h"
+#include "board.h"
 
 typedef enum {
     TOPIC_SELECTION_SCREEN =0,
@@ -33,32 +34,6 @@ typedef enum {
     CREDITS=4
 } MenuOption;
 
-typedef enum {
-    QUESTION=0,
-    BOSS=1,
-    SPECIAL_EVENT=2,
-} TileType;
-
-typedef struct {
-    Vector2 position;
-    Vector2 prevPosition;
-    int currentTile;
-    int prevTile;
-} Player;
-
-typedef struct {
-    Vector2 position;
-    TileType type;
-    char topic[100];
-} Tile;
-
-#define TILE_DISTANCE 150
-
-int _rool = 0;
-int acertou;
-Question tileQuestion = {0};
-
-Tile _tiles[3] = {0};
 MenuOption _menuOption = MAIN_MENU;
 QuizScreen _quizScreen = 0;
 char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
@@ -82,10 +57,12 @@ void loadQuestionThread(void *arg);
 const char* getTileTopic(char *topic);
 
 int main() {
-
     const int screenWidth = 1280;
     const int screenHeight = 800;
 
+    InitWindow(screenWidth, screenHeight, "Quiz Game");
+
+    createBoard();
     
     Rectangle topicButtons[4];
     for (int i = 0; i < 4; i++) {
@@ -108,33 +85,7 @@ int main() {
         "Casa AED",
         "Casa INFRA SO"
     };
-
-    for (int i = 0; i < 3; i ++)
-    {
-        _tiles[i].position = (Vector2) {200+(TILE_DISTANCE*i), 600};
-        _tiles[i].type = QUESTION;
-        strcpy(_tiles[i].topic, tileLabels[i]); 
-    }
-
-    Rectangle tileRects[3] = {
-        {_tiles[0].position.x - 50, _tiles[0].position.y - 50, 100, 100},
-        {_tiles[1].position.x - 50, _tiles[1].position.y - 50, 100, 100},
-        {_tiles[2].position.x - 50, _tiles[2].position.y - 50, 100, 100}
-    };
-
-    Player player = {
-        _tiles->position,
-        (Vector2) {0,0},
-        0,
-        0
-    };
-
-    int targetTile = 0;
-    bool isMoving = false;
-
     Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
-
-    InitWindow(screenWidth, screenHeight, "Quiz Game");
 
     Option options[4];
     char *labels[] = {"A", "B", "C", "D"};
@@ -203,88 +154,31 @@ int main() {
                 }
             }
 
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
-            checkIfAnswerIsRight(options, questions[_currentQuestion]);
-        }
-
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
-            if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
-                _quizScreen = TOPIC_SELECTION_SCREEN;
-                _menuOption = MAIN_MENU;
-                saveScore("Nataniel");
-            } else if (_quizScreen == ANSWER_SCREEN) {
-                _currentQuestion++;
-                if (_currentQuestion >= 5) {
-                    _quizScreen = FINAL_SCORE_SCREEN;
-                } else {
-                    _quizScreen = QUESTION_SCREEN;
-                }
-                _gotItRight = false;
-            }
-        }
-    }
-
-    if (_menuOption == TABULEIRO_MODE)
-        {
-        if (!isMoving && IsKeyPressed(KEY_SPACE)) { //lidarcomJogada()
-                _rool = rand() % 3 + 1; // 1 a 3
-                targetTile = player.currentTile + _rool;
-                if (targetTile > 2) targetTile = 2;
-                player.prevPosition = player.position;
-                player.prevTile = player.currentTile;
-                isMoving = true;
+            else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
+                checkIfAnswerIsRight(options, questions[_currentQuestion]);
             }
 
-            if (isMoving) {
-                Vector2 targetPos = _tiles[targetTile].position;
-                Vector2 direction = Vector2Subtract(targetPos, player.position);
-                float distance = Vector2Length(direction);
-                if (distance < 2.0f) {
-                    player.position = targetPos;
-                    player.currentTile = targetTile;
-                    isMoving = false;
-                    //new question = Addquestion
-                    pthread_create(&loaderThread, NULL, loadQuestionThread, 
-                    (void *)getTileTopic(_tiles[player.currentTile].topic));
-
-                    _quizScreen = TABULEIRO_QUESTION_SCREEN;
-   
-
-                    if (!_gotItRight)
-                    {
-                        targetPos = player.prevPosition;
-                        targetTile = player.prevTile;
-                        isMoving = true;
+            else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
+                if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
+                    _quizScreen = TOPIC_SELECTION_SCREEN;
+                    _menuOption = MAIN_MENU;
+                    saveScore("Nataniel");
+                } else if (_quizScreen == ANSWER_SCREEN) {
+                    _currentQuestion++;
+                    if (_currentQuestion >= 5) {
+                        _quizScreen = FINAL_SCORE_SCREEN;
+                    } else {
+                        _quizScreen = QUESTION_SCREEN;
                     }
-
-                    /*acertou = rand() % 2;
-                    if (!acertou)
-                    {
-                        targetPos = player.prevPosition;
-                        targetTile = player.prevTile;
-                        isMoving = true;
-                    }*/
-
-                } else {
-                    direction = Vector2Normalize(direction);
-                    player.position.x += direction.x * 5;
-                    player.position.y += direction.y * 5;
+                    _gotItRight = false;
                 }
             }
-    }
+        }
 
-    if (_quizScreen == TABULEIRO_QUESTION_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-    checkIfAnswerIsRight(options, tileQuestion);
-    
-    if (_gotItRight) {
-        _quizScreen = -1; // nenhum screen ativo, volta ao tabuleiro
-    } else {
-        player.position = player.prevPosition;
-        player.currentTile = player.prevTile;
-        _quizScreen = -1;
-    }
-}
-
+        if (_menuOption == TABULEIRO_MODE)
+        {
+            updateBoard();
+        }
 
         BeginDrawing();
 
@@ -346,38 +240,18 @@ int main() {
             break;
         
         case TABULEIRO_MODE:
-
-            if (_quizScreen == TABULEIRO_QUESTION_SCREEN) {
-             drawQuestion(options, tileQuestion);
-            }
-
-            else {
-            DrawText("MODO TABULEIRO - Pressione SPACE para rolar o dado", 20, 20, 20, DARKGRAY);
-            DrawText(TextFormat("DADO %d", _rool), 20, 40, 20, DARKGRAY);
-            DrawText(TextFormat("%d", acertou), 20, 60, 20, DARKGRAY);
-
-            // Desenhar casas
-            for (int i = 0; i < 3; i++) {
-                DrawRectangleRec(tileRects[i], LIGHTGRAY);
-                DrawRectangleLinesEx(tileRects[i], 2, DARKGRAY);
-                DrawText(tileLabels[i], tileRects[i].x + 10, tileRects[i].y + 40, 16, BLACK);
-            }
-
-            // Desenhar jogador
-            DrawCircleV(player.position, 20, RED);
-            }
-            break;
+            drawBoard();
         
         default:
             break;
 
-    }
+        }
 
-    EndDrawing();
+        EndDrawing();
 
-    if (_quizScreen == LOADING_SCREEN) {
-        pthread_join(loaderThread, NULL);
-    }
+        if (_quizScreen == LOADING_SCREEN) {
+            pthread_join(loaderThread, NULL);
+        }
 
 }
     CloseWindow();
@@ -407,8 +281,13 @@ void loadQuestionThread(void *arg)
     const char (*themes)[100] = getThemesOfTopic(topic);
 
     //tema aleatorio
+    if (!themes) {
+        TraceLog(LOG_ERROR, "Tópico inválido ou tema não encontrado.");
+        _loadingFinished = true;
+        return NULL;
+    }
 
-    tileQuestion = addQuestion(topic, themes[0]);
+    //tileQuestion = addQuestion(topic, themes[0]);
 
 
     _loadingFinished = true;
