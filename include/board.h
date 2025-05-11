@@ -21,17 +21,24 @@ typedef enum {
     SPECIAL_EVENT=2,
 } TileType;
 
-typedef struct {
+typedef struct Tile {
     Vector2 position;
     TileType type;
+    Rectangle rect;
     char topic[100];
+    int casa;
+    struct Tile *next;
+    struct Tile *prev;
 } Tile;
 
 #define TILE_DISTANCE 150
 #define NUMBER_OF_TILES 3
 
+void criarTile(TileType type, const char *topic, int casa);
+Vector2 getPositionOfTile(int casa);
 void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);
+
 
 #endif
