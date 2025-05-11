@@ -1,4 +1,5 @@
 #include "raylib.h"
+#include "raymath.h"
 #include "resource_dir.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +13,9 @@
 #include "topics.h"
 #include <pthread.h>
 #include "hall.h"
+#include "time.h"
+#include "string.h"
+#include "board.h"
 
 typedef enum {
     TOPIC_SELECTION_SCREEN =0,
@@ -19,6 +23,7 @@ typedef enum {
     QUESTION_SCREEN = 2,
     ANSWER_SCREEN = 3,
     FINAL_SCORE_SCREEN = 4,
+    TABULEIRO_QUESTION_SCREEN = 5 
 } QuizScreen;
 
 typedef enum {
@@ -38,20 +43,26 @@ int _currentQuestion = 0;
 Question questions[5];
 pthread_t loaderThread;
 bool _loadingFinished = false;
+const char *topics[] = {
+    "Algoritmos e Estruturas de Dados",
+    "INFRA_SO",
+    "POO",
+    "Historia do Brasil"
+    };
+
 
 void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
+void loadQuestionThread(void *arg);
+const char* getTileTopic(char *topic);
 
 int main() {
-
     const int screenWidth = 1280;
     const int screenHeight = 800;
-    const char *topics[] = {
-        "Algoritmos e Estruturas de Dados",
-        "INFRA_SO",
-        "POO",
-        "Historia do Brasil"
-    };
+
+    InitWindow(screenWidth, screenHeight, "Quiz Game");
+
+    createBoard();
     
     Rectangle topicButtons[4];
     for (int i = 0; i < 4; i++) {
@@ -69,9 +80,12 @@ int main() {
         mainMenuButtons[i] = (Rectangle){ screenWidth/2 - 200, 200 + i*100, 400, 60 };
     }
 
+    const char* tileLabels[3] = {
+        "Inicio",
+        "Casa AED",
+        "Casa INFRA SO"
+    };
     Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
-
-    InitWindow(screenWidth, screenHeight, "Quiz Game");
 
     Option options[4];
     char *labels[] = {"A", "B", "C", "D"};
@@ -83,6 +97,8 @@ int main() {
         options[i].rect = optionRects[i];
         strcpy(options[i].answer, labels[i]);
     }
+
+    srand(time(NULL)); 
 
     while (!WindowShouldClose()) {
         //UPTADE
@@ -96,7 +112,7 @@ int main() {
                             _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
-                            // Implementar depois
+                            _menuOption = TABULEIRO_MODE;
                             break;
                         case 2: // Hall da Fama
                             _menuOption = HALL_OF_FAME;
@@ -130,7 +146,6 @@ int main() {
                     }
                 }
             }
-        
 
             if (_quizScreen == LOADING_SCREEN)
             {
@@ -139,26 +154,31 @@ int main() {
                 }
             }
 
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
-            checkIfAnswerIsRight(options, questions[_currentQuestion]);
-        }
+            else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
+                checkIfAnswerIsRight(options, questions[_currentQuestion]);
+            }
 
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
-            if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
-                _quizScreen = TOPIC_SELECTION_SCREEN;
-                _menuOption = MAIN_MENU;
-                saveScore("Nataniel");
-            } else if (_quizScreen == ANSWER_SCREEN) {
-                _currentQuestion++;
-                if (_currentQuestion >= 5) {
-                    _quizScreen = FINAL_SCORE_SCREEN;
-                } else {
-                    _quizScreen = QUESTION_SCREEN;
+            else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
+                if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
+                    _quizScreen = TOPIC_SELECTION_SCREEN;
+                    _menuOption = MAIN_MENU;
+                    saveScore("Nataniel");
+                } else if (_quizScreen == ANSWER_SCREEN) {
+                    _currentQuestion++;
+                    if (_currentQuestion >= 5) {
+                        _quizScreen = FINAL_SCORE_SCREEN;
+                    } else {
+                        _quizScreen = QUESTION_SCREEN;
+                    }
+                    _gotItRight = false;
                 }
-                _gotItRight = false;
             }
         }
-    }
+
+        if (_menuOption == TABULEIRO_MODE)
+        {
+            updateBoard();
+        }
 
         BeginDrawing();
 
@@ -218,17 +238,20 @@ int main() {
         case HALL_OF_FAME:
             drawHallOfFame();
             break;
-
+        
+        case TABULEIRO_MODE:
+            drawBoard();
+        
         default:
             break;
 
-    }
+        }
 
-    EndDrawing();
+        EndDrawing();
 
-    if (_quizScreen == LOADING_SCREEN) {
-        pthread_join(loaderThread, NULL);
-    }
+        if (_quizScreen == LOADING_SCREEN) {
+            pthread_join(loaderThread, NULL);
+        }
 
 }
     CloseWindow();
@@ -252,6 +275,26 @@ void checkIfAnswerIsRight(Option *options, Question question) {
     }
 }
 
+void loadQuestionThread(void *arg)
+{    
+    const char *topic = (const char *)arg;
+    const char (*themes)[100] = getThemesOfTopic(topic);
+
+    //tema aleatorio
+    if (!themes) {
+        TraceLog(LOG_ERROR, "Tópico inválido ou tema não encontrado.");
+        _loadingFinished = true;
+        return NULL;
+    }
+
+    //tileQuestion = addQuestion(topic, themes[0]);
+
+
+    _loadingFinished = true;
+    return NULL;
+
+}
+
 void *loadQuestionsThread(void *arg) {
     const char *topic = (const char *)arg;
     const char (*themes)[100] = getThemesOfTopic(topic);
@@ -261,5 +304,19 @@ void *loadQuestionsThread(void *arg) {
     }
 
     _loadingFinished = true;
+    return NULL;
+}
+
+const char* getTileTopic(char *topic)
+{
+    if (strcmp(topic, "Casa AED") == 0)
+    {
+        return topics[0];
+    }
+    else if (strcmp(topic, "Casa INFRA_SO") == 0)
+    {
+        return topics[1];
+    }
+
     return NULL;
 }
