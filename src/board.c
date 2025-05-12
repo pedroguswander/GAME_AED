@@ -8,6 +8,7 @@
 
 #define BOARD_SIZE 20
 
+Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
 //Tile _tiles[3] = {0};
 Tile *_tilesHEAD = NULL;
@@ -81,6 +82,7 @@ void createBoard()
     _boardState = CAN_PLAY;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
+    backgroundTexture = LoadTexture("assets/board-background.png");
 
     for (int i = 0; i < BOARD_SIZE; i++) {
         createTile(QUESTION, tileLabels[i], i);
@@ -160,6 +162,10 @@ void updateBoard()
 
 void drawBoard()
 {
+    // Desenha a imagem de fundo
+    DrawTexture(backgroundTexture, 0, 0, WHITE);
+
+    // Elementos principais da interface do modo tabuleiro
     DrawText("MODO TABULEIRO - Pressione SPACE para rolar o dado", 20, 20, 20, DARKGRAY);
     DrawText(TextFormat("DADO %d", _dice), 20, 40, 20, DARKGRAY);
     DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
@@ -181,16 +187,3 @@ void drawBoard()
         }
     }
 }
-
-// void freeBoard() {
-//     Tile *current = _tilesHEAD;
-//     while (current) {
-//         Tile *next = current->next;
-//         free(current);
-//         current = next;
-//     }
-//     _tilesHEAD = NULL;
-//     _tilesTAIL = NULL;
-// }
-
-

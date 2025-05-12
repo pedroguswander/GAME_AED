@@ -71,8 +71,8 @@ void loadQuestionThread(void *arg);
 const char* getTileTopic(char *topic);
 
 int main() {
-    const int screenWidth = 1280;
-    const int screenHeight = 800;
+    const int screenWidth = 1920;
+    const int screenHeight = 1080;
 
     InitWindow(screenWidth, screenHeight, "Quiz Game");
 
@@ -196,7 +196,8 @@ int main() {
 
         BeginDrawing();
 
-        ClearBackground(BLACK);
+        ClearBackground((Color){ 135, 206, 235, 255 });
+
 
         switch (_menuOption)
         {
