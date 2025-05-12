@@ -17,6 +17,20 @@
 #include "string.h"
 #include "board.h"
 
+
+typedef enum {
+    ROLL_DICE,
+    ANSWER_QUESTION,
+    SHOW_FEEDBACK
+} TurnPhase;
+
+int playerPositions[2] = {0, 0};
+int currentPlayer = 0; // 0 ou 1
+TurnPhase phase = ROLL_DICE;
+int diceResult = 0;
+bool questionAnsweredCorrectly = false;
+
+
 typedef enum {
     TOPIC_SELECTION_SCREEN =0,
     LOADING_SCREEN = 1,
@@ -240,6 +254,7 @@ int main() {
             break;
         
         case TABULEIRO_MODE:
+            // freeBoard();
             drawBoard();
         
         default:
@@ -284,14 +299,14 @@ void loadQuestionThread(void *arg)
     if (!themes) {
         TraceLog(LOG_ERROR, "Tópico inválido ou tema não encontrado.");
         _loadingFinished = true;
-        return NULL;
+        return;
     }
 
     //tileQuestion = addQuestion(topic, themes[0]);
 
 
     _loadingFinished = true;
-    return NULL;
+    return;
 
 }
 

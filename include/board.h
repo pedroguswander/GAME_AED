@@ -26,7 +26,7 @@ typedef struct Tile {
     TileType type;
     Rectangle rect;
     char topic[100];
-    int casa;
+    int tile;
     struct Tile *next;
     struct Tile *prev;
 } Tile;
@@ -34,11 +34,12 @@ typedef struct Tile {
 #define TILE_DISTANCE 150
 #define NUMBER_OF_TILES 3
 
-void criarTile(TileType type, const char *topic, int casa);
+void createTile(TileType type, const char *topic, int casa);
 Vector2 getPositionOfTile(int casa);
 void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);
+void freeBoard();
 
 
 #endif

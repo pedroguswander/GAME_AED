@@ -6,6 +6,8 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+#define BOARD_SIZE 20
+
 BoardState _boardState = CAN_PLAY;
 //Tile _tiles[3] = {0};
 Tile *_tilesHEAD = NULL;
@@ -17,45 +19,62 @@ int _dice;
 int _targetTile = 0;
 int _acertou = 0;
 
-const char* tileLabels[3] = {
-    "Inicio",
-    "Casa AED",
-    "Casa INFRA SO"
+const char* tileLabels[BOARD_SIZE] = {
+    "Início",
+    "Conhecimentos Gerais",
+    "Filmes",
+    "Músicas",
+    "Matemática",
+    "Conhecimentos Gerais",
+    "Filmes",
+    "Músicas",
+    "Matemática",
+    "Conhecimentos Gerais",
+    "Filmes",
+    "Músicas",
+    "Matemática",
+    "Conhecimentos Gerais",
+    "Filmes",
+    "Músicas",
+    "Matemática",
+    "Boss Node AED",
+    "Boss Node AED",
+    "Final"
 };
 
-void criarTile(TileType type, const char *topic, int casa)
+
+void createTile(TileType type, const char *topic, int tile)
 {
-    Tile *novo = (Tile *) malloc(sizeof(Tile));
-    if (novo) 
+    Tile *new_tile = (Tile *) malloc(sizeof(Tile));
+    if (new_tile) 
     {
-        novo->position = (Vector2) {200+(TILE_DISTANCE*casa), 600};
-        novo->type = type;
-        novo->rect = (Rectangle) {
-            novo->position.x - 50,
-            novo->position.y - 50,
+        new_tile->position = (Vector2) {200 + (TILE_DISTANCE * tile), 600};
+        new_tile->type = type;
+        new_tile->rect = (Rectangle) {
+            new_tile->position.x - 50,
+            new_tile->position.y - 50,
             100,
             100
         };
-        strcpy(novo->topic, topic);
-        novo->casa = casa;
+        strcpy(new_tile->topic, topic);
+        new_tile->tile = tile;
+        new_tile->next = NULL;
+        new_tile->prev = NULL;
 
         if (_tilesHEAD == NULL)
         {
-            _tilesHEAD = novo;
-            _tilesTAIL = novo;
-            novo->next = _tilesHEAD;
-            novo->prev = _tilesTAIL;
+            _tilesHEAD = new_tile;
+            _tilesTAIL = new_tile;
         }
-        else {
-            novo->next = _tilesHEAD;
-            novo->prev = _tilesTAIL;
-            novo->prev->next = novo;
-            novo->next->prev = novo;
-            _tilesTAIL = novo;
+        else 
+        {
+            _tilesTAIL->next = new_tile;
+            new_tile->prev = _tilesTAIL;
+            _tilesTAIL = new_tile;
         }
-
     }
 }
+
 
 void createBoard()
 {
@@ -63,34 +82,31 @@ void createBoard()
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
 
-    criarTile(QUESTION, tileLabels[0], 0);
-    criarTile(QUESTION, tileLabels[1], 1);
-    criarTile(QUESTION, tileLabels[2], 2);
+    for (int i = 0; i < BOARD_SIZE; i++) {
+        createTile(QUESTION, tileLabels[i], i);
+    }
 
-    _player =  (Player) {
+    _player = (Player) {
         _tilesHEAD->position,
         (Vector2) {0,0},
         0,
         0
     };
-
 }
 
-Vector2 getPositionOfTile(int casa)
+
+Vector2 getPositionOfTile(int tile)
 {
-    if (_tilesHEAD != NULL)
+    Tile *iterador = _tilesHEAD;
+    while (iterador != NULL)
     {
-        Tile *iterador = _tilesHEAD;
-        do {
-            if (iterador->casa == casa)
-            {
-                return iterador->position;
-            }
-            iterador = iterador->next;
+        if (iterador->tile == tile)
+        {
+            return iterador->position;
         }
-        while (iterador != _tilesHEAD);
+        iterador = iterador->next;
     }
-    return (Vector2) {0};
+    return (Vector2){0};
 }
 
 void updateBoard()
@@ -101,7 +117,7 @@ void updateBoard()
         if (IsKeyPressed(KEY_SPACE)) {
             _dice = rand() % 2 + 1;
             _targetTile = _player.currentTile + _dice;
-            if (_targetTile > 2) _targetTile = 2;
+            if (_targetTile >= BOARD_SIZE) _targetTile = BOARD_SIZE - 1;
             _player.prevPosition = _player.position;
             _player.prevTile = _player.currentTile;
             _boardState = MOVING;
@@ -150,13 +166,31 @@ void drawBoard()
 
     if (_tilesHEAD != NULL) {
         Tile *current = _tilesHEAD;
-        do {
+        int i = 0;
+        while (current != NULL) {
             DrawRectangleRec(current->rect, LIGHTGRAY);
             DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
             DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
-            current = current->next;
-        } while (current != _tilesHEAD);
-    }
 
-    DrawCircleV(_player.position, 20, RED);
+            if (_player.currentTile == i) {
+                DrawCircleV(_player.position, 20, RED);
+            }
+
+            current = current->next;
+            i++;
+        }
+    }
 }
+
+// void freeBoard() {
+//     Tile *current = _tilesHEAD;
+//     while (current) {
+//         Tile *next = current->next;
+//         free(current);
+//         current = next;
+//     }
+//     _tilesHEAD = NULL;
+//     _tilesTAIL = NULL;
+// }
+
+
