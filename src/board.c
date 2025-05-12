@@ -82,7 +82,7 @@ void createBoard()
     _boardState = CAN_PLAY;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
-    backgroundTexture = LoadTexture("assets/board-background.png");
+    backgroundTexture = LoadTexture("board-background.png");
 
     for (int i = 0; i < BOARD_SIZE; i++) {
         createTile(QUESTION, tileLabels[i], i);
@@ -115,50 +115,50 @@ void updateBoard()
 {
     switch (_boardState)
     {
-    case CAN_PLAY:
-        if (IsKeyPressed(KEY_SPACE)) {
-            _dice = rand() % 2 + 1;
-            _targetTile = _player.currentTile + _dice;
-            if (_targetTile >= BOARD_SIZE) _targetTile = BOARD_SIZE - 1;
-            _player.prevPosition = _player.position;
-            _player.prevTile = _player.currentTile;
-            _boardState = MOVING;
-        }
-        break;
-    
-    case MOVING:
-        Vector2 targetPos = getPositionOfTile(_targetTile);
-        Vector2 direction = Vector2Subtract(targetPos, _player.position);
-        float distance = Vector2Length(direction);
-        if (distance < 2.0f) {
-            _player.position = targetPos;
-            _player.currentTile = _targetTile;
-            _acertou = rand() % 2;
-
-            if (!_acertou)
-            {
-                targetPos = _player.prevPosition;
-                _targetTile = _player.prevTile;
+        case CAN_PLAY:
+            if (IsKeyPressed(KEY_SPACE)) {
+                _dice = rand() % 2 + 1;
+                _targetTile = _player.currentTile + _dice;
+                if (_targetTile >= BOARD_SIZE) _targetTile = BOARD_SIZE - 1;
+                _player.prevPosition = _player.position;
+                _player.prevTile = _player.currentTile;
                 _boardState = MOVING;
             }
-            else
-            {
-                _boardState = CAN_PLAY;
+            break;
+
+        case MOVING: {
+            Vector2 targetPos = getPositionOfTile(_targetTile);
+            Vector2 direction = Vector2Subtract(targetPos, _player.position);
+            float distance = Vector2Length(direction);
+
+            if (distance < 2.0f) {
+                _player.position = targetPos;
+                _player.currentTile = _targetTile;
+                _acertou = rand() % 2;
+
+                if (!_acertou) {
+                    targetPos = _player.prevPosition;
+                    _targetTile = _player.prevTile;
+                    _boardState = MOVING;
+                } else {
+                    _boardState = CAN_PLAY;
+                }
+
+            } else {
+                direction = Vector2Normalize(direction);
+                _player.position.x += direction.x * 5;
+                _player.position.y += direction.y * 5;
             }
 
-        } else {
-            direction = Vector2Normalize(direction);
-            _player.position.x += direction.x * 5;
-            _player.position.y += direction.y * 5;
+            break;
         }
 
-        break;
-
-
-    default:
-        break;
+        default:
+            break;
     }
 }
+
+
 
 void drawBoard()
 {

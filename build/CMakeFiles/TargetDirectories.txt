@@ -1,0 +1,3 @@
+/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles/GAME_AED.dir
+/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles/edit_cache.dir
+/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles/rebuild_cache.dir

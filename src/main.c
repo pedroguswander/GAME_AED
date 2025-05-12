@@ -75,6 +75,10 @@ int main() {
     const int screenHeight = 1080;
 
     InitWindow(screenWidth, screenHeight, "Quiz Game");
+    SearchAndSetResourceDir("assets");
+    lerJsonDeFormatacao("exemplo_questao.json");
+
+
 
     createBoard();
     
@@ -169,8 +173,15 @@ int main() {
             }
 
             else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
-                checkIfAnswerIsRight(options, questions[_currentQuestion]);
+                Vector2 mouse = GetMousePosition();
+                for (int i = 0; i < 4; i++) {
+                    if (CheckCollisionPointRec(mouse, options[i].rect)) {
+                        checkIfAnswerIsRight(options, questions[_currentQuestion]);
+                        break;
+                    }
+                }
             }
+
 
             else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
                 if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
