@@ -1,4 +1,6 @@
 #include "question.h"
+#include "topics.h"
+#include "prompt.h"
 
 Question createQuestion(char *statement, char *optionA, char *optionB, char *optionC, char *optionD, char *answer)
 {
@@ -37,5 +39,17 @@ void drawQuestion(Option *options, Question question)
         DrawText(optionText, options[i].rect.x + 10, options[i].rect.y + 10, 20, WHITE);
     }
 }
+
+/*Question loadQuestion()
+{
+    const char *topic = "Historia do Brasil";
+    const char (*themes)[100] = getThemesOfTopic(topic);
+
+    if (themes != NULL)
+    {
+        return addQuestion(topic, themes[0]);
+    }
+    return (Question) {0};
+}*/
 
 

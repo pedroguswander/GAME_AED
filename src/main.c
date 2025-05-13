@@ -67,7 +67,6 @@ const char *topics[] = {
 
 void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
-void loadQuestionThread(void *arg);
 const char* getTileTopic(char *topic);
 
 int main() {
@@ -357,26 +356,6 @@ void checkIfAnswerIsRight(Option *options, Question question) {
             return;
         }
     }
-}
-
-void loadQuestionThread(void *arg)
-{    
-    const char *topic = (const char *)arg;
-    const char (*themes)[100] = getThemesOfTopic(topic);
-
-    //tema aleatorio
-    if (!themes) {
-        TraceLog(LOG_ERROR, "Tópico inválido ou tema não encontrado.");
-        _loadingFinished = true;
-        return;
-    }
-
-    //tileQuestion = addQuestion(topic, themes[0]);
-
-
-    _loadingFinished = true;
-    return;
-
 }
 
 void *loadQuestionsThread(void *arg) {

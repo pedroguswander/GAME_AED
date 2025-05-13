@@ -18,6 +18,22 @@ const char HIST_BR_THEMES[2][100] = {
     "Independência do Brasil", "Ditadura Militar"
 };
 
+const char CONHECIMENTOS_GERAIS_THEMES[2][100] = {
+    "", ""
+};
+
+const char FILMES_THEMES[2][100] = {
+    "", ""
+};
+
+const char MUSICAS_THEMES[2][100] = {
+    "", ""
+};
+
+const char MATEMATICA_THEMES[2][100] = {
+    "Álgebra", "Geometria"
+};
+
 const char (*getThemesOfTopic(const char *topic))[100] {
     if (strcmp(topic, "Algoritmos e Estruturas de Dados") == 0) {
         return AED_THEMES;
@@ -30,6 +46,18 @@ const char (*getThemesOfTopic(const char *topic))[100] {
     }
     else if (strcmp(topic, "Historia do Brasil") == 0) {
         return HIST_BR_THEMES;
+    }
+    else if (strcmp(topic, "Conhecimentos Gerais") == 0) {
+        return CONHECIMENTOS_GERAIS_THEMES;
+    }
+    else if (strcmp(topic, "Filmes") == 0) {
+        return FILMES_THEMES;
+    }
+    else if (strcmp(topic, "Músicas") == 0) {
+        return MUSICAS_THEMES;
+    }
+    else if (strcmp(topic, "Matemática") == 0) {
+        return MATEMATICA_THEMES;
     }
     return NULL;
 }

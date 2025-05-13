@@ -3,10 +3,13 @@
 #include "raylib.h"
 
 typedef enum {
-    CAN_PLAY = 0,
-    MOVING =1,
-    EVENT = 2,
+    CAN_PLAY,
+    MOVING,
+    LOADING,      // <- novo estado
+    EVENT,
+    SHOW_ANSWER
 } BoardState;
+
 
 typedef struct {
     Vector2 position;
@@ -32,10 +35,10 @@ typedef struct Tile {
 } Tile;
 
 #define TILE_DISTANCE 150
-#define NUMBER_OF_TILES 3
 
 void createTile(TileType type, const char *topic, int casa);
 Vector2 getPositionOfTile(int casa);
+Tile *getTileByTile(int tile);
 void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);

@@ -5,6 +5,9 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "question.h"
+#include "pthread.h"
+#include "prompt.h"
 
 #define BOARD_SIZE 20
 
@@ -14,11 +17,41 @@ BoardState _boardState = CAN_PLAY;
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
 Player _player = {0};
+
+bool _loadingFinishedBoard = false;
+pthread_t _loadThread;  // Inclua pthread: #include <pthread.h>
+
+Question _questionTile = {0};
 //Rectangle tileRects[3] = {0};
+
+Option options[4];
+char *labels[] = {"A", "B", "C", "D"};
+Rectangle optionRects[4];
+Rectangle nextQuestionButton = {1920/4, 1080-100, 480, 320};
+int startY = 100;
 
 int _dice;
 int _targetTile = 0;
 int _acertou = 0;
+int _gotItRigth = 0;
+
+const Vector2 tilePositions[BOARD_SIZE] = {
+    {400, 940},
+    {200, 770},
+    {600, 770},
+    {1000, 770},
+    {1400, 770},
+    {1730, 490},
+    {1400, 530},
+    {1000, 530},
+    {600, 530},
+    {200, 530},
+    {180, 290}, 
+    {600, 300},
+    {1000, 300},
+    {1400, 300},
+    {1500, 70},
+};
 
 const char* tileLabels[BOARD_SIZE] = {
     "Início",
@@ -44,12 +77,27 @@ const char* tileLabels[BOARD_SIZE] = {
 };
 
 
+void *loadQuestionThread(void *arg) {
+    Tile *tile = (Tile *)arg;
+    const char (*themes)[100] = getThemesOfTopic(tile->topic);
+
+    if (themes != NULL) {
+        _questionTile = addQuestion(tile->topic, themes[0]);
+    } else {
+        _questionTile = (Question){0};
+    }
+
+    _loadingFinishedBoard = true;
+    return NULL;
+}
+
+
 void createTile(TileType type, const char *topic, int tile)
 {
     Tile *new_tile = (Tile *) malloc(sizeof(Tile));
     if (new_tile) 
     {
-        new_tile->position = (Vector2) {200 + (TILE_DISTANCE * tile), 600};
+        new_tile->position = tilePositions[tile];
         new_tile->type = type;
         new_tile->rect = (Rectangle) {
             new_tile->position.x - 50,
@@ -82,7 +130,13 @@ void createBoard()
     _boardState = CAN_PLAY;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
-    backgroundTexture = LoadTexture("board-background.png");
+    backgroundTexture = LoadTexture("background-board-mode-1.png");
+
+    for (int i = 0; i < 4; i++) {
+        optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40};
+        options[i].rect = optionRects[i];
+        strcpy(options[i].answer, labels[i]);
+    }
 
     for (int i = 0; i < BOARD_SIZE; i++) {
         createTile(QUESTION, tileLabels[i], i);
@@ -111,13 +165,25 @@ Vector2 getPositionOfTile(int tile)
     return (Vector2){0};
 }
 
+Tile *getTileByTile(int tile) {
+    Tile *iterador = _tilesHEAD;
+    while (iterador != NULL) {
+        if (iterador->tile == tile) {
+            return iterador;
+        }
+        iterador = iterador->next;
+    }
+    return NULL; 
+}
+
+
 void updateBoard()
 {
     switch (_boardState)
     {
         case CAN_PLAY:
             if (IsKeyPressed(KEY_SPACE)) {
-                _dice = rand() % 2 + 1;
+                _dice = rand() % 3 + 1;
                 _targetTile = _player.currentTile + _dice;
                 if (_targetTile >= BOARD_SIZE) _targetTile = BOARD_SIZE - 1;
                 _player.prevPosition = _player.position;
@@ -126,37 +192,81 @@ void updateBoard()
             }
             break;
 
-        case MOVING: {
-            Vector2 targetPos = getPositionOfTile(_targetTile);
-            Vector2 direction = Vector2Subtract(targetPos, _player.position);
-            float distance = Vector2Length(direction);
+    case MOVING: {
+        Vector2 targetPos = getPositionOfTile(_targetTile);
+        Vector2 direction = Vector2Subtract(targetPos, _player.position);
+        float distance = Vector2Length(direction);
 
-            if (distance < 2.0f) {
-                _player.position = targetPos;
-                _player.currentTile = _targetTile;
-                _acertou = rand() % 2;
+        TraceLog(LOG_INFO, "Moving from (%f, %f) to (%f, %f) - Distance: %f", 
+         _player.position.x, _player.position.y, 
+         targetPos.x, targetPos.y, distance);
 
-                if (!_acertou) {
-                    targetPos = _player.prevPosition;
-                    _targetTile = _player.prevTile;
-                    _boardState = MOVING;
-                } else {
-                    _boardState = CAN_PLAY;
-                }
+        // Normaliza a direção e calcula o movimento
+        direction = Vector2Normalize(direction);
+        Vector2 movement = Vector2Scale(direction, 5.0f);
+        
+        // Verifica se o movimento não ultrapassará o alvo
+        if (Vector2Length(direction) * 5.0f >= distance) {
+            _player.position = targetPos;
+            _player.currentTile = _targetTile;
 
+            Tile *tile = getTileByTile(_player.currentTile);
+            if (tile != NULL && tile->type == QUESTION) {
+                _loadingFinishedBoard = false;
+                pthread_create(&_loadThread, NULL, loadQuestionThread, tile);
+                _boardState = LOADING;
             } else {
-                direction = Vector2Normalize(direction);
-                _player.position.x += direction.x * 5;
-                _player.position.y += direction.y * 5;
+                _boardState = CAN_PLAY;
+            }
+        } else {
+            _player.position = Vector2Add(_player.position, movement);
+        }
+        break;
+    }
+
+        case LOADING:
+            if (_loadingFinishedBoard) {
+                pthread_join(_loadThread, NULL);
+                _boardState = EVENT;
+            }
+            break;
+
+        case EVENT:
+            if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
+            {
+                if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+                {
+                    Vector2 mouse = GetMousePosition();
+                    for (int i = 0; i < 4; i++) {
+                        if (CheckCollisionPointRec(mouse, options[i].rect)) {
+                            if (strcmp(options[i].answer, _questionTile.answer) == 0)
+                            {
+                                _gotItRigth = true;
+                            }
+                            else 
+                            {
+                                _gotItRigth = false;
+                            }
+
+                            _boardState = SHOW_ANSWER;
+                        }
+                    }
+                }
             }
 
             break;
-        }
+
+        case SHOW_ANSWER:
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton))
+            {
+                _boardState = CAN_PLAY;
+            }
 
         default:
             break;
     }
 }
+
 void freeBoard() {
     Tile *atual = _tilesHEAD;
     while (atual != NULL) {
@@ -168,34 +278,55 @@ void freeBoard() {
     _tilesTAIL = NULL;
 }
 
-
-
-
 void drawBoard()
 {
-    // Desenha a imagem de fundo
-    DrawTexture(backgroundTexture, 0, 0, WHITE);
+    switch (_boardState)
+    {
+        case LOADING:
+            DrawText("Carregando pergunta...", GetScreenWidth()/2 - 100, GetScreenHeight()/2, 30, BLUE);
+            break;
 
-    // Elementos principais da interface do modo tabuleiro
-    const char* mensagem = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
-    DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
-    DrawText(TextFormat("DADO %d", _dice), 20, 40, 20, DARKGRAY);
-    DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
 
-    if (_tilesHEAD != NULL) {
-        Tile *current = _tilesHEAD;
-        int i = 0;
-        while (current != NULL) {
-            DrawRectangleRec(current->rect, LIGHTGRAY);
-            DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
-            DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
+        case EVENT:
+            drawQuestion(options, _questionTile);
+            break;
 
-            if (_player.currentTile == i) {
-                DrawCircleV(_player.position, 20, RED);
-            }
+        case SHOW_ANSWER:
+            DrawText("Gabarito:", 50, 100, 28, YELLOW);
+            DrawText(_questionTile.answer, 200, 100, 28, WHITE);
+            DrawText(_gotItRigth ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRigth ? GREEN : RED);
+            DrawRectangleRec(nextQuestionButton, RED);
+            DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+            break;
+        
+        default:
+            DrawTexture(backgroundTexture, 0, 0, WHITE);
 
-            current = current->next;
-            i++;
-        }
+            // Elementos principais da interface do modo tabuleiro
+            const char* mensagem = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
+            DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
+            DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
+            DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
+
+            if (_tilesHEAD != NULL) {
+                Tile *current = _tilesHEAD;
+                int i = 0;
+                while (current != NULL) {
+                    DrawRectangleRec(current->rect, LIGHTGRAY);
+                    DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
+                    DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
+
+                    if (_player.currentTile == i) {
+                        DrawCircleV(_player.position, 20, PINK);
+                    }
+
+                    current = current->next;
+                    i++;
+                }
+            }        
+            break;
+
     }
 }
+
+
