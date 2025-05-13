@@ -63,7 +63,7 @@ const char *topics[] = {
     "POO",
     "Historia do Brasil"
     };
-    float timeRemaining = 30.0f;
+    float timeRemaining = 40.0f; // ajusta o tempo pra responder a pergunta
     bool timerActive = false;
     bool timeOut = false;
 
@@ -285,19 +285,20 @@ int main() {
                 DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
                 break;
 
-            case QUESTION_SCREEN:
-                drawScore(5);
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                drawQuestion(options, questions[_currentQuestion]);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
-                DrawText(TextFormat("Tempo: %.1f", timeRemaining), screenWidth - 150, 60, 20, 
-                timeRemaining < 5.0f ? RED : WHITE); // Fica vermelho quando faltam 5 segundos
-       
-       drawQuestion(options, questions[_currentQuestion]);
-       DrawRectangleRec(retornarButton, DARKGRAY);
-       DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
-                break;
+                case QUESTION_SCREEN:
+    drawScore(5);
+
+    DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 200, 30, 20, LIGHTGRAY);
+
+    drawQuestion(options, questions[_currentQuestion]);
+
+    DrawRectangle(10, 10, 150, 40, (Color){0, 0, 0, 200});
+    DrawText(TextFormat("Tempo: %.1f", timeRemaining), 40, 40, 30, // pra mudar o posicionamento do timer
+            timeRemaining < 5.0f ? RED : WHITE);
+    
+    DrawRectangleRec(retornarButton, DARKGRAY);
+    DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+    break;
 
                 case ANSWER_SCREEN:
                 drawScore(5);
