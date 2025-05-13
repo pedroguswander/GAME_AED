@@ -87,14 +87,15 @@ int main() {
         topicButtons[i] = (Rectangle){ screenWidth/2 - 200, 150 + i*100, 400, 60 };
     }
 
-    Rectangle mainMenuButtons[4];
+    Rectangle mainMenuButtons[5];
     const char *mainMenuLabels[] = {
         "Modo Normal",
         "Modo Tabuleiro",
         "Hall da Fama",
-        "Créditos"
+        "Créditos",
+		"Sair do Jogo"
     };
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 5; i++) {
         mainMenuButtons[i] = (Rectangle){ screenWidth/2 - 200, 200 + i*100, 400, 60 };
     }
 
@@ -144,7 +145,7 @@ int main() {
 
         if (_menuOption == MAIN_MENU && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             Vector2 mouse = GetMousePosition();
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 5; i++) {
                 if (CheckCollisionPointRec(mouse, mainMenuButtons[i])) {
                     switch(i) {
                         case 0: // Modo Normal
@@ -160,6 +161,10 @@ int main() {
                         case 3: // Créditos
                             _menuOption = CREDITS;
                             break;
+						case 4:
+							CloseWindow();
+							exit(0);
+							break;
                     }
                 }
             }
@@ -235,7 +240,7 @@ int main() {
 {
     case MAIN_MENU:
         DrawText("MENU PRINCIPAL", screenWidth/2 - MeasureText("MENU PRINCIPAL", 40)/2, 80, 40, YELLOW);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             DrawRectangleRec(mainMenuButtons[i], DARKGRAY);
             DrawText(mainMenuLabels[i], mainMenuButtons[i].x + 20, mainMenuButtons[i].y + 15, 24, WHITE);
         }
