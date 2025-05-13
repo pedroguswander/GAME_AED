@@ -157,6 +157,17 @@ void updateBoard()
             break;
     }
 }
+void freeBoard() {
+    Tile *atual = _tilesHEAD;
+    while (atual != NULL) {
+        Tile *prox = atual->next;
+        free(atual);
+        atual = prox;
+    }
+    _tilesHEAD = NULL;
+    _tilesTAIL = NULL;
+}
+
 
 
 
