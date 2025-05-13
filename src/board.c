@@ -177,7 +177,8 @@ void drawBoard()
     DrawTexture(backgroundTexture, 0, 0, WHITE);
 
     // Elementos principais da interface do modo tabuleiro
-    DrawText("MODO TABULEIRO - Pressione SPACE para rolar o dado", 20, 20, 20, DARKGRAY);
+    const char* mensagem = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
+    DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
     DrawText(TextFormat("DADO %d", _dice), 20, 40, 20, DARKGRAY);
     DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
 
