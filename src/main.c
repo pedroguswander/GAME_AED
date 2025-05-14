@@ -88,6 +88,8 @@ void updateTimer() {
             timeRemaining = 0;
             timerActive = false;
             timeOut = true;
+
+            
         }
     }
 }
@@ -163,10 +165,10 @@ int main() {
     while (!WindowShouldClose()) { // Botão de voltar com reset
         updateTimer();
 
-        updateTimer();
 
-        if (_menuOption == QUIZ_MODE && _quizScreen == QUESTION_SCREEN && !isTimerRunning()) {
-            startTimer(15.0f); // 15 segundos para o modo quiz
+        if (isTimeOut() && _menuOption == QUIZ_MODE && _quizScreen == QUESTION_SCREEN) {
+            _quizScreen = ANSWER_SCREEN;
+            _gotItRight = false;
         }
         
         if (isTimeOut()) {
@@ -272,7 +274,7 @@ int main() {
                     saveScore("Nataniel");
                 } else if (_quizScreen == ANSWER_SCREEN) {
                     _currentQuestion++;
-                    isTimeOut();
+                    resetTimer(); // Reset aqui
                     if (_currentQuestion >= 5) {
                         _quizScreen = FINAL_SCORE_SCREEN;
                     } else {
@@ -324,13 +326,13 @@ int main() {
                 case QUESTION_SCREEN:
     drawScore(5);
     DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 200, 30, 20, LIGHTGRAY);
-    drawQuestion(options, questions[_currentQuestion]);
-
-    // Timer - versão atualizada
-    DrawRectangle(10, 10, 150, 40, (Color){0, 0, 0, 200});
+    
+    // Timer
+    DrawRectangle(10, 10, 180, 50, (Color){0, 0, 0, 180});
     DrawText(TextFormat("Tempo: %.1f", getRemainingTime()), 20, 20, 30, 
            getRemainingTime() < 5.0f ? RED : WHITE);
     
+    drawQuestion(options, questions[_currentQuestion]);
     DrawRectangleRec(retornarButton, DARKGRAY);
     DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
     break;
@@ -356,7 +358,7 @@ int main() {
                 DrawText("Gabarito:", 50, 100, 28, YELLOW);
                 DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
                 
-                if (isTimeOut()) {  // Usando a função do timer.h
+                if (isTimeOut()) { 
                     DrawText("TEMPO ESGOTADO!", 50, 200, 40, ORANGE);
                     DrawText("ERROU!", 50, 250, 40, RED);
                 } else {
