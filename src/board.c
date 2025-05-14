@@ -145,7 +145,7 @@ void createBoard()
 {
     InitAudioDevice();
 
-    _boardState = WAITING_TO_END;
+    _boardState = CAN_PLAY;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
     backgroundTexture = LoadTexture("background-board-mode-1.png");
