@@ -9,7 +9,10 @@
 #include "pthread.h"
 #include "prompt.h"
 
+
 #define BOARD_SIZE 20
+#define PLAYER1_TEXT_SIZE 32
+#define PLAYER1_TEXT_SCALE 3
 
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
@@ -17,6 +20,9 @@ BoardState _boardState = CAN_PLAY;
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
 Player _player = {0};
+Texture2D _playerText = {0};
+Rectangle _player1TextSrc = {0};
+Rectangle _player1TextDest = {0};
 
 bool _loadingFinishedBoard = false;
 pthread_t _loadThread;  // Inclua pthread: #include <pthread.h>
@@ -135,6 +141,9 @@ void createBoard()
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
     backgroundTexture = LoadTexture("background-board-mode-1.png");
+
+    _playerText = LoadTexture("player/hero-idle-front.png");
+    _player1TextSrc = (Rectangle) {0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
     for (int i = 0; i < 4; i++) {
         optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40};
@@ -289,7 +298,7 @@ void updateBoard()
         case SHOW_ANSWER:
             if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton))
             {
-                _boardState = CAN_PLAY;
+                 _boardState = CAN_PLAY;
             }
 
         default:
@@ -347,7 +356,10 @@ void drawBoard()
                     DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
 
                     if (_player.currentTile->tile == i) {
-                        DrawCircleV(_player.currentTile->position, 20, PINK);
+                        //DrawCircleV(_player.currentTile->position, 20, PINK);
+                        _player1TextDest = (Rectangle) {_player.currentTile->position.x, _player.currentTile->position.y,
+                            _player1TextSrc.width * PLAYER1_TEXT_SCALE, _player1TextSrc.height * PLAYER1_TEXT_SCALE};
+                        DrawTexturePro(_playerText, _player1TextSrc, _player1TextDest, (Vector2) {0, 0}, 0, WHITE);
                     }
 
                     current = current->next;
