@@ -1,7 +1,7 @@
 #include "board.h"
 #include "raylib.h"
 #include "raymath.h"
-#include "time.h"
+#include "timer.h"
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -10,10 +10,19 @@
 #include "prompt.h"
 
 
+
 #define BOARD_SIZE 20
 #define PLAYER1_TEXT_SIZE 32
 #define PLAYER1_TEXT_SCALE 3
 #define MAX_PLAYERS 2
+
+extern void startTimer(float duration);
+extern void stopTimer();
+extern void updateTimer();
+extern bool isTimeOut();
+extern bool isTimerRunning();
+extern float getRemainingTime();
+extern void resetTimer();
 
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
@@ -46,6 +55,10 @@ int _currentPlayerIndex = 0;
 float stepTimer = 0.0f;
 float stepDelay = 0.5f; 
 bool isWaiting = false;
+
+static float timeRemaining = 0;
+static bool timerActive = false;
+static bool timeOut = false;    
 
 Tile *tileBeforePlaying = NULL;
 
@@ -219,7 +232,6 @@ int getIndexOfTile(Tile *tile) {
 void updateBoard()
 {
     Player *player = &_players[_currentPlayerIndex];
-
     _playerColor = _currentPlayerIndex? BLUE: RED;
 
     switch (_boardState)
@@ -241,6 +253,9 @@ void updateBoard()
             if (!movePlayer(player, true)) break;
 
             if (player->currentTile && player->currentTile->type == QUESTION) {
+                // INICIA O TIMER QUANDO UMA PERGUNTA COMEÇA (20 segundos)
+                startTimer(20.0f);
+                
                 _loadingFinishedBoard = false;
                 pthread_create(&_loadThread, NULL, loadQuestionThread, player->currentTile);
                 _boardState = LOADING;
@@ -251,10 +266,8 @@ void updateBoard()
 
         case MOVING_BACKWARDS:
             if (!movePlayer(player, false)) break;
-
             finalizeTurn();
             break;
-
 
         case LOADING:
             if (_loadingFinishedBoard) {
@@ -263,54 +276,52 @@ void updateBoard()
             }
             break;
 
-        case END:
-            //mexer em _menuOption
-            break;
-
         case EVENT:
-            if (player->currentTile->tile >= BOARD_SIZE -1)
-            {
-                _boardState = END;
+            // Atualiza o timer a cada frame
+            updateTimer();
+
+            // Verifica se o tempo acabou
+            if (isTimeOut()) {
+                _gotItRigth = false; // Considera resposta errada
+                _boardState = SHOW_ANSWER;
             }
 
-            else if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
-            {
-                if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
-                {
+            if (player->currentTile->tile >= BOARD_SIZE - 1) {
+                _boardState = END;
+            }
+            else if (_tilesHEAD != NULL && _tilesHEAD->type == QUESTION) {
+                if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                     Vector2 mouse = GetMousePosition();
                     for (int i = 0; i < 4; i++) {
                         if (CheckCollisionPointRec(mouse, options[i].rect)) {
-                            if (strcmp(options[i].answer, _questionTile.answer) == 0)
-                            {
-                                _gotItRigth = true;
-                            }
-                            else 
-                            {
-                                _gotItRigth = false;
-                            }
-
+                            stopTimer(); // PARA O TIMER AO RESPONDER
+                            _gotItRigth = (strcmp(options[i].answer, _questionTile.answer) == 0);
                             _boardState = SHOW_ANSWER;
                         }
                     }
                 }
             }
-
-
             break;
 
         case SHOW_ANSWER:
-            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton))
-            {
-                if (_gotItRigth)
-                {
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && 
+                CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
+                
+                // Reseta o timer completamente
+                resetTimer();
+                
+                if (_gotItRigth) {
                     finalizeTurn();
-                }
-                else
-                {
+                } else {
                     player->targetTile = tileBeforePlaying;
                     _boardState = MOVING_BACKWARDS;
                 }
             }
+            break;
+
+        case END:
+            // Lógica de fim de jogo
+            break;
 
         default:
             break;
@@ -336,10 +347,16 @@ void drawBoard()
             DrawText("Carregando pergunta...", GetScreenWidth()/2 - 100, GetScreenHeight()/2, 30, BLUE);
             break;
 
-
         case EVENT:
             drawQuestion(options, _questionTile);
             DrawText(TextFormat("P%d", _currentPlayerIndex + 1), 540, 900, 32, _currentPlayerIndex? BLUE: RED);
+            
+            // Mostra o timer durante perguntas
+            if (isTimerRunning()) {
+                DrawRectangle(10, 10, 180, 50, (Color){0, 0, 0, 200});
+                DrawText(TextFormat("Tempo: %.1f", getRemainingTime()), 20, 20, 30, 
+                       getRemainingTime() < 5.0f ? RED : WHITE);
+            }
             break;
 
         case END:
@@ -352,13 +369,18 @@ void drawBoard()
             DrawText("Gabarito:", 50, 100, 28, YELLOW);
             DrawText(_questionTile.answer, 200, 100, 28, WHITE);
             DrawText(_gotItRigth ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRigth ? GREEN : RED);
+            
+            if (isTimeOut()) {
+                DrawText("TEMPO ESGOTADO!", GetScreenWidth()/2 - 150, GetScreenHeight()/2 - 50, 40, ORANGE);
+            }
+            
             DrawRectangleRec(nextQuestionButton, RED);
             DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
             break;
         
         default:
             DrawTexture(backgroundTexture, 0, 0, WHITE);
-
+            
             // Elementos principais da interface do modo tabuleiro
             const char* mensagem = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
             DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
@@ -369,7 +391,7 @@ void drawBoard()
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
                 _player1TextDest = (Rectangle){
-                    p->currentTile->position.x + i * 40,  // Deslocamento para evitar sobreposição
+                    p->currentTile->position.x + i * 40,
                     p->currentTile->position.y,
                     _player1TextSrc.width * PLAYER1_TEXT_SCALE,
                     _player1TextSrc.height * PLAYER1_TEXT_SCALE
@@ -389,9 +411,8 @@ void drawBoard()
                     current = current->next;
                     i++;
                 }
-            }        
+            }
             break;
-
     }
 }
 
