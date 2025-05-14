@@ -17,9 +17,10 @@
 
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
-//Tile _tiles[3] = {0};
+
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
+
 Player _players[MAX_PLAYERS];
 
 Texture2D _playerText = {0};
@@ -46,6 +47,7 @@ float stepTimer = 0.0f;
 float stepDelay = 0.5f; 
 bool isWaiting = false;
 
+Tile *tileBeforePlaying = NULL;
 
 const Vector2 tilePositions[BOARD_SIZE] = {
     {400, 940},
@@ -169,7 +171,6 @@ void createBoard()
 
 }
 
-
 Vector2 getPositionOfTile(int tile)
 {
     Tile *iterador = _tilesHEAD;
@@ -226,49 +227,30 @@ void updateBoard()
                 player->targetTile = getTileByTile(_currentTileIndex + _dice);
                 if (player->targetTile->tile >= BOARD_SIZE)
                     player->targetTile->tile = BOARD_SIZE - 1;
+
+                tileBeforePlaying = player->currentTile;
                 _boardState = MOVING;
             }
             break;
 
-    case MOVING: {
-        if (player->currentTile != player->targetTile)
-        {
-            if (!isWaiting)
-            {
-                isWaiting = true;
-                stepTimer =  0.0f;
-            }
-            else 
-            {
-                stepTimer += GetFrameTime();
-                if (stepTimer >= stepDelay)
-                {
-                    player->prevTile = player->currentTile;
-                    player->currentTile = player->currentTile->next;
+        case MOVING:
+            if (!movePlayer(player, true)) break;
 
-                    Vector2 direction = Vector2Subtract(player->prevTile->position, player->currentTile->position);
-                    float distance = Vector2Length(direction);
-                    direction = Vector2Normalize(direction);
-                    Vector2 movement = Vector2Scale(direction, 5.0f);
-                    
-                    player->currentTile->position = Vector2Add(player->currentTile->position, movement);
-
-                    isWaiting = false;
-                }
-            }
-
-        }
-        else {
-            if (player->currentTile != NULL && player->currentTile->type == QUESTION) {
+            if (player->currentTile && player->currentTile->type == QUESTION) {
                 _loadingFinishedBoard = false;
                 pthread_create(&_loadThread, NULL, loadQuestionThread, player->currentTile);
                 _boardState = LOADING;
             } else {
-                _boardState = CAN_PLAY;
+                finalizeTurn();
             }
-        }
-        break;
-    }
+            break;
+
+        case MOVING_BACKWARDS:
+            if (!movePlayer(player, false)) break;
+
+            finalizeTurn();
+            break;
+
 
         case LOADING:
             if (_loadingFinishedBoard) {
@@ -315,8 +297,15 @@ void updateBoard()
         case SHOW_ANSWER:
             if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton))
             {
-                 _currentPlayerIndex = (_currentPlayerIndex + 1) % MAX_PLAYERS;
-                 _boardState = CAN_PLAY;
+                if (_gotItRigth)
+                {
+                    finalizeTurn();
+                }
+                else
+                {
+                    player->targetTile = tileBeforePlaying;
+                    _boardState = MOVING_BACKWARDS;
+                }
             }
 
         default:
@@ -398,5 +387,36 @@ void drawBoard()
 
     }
 }
+
+void finalizeTurn() {
+    tileBeforePlaying = NULL;
+    _currentPlayerIndex = (_currentPlayerIndex + 1) % MAX_PLAYERS;
+    _boardState = CAN_PLAY;
+}
+
+bool movePlayer(Player *player, bool forward) {
+    if (!isWaiting) {
+        isWaiting = true;
+        stepTimer = 0.0f;
+        return false;
+    }
+
+    stepTimer += GetFrameTime();
+    if (stepTimer >= stepDelay) {
+        player->prevTile = player->currentTile;
+        player->currentTile = forward ? player->currentTile->next : player->currentTile->prev;
+
+        Vector2 direction = Vector2Subtract(player->prevTile->position, player->currentTile->position);
+        direction = Vector2Normalize(direction);
+        Vector2 movement = Vector2Scale(direction, 5.0f);
+
+        player->currentTile->position = Vector2Add(player->currentTile->position, movement);
+
+        isWaiting = false;
+    }
+
+    return player->currentTile == player->targetTile;
+}
+
 
 

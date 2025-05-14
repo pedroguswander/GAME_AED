@@ -5,6 +5,7 @@
 typedef enum {
     CAN_PLAY,
     MOVING,
+    MOVING_BACKWARDS,
     LOADING,      // <- novo estado
     EVENT,
     SHOW_ANSWER,
@@ -40,6 +41,8 @@ typedef struct {
 void createTile(TileType type, const char *topic, int casa);
 Vector2 getPositionOfTile(int casa);
 Tile *getTileByTile(int tile);
+bool movePlayer(Player *player, bool forward);
+void finalizeTurn(void);
 void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);
