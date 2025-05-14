@@ -34,6 +34,10 @@ int _dice;
 int _targetTile = 0;
 int _acertou = 0;
 int _gotItRigth = 0;
+float stepTimer = 0.0f;
+float stepDelay = 0.5f; // 0.5 segundos entre cada movimento
+bool isWaiting = false;
+
 
 const Vector2 tilePositions[BOARD_SIZE] = {
     {400, 940},
@@ -145,8 +149,9 @@ void createBoard()
     _player = (Player) {
         _tilesHEAD->position,
         (Vector2) {0,0},
-        0,
-        0
+        _tilesHEAD,
+        NULL,
+        NULL,
     };
 }
 
@@ -176,6 +181,23 @@ Tile *getTileByTile(int tile) {
     return NULL; 
 }
 
+int getIndexOfTile(Tile *tile) {
+    if (tile == NULL) return -1;
+
+    Tile *current = _tilesHEAD;
+    int index = 0;
+    
+    while (current != NULL) {
+        if (current == tile) { 
+            return index;
+        }
+        current = current->next;
+        index++;
+    }
+    
+    return -1; 
+}
+
 
 void updateBoard()
 {
@@ -184,42 +206,50 @@ void updateBoard()
         case CAN_PLAY:
             if (IsKeyPressed(KEY_SPACE)) {
                 _dice = rand() % 3 + 1;
-                _targetTile = _player.currentTile + _dice;
-                if (_targetTile >= BOARD_SIZE) _targetTile = BOARD_SIZE - 1;
-                _player.prevPosition = _player.position;
-                _player.prevTile = _player.currentTile;
+                int _currentTileIndex = getIndexOfTile(_player.currentTile);
+                _player.targetTile = getTileByTile(_currentTileIndex + _dice);
+                if (_player.targetTile->tile >= BOARD_SIZE) _player.targetTile->tile = BOARD_SIZE - 1;
+
                 _boardState = MOVING;
             }
             break;
 
     case MOVING: {
-        Vector2 targetPos = getPositionOfTile(_targetTile);
-        Vector2 direction = Vector2Subtract(targetPos, _player.position);
-        float distance = Vector2Length(direction);
+        if (_player.currentTile != _player.targetTile)
+        {
+            if (!isWaiting)
+            {
+                isWaiting = true;
+                stepTimer =  0.0f;
+            }
+            else 
+            {
+                stepTimer += GetFrameTime();
+                if (stepTimer >= stepDelay)
+                {
+                    _player.prevTile = _player.currentTile;
+                    _player.currentTile = _player.currentTile->next;
 
-        TraceLog(LOG_INFO, "Moving from (%f, %f) to (%f, %f) - Distance: %f", 
-         _player.position.x, _player.position.y, 
-         targetPos.x, targetPos.y, distance);
+                    Vector2 direction = Vector2Subtract(_player.prevTile->position, _player.currentTile->position);
+                    float distance = Vector2Length(direction);
+                    direction = Vector2Normalize(direction);
+                    Vector2 movement = Vector2Scale(direction, 5.0f);
+                    
+                    _player.currentTile->position = Vector2Add(_player.currentTile->position, movement);
 
-        // Normaliza a direção e calcula o movimento
-        direction = Vector2Normalize(direction);
-        Vector2 movement = Vector2Scale(direction, 5.0f);
-        
-        // Verifica se o movimento não ultrapassará o alvo
-        if (Vector2Length(direction) * 5.0f >= distance) {
-            _player.position = targetPos;
-            _player.currentTile = _targetTile;
+                    isWaiting = false;
+                }
+            }
 
-            Tile *tile = getTileByTile(_player.currentTile);
-            if (tile != NULL && tile->type == QUESTION) {
+        }
+        else {
+            if (_player.currentTile != NULL && _player.currentTile->type == QUESTION) {
                 _loadingFinishedBoard = false;
-                pthread_create(&_loadThread, NULL, loadQuestionThread, tile);
+                pthread_create(&_loadThread, NULL, loadQuestionThread, _player.currentTile);
                 _boardState = LOADING;
             } else {
                 _boardState = CAN_PLAY;
             }
-        } else {
-            _player.position = Vector2Add(_player.position, movement);
         }
         break;
     }
@@ -316,8 +346,8 @@ void drawBoard()
                     DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
                     DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
 
-                    if (_player.currentTile == i) {
-                        DrawCircleV(_player.position, 20, PINK);
+                    if (_player.currentTile->tile == i) {
+                        DrawCircleV(_player.currentTile->position, 20, PINK);
                     }
 
                     current = current->next;

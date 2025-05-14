@@ -119,6 +119,7 @@ int main() {
     srand(time(NULL));
     Rectangle retornarButton = { 20, 20, 150, 40 };
 
+    SetTargetFPS(60);
 
     while (!WindowShouldClose()) { // Botão de voltar com reset
         if (_menuOption != MAIN_MENU && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {

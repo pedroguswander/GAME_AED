@@ -10,14 +10,6 @@ typedef enum {
     SHOW_ANSWER
 } BoardState;
 
-
-typedef struct {
-    Vector2 position;
-    Vector2 prevPosition;
-    int currentTile;
-    int prevTile;
-} Player;
-
 typedef enum {
     QUESTION=0,
     BOSS=1,
@@ -33,6 +25,14 @@ typedef struct Tile {
     struct Tile *next;
     struct Tile *prev;
 } Tile;
+
+typedef struct {
+    Vector2 position;
+    Vector2 prevPosition;
+    Tile *currentTile;
+    Tile *prevTile;
+    Tile *targetTile;
+} Player;
 
 #define TILE_DISTANCE 150
 
