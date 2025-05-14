@@ -40,16 +40,5 @@ void drawQuestion(Option *options, Question question)
     }
 }
 
-/*Question loadQuestion()
-{
-    const char *topic = "Historia do Brasil";
-    const char (*themes)[100] = getThemesOfTopic(topic);
-
-    if (themes != NULL)
-    {
-        return addQuestion(topic, themes[0]);
-    }
-    return (Question) {0};
-}*/
 
 

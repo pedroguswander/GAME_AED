@@ -49,6 +49,8 @@ bool isWaiting = false;
 
 Tile *tileBeforePlaying = NULL;
 
+Color _playerColor = {0};
+
 const Vector2 tilePositions[BOARD_SIZE] = {
     {400, 940},
     {200, 770},
@@ -218,6 +220,8 @@ void updateBoard()
 {
     Player *player = &_players[_currentPlayerIndex];
 
+    _playerColor = _currentPlayerIndex? BLUE: RED;
+
     switch (_boardState)
     {
         case CAN_PLAY:
@@ -335,6 +339,7 @@ void drawBoard()
 
         case EVENT:
             drawQuestion(options, _questionTile);
+            DrawText(TextFormat("P%d", _currentPlayerIndex + 1), 540, 900, 32, _currentPlayerIndex? BLUE: RED);
             break;
 
         case END:
@@ -359,7 +364,7 @@ void drawBoard()
             DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
             DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
             DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
-            DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 50, 540, 20, BLACK);
+            DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 540, 900, 20, BLACK);
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
@@ -370,6 +375,8 @@ void drawBoard()
                     _player1TextSrc.height * PLAYER1_TEXT_SCALE
                 };
                 DrawTexturePro(_playerText, _player1TextSrc, _player1TextDest, (Vector2){0, 0}, 0, WHITE);
+                DrawText(TextFormat("P%d", _currentPlayerIndex + 1), _player1TextDest.x, _player1TextDest.y+100,
+                 20, i? BLUE: RED);
             }
 
             if (_tilesHEAD != NULL) {
