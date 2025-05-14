@@ -9,6 +9,7 @@ typedef enum {
     LOADING,      // <- novo estado
     EVENT,
     SHOW_ANSWER,
+    WAITING_TO_END,
     END
 } BoardState;
 

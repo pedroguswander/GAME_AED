@@ -10,13 +10,15 @@
 #include "prompt.h"
 
 
-#define BOARD_SIZE 20
+#define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
 #define PLAYER1_TEXT_SCALE 3
 #define MAX_PLAYERS 2
 
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
+
+Sound victoyTheme;
 
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
@@ -46,6 +48,9 @@ int _currentPlayerIndex = 0;
 float stepTimer = 0.0f;
 float stepDelay = 0.5f; 
 bool isWaiting = false;
+float waitingToEndTimer = 0.0f;
+float waitingToEndDuration = 0.5f;
+
 
 Tile *tileBeforePlaying = NULL;
 
@@ -78,18 +83,13 @@ const char* tileLabels[BOARD_SIZE] = {
     "Conhecimentos Gerais",
     "Filmes",
     "Músicas",
-    "Matemática",
     "Conhecimentos Gerais",
     "Filmes",
-    "Músicas",
+    "Conhecimentos Gerais",
     "Matemática",
     "Conhecimentos Gerais",
-    "Filmes",
     "Músicas",
-    "Matemática",
-    "Boss Node AED",
-    "Boss Node AED",
-    "Final"
+    "Filmes",
 };
 
 
@@ -143,10 +143,14 @@ void createTile(TileType type, const char *topic, int tile)
 
 void createBoard()
 {
-    _boardState = CAN_PLAY;
+    InitAudioDevice();
+
+    _boardState = WAITING_TO_END;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
     backgroundTexture = LoadTexture("background-board-mode-1.png");
+
+    victoyTheme = LoadSound("music/videoplayback.wav");
 
     _playerText = LoadTexture("player/hero-idle-front.png");
     _player1TextSrc = (Rectangle) {0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
@@ -162,13 +166,27 @@ void createBoard()
     }
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
+        if (i == 0)
+        {
         _players[i] = (Player){
+            _tilesHEAD->position,
+            (Vector2){0, 0},
+            _tilesTAIL->prev->prev,
+            NULL,
+            NULL,
+        };
+        }
+        else 
+        {
+            _players[i] = (Player){
             _tilesHEAD->position,
             (Vector2){0, 0},
             _tilesHEAD,
             NULL,
             NULL,
         };
+        }
+
     }
 
 }
@@ -228,9 +246,10 @@ void updateBoard()
             if (IsKeyPressed(KEY_SPACE)) {
                 _dice = rand() % 3 + 1;
                 int _currentTileIndex = getIndexOfTile(player->currentTile);
-                player->targetTile = getTileByTile(_currentTileIndex + _dice);
-                if (player->targetTile->tile >= BOARD_SIZE)
-                    player->targetTile->tile = BOARD_SIZE - 1;
+                int destino = _currentTileIndex + _dice;
+
+                if (destino >= BOARD_SIZE) destino = BOARD_SIZE - 1;
+                player->targetTile = getTileByTile(destino);
 
                 tileBeforePlaying = player->currentTile;
                 _boardState = MOVING;
@@ -264,16 +283,25 @@ void updateBoard()
             break;
 
         case END:
+            PlaySound(victoyTheme);
+
             //mexer em _menuOption
             break;
 
-        case EVENT:
-            if (player->currentTile->tile >= BOARD_SIZE -1)
+        case WAITING_TO_END:
+            waitingToEndTimer += GetFrameTime();
+            if (waitingToEndTimer >= waitingToEndDuration)
             {
+                waitingToEndTimer = 0.0f;
                 _boardState = END;
             }
+            break;
 
-            else if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
+
+        case EVENT:
+            TraceLog(LOG_INFO, "Tile atual do jogador: %d", player->currentTile->tile);
+            
+            if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
             {
                 if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
                 {
@@ -304,6 +332,10 @@ void updateBoard()
                 if (_gotItRigth)
                 {
                     finalizeTurn();
+                    if (player->currentTile->tile >= BOARD_SIZE -1)
+                    {
+                        _boardState = WAITING_TO_END;
+                    }
                 }
                 else
                 {
@@ -318,6 +350,8 @@ void updateBoard()
 }
 
 void freeBoard() {
+    UnloadSound(victoyTheme); 
+
     Tile *atual = _tilesHEAD;
     while (atual != NULL) {
         Tile *prox = atual->next;
