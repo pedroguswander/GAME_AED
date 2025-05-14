@@ -63,6 +63,9 @@ const char *topics[] = {
     "POO",
     "Historia do Brasil"
     };
+    float timeRemaining = 40.0f; // ajusta o tempo pra responder a pergunta
+    bool timerActive = false;
+    bool timeOut = false;
 
 
 void checkIfAnswerIsRight(Option *options, Question question);
@@ -120,10 +123,27 @@ int main() {
     SetTargetFPS(60);
 
     while (!WindowShouldClose()) { // Botão de voltar com reset
+        if (_menuOption == QUIZ_MODE && _quizScreen == QUESTION_SCREEN && !timerActive) {
+            timeRemaining = 15.0f;
+            timerActive = true;
+            timeOut = false;
+        }
+    
+        if (timerActive) {
+            timeRemaining -= GetFrameTime();
+            if (timeRemaining <= 0) {
+                timeRemaining = 0;
+                timerActive = false;
+                timeOut = true;
+                _quizScreen = ANSWER_SCREEN;
+            }
+        }
         if (_menuOption != MAIN_MENU && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             Vector2 mouse = GetMousePosition();
             if (CheckCollisionPointRec(mouse, retornarButton)) {
                 _menuOption = MAIN_MENU;
+                timerActive = false;
+                timeOut = false;
 
                 // Resetar quiz
                 _quizScreen = TOPIC_SELECTION_SCREEN;
@@ -214,6 +234,7 @@ int main() {
                     saveScore("Nataniel");
                 } else if (_quizScreen == ANSWER_SCREEN) {
                     _currentQuestion++;
+                    timeOut = false;
                     if (_currentQuestion >= 5) {
                         _quizScreen = FINAL_SCORE_SCREEN;
                     } else {
@@ -262,20 +283,35 @@ int main() {
                 DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
                 break;
 
-            case QUESTION_SCREEN:
-                drawScore(5);
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                drawQuestion(options, questions[_currentQuestion]);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
-                break;
+                case QUESTION_SCREEN:
+    drawScore(5);
 
-            case ANSWER_SCREEN:
+    DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 200, 30, 20, LIGHTGRAY);
+
+    drawQuestion(options, questions[_currentQuestion]);
+
+    DrawRectangle(10, 10, 150, 40, (Color){0, 0, 0, 200});
+    DrawText(TextFormat("Tempo: %.1f", timeRemaining), 40, 40, 30, // pra mudar o posicionamento do timer
+            timeRemaining < 5.0f ? RED : WHITE);
+    
+    DrawRectangleRec(retornarButton, DARKGRAY);
+    DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+    break;
+
+                case ANSWER_SCREEN:
                 drawScore(5);
                 DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
                 DrawText("Gabarito:", 50, 100, 28, YELLOW);
                 DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
-                DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRight ? GREEN : RED);
+                
+                // Mensagem única e bem posicionada
+                if (timeOut) {
+                    DrawText("TEMPO ESGOTADO!", 50, 200, 40, ORANGE);
+                    DrawText("ERROU!", 50, 250, 40, RED);
+                } else {
+                    DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRight ? GREEN : RED);
+                }
+                
                 DrawRectangleRec(nextQuestionButton, RED);
                 DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
                 DrawRectangleRec(retornarButton, DARKGRAY);
@@ -345,7 +381,7 @@ void checkIfAnswerIsRight(Option *options, Question question) {
     Vector2 mouse = GetMousePosition();
     _quizScreen = ANSWER_SCREEN;
     _gotItRight = false;
-
+    timerActive = false; 
     for (int i = 0; i < 4; i++) {
         if (CheckCollisionPointRec(mouse, options[i].rect)) {
             if (strcmp(options[i].answer, question.answer) == 0) {
