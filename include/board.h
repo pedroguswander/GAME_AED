@@ -7,7 +7,8 @@ typedef enum {
     MOVING,
     LOADING,      // <- novo estado
     EVENT,
-    SHOW_ANSWER
+    SHOW_ANSWER,
+    END
 } BoardState;
 
 typedef enum {

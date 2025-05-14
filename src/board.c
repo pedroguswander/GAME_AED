@@ -13,35 +13,37 @@
 #define BOARD_SIZE 20
 #define PLAYER1_TEXT_SIZE 32
 #define PLAYER1_TEXT_SCALE 3
+#define MAX_PLAYERS 2
 
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
 //Tile _tiles[3] = {0};
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
-Player _player = {0};
+Player _players[MAX_PLAYERS];
+
 Texture2D _playerText = {0};
 Rectangle _player1TextSrc = {0};
 Rectangle _player1TextDest = {0};
 
 bool _loadingFinishedBoard = false;
-pthread_t _loadThread;  // Inclua pthread: #include <pthread.h>
+pthread_t _loadThread;
 
 Question _questionTile = {0};
-//Rectangle tileRects[3] = {0};
 
 Option options[4];
 char *labels[] = {"A", "B", "C", "D"};
 Rectangle optionRects[4];
 Rectangle nextQuestionButton = {1920/4, 1080-100, 480, 320};
-int startY = 100;
 
+int startY = 100;
 int _dice;
 int _targetTile = 0;
 int _acertou = 0;
 int _gotItRigth = 0;
+int _currentPlayerIndex = 0;
 float stepTimer = 0.0f;
-float stepDelay = 0.5f; // 0.5 segundos entre cada movimento
+float stepDelay = 0.5f; 
 bool isWaiting = false;
 
 
@@ -155,13 +157,16 @@ void createBoard()
         createTile(QUESTION, tileLabels[i], i);
     }
 
-    _player = (Player) {
-        _tilesHEAD->position,
-        (Vector2) {0,0},
-        _tilesHEAD,
-        NULL,
-        NULL,
-    };
+    for (int i = 0; i < MAX_PLAYERS; i++) {
+        _players[i] = (Player){
+            _tilesHEAD->position,
+            (Vector2){0, 0},
+            _tilesHEAD,
+            NULL,
+            NULL,
+        };
+    }
+
 }
 
 
@@ -210,21 +215,23 @@ int getIndexOfTile(Tile *tile) {
 
 void updateBoard()
 {
+    Player *player = &_players[_currentPlayerIndex];
+
     switch (_boardState)
     {
         case CAN_PLAY:
             if (IsKeyPressed(KEY_SPACE)) {
                 _dice = rand() % 3 + 1;
-                int _currentTileIndex = getIndexOfTile(_player.currentTile);
-                _player.targetTile = getTileByTile(_currentTileIndex + _dice);
-                if (_player.targetTile->tile >= BOARD_SIZE) _player.targetTile->tile = BOARD_SIZE - 1;
-
+                int _currentTileIndex = getIndexOfTile(player->currentTile);
+                player->targetTile = getTileByTile(_currentTileIndex + _dice);
+                if (player->targetTile->tile >= BOARD_SIZE)
+                    player->targetTile->tile = BOARD_SIZE - 1;
                 _boardState = MOVING;
             }
             break;
 
     case MOVING: {
-        if (_player.currentTile != _player.targetTile)
+        if (player->currentTile != player->targetTile)
         {
             if (!isWaiting)
             {
@@ -236,15 +243,15 @@ void updateBoard()
                 stepTimer += GetFrameTime();
                 if (stepTimer >= stepDelay)
                 {
-                    _player.prevTile = _player.currentTile;
-                    _player.currentTile = _player.currentTile->next;
+                    player->prevTile = player->currentTile;
+                    player->currentTile = player->currentTile->next;
 
-                    Vector2 direction = Vector2Subtract(_player.prevTile->position, _player.currentTile->position);
+                    Vector2 direction = Vector2Subtract(player->prevTile->position, player->currentTile->position);
                     float distance = Vector2Length(direction);
                     direction = Vector2Normalize(direction);
                     Vector2 movement = Vector2Scale(direction, 5.0f);
                     
-                    _player.currentTile->position = Vector2Add(_player.currentTile->position, movement);
+                    player->currentTile->position = Vector2Add(player->currentTile->position, movement);
 
                     isWaiting = false;
                 }
@@ -252,9 +259,9 @@ void updateBoard()
 
         }
         else {
-            if (_player.currentTile != NULL && _player.currentTile->type == QUESTION) {
+            if (player->currentTile != NULL && player->currentTile->type == QUESTION) {
                 _loadingFinishedBoard = false;
-                pthread_create(&_loadThread, NULL, loadQuestionThread, _player.currentTile);
+                pthread_create(&_loadThread, NULL, loadQuestionThread, player->currentTile);
                 _boardState = LOADING;
             } else {
                 _boardState = CAN_PLAY;
@@ -270,8 +277,17 @@ void updateBoard()
             }
             break;
 
+        case END:
+            //mexer em _menuOption
+            break;
+
         case EVENT:
-            if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
+            if (player->currentTile->tile >= BOARD_SIZE -1)
+            {
+                _boardState = END;
+            }
+
+            else if (_tilesHEAD != NULL &&_tilesHEAD->type == QUESTION)
             {
                 if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
                 {
@@ -293,11 +309,13 @@ void updateBoard()
                 }
             }
 
+
             break;
 
         case SHOW_ANSWER:
             if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton))
             {
+                 _currentPlayerIndex = (_currentPlayerIndex + 1) % MAX_PLAYERS;
                  _boardState = CAN_PLAY;
             }
 
@@ -330,6 +348,12 @@ void drawBoard()
             drawQuestion(options, _questionTile);
             break;
 
+        case END:
+            DrawRectangleRec((Rectangle) {0, 0, 1920, 1080}, BLUE);
+            DrawText(TextFormat("Jogador: %d venceu!!", _currentPlayerIndex+1),
+            1920/2, 1080/2, 20, PINK);
+            break;
+
         case SHOW_ANSWER:
             DrawText("Gabarito:", 50, 100, 28, YELLOW);
             DrawText(_questionTile.answer, 200, 100, 28, WHITE);
@@ -346,6 +370,18 @@ void drawBoard()
             DrawText(mensagem, GetScreenWidth()/2 - MeasureText(mensagem, 20)/2, 20, 20, BLACK);
             DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
             DrawText(TextFormat("%d", _acertou), 20, 60, 20, DARKGRAY);
+            DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 50, 540, 20, BLACK);
+
+            for (int i = 0; i < MAX_PLAYERS; i++) {
+                Player *p = &_players[i];
+                _player1TextDest = (Rectangle){
+                    p->currentTile->position.x + i * 40,  // Deslocamento para evitar sobreposição
+                    p->currentTile->position.y,
+                    _player1TextSrc.width * PLAYER1_TEXT_SCALE,
+                    _player1TextSrc.height * PLAYER1_TEXT_SCALE
+                };
+                DrawTexturePro(_playerText, _player1TextSrc, _player1TextDest, (Vector2){0, 0}, 0, WHITE);
+            }
 
             if (_tilesHEAD != NULL) {
                 Tile *current = _tilesHEAD;
@@ -354,14 +390,6 @@ void drawBoard()
                     DrawRectangleRec(current->rect, LIGHTGRAY);
                     DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
                     DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
-
-                    if (_player.currentTile->tile == i) {
-                        //DrawCircleV(_player.currentTile->position, 20, PINK);
-                        _player1TextDest = (Rectangle) {_player.currentTile->position.x, _player.currentTile->position.y,
-                            _player1TextSrc.width * PLAYER1_TEXT_SCALE, _player1TextSrc.height * PLAYER1_TEXT_SCALE};
-                        DrawTexturePro(_playerText, _player1TextSrc, _player1TextDest, (Vector2) {0, 0}, 0, WHITE);
-                    }
-
                     current = current->next;
                     i++;
                 }

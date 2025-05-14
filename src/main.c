@@ -77,8 +77,6 @@ int main() {
     SearchAndSetResourceDir("assets");
     lerJsonDeFormatacao("exemplo_questao.json");
 
-
-
     createBoard();
     
     Rectangle topicButtons[4];
