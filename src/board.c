@@ -277,51 +277,40 @@ void freeBoard() {
 }
 
 void drawBoard() {
-    if (_boardState == EVENT && _eventState == EVENT_DISPLAY_TOPIC) {
-        DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
-        DrawText(_players[_currentPlayerIndex].currentTile->topic,
-                 GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
-                 40, BLACK);
-        return;
-    }
-
-    if (_boardState != END) {
-        DrawTexture(backgroundTexture, 0, 0, WHITE);
-        const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
-        DrawText(msg, GetScreenWidth()/2 - MeasureText(msg, 20)/2, 20, 20, BLACK);
-        DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
-        DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 540, 900, 20, BLACK);
-
-        for (int i = 0; i < MAX_PLAYERS; i++) {
-            Player *p = &_players[i];
-            if (_boardState != MOVING) 
-            {
-                drawPlayer(p, i, _playerText);
-            }
-
-            else 
-            {
-                drawPlayer(p, i, playerWalkBackSheet[currentSpriteIndex]);
-            }
-        }
-
-        if (_tilesHEAD) {
-            Tile *current = _tilesHEAD;
-            while (current) {
-                DrawRectangleRec(current->rect, LIGHTGRAY);
-                DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
-                DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
-                current = current->next;
-            }
-        }
-    }
-
     switch (_boardState) {
         case EVENT:
             if (_eventState == EVENT_QUESTION) {
-                drawQuestion(options, _questionTile);
-                DrawText(TextFormat("P%d", _currentPlayerIndex + 1), 540, 900, 32, _playerColor);
+
             }
+            switch (_eventState) {
+                case EVENT_DISPLAY_TOPIC:
+                    DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+                    DrawText(_players[_currentPlayerIndex].currentTile->topic,
+                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            40, BLACK);
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
+                    GetScreenHeight()/2 - 100, 48, BLACK);
+                    break;
+
+                case EVENT_LOADING:
+                    DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+                    DrawText(_players[_currentPlayerIndex].currentTile->topic,
+                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            40, BLACK);
+
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
+                    GetScreenHeight()/2 - 100, 48, BLACK);
+                    break;
+
+                case EVENT_QUESTION:
+                    drawQuestion(options, _questionTile);
+                    DrawText(TextFormat("P%d", _currentPlayerIndex + 1), 540, 900, 32, _playerColor);
+                    break;
+
+                default:
+                    break;
+            }
+
             break;
 
         case SHOW_ANSWER:
@@ -339,6 +328,35 @@ void drawBoard() {
             break;
 
         default:
+            DrawTexture(backgroundTexture, 0, 0, WHITE);
+            const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
+            DrawText(msg, GetScreenWidth()/2 - MeasureText(msg, 20)/2, 20, 20, BLACK);
+            DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
+            DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 540, 900, 20, BLACK);
+
+            for (int i = 0; i < MAX_PLAYERS; i++) {
+                Player *p = &_players[i];
+                if (_boardState != MOVING) 
+                {
+                    drawPlayer(p, i, _playerText);
+                }
+
+                else 
+                {
+                    drawPlayer(p, i, playerWalkBackSheet[currentSpriteIndex]);
+                }
+            }
+
+            if (_tilesHEAD) {
+                Tile *current = _tilesHEAD;
+                while (current) {
+                    DrawRectangleRec(current->rect, LIGHTGRAY);
+                    DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
+                    DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
+                    current = current->next;
+                }
+            }
+
             break;
     }
 }
