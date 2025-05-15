@@ -349,7 +349,7 @@ bool movePlayer(Player *player, bool forward) {
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     float distance = Vector2Length(direction);
 
-    if (distance < 2.0f) {  // Chegou suficientemente perto do próximo tile
+    if (distance < 5.0f) {  // Chegou suficientemente perto do próximo tile
         player->position = targetPos;  // Ajusta posição
         player->prevTile = player->currentTile;
         player->currentTile = nextTile;
