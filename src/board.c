@@ -131,7 +131,6 @@ void createBoard() {
     victoyTheme = LoadSound("music/videoplayback.wav");
 
     InitPlayerAnimation();
-    _playerText = playerIdleSprite; //o sprite do player começa sendo o sprite "parado"
 
     _playerTextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
@@ -156,7 +155,8 @@ void createBoard() {
             NULL,
             i+1,
             _playerColor,
-            CAN_PLAY
+            CAN_PLAY,
+            playerIdleSprite,
         };
     }
 }
@@ -211,12 +211,12 @@ void updateBoard() {
             if (!movePlayer(player, true))
             {
                 UpdatePlayerAnimation();
-                //_playerText = playerWalkBackSheet[currentSpriteIndex]; //setPlayerSpriteAnimation
                 setPlayerSpriteAnimation(player);
                 break;
             }
             
-            _playerText = playerIdleSprite;
+            _playerTextSrc = (Rectangle) {_playerTextSrc.x, _playerTextSrc.y, abs(_playerTextSrc.width) , _playerTextSrc.height};
+            player->sprite = playerIdleSprite;
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
@@ -361,7 +361,7 @@ void drawBoard() {
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
-                drawPlayer(p, _playerText);
+                drawPlayer(p);
             }
 
             if (_tilesHEAD) {
@@ -390,13 +390,21 @@ void setPlayerSpriteAnimation(Player *player)
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     direction = Vector2Normalize(direction);
 
-    if (direction.x == 1)
+    float dx = direction.x;
+    float dy = direction.y;
+
+    if (dx == 1 && dy == 0)
     {
-        _playerText = playerIdleSprite;
+        player->sprite = playerWalkSideSheet[currentSpriteIndex];
     }
-    else
+    else if (dy < 0)
     {
-        _playerText = playerWalkBackSheet[currentSpriteIndex];
+        player->sprite = playerWalkBackSheet[currentSpriteIndex];
+    }
+    else if (dx == -1 && dy == 0)
+    {
+        //_playerTextSrc = (Rectangle) {_playerTextSrc.x, _playerTextSrc.y, -_playerTextSrc.width , _playerTextSrc.height};
+        player->sprite = playerWalkSideSheet[currentSpriteIndex];
     }
 }
 
@@ -429,7 +437,7 @@ bool movePlayer(Player *player, bool forward) {
     return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
 }
 
-void drawPlayer(Player *p, Texture2D sprite)
+void drawPlayer(Player *p)
 {
     Vector2 playerCenter = {
         p->position.x + p->number * 40 + (_playerTextSrc.width * PLAYER1_TEXT_SCALE)/2,
@@ -443,9 +451,8 @@ void drawPlayer(Player *p, Texture2D sprite)
         _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
         _playerTextSrc.height * PLAYER1_TEXT_SCALE
     };
-    DrawTexturePro(sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
+    DrawTexturePro(p->sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
     
-
     const char* playerLabel = TextFormat("P%d", p->number);
     int labelWidth = MeasureText(playerLabel, 20);
     DrawText(playerLabel,

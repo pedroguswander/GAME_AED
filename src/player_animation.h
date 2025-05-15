@@ -3,9 +3,11 @@
 
 #include "raylib.h"
 
-#define PLAYER_WALK_BACK_SHEET_SIZE 6
+#define PLAYER_WALK_SHEET_SIZE 6
 
-extern Texture2D playerWalkBackSheet[PLAYER_WALK_BACK_SHEET_SIZE];
+extern Texture2D playerWalkBackSheet[PLAYER_WALK_SHEET_SIZE];
+extern Texture2D playerWalkSideSheet[PLAYER_WALK_SHEET_SIZE];
+
 extern Texture2D playerIdleSprite;
 extern int currentSpriteIndex;
 
