@@ -6,7 +6,7 @@ typedef enum {
     CAN_PLAY,
     MOVING,
     MOVING_BACKWARDS,
-    LOADING,      // <- novo estado
+    LOADING, 
     EVENT,
     SHOW_ANSWER,
     WAITING_TO_END,

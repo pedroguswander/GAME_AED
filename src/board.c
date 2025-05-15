@@ -436,27 +436,31 @@ void finalizeTurn() {
 }
 
 bool movePlayer(Player *player, bool forward) {
-    if (!isWaiting) {
-        isWaiting = true;
-        stepTimer = 0.0f;
-        return false;
-    }
+    if (player->currentTile == NULL || player->targetTile == NULL) return true;
 
-    stepTimer += GetFrameTime();
-    if (stepTimer >= stepDelay) {
+    // Posição destino temporária: a do próximo tile
+    Tile *nextTile = forward ? player->currentTile->next : player->currentTile->prev;
+    if (nextTile == NULL) return true;
+
+    Vector2 targetPos = nextTile->position;
+
+    // Calcula a direção corretamente
+    Vector2 direction = Vector2Subtract(targetPos, player->position);
+    float distance = Vector2Length(direction);
+
+    if (distance < 2.0f) {  // Chegou suficientemente perto do próximo tile
+        player->position = targetPos;  // Ajusta posição
         player->prevTile = player->currentTile;
-        player->currentTile = forward ? player->currentTile->next : player->currentTile->prev;
-
-        Vector2 direction = Vector2Subtract(player->prevTile->position, player->currentTile->position);
+        player->currentTile = nextTile;
+    } else {
+        // Move o jogador gradualmente em direção ao próximo tile
         direction = Vector2Normalize(direction);
-        Vector2 movement = Vector2Scale(direction, 5.0f);
-
-        player->currentTile->position = Vector2Add(player->currentTile->position, movement);
-
-        isWaiting = false;
+        Vector2 movement = Vector2Scale(direction, 300.0f * GetFrameTime()); // velocidade ajustável
+        player->position = Vector2Add(player->position, movement);
     }
 
-    return player->currentTile == player->targetTile;
+    // Verifica se já chegou no tile destino
+    return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
 }
 
 
