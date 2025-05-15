@@ -8,6 +8,7 @@ static const char *playerWalkBackFiles[PLAYER_WALK_BACK_SHEET_SIZE] = {
 };
 
 Texture2D playerWalkBackSheet[PLAYER_WALK_BACK_SHEET_SIZE];
+Texture2D playerIdleSprite;
 int currentSpriteIndex = 0;
 static float changeSpriteTimer = 1.0f/30;
 
@@ -19,6 +20,8 @@ void InitPlayerAnimation() {
         playerWalkBackSheet[i] = LoadTexture(filePath);
         strcpy(playerWalkBackPath, "player/walk/hero-walk-back/");
     }
+
+    playerIdleSprite = LoadTexture("player/hero-idle-front.png");
 }
 
 void UpdatePlayerAnimation() {

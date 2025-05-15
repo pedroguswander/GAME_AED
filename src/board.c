@@ -72,6 +72,23 @@ const char* tileLabels[BOARD_SIZE] = {
     "Conhecimentos Gerais", "Matemática", "Conhecimentos Gerais", "Músicas", "Filmes",
 };
 
+void resetBoard() {
+    _boardState = CAN_PLAY;
+    _eventState = EVENT_NONE;
+    _loadingFinishedBoard = false;
+    _dice = 0;
+    _targetTile = 0;
+    _acertou = 0;
+    _gotItRigth = 0;
+    _currentPlayerIndex = 0;
+    stepTimer = 0.0f;
+    waitingToEndTimer = 0.0f;
+    isWaiting = false;
+    tileBeforePlaying = NULL;
+    _playerColor = (Color){0};
+}
+
+
 void *loadQuestionThread(void *arg) {
     Tile *tile = (Tile *)arg;
     const char (*themes)[100] = getThemesOfTopic(tile->topic);
@@ -103,6 +120,8 @@ void createTile(TileType type, const char *topic, int tile) {
 }
 
 void createBoard() {
+    resetBoard();
+
     InitAudioDevice();
     _boardState = CAN_PLAY;
     _eventState = EVENT_NONE;
@@ -112,8 +131,8 @@ void createBoard() {
     victoyTheme = LoadSound("music/videoplayback.wav");
 
     InitPlayerAnimation();
+    _playerText = playerIdleSprite; //o sprite do player começa sendo o sprite "parado"
 
-    _playerText = LoadTexture("player/hero-idle-front.png");
     _playerTextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
     for (int i = 0; i < 4; i++) {
@@ -127,12 +146,17 @@ void createBoard() {
     }
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
+        _playerColor = (i == 0) ? RED : BLUE;
+
         _players[i] = (Player){
             _tilesHEAD->position,
             (Vector2){0, 0},
             _tilesHEAD,
             NULL,
             NULL,
+            i+1,
+            _playerColor,
+            CAN_PLAY
         };
     }
 }
@@ -169,7 +193,6 @@ int getIndexOfTile(Tile *tile) {
 
 void updateBoard() {
     Player *player = &_players[_currentPlayerIndex];
-    _playerColor = _currentPlayerIndex ? BLUE : RED;
 
     switch (_boardState) {
         case CAN_PLAY:
@@ -188,9 +211,12 @@ void updateBoard() {
             if (!movePlayer(player, true))
             {
                 UpdatePlayerAnimation();
+                //_playerText = playerWalkBackSheet[currentSpriteIndex]; //setPlayerSpriteAnimation
+                setPlayerSpriteAnimation(player);
                 break;
             }
             
+            _playerText = playerIdleSprite;
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
@@ -260,20 +286,13 @@ void updateBoard() {
             break;
 
         case END:
+            if (CheckCollisionPointRec(GetMousePosition(), (Rectangle) {0, 0, GetScreenWidth(), GetScreenHeight()}))
+            {
+
+            }
             PlaySound(victoyTheme);
             break;
     }
-}
-
-void freeBoard() {
-    UnloadSound(victoyTheme);
-    Tile *current = _tilesHEAD;
-    while (current) {
-        Tile *next = current->next;
-        free(current);
-        current = next;
-    }
-    _tilesHEAD = _tilesTAIL = NULL;
 }
 
 void drawBoard() {
@@ -284,22 +303,28 @@ void drawBoard() {
             }
             switch (_eventState) {
                 case EVENT_DISPLAY_TOPIC:
+                    DrawText("Carregando pergunta...", GetScreenWidth()/2 - 150, GetScreenHeight()/2+300, 30, BLACK);
                     DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+
+
                     DrawText(_players[_currentPlayerIndex].currentTile->topic,
-                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            GetScreenWidth()/2 - 100, GetScreenHeight()/2 - 40,
                             40, BLACK);
-                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
-                    GetScreenHeight()/2 - 100, 48, BLACK);
+
+                            
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 350,
+                    GetScreenHeight()/2 - 300, 48, BLACK);
                     break;
 
                 case EVENT_LOADING:
+                    DrawText("Carregando pergunta...", GetScreenWidth()/2 - 150, GetScreenHeight()/2+300, 30, BLACK);
                     DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
                     DrawText(_players[_currentPlayerIndex].currentTile->topic,
-                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            GetScreenWidth()/2 - 100, GetScreenHeight()/2 - 40,
                             40, BLACK);
 
-                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
-                    GetScreenHeight()/2 - 100, 48, BLACK);
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 350,
+                    GetScreenHeight()/2 - 300, 48, BLACK);
                     break;
 
                 case EVENT_QUESTION:
@@ -336,15 +361,7 @@ void drawBoard() {
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
-                if (_boardState != MOVING) 
-                {
-                    drawPlayer(p, i, _playerText);
-                }
-
-                else 
-                {
-                    drawPlayer(p, i, playerWalkBackSheet[currentSpriteIndex]);
-                }
+                drawPlayer(p, _playerText);
             }
 
             if (_tilesHEAD) {
@@ -367,6 +384,22 @@ void finalizeTurn() {
     _boardState = CAN_PLAY;
 }
 
+void setPlayerSpriteAnimation(Player *player)
+{
+    Vector2 targetPos = player->currentTile->next->position;
+    Vector2 direction = Vector2Subtract(targetPos, player->position);
+    direction = Vector2Normalize(direction);
+
+    if (direction.x == 1)
+    {
+        _playerText = playerIdleSprite;
+    }
+    else
+    {
+        _playerText = playerWalkBackSheet[currentSpriteIndex];
+    }
+}
+
 bool movePlayer(Player *player, bool forward) {
     if (player->currentTile == NULL || player->targetTile == NULL) return true;
 
@@ -387,6 +420,7 @@ bool movePlayer(Player *player, bool forward) {
     } else {
         // Move o jogador gradualmente em direção ao próximo tile
         direction = Vector2Normalize(direction);
+        TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
         Vector2 movement = Vector2Scale(direction, 300.0f * GetFrameTime()); // velocidade ajustável
         player->position = Vector2Add(player->position, movement);
     }
@@ -395,11 +429,56 @@ bool movePlayer(Player *player, bool forward) {
     return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
 }
 
-void drawPlayer(Player *p, int currentPlayerIndex, Texture2D sprite)
+void drawPlayer(Player *p, Texture2D sprite)
 {
-    _playerTextDest = (Rectangle){p->position.x + currentPlayerIndex * 40, p->position.y,
-    _playerTextSrc.width * PLAYER1_TEXT_SCALE, _playerTextSrc.height * PLAYER1_TEXT_SCALE};
+    Vector2 playerCenter = {
+        p->position.x + p->number * 40 + (_playerTextSrc.width * PLAYER1_TEXT_SCALE)/2,
+        p->position.y + (_playerTextSrc.height * PLAYER1_TEXT_SCALE)/2
+    };
+    
+    // Draw player texture
+    _playerTextDest = (Rectangle){
+        p->position.x + p->number * 40, 
+        p->position.y,
+        _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
+        _playerTextSrc.height * PLAYER1_TEXT_SCALE
+    };
     DrawTexturePro(sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
-    DrawText(TextFormat("P%d", _currentPlayerIndex + 1),
-     _playerTextDest.x+_playerTextDest.width/2, _playerTextDest.y-50, 20, currentPlayerIndex? BLUE: RED);
+    
+
+    const char* playerLabel = TextFormat("P%d", p->number);
+    int labelWidth = MeasureText(playerLabel, 20);
+    DrawText(playerLabel,
+             playerCenter.x - labelWidth/2,  
+             p->position.y - 20,             
+             10, 
+             p->color);
+}
+
+void freeBoard() {
+    // Libera texturas e sons
+    UnloadTexture(backgroundTexture);
+    UnloadTexture(_playerText);
+    UnloadSound(victoyTheme);
+    UnloadPlayerAnimation();
+
+    // Finaliza a thread se estiver ativa
+    if (!_loadingFinishedBoard) {
+        pthread_cancel(_loadThread); // força o encerramento
+        pthread_join(_loadThread, NULL);
+    }
+
+    // Libera lista de tiles
+    Tile *current = _tilesHEAD;
+    while (current) {
+        Tile *next = current->next;
+        free(current);
+        current = next;
+    }
+
+    _tilesHEAD = NULL;
+    _tilesTAIL = NULL;
+
+    // Reseta questão atual
+    memset(&_questionTile, 0, sizeof(Question));
 }
