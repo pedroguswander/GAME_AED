@@ -15,6 +15,7 @@
 		"stdlib.h": "c",
 		"stdio.h": "c",
 		"curl.h": "c",
-		"raylib.h": "c"
+		"raylib.h": "c",
+		"player_animation.h": "c"
 	}
 }

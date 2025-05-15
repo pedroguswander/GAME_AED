@@ -9,6 +9,7 @@
 #include "question.h"
 #include "pthread.h"
 #include "prompt.h"
+#include "player_animation.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -33,8 +34,8 @@ Tile *_tilesTAIL = NULL;
 Player _players[MAX_PLAYERS];
 
 Texture2D _playerText = {0};
-Rectangle _player1TextSrc = {0};
-Rectangle _player1TextDest = {0};
+Rectangle _playerTextSrc = {0};
+Rectangle _playerTextDest = {0};
 
 bool _loadingFinishedBoard = false;
 pthread_t _loadThread;
@@ -110,8 +111,10 @@ void createBoard() {
     backgroundTexture = LoadTexture("background-board-mode-1.png");
     victoyTheme = LoadSound("music/videoplayback.wav");
 
+    InitPlayerAnimation();
+
     _playerText = LoadTexture("player/hero-idle-front.png");
-    _player1TextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
+    _playerTextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
     for (int i = 0; i < 4; i++) {
         optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40};
@@ -182,7 +185,12 @@ void updateBoard() {
             break;
 
         case MOVING:
-            if (!movePlayer(player, true)) break;
+            if (!movePlayer(player, true))
+            {
+                UpdatePlayerAnimation();
+                break;
+            }
+            
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
@@ -286,10 +294,15 @@ void drawBoard() {
 
         for (int i = 0; i < MAX_PLAYERS; i++) {
             Player *p = &_players[i];
-            _player1TextDest = (Rectangle){p->position.x + i * 40, p->position.y,
-                _player1TextSrc.width * PLAYER1_TEXT_SCALE, _player1TextSrc.height * PLAYER1_TEXT_SCALE};
-            DrawTexturePro(_playerText, _player1TextSrc, _player1TextDest, (Vector2){0, 0}, 0, WHITE);
-            DrawText(TextFormat("P%d", _currentPlayerIndex + 1), _player1TextDest.x, _player1TextDest.y+100, 20, i? BLUE: RED);
+            if (_boardState != MOVING) 
+            {
+                drawPlayer(p, i, _playerText);
+            }
+
+            else 
+            {
+                drawPlayer(p, i, playerWalkBackSheet[currentSpriteIndex]);
+            }
         }
 
         if (_tilesHEAD) {
@@ -362,4 +375,13 @@ bool movePlayer(Player *player, bool forward) {
 
     // Verifica se já chegou no tile destino
     return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
+}
+
+void drawPlayer(Player *p, int currentPlayerIndex, Texture2D sprite)
+{
+    _playerTextDest = (Rectangle){p->position.x + currentPlayerIndex * 40, p->position.y,
+    _playerTextSrc.width * PLAYER1_TEXT_SCALE, _playerTextSrc.height * PLAYER1_TEXT_SCALE};
+    DrawTexturePro(sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
+    DrawText(TextFormat("P%d", _currentPlayerIndex + 1),
+     _playerTextDest.x+_playerTextDest.width/2, _playerTextDest.y-50, 20, currentPlayerIndex? BLUE: RED);
 }

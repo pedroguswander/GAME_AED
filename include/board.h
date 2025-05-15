@@ -47,6 +47,8 @@ void finalizeTurn(void);
 void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);
+void changePlayerWalkAnimationSprite(void);
+void drawPlayer(Player *p, int currentPlayerIndex, Texture2D sprite);
 void freeBoard();
 
 
