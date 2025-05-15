@@ -63,4 +63,14 @@ CMakeFiles/GAME_AED.dir/src/board.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /home/antonio/CLionProjects/GAME_AED/include/question.h \
+ /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
+ /home/antonio/CLionProjects/GAME_AED/include/question.h \
+ /home/antonio/CLionProjects/GAME_AED/include/topics.h \
+ /home/antonio/CLionProjects/GAME_AED/src/player_animation.h

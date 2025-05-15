@@ -45,7 +45,8 @@ typedef enum {
     QUIZ_MODE=1,
     TABULEIRO_MODE=2,
     HALL_OF_FAME=3,
-    CREDITS=4
+    CREDITS=4,
+    FINAL_MENU_SCREEN = 5,
 } MenuOption;
 
 MenuOption _menuOption = MAIN_MENU;
@@ -115,28 +116,44 @@ int main() {
     }
 
     srand(time(NULL));
-    Rectangle retornarButton = { 20, 20, 150, 40 };
+    Rectangle returnButton= { 20, 20, 150, 40 };
 
     SetTargetFPS(60);
 
     while (!WindowShouldClose()) { // Botão de voltar com reset
         if (_menuOption != MAIN_MENU && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
             Vector2 mouse = GetMousePosition();
-            if (CheckCollisionPointRec(mouse, retornarButton)) {
-                _menuOption = MAIN_MENU;
 
-                // Resetar quiz
-                _quizScreen = TOPIC_SELECTION_SCREEN;
-                _currentQuestion = 0;
-                resetScore();
-                _gotItRight = false;
-                _loadingFinished = false;
+            if (CheckCollisionPointRec(mouse, returnButton)) {
+                switch (_menuOption) {
+                    case QUIZ_MODE:
+                        _menuOption = MAIN_MENU;
+                        _quizScreen = TOPIC_SELECTION_SCREEN;
+                        _currentQuestion = 0;
+                        resetScore();
+                        _gotItRight = false;
+                        _loadingFinished = false;
+                        break;
 
-                // Resetar tabuleiro
-                freeBoard();
-                createBoard();
+                    case TABULEIRO_MODE:
+                        _menuOption = MAIN_MENU;
+                        freeBoard();
+                        createBoard();
+                        break;
+
+                    case HALL_OF_FAME:
+                    case CREDITS:
+                    case FINAL_MENU_SCREEN:
+                        _menuOption = MAIN_MENU;
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
+
+
 
 
         //UPTADE
@@ -252,22 +269,22 @@ int main() {
                     DrawRectangleRec(topicButtons[i], GRAY);
                     DrawText(topics[i], topicButtons[i].x + 10, topicButtons[i].y + 15, 20, BLACK);
                 }
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+                DrawRectangleRec(returnButton, DARKGRAY);
+                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case LOADING_SCREEN:
                 DrawText("Carregando perguntas da IA...", screenWidth/2 - 200, screenHeight/2, 30, WHITE);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+                DrawRectangleRec(returnButton, DARKGRAY);
+                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case QUESTION_SCREEN:
                 drawScore(5);
                 DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
                 drawQuestion(options, questions[_currentQuestion]);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+                DrawRectangleRec(returnButton, DARKGRAY);
+                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case ANSWER_SCREEN:
@@ -278,8 +295,8 @@ int main() {
                 DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRight ? GREEN : RED);
                 DrawRectangleRec(nextQuestionButton, RED);
                 DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+                DrawRectangleRec(returnButton, DARKGRAY);
+                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case FINAL_SCORE_SCREEN:
@@ -289,22 +306,22 @@ int main() {
                          screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
                 DrawRectangleRec(nextQuestionButton, GREEN);
                 DrawText("JOGAR NOVAMENTE", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
-                DrawRectangleRec(retornarButton, DARKGRAY);
-                DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+                DrawRectangleRec(returnButton, DARKGRAY);
+                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
         }
         break;
 
     case HALL_OF_FAME:
         drawHallOfFame();
-        DrawRectangleRec(retornarButton, DARKGRAY);
-        DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+        DrawRectangleRec(returnButton, DARKGRAY);
+        DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
         break;
 
     case TABULEIRO_MODE:
         drawBoard();
-        DrawRectangleRec(retornarButton, DARKGRAY);
-        DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+        DrawRectangleRec(returnButton, DARKGRAY);
+        DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
         break;
 
     case CREDITS:
@@ -320,8 +337,8 @@ int main() {
         DrawText("Fernando Augusto - Programador",    screenWidth/2 - 200, baseY + 2*gap, 24, GREEN);
         DrawText("Felipe Andrade - Programador",      screenWidth/2 - 200, baseY + 3*gap, 24, GREEN);
 
-        DrawRectangleRec(retornarButton, DARKGRAY);
-        DrawText("Voltar", retornarButton.x + 20, retornarButton.y + 10, 20, WHITE);
+        DrawRectangleRec(returnButton, DARKGRAY);
+        DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
         break;
 
     default:

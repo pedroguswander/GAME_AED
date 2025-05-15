@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/antonio/CLionProjects/GAME_AED/src/board.c" "CMakeFiles/GAME_AED.dir/src/board.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/board.c.o.d"
   "/home/antonio/CLionProjects/GAME_AED/src/hall.c" "CMakeFiles/GAME_AED.dir/src/hall.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/hall.c.o.d"
   "/home/antonio/CLionProjects/GAME_AED/src/main.c" "CMakeFiles/GAME_AED.dir/src/main.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/main.c.o.d"
+  "/home/antonio/CLionProjects/GAME_AED/src/player_animation.c" "CMakeFiles/GAME_AED.dir/src/player_animation.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/player_animation.c.o.d"
   "/home/antonio/CLionProjects/GAME_AED/src/prompt.c" "CMakeFiles/GAME_AED.dir/src/prompt.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/prompt.c.o.d"
   "/home/antonio/CLionProjects/GAME_AED/src/question.c" "CMakeFiles/GAME_AED.dir/src/question.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/question.c.o.d"
   "/home/antonio/CLionProjects/GAME_AED/src/score.c" "CMakeFiles/GAME_AED.dir/src/score.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/score.c.o.d"
