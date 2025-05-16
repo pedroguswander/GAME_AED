@@ -21,7 +21,7 @@ Texture2D playerWalkSideSheet[PLAYER_WALK_SHEET_SIZE];
 
 Texture2D playerIdleSprite;
 int currentSpriteIndex = 0;
-static float changeSpriteTimer = 1.0f/30;
+static float changeSpriteTimer = 15.0f/60;
 
 void InitPlayerAnimation() {
     char filePath[1024];  // Declarado uma única vez fora do loop

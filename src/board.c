@@ -10,6 +10,7 @@
 #include "pthread.h"
 #include "prompt.h"
 #include "player_animation.h"
+#include "dice_animation.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -26,6 +27,8 @@ typedef enum {
 Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
 EventState _eventState = EVENT_NONE;
+
+Camera2D _boardCamera = {0};
 
 Sound victoyTheme;
 Tile *_tilesHEAD = NULL;
@@ -59,6 +62,9 @@ float waitingToEndTimer = 0.0f;
 float waitingToEndDuration = 0.5f;
 Tile *tileBeforePlaying = NULL;
 Color _playerColor = {0};
+
+static bool diceRolled = false;
+static double diceRollTime = 0;
 
 const Vector2 tilePositions[BOARD_SIZE] = {
     {400, 940},
@@ -135,6 +141,15 @@ void createBoard() {
     resetBoard();
 
     InitAudioDevice();
+    //BeginMode2D(_boardCamera);
+
+    _boardCamera = (Camera2D) {
+        (Vector2){GetScreenWidth()/2, GetScreenHeight()/2},
+        (Vector2) {0, 0},
+        0,
+        1
+    };
+
     _boardState = CAN_PLAY;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
@@ -143,6 +158,7 @@ void createBoard() {
     victoyTheme = LoadSound("music/videoplayback.wav");
 
     InitPlayerAnimation();
+    initDice();
 
     _playerTextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
@@ -208,17 +224,30 @@ int getIndexOfTile(Tile *tile) {
 void updateBoard() {
     Player *player = &_players[_currentPlayerIndex];
 
-    switch (_boardState) {
-        case CAN_PLAY:
-            if (IsKeyPressed(KEY_SPACE)) {
-                _dice = rand() % 3 + 1;
-                int index = getIndexOfTile(player->currentTile);
-                int destino = index + _dice;
-                if (destino >= BOARD_SIZE) destino = BOARD_SIZE - 1;
-                player->targetTile = getTileByTile(destino);
-                tileBeforePlaying = player->currentTile;
-                _boardState = MOVING;
-            }
+        switch (_boardState) {
+            case CAN_PLAY:
+                if (diceRolled) {
+                    // Espera 0.8 segundos após o lançamento do dado antes de iniciar o movimento
+                    if (GetTime() - diceRollTime >= 0.8) {
+                        int index = getIndexOfTile(player->currentTile);
+                        int destino = index + _dice;
+                        if (destino >= BOARD_SIZE) destino = BOARD_SIZE - 1;
+                        player->targetTile = getTileByTile(destino);
+                        tileBeforePlaying = player->currentTile;
+
+                        _boardState = MOVING;                        
+                        diceRolled = false; // Reset para o próximo turno
+                    }
+                } else if (IsKeyPressed(KEY_SPACE)) {
+                    _dice = rand() % 6 + 1;
+                    setDiceResult(_dice);
+                    diceRolled = true;
+                    diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
+                }
+                else
+                {
+                    updateDice();
+                }
             break;
 
         case MOVING:
@@ -367,6 +396,12 @@ void drawBoard() {
                      1920/2, 1080/2, 20, PINK);
             break;
 
+        case CAN_PLAY:
+            DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+            drawDice();
+            DrawText(TextFormat("P%d - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1), 595, 509, 20, BLACK);
+
+            break;
         default:
             DrawTexture(backgroundTexture, 0, 0, WHITE);
             const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
