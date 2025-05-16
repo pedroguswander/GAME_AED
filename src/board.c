@@ -86,8 +86,8 @@ const Vector2 tilePositions[BOARD_SIZE] = {
 
 const char* tileLabels[BOARD_SIZE] = {
     "Início", "Conhecimentos Gerais", "Filmes", "Músicas", "Matemática",
-    "Conhecimentos Gerais", "Filmes", "Músicas", "Conhecimentos Gerais", "Filmes",
-    "Conhecimentos Gerais", "Matemática", "Conhecimentos Gerais", "Músicas", "Filmes",
+    "Boss Node AED", "Filmes", "Músicas", "Conhecimentos Gerais", "Filmes",
+    "Boss Node AED", "Matemática", "Conhecimentos Gerais", "Músicas", "Final"
 };
 
 void resetBoard() {
@@ -109,8 +109,14 @@ void resetBoard() {
 
 void *loadQuestionThread(void *arg) {
     Tile *tile = (Tile *)arg;
-    const char (*themes)[100] = getThemesOfTopic(tile->topic);
-    _questionTile = themes ? addQuestion(tile->topic, themes[0]) : (Question){0};
+    Theme temaEnum = topicToTheme(tile->topic);
+    Question newQuestion = (temaEnum != THEME_COUNT) ? addQuestion(tile->topic, temaEnum) : (Question){0};
+
+    // Libera a memória da questão anterior, se existir
+    if (_questionTile.statement != NULL) {
+        freeQuestion(_questionTile);
+    }
+    _questionTile = newQuestion;
     _loadingFinishedBoard = true;
     return NULL;
 }
@@ -162,7 +168,11 @@ void createBoard() {
     }
 
     for (int i = 0; i < BOARD_SIZE; i++) {
-        createTile(QUESTION, tileLabels[i], i);
+        TileType type = QUESTION; // Tipo padrão é QUESTION
+        if (strcmp(tileLabels[i], "Boss Node AED") == 0) {
+            // type = BOSS;
+        }
+        createTile(type, tileLabels[i], i);
     }
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
@@ -246,7 +256,8 @@ void updateBoard() {
                         diceRolled = false; // Reset para o próximo turno
                     }
                 } else if (IsKeyPressed(KEY_SPACE)) {
-                    _dice = rand() % 6 + 1;
+                    // _dice = rand() % 6 + 1;
+                    _dice = 5;
                     setDiceResult(_dice);
                     diceRolled = true;
                     diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
@@ -291,6 +302,11 @@ void updateBoard() {
                             _loadingFinishedBoard = false;
                             pthread_create(&_loadThread, NULL, loadQuestionThread, player->currentTile);
                             _eventState = EVENT_LOADING;
+                        } else if (player->currentTile->type == BOSS) { 
+                            // // Tratamento básico inicial: apenas finalize o turno
+                            // printf("Jogador caiu na Boss Node AED.\n");
+                            // printf("Finalizando turno do Jogador %d.\n", _currentPlayerIndex + 1);
+                            // finalizeTurn();
                         } else {
                             finalizeTurn();
                         }

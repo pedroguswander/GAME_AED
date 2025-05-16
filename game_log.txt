@@ -1,0 +1,2723 @@
+INFO: Initializing raylib 5.6-dev
+INFO: Platform backend: DESKTOP (GLFW)
+INFO: Supported raylib modules:
+INFO:     > rcore:..... loaded (mandatory)
+INFO:     > rlgl:...... loaded (mandatory)
+INFO:     > rshapes:... loaded (optional)
+INFO:     > rtextures:. loaded (optional)
+INFO:     > rtext:..... loaded (optional)
+INFO:     > rmodels:... loaded (optional)
+INFO:     > raudio:.... loaded (optional)
+INFO: DISPLAY: Device initialized successfully
+INFO:     > Display size: 1920 x 1080
+INFO:     > Screen size:  1920 x 1080
+INFO:     > Render size:  1920 x 1080
+INFO:     > Viewport offsets: 0, 0
+INFO: GLAD: OpenGL extensions loaded successfully
+INFO: GL: Supported extensions count: 232
+INFO: GL: OpenGL device information:
+INFO:     > Vendor:   Intel
+INFO:     > Renderer: Mesa Intel(R) Graphics (ADL GT2)
+INFO:     > Version:  4.6 (Core Profile) Mesa 24.2.8-1ubuntu1~24.04.1
+INFO:     > GLSL:     4.60
+INFO: GL: VAO extension detected, VAO functions loaded successfully
+INFO: GL: NPOT textures extension detected, full NPOT textures supported
+INFO: GL: DXT compressed textures supported
+INFO: GL: ETC2/EAC compressed textures supported
+INFO: PLATFORM: DESKTOP (GLFW - X11): Initialized successfully
+INFO: TEXTURE: [ID 1] Texture loaded successfully (1x1 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 1] Default texture loaded successfully
+INFO: SHADER: [ID 1] Vertex shader compiled successfully
+INFO: SHADER: [ID 2] Fragment shader compiled successfully
+INFO: SHADER: [ID 3] Program shader loaded successfully
+INFO: SHADER: [ID 3] Default shader loaded successfully
+INFO: RLGL: Render batch vertex buffers loaded successfully in RAM (CPU)
+INFO: RLGL: Render batch vertex buffers loaded successfully in VRAM (GPU)
+INFO: RLGL: Default OpenGL state initialized successfully
+INFO: TEXTURE: [ID 2] Texture loaded successfully (128x128 | GRAY_ALPHA | 1 mipmaps)
+INFO: FONT: Default font loaded successfully (224 glyphs)
+INFO: SYSTEM: Working Directory: /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED
+INFO: SYSTEM: Working Directory: /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/assets
+INFO: AUDIO: Device initialized successfully
+INFO:     > Backend:       miniaudio | PulseAudio
+INFO:     > Format:        32-bit IEEE Floating Point -> 32-bit Signed Integer
+INFO:     > Channels:      2 -> 2
+INFO:     > Sample rate:   48000 -> 48000
+INFO:     > Periods size:  3600
+INFO: FILEIO: [background-board-mode-1.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (1920x1080 | R8G8B8 | 1 mipmaps)
+INFO: TEXTURE: [ID 3] Texture loaded successfully (1920x1080 | R8G8B8 | 1 mipmaps)
+INFO: FILEIO: [music/videoplayback.wav] File loaded successfully
+INFO: WAVE: Data loaded successfully (44100 Hz, 16 bit, 2 channels)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-1.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 4] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-1.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 5] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-1.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 6] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-2.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 7] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-2.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 8] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-2.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 9] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-3.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 10] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-3.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 11] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-3.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 12] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-4.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 13] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-4.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 14] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-4.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 15] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-5.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 16] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-5.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 17] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-5.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 18] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-back/hero-walk-back-6.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 19] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-side/hero-walk-side-6.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 20] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/walk/hero-walk-front/hero-walk-front-6.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 21] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [player/hero-idle-front.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 22] Texture loaded successfully (32x32 | R8G8B8A8 | 1 mipmaps)
+INFO: FILEIO: [objects/dice.png] File loaded successfully
+INFO: IMAGE: Data loaded successfully (96x16 | R8G8B8A8 | 1 mipmaps)
+INFO: TEXTURE: [ID 23] Texture loaded successfully (96x16 | R8G8B8A8 | 1 mipmaps)
+INFO: TIMER: Target time per frame: 16.667 milliseconds
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647647)
+INFO: (-0.761940 -0.647647)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647647)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761939 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761939 -0.647649)
+INFO: (-0.761940 -0.647648)
+INFO: (-0.761942 -0.647646)
+INFO: (0.761490 0.648177)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (-1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (-1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (1.000000 0.000000)
+INFO: (-1.000000 0.000000)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646978)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762509 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646976)
+INFO: (0.762510 -0.646976)
+INFO: (0.762510 -0.646977)
+INFO: (0.762510 -0.646976)
+INFO: (0.762510 -0.646976)
+INFO: (0.762510 -0.646976)
+INFO: (0.762511 -0.646976)
+INFO: (0.762511 -0.646976)
+INFO: (0.762510 -0.646976)
+INFO: (0.762511 -0.646976)
+INFO: (0.762511 -0.646976)
+INFO: (0.762510 -0.646976)
+INFO: (0.762511 -0.646976)
+INFO: (0.762512 -0.646975)
+INFO: (0.762512 -0.646974)
+INFO: (0.762512 -0.646974)
+INFO: (0.762513 -0.646973)
+INFO: (0.762513 -0.646973)
+INFO: (0.762512 -0.646974)
+INFO: (0.762513 -0.646973)
+INFO: (-0.762523 0.646961)
+get_random_subtheme chamado com tema: 4
+get_random_subtheme chamado com tema: 4
+Tema AED, índice selecionado: 54, subtema: "diferença entre array e lista encadeada"
+Subtema selecionado: "diferença entre array e lista encadeada"
+Prompt enviado para a API (final):
+Crie uma questão de múltipla escolha sobre diferença entre array e lista encadeada em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta.
+Resposta bruta da API (bytes):
+7b 0a 20 20 22 63 61 6e 64 69 64 61 74 65 73 22 
+3a 20 5b 0a 20 20 20 20 7b 0a 20 20 20 20 20 20 
+22 63 6f 6e 74 65 6e 74 22 3a 20 7b 0a 20 20 20 
+20 20 20 20 20 22 70 61 72 74 73 22 3a 20 5b 0a 
+20 20 20 20 20 20 20 20 20 20 7b 0a 20 20 20 20 
+20 20 20 20 20 20 20 20 22 74 65 78 74 22 3a 20 
+22 60 60 60 6a 73 6f 6e 5c 6e 7b 5c 6e 20 20 5c 
+22 65 6e 75 6e 63 69 61 64 6f 5c 22 3a 20 5c 22 
+51 75 61 6c 20 61 20 70 72 69 6e 63 69 70 61 6c 
+20 64 69 66 65 72 65 6e c3 a7 61 20 65 6e 74 72 
+65 20 75 6d 20 61 72 72 61 79 20 65 20 75 6d 61 
+20 6c 69 73 74 61 20 65 6e 63 61 64 65 61 64 61 
+20 65 6d 20 74 65 72 6d 6f 73 20 64 65 20 61 72 
+6d 61 7a 65 6e 61 6d 65 6e 74 6f 20 64 65 20 64 
+61 64 6f 73 20 6e 61 20 6d 65 6d c3 b3 72 69 61 
+3f 5c 22 2c 5c 6e 20 20 5c 22 61 6c 74 65 72 6e 
+61 74 69 76 61 73 5c 22 3a 20 7b 5c 6e 20 20 20 
+20 5c 22 41 5c 22 3a 20 5c 22 41 72 72 61 79 73 
+20 61 72 6d 61 7a 65 6e 61 6d 20 64 61 64 6f 73 
+20 64 65 20 66 6f 72 6d 61 20 73 65 71 75 65 6e 
+63 69 61 6c 20 6e 61 20 6d 65 6d c3 b3 72 69 61 
+2c 20 65 6e 71 75 61 6e 74 6f 20 6c 69 73 74 61 
+73 20 65 6e 63 61 64 65 61 64 61 73 20 61 72 6d 
+61 7a 65 6e 61 6d 20 64 61 64 6f 73 20 64 65 20 
+66 6f 72 6d 61 20 6e c3 a3 6f 20 73 65 71 75 65 
+6e 63 69 61 6c 2c 20 63 6f 6d 20 70 6f 6e 74 65 
+69 72 6f 73 20 69 6e 64 69 63 61 6e 64 6f 20 6f 
+20 70 72 c3 b3 78 69 6d 6f 20 65 6c 65 6d 65 6e 
+74 6f 2e 5c 22 2c 5c 6e 20 20 20 20 5c 22 42 5c 
+22 3a 20 5c 22 41 72 72 61 79 73 20 73 c3 a3 6f 
+20 6d 61 69 73 20 65 66 69 63 69 65 6e 74 65 73 
+20 70 61 72 61 20 69 6e 73 65 72 c3 a7 c3 b5 65 
+73 20 65 20 72 65 6d 6f c3 a7 c3 b5 65 73 20 64 
+65 20 65 6c 65 6d 65 6e 74 6f 73 20 6e 6f 20 6d 
+65 69 6f 20 64 61 20 65 73 74 72 75 74 75 72 61 
+2c 20 65 6e 71 75 61 6e 74 6f 20 6c 69 73 74 61 
+73 20 65 6e 63 61 64 65 61 64 61 73 20 73 c3 a3 
+6f 20 6d 61 69 73 20 65 66 69 63 69 65 6e 74 65 
+73 20 70 61 72 61 20 61 63 65 73 73 6f 73 20 61 
+6c 65 61 74 c3 b3 72 69 6f 73 2e 5c 22 2c 5c 6e 
+20 20 20 20 5c 22 43 5c 22 3a 20 5c 22 4c 69 73 
+74 61 73 20 65 6e 63 61 64 65 61 64 61 73 20 75 
+74 69 6c 69 7a 61 6d 20 6d 65 6e 6f 73 20 6d 65 
+6d c3 b3 72 69 61 20 71 75 65 20 61 72 72 61 79 
+73 2c 20 69 6e 64 65 70 65 6e 64 65 6e 74 65 20 
+64 6f 20 74 61 6d 61 6e 68 6f 20 64 6f 73 20 64 
+61 64 6f 73 2e 5c 22 2c 5c 6e 20 20 20 20 5c 22 
+44 5c 22 3a 20 5c 22 41 72 72 61 79 73 20 73 c3 
+a3 6f 20 65 73 74 72 75 74 75 72 61 73 20 64 69 
+6e c3 a2 6d 69 63 61 73 2c 20 65 6e 71 75 61 6e 
+74 6f 20 6c 69 73 74 61 73 20 65 6e 63 61 64 65 
+61 64 61 73 20 73 c3 a3 6f 20 65 73 74 72 75 74 
+75 72 61 73 20 65 73 74 c3 a1 74 69 63 61 73 2e 
+5c 22 5c 6e 20 20 7d 2c 5c 6e 20 20 5c 22 72 65 
+73 70 6f 73 74 61 43 6f 72 72 65 74 61 5c 22 3a 
+20 5c 22 41 5c 22 5c 6e 7d 5c 6e 60 60 60 5c 6e 
+22 0a 20 20 20 20 20 20 20 20 20 20 7d 0a 20 20 
+20 20 20 20 20 20 5d 2c 0a 20 20 20 20 20 20 20 
+20 22 72 6f 6c 65 22 3a 20 22 6d 6f 64 65 6c 22 
+0a 20 20 20 20 20 20 7d 2c 0a 20 20 20 20 20 20 
+22 66 69 6e 69 73 68 52 65 61 73 6f 6e 22 3a 20 
+22 53 54 4f 50 22 2c 0a 20 20 20 20 20 20 22 61 
+76 67 4c 6f 67 70 72 6f 62 73 22 3a 20 2d 30 2e 
+31 33 36 38 39 39 32 37 34 33 32 38 34 38 30 35 
+39 0a 20 20 20 20 7d 0a 20 20 5d 2c 0a 20 20 22 
+75 73 61 67 65 4d 65 74 61 64 61 74 61 22 3a 20 
+7b 0a 20 20 20 20 22 70 72 6f 6d 70 74 54 6f 6b 
+65 6e 43 6f 75 6e 74 22 3a 20 34 32 2c 0a 20 20 
+20 20 22 63 61 6e 64 69 64 61 74 65 73 54 6f 6b 
+65 6e 43 6f 75 6e 74 22 3a 20 31 38 34 2c 0a 20 
+20 20 20 22 74 6f 74 61 6c 54 6f 6b 65 6e 43 6f 
+75 6e 74 22 3a 20 32 32 36 2c 0a 20 20 20 20 22 
+70 72 6f 6d 70 74 54 6f 6b 65 6e 73 44 65 74 61 
+69 6c 73 22 3a 20 5b 0a 20 20 20 20 20 20 7b 0a 
+20 20 20 20 20 20 20 20 22 6d 6f 64 61 6c 69 74 
+79 22 3a 20 22 54 45 58 54 22 2c 0a 20 20 20 20 
+20 20 20 20 22 74 6f 6b 65 6e 43 6f 75 6e 74 22 
+3a 20 34 32 0a 20 20 20 20 20 20 7d 0a 20 20 20 
+20 5d 2c 0a 20 20 20 20 22 63 61 6e 64 69 64 61 
+74 65 73 54 6f 6b 65 6e 73 44 65 74 61 69 6c 73 
+22 3a 20 5b 0a 20 20 20 20 20 20 7b 0a 20 20 20 
+20 20 20 20 20 22 6d 6f 64 61 6c 69 74 79 22 3a 
+20 22 54 45 58 54 22 2c 0a 20 20 20 20 20 20 20 
+20 22 74 6f 6b 65 6e 43 6f 75 6e 74 22 3a 20 31 
+38 34 0a 20 20 20 20 20 20 7d 0a 20 20 20 20 5d 
+0a 20 20 7d 2c 0a 20 20 22 6d 6f 64 65 6c 56 65 
+72 73 69 6f 6e 22 3a 20 22 67 65 6d 69 6e 69 2d 
+31 2e 35 2d 66 6c 61 73 68 2d 6c 61 74 65 73 74 
+22 0a 7d 0a Tamanho da resposta bruta: 1411
+Primeiro byte da resposta (hex): 7b
+Último byte da resposta (hex): 7d
+A resposta parece começar e terminar com chaves.
+
+Resposta bruta da API (string):
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?\",\n  \"alternativas\": {\n    \"A\": \"Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.\",\n    \"B\": \"Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.\",\n    \"C\": \"Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.\",\n    \"D\": \"Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13689927432848059
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 184,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 184
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+String sendo passada para cJSON_Parse(text->valuestring):
+```json
+{
+  "enunciado": "Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?",
+  "alternativas": {
+    "A": "Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.",
+    "B": "Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.",
+    "C": "Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.",
+    "D": "Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas."
+  },
+  "respostaCorreta": "A"
+}
+```
+
+JSON extraído da resposta:
+{
+  "enunciado": "Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?",
+  "alternativas": {
+    "A": "Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.",
+    "B": "Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.",
+    "C": "Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.",
+    "D": "Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas."
+  },
+  "respostaCorreta": "A"
+}
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+
+================ PERGUNTA ================
+Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?
+A) Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.
+B) Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.
+C) Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.
+D) Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.
+==========================================
+
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646977)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: (-0.762509 0.646978)
+INFO: TEXTURE: [ID 3] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 4] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 5] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 6] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 7] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 8] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 9] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 10] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 11] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 12] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 13] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 14] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 15] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 16] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 17] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 18] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 19] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 20] Unloaded texture data from VRAM (GPU)
+INFO: TEXTURE: [ID 21] Unloaded texture data from VRAM (GPU)
+GAME_AED: /opt/libs/raylib/src/external/miniaudio.h:30719: ma_device__cork_stream__pulse: Assertion `pStream != ((void *)0)' failed.

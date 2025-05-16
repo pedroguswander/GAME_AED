@@ -1,8 +1,8 @@
 {
-    "enunciado": "Qual é a capital da França?",
-    "alternativaA": "A) Paris",
-    "alternativaB": "B) Londres",
-    "alternativaC": "C) Roma",
-    "alternativaD": "D) Berlim",
-    "correta": "A"
+    "statement": "Qual é a capital da França?",
+    "optionA": "A) Paris",
+    "optionB": "B) Londres",
+    "optionC": "C) Roma",
+    "optionD": "D) Berlim",
+    "answer": "A"
 }

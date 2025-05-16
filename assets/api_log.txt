@@ -1,0 +1,40 @@
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre array e lista encadeada em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?\",\n  \"alternativas\": {\n    \"A\": \"Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.\",\n    \"B\": \"Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.\",\n    \"C\": \"Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.\",\n    \"D\": \"Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13689927432848059
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 184,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 184
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

@@ -1,0 +1,3 @@
+/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/CMakeFiles/GAME_AED.dir
+/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/CMakeFiles/edit_cache.dir
+/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/CMakeFiles/rebuild_cache.dir

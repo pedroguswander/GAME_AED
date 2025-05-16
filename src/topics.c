@@ -1,6 +1,8 @@
 #include "topics.h"
 #include <stdio.h>
 #include <string.h>
+#include <subthemes.h>
+
 
 const char AED_THEMES[5][100] = {
     "PILHA", "FILA", "ARVORE", "BUBBLE SORT", "LISTA ENCADEADA"
@@ -60,4 +62,13 @@ const char (*getThemesOfTopic(const char *topic))[100] {
         return MATEMATICA_THEMES;
     }
     return NULL;
+}
+
+Theme topicToTheme(const char *topic) {
+    if (strcmp(topic, "Matemática") == 0) return THEME_MATEMATICA;
+    if (strcmp(topic, "Músicas") == 0) return THEME_MUSICA;
+    if (strcmp(topic, "Filmes") == 0) return THEME_FILMES;
+    if (strcmp(topic, "Conhecimentos Gerais") == 0) return THEME_CONHECIMENTOS_GERAIS;
+    if (strcmp(topic, "Boss Node AED") == 0) return THEME_AED;
+    return THEME_COUNT; // valor padrão para erro
 }

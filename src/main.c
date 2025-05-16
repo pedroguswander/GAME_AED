@@ -16,6 +16,7 @@
 #include "time.h"
 #include "string.h"
 #include "board.h"
+#include <subthemes.h>
 
 
 typedef enum {
@@ -398,9 +399,9 @@ void checkIfAnswerIsRight(Option *options, Question question) {
 void *loadQuestionsThread(void *arg) {
     const char *topic = (const char *)arg;
     const char (*themes)[100] = getThemesOfTopic(topic);
-
+    
     for (int j = 0; j < 5; j++) {
-        questions[j] = addQuestion(topic, themes[j]);
+        questions[j] = addQuestion(topic, topicToTheme(themes[j]));
     }
 
     _loadingFinished = true;
