@@ -253,13 +253,34 @@ int main() {
 
         switch (_menuOption)
 {
-    case MAIN_MENU:
-        DrawText("MENU PRINCIPAL", screenWidth/2 - MeasureText("MENU PRINCIPAL", 40)/2, 80, 40, YELLOW);
-        for (int i = 0; i < 5; i++) {
-            DrawRectangleRec(mainMenuButtons[i], DARKGRAY);
-            DrawText(mainMenuLabels[i], mainMenuButtons[i].x + 20, mainMenuButtons[i].y + 15, 24, WHITE);
-        }
-        break;
+            case MAIN_MENU: {
+                // Fundo animado com variação suave de cores
+                float t = GetTime();
+                int r = 30 + 20 * sinf(t);
+                int g = 50 + 20 * sinf(t + 1.0f);
+                int b = 70 + 20 * sinf(t + 2.0f);
+                ClearBackground((Color){ r, g, b, 255 });
+
+                // Bolhas subindo
+                for (int i = 0; i < 50; i++) {
+                    float y = (float)(screenHeight - fmod(GetTime() * 50 + i * 40, screenHeight));
+                    float x = 100 + (i * 30) % screenWidth;
+                    DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
+                }
+
+                // Título centralizado
+                const char *titulo = "MENU PRINCIPAL";
+                int larguraTexto = MeasureText(titulo, 40);
+                DrawText(titulo, screenWidth/2 - larguraTexto/2, 80, 40, YELLOW);
+
+                // Botões do menu
+                for (int i = 0; i < 5; i++) {
+                    DrawRectangleRec(mainMenuButtons[i], DARKGRAY);
+                    DrawText(mainMenuLabels[i], mainMenuButtons[i].x + 20, mainMenuButtons[i].y + 15, 24, WHITE);
+                }
+                break;
+            }
+
 
     case QUIZ_MODE:
         switch (_quizScreen) {
