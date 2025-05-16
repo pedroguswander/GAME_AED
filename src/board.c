@@ -37,7 +37,6 @@ Tile *_tilesTAIL = NULL;
 
 Player _players[MAX_PLAYERS];
 
-Texture2D _playerText = {0};
 Rectangle _playerTextSrc = {0};
 Rectangle _playerTextDest = {0};
 
@@ -180,8 +179,10 @@ void createBoard() {
             false,
             _playerColor,
             CAN_PLAY,
-            playerIdleSprite,
+            (Texture2D) {0},
         };
+
+        setSpriteToIdle(&_players[i]);
     }
 
     _boardCamera = (Camera2D) {
@@ -265,7 +266,7 @@ void updateBoard() {
             }
             
             // Mantém o flip atual quando voltar para idle
-            player->sprite = playerIdleSprite;
+            setSpriteToIdle(player);
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
@@ -278,7 +279,7 @@ void updateBoard() {
                 break;
             } 
 
-            player->sprite = playerIdleSprite;
+            setSpriteToIdle(player);
             finalizeTurn();
             break;
 
@@ -412,7 +413,7 @@ void drawBoard() {
 
 
             BeginMode2D(_boardCamera);
-            
+
                 DrawTexture(backgroundTexture, 0, 0, WHITE);
                 DrawCircle(_boardCamera.target.x, _boardCamera.target.y, 10, RED);
                 drawPlayer(&_players[_currentPlayerIndex]);
@@ -454,7 +455,7 @@ void finalizeTurn() {
     _boardState = CAN_PLAY;
 }
 
-void setPlayerSpriteAnimation(Player *player)
+/*void setPlayerSpriteAnimation(Player *player)
 {
     Vector2 targetPos = player->nextTile->position;
     Vector2 direction = Vector2Subtract(targetPos, player->position);
@@ -490,7 +491,7 @@ void setPlayerSpriteAnimation(Player *player)
         player->sprite = playerWalkFrontSheet[currentSpriteIndex];
         player->flipHorizontal = false;
     }
-}
+}*/
 
 bool movePlayer(Player *player, bool forward) {
     if (player->currentTile == NULL || player->targetTile == NULL) return true;
@@ -558,7 +559,6 @@ void drawPlayer(Player *p)
 void freeBoard() {
     // Libera texturas e sons
     UnloadTexture(backgroundTexture);
-    UnloadTexture(_playerText);
     UnloadSound(victoyTheme);
     UnloadPlayerAnimation();
 

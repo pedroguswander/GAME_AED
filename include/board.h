@@ -57,7 +57,6 @@ void changePlayerWalkAnimationSprite(void);
 void drawPlayer(Player *p);
 void freeBoard();
 void resetBoard();
-void setPlayerSpriteAnimation(Player *player);
 
 
 

@@ -1,6 +1,7 @@
-#include "player_animation.h"
 #include <string.h>
 #include <stdio.h>
+#include "player_animation.h"
+#include "raymath.h"
 
 static char playerWalkBackPath[1000] = "player/walk/hero-walk-back/";
 static const char *playerWalkBackFiles[PLAYER_WALK_SHEET_SIZE] = {
@@ -29,7 +30,53 @@ Texture2D playerIdleSprite;
 int currentSpriteIndex = 0;
 static float changeSpriteTimer = 15.0f/60;
 
+
+void setPlayerSpriteAnimation(Player *player)
+{
+    Vector2 targetPos = player->nextTile->position;
+    Vector2 direction = Vector2Subtract(targetPos, player->position);
+    direction = Vector2Normalize(direction);
+    TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
+
+    float dx = direction.x;
+    float dy = direction.y;
+    
+    // Tolerância para considerar movimento horizontal/vertical
+    const float tolerance = 0.3f;
+    
+    if (fabs(dy) < tolerance)  // Movimento principalmente horizontal
+    {
+        player->sprite = playerWalkSideSheet[currentSpriteIndex];
+        // Aplica flip horizontal se estiver indo para a esquerda
+        if (dx < 0) 
+        {
+            player->flipHorizontal = true;
+        }
+        else
+        {
+            player->flipHorizontal = false;
+        }
+    }
+    else if (dy < -tolerance)  // Movimento para cima
+    {
+        player->sprite = playerWalkBackSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
+    }
+    else if (dy > tolerance)   // Movimento para baixo
+    {
+        player->sprite = playerWalkFrontSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
+    }
+}
+
+void setSpriteToIdle(Player *player)
+{
+    player->sprite = playerIdleSprite;
+}
+
 void InitPlayerAnimation() {
+    currentSpriteIndex = 0;
+
     char filePath[1024];  // Declarado uma única vez fora do loop
 
     for (int i = 0; i < PLAYER_WALK_SHEET_SIZE; i++) {
