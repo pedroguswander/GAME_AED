@@ -33,8 +33,14 @@ typedef struct {
     Vector2 position;
     Vector2 prevPosition;
     Tile *currentTile;
+    Tile *nextTile;
     Tile *prevTile;
     Tile *targetTile;
+    int number;
+    bool flipHorizontal;
+    Color color;
+    BoardState state;
+    Texture2D sprite;
 } Player;
 
 #define TILE_DISTANCE 150
@@ -48,8 +54,9 @@ void updateBoard(void);
 void drawBoard(void);
 void createBoard(void);
 void changePlayerWalkAnimationSprite(void);
-void drawPlayer(Player *p, int currentPlayerIndex, Texture2D sprite);
+void drawPlayer(Player *p);
 void freeBoard();
+void resetBoard();
 
 
 

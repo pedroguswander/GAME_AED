@@ -2,15 +2,15 @@
 #define PLAYER_ANIMATION_H
 
 #include "raylib.h"
+#include "board.h"
 
-#define PLAYER_WALK_BACK_SHEET_SIZE 6
-
-extern Texture2D playerWalkBackSheet[PLAYER_WALK_BACK_SHEET_SIZE];
-extern int currentSpriteIndex;
+#define PLAYER_WALK_SHEET_SIZE 6
 
 void InitPlayerAnimation();
 void UpdatePlayerAnimation();
 void UnloadPlayerAnimation();
 void ChangePlayerWalkAnimationSprite();
+void setPlayerSpriteAnimation(Player *player);
+void setSpriteToIdle(Player *player);
 
 #endif

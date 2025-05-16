@@ -10,6 +10,8 @@
 #include "pthread.h"
 #include "prompt.h"
 #include "player_animation.h"
+#include "dice_animation.h"
+#include "rlgl.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -27,13 +29,14 @@ Texture2D backgroundTexture;
 BoardState _boardState = CAN_PLAY;
 EventState _eventState = EVENT_NONE;
 
+Camera2D _boardCamera = {0};
+
 Sound victoyTheme;
 Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
 
 Player _players[MAX_PLAYERS];
 
-Texture2D _playerText = {0};
 Rectangle _playerTextSrc = {0};
 Rectangle _playerTextDest = {0};
 
@@ -60,10 +63,25 @@ float waitingToEndDuration = 0.5f;
 Tile *tileBeforePlaying = NULL;
 Color _playerColor = {0};
 
+static bool diceRolled = false;
+static double diceRollTime = 0;
+
 const Vector2 tilePositions[BOARD_SIZE] = {
-    {400, 940}, {200, 770}, {600, 770}, {1000, 770}, {1400, 770},
-    {1730, 490}, {1400, 530}, {1000, 530}, {600, 530}, {200, 530},
-    {180, 290}, {600, 300}, {1000, 300}, {1400, 300}, {1500, 70},
+    {400, 940},
+    {200, 770},
+    {600, 770},
+    {1000, 770},
+    {1400, 770},
+    {1730, 490},
+    {1400, 530},
+    {1000, 530},
+    {600, 530},
+    {200, 530},
+    {180, 290},
+    {600, 300},
+    {1000, 300},
+    {1400, 300},
+    {1500, 70},
 };
 
 const char* tileLabels[BOARD_SIZE] = {
@@ -71,6 +89,23 @@ const char* tileLabels[BOARD_SIZE] = {
     "Conhecimentos Gerais", "Filmes", "Músicas", "Conhecimentos Gerais", "Filmes",
     "Conhecimentos Gerais", "Matemática", "Conhecimentos Gerais", "Músicas", "Filmes",
 };
+
+void resetBoard() {
+    _boardState = CAN_PLAY;
+    _eventState = EVENT_NONE;
+    _loadingFinishedBoard = false;
+    _dice = 0;
+    _targetTile = 0;
+    _acertou = 0;
+    _gotItRigth = 0;
+    _currentPlayerIndex = 0;
+    stepTimer = 0.0f;
+    waitingToEndTimer = 0.0f;
+    isWaiting = false;
+    tileBeforePlaying = NULL;
+    _playerColor = (Color){0};
+}
+
 
 void *loadQuestionThread(void *arg) {
     Tile *tile = (Tile *)arg;
@@ -103,7 +138,11 @@ void createTile(TileType type, const char *topic, int tile) {
 }
 
 void createBoard() {
+    resetBoard();
+
     InitAudioDevice();
+    //BeginMode2D(_boardCamera);
+
     _boardState = CAN_PLAY;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
@@ -112,8 +151,8 @@ void createBoard() {
     victoyTheme = LoadSound("music/videoplayback.wav");
 
     InitPlayerAnimation();
+    initDice();
 
-    _playerText = LoadTexture("player/hero-idle-front.png");
     _playerTextSrc = (Rectangle){0, 0, PLAYER1_TEXT_SIZE, PLAYER1_TEXT_SIZE};
 
     for (int i = 0; i < 4; i++) {
@@ -127,14 +166,31 @@ void createBoard() {
     }
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
+        _playerColor = (i == 0) ? RED : BLUE;
+
         _players[i] = (Player){
             _tilesHEAD->position,
             (Vector2){0, 0},
             _tilesHEAD,
             NULL,
             NULL,
+            NULL,
+            i+1,
+            false,
+            _playerColor,
+            CAN_PLAY,
+            (Texture2D) {0},
         };
+
+        setSpriteToIdle(&_players[i]);
     }
+
+    _boardCamera = (Camera2D) {
+        (Vector2){GetScreenWidth()/2, GetScreenHeight()/2},
+        _players->position,
+        0,
+        1
+    };
 }
 
 Vector2 getPositionOfTile(int tile) {
@@ -169,34 +225,61 @@ int getIndexOfTile(Tile *tile) {
 
 void updateBoard() {
     Player *player = &_players[_currentPlayerIndex];
-    _playerColor = _currentPlayerIndex ? BLUE : RED;
 
-    switch (_boardState) {
-        case CAN_PLAY:
-            if (IsKeyPressed(KEY_SPACE)) {
-                _dice = rand() % 3 + 1;
-                int index = getIndexOfTile(player->currentTile);
-                int destino = index + _dice;
-                if (destino >= BOARD_SIZE) destino = BOARD_SIZE - 1;
-                player->targetTile = getTileByTile(destino);
-                tileBeforePlaying = player->currentTile;
-                _boardState = MOVING;
-            }
+
+        switch (_boardState) {
+            case CAN_PLAY:
+
+                _boardCamera.target = player->position;
+
+                _boardCamera.zoom = 3.0f;
+                if (diceRolled) {
+                    // Espera 0.8 segundos após o lançamento do dado antes de iniciar o movimento
+                    if (GetTime() - diceRollTime >= 0.8) {
+                        int index = getIndexOfTile(player->currentTile);
+                        int destino = index + _dice;
+                        if (destino >= BOARD_SIZE) destino = BOARD_SIZE - 1;
+                        player->targetTile = getTileByTile(destino);
+                        tileBeforePlaying = player->currentTile;
+
+                        _boardState = MOVING;                        
+                        diceRolled = false; // Reset para o próximo turno
+                    }
+                } else if (IsKeyPressed(KEY_SPACE)) {
+                    _dice = rand() % 6 + 1;
+                    setDiceResult(_dice);
+                    diceRolled = true;
+                    diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
+                }
+                else
+                {
+                    updateDice();
+                }
             break;
 
         case MOVING:
             if (!movePlayer(player, true))
             {
                 UpdatePlayerAnimation();
+                setPlayerSpriteAnimation(player);
                 break;
             }
             
+            // Mantém o flip atual quando voltar para idle
+            setSpriteToIdle(player);
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
 
         case MOVING_BACKWARDS:
-            if (!movePlayer(player, false)) break;
+            if (!movePlayer(player, false))
+            {
+                UpdatePlayerAnimation();
+                setPlayerSpriteAnimation(player);
+                break;
+            } 
+
+            setSpriteToIdle(player);
             finalizeTurn();
             break;
 
@@ -260,20 +343,13 @@ void updateBoard() {
             break;
 
         case END:
+            if (CheckCollisionPointRec(GetMousePosition(), (Rectangle) {0, 0, GetScreenWidth(), GetScreenHeight()}))
+            {
+
+            }
             PlaySound(victoyTheme);
             break;
     }
-}
-
-void freeBoard() {
-    UnloadSound(victoyTheme);
-    Tile *current = _tilesHEAD;
-    while (current) {
-        Tile *next = current->next;
-        free(current);
-        current = next;
-    }
-    _tilesHEAD = _tilesTAIL = NULL;
 }
 
 void drawBoard() {
@@ -284,22 +360,28 @@ void drawBoard() {
             }
             switch (_eventState) {
                 case EVENT_DISPLAY_TOPIC:
+                    DrawText("Carregando pergunta...", GetScreenWidth()/2 - 150, GetScreenHeight()/2+300, 30, BLACK);
                     DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+
+
                     DrawText(_players[_currentPlayerIndex].currentTile->topic,
-                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            GetScreenWidth()/2 - 100, GetScreenHeight()/2 - 40,
                             40, BLACK);
-                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
-                    GetScreenHeight()/2 - 100, 48, BLACK);
+
+                            
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 350,
+                    GetScreenHeight()/2 - 300, 48, BLACK);
                     break;
 
                 case EVENT_LOADING:
+                    DrawText("Carregando pergunta...", GetScreenWidth()/2 - 150, GetScreenHeight()/2+300, 30, BLACK);
                     DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
                     DrawText(_players[_currentPlayerIndex].currentTile->topic,
-                            GetScreenWidth()/2 - 200, GetScreenHeight()/2 - 40,
+                            GetScreenWidth()/2 - 100, GetScreenHeight()/2 - 40,
                             40, BLACK);
 
-                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 600,
-                    GetScreenHeight()/2 - 100, 48, BLACK);
+                    DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 350,
+                    GetScreenHeight()/2 - 300, 48, BLACK);
                     break;
 
                 case EVENT_QUESTION:
@@ -327,6 +409,20 @@ void drawBoard() {
                      1920/2, 1080/2, 20, PINK);
             break;
 
+        case CAN_PLAY:
+
+
+            BeginMode2D(_boardCamera);
+
+                DrawTexture(backgroundTexture, 0, 0, WHITE);
+                DrawCircle(_boardCamera.target.x, _boardCamera.target.y, 10, RED);
+                drawPlayer(&_players[_currentPlayerIndex]);
+
+            EndMode2D();
+
+            drawDice();
+            DrawText(TextFormat("P%d - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1), 595, 509, 20, BLACK);
+            break;
         default:
             DrawTexture(backgroundTexture, 0, 0, WHITE);
             const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
@@ -336,15 +432,7 @@ void drawBoard() {
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
-                if (_boardState != MOVING) 
-                {
-                    drawPlayer(p, i, _playerText);
-                }
-
-                else 
-                {
-                    drawPlayer(p, i, playerWalkBackSheet[currentSpriteIndex]);
-                }
+                drawPlayer(p);
             }
 
             if (_tilesHEAD) {
@@ -367,39 +455,130 @@ void finalizeTurn() {
     _boardState = CAN_PLAY;
 }
 
+/*void setPlayerSpriteAnimation(Player *player)
+{
+    Vector2 targetPos = player->nextTile->position;
+    Vector2 direction = Vector2Subtract(targetPos, player->position);
+    direction = Vector2Normalize(direction);
+    TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
+
+    float dx = direction.x;
+    float dy = direction.y;
+    
+    // Tolerância para considerar movimento horizontal/vertical
+    const float tolerance = 0.3f;
+    
+    if (fabs(dy) < tolerance)  // Movimento principalmente horizontal
+    {
+        player->sprite = playerWalkSideSheet[currentSpriteIndex];
+        // Aplica flip horizontal se estiver indo para a esquerda
+        if (dx < 0) 
+        {
+            player->flipHorizontal = true;
+        }
+        else
+        {
+            player->flipHorizontal = false;
+        }
+    }
+    else if (dy < -tolerance)  // Movimento para cima
+    {
+        player->sprite = playerWalkBackSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
+    }
+    else if (dy > tolerance)   // Movimento para baixo
+    {
+        player->sprite = playerWalkFrontSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
+    }
+}*/
+
 bool movePlayer(Player *player, bool forward) {
     if (player->currentTile == NULL || player->targetTile == NULL) return true;
 
-    // Posição destino temporária: a do próximo tile
-    Tile *nextTile = forward ? player->currentTile->next : player->currentTile->prev;
-    if (nextTile == NULL) return true;
+    // Se não tiver próximo tile definido, defina-o agora
+    if (player->nextTile == NULL) {
+        player->nextTile = forward ? player->currentTile->next : player->currentTile->prev;
+        if (player->nextTile == NULL) return true;
+    }
 
-    Vector2 targetPos = nextTile->position;
-
-    // Calcula a direção corretamente
+    Vector2 targetPos = player->nextTile->position;
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     float distance = Vector2Length(direction);
 
-    if (distance < 5.0f) {  // Chegou suficientemente perto do próximo tile
-        player->position = targetPos;  // Ajusta posição
+    if (distance < 3.0f) {
+        // Chegou ao próximo tile
+        player->position = targetPos;
         player->prevTile = player->currentTile;
-        player->currentTile = nextTile;
+        player->currentTile = player->nextTile;
+
+        // Verifica se chegou ao destino final
+        if (player->currentTile == player->targetTile) {
+            player->nextTile = NULL;
+            return true;
+        }
+
+        // Define o próximo tile novamente
+        player->nextTile = forward ? player->currentTile->next : player->currentTile->prev;
+        if (player->nextTile == NULL) return true;
     } else {
-        // Move o jogador gradualmente em direção ao próximo tile
+        // Movimento suave
         direction = Vector2Normalize(direction);
-        Vector2 movement = Vector2Scale(direction, 300.0f * GetFrameTime()); // velocidade ajustável
+        Vector2 movement = Vector2Scale(direction, 250.0f * GetFrameTime());
         player->position = Vector2Add(player->position, movement);
     }
 
-    // Verifica se já chegou no tile destino
-    return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
+    return false;
 }
 
-void drawPlayer(Player *p, int currentPlayerIndex, Texture2D sprite)
+void drawPlayer(Player *p)
 {
-    _playerTextDest = (Rectangle){p->position.x + currentPlayerIndex * 40, p->position.y,
-    _playerTextSrc.width * PLAYER1_TEXT_SCALE, _playerTextSrc.height * PLAYER1_TEXT_SCALE};
-    DrawTexturePro(sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
-    DrawText(TextFormat("P%d", _currentPlayerIndex + 1),
-     _playerTextDest.x+_playerTextDest.width/2, _playerTextDest.y-50, 20, currentPlayerIndex? BLUE: RED);
+    Vector2 playerCenter = {
+        p->position.x + p->number * 40 + (_playerTextSrc.width * PLAYER1_TEXT_SCALE)/2,
+        p->position.y + (_playerTextSrc.height * PLAYER1_TEXT_SCALE)/2
+    };
+    
+    // Draw player texture
+    _playerTextDest = (Rectangle){
+        p->position.x + p->number * 40, 
+        p->position.y,
+        p->flipHorizontal? -1 * _playerTextSrc.width * PLAYER1_TEXT_SCALE: _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
+        _playerTextSrc.height * PLAYER1_TEXT_SCALE
+    };
+    DrawTexturePro(p->sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
+    
+    const char* playerLabel = TextFormat("P%d", p->number);
+    int labelWidth = MeasureText(playerLabel, 20);
+    DrawText(playerLabel,
+             playerCenter.x - labelWidth/2,  
+             p->position.y - 20,             
+             10, 
+             p->color);
+}
+
+void freeBoard() {
+    // Libera texturas e sons
+    UnloadTexture(backgroundTexture);
+    UnloadSound(victoyTheme);
+    UnloadPlayerAnimation();
+
+    // Finaliza a thread se estiver ativa
+    if (!_loadingFinishedBoard) {
+        pthread_cancel(_loadThread); // força o encerramento
+        pthread_join(_loadThread, NULL);
+    }
+
+    // Libera lista de tiles
+    Tile *current = _tilesHEAD;
+    while (current) {
+        Tile *next = current->next;
+        free(current);
+        current = next;
+    }
+
+    _tilesHEAD = NULL;
+    _tilesTAIL = NULL;
+
+    // Reseta questão atual
+    memset(&_questionTile, 0, sizeof(Question));
 }
