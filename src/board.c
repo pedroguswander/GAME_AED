@@ -61,9 +61,21 @@ Tile *tileBeforePlaying = NULL;
 Color _playerColor = {0};
 
 const Vector2 tilePositions[BOARD_SIZE] = {
-    {400, 940}, {200, 770}, {600, 770}, {1000, 770}, {1400, 770},
-    {1730, 490}, {1400, 530}, {1000, 530}, {600, 530}, {200, 530},
-    {180, 290}, {600, 300}, {1000, 300}, {1400, 300}, {1500, 70},
+    {400, 940},
+    {200, 770},
+    {600, 770},
+    {1000, 770},
+    {1400, 770},
+    {1730, 490},
+    {1400, 530},
+    {1000, 530},
+    {600, 530},
+    {200, 530},
+    {180, 290},
+    {600, 300},
+    {1000, 300},
+    {1400, 300},
+    {1500, 70},
 };
 
 const char* tileLabels[BOARD_SIZE] = {
@@ -153,7 +165,9 @@ void createBoard() {
             _tilesHEAD,
             NULL,
             NULL,
+            NULL,
             i+1,
+            false,
             _playerColor,
             CAN_PLAY,
             playerIdleSprite,
@@ -215,7 +229,8 @@ void updateBoard() {
                 break;
             }
             
-            _playerTextSrc = (Rectangle) {_playerTextSrc.x, _playerTextSrc.y, abs(_playerTextSrc.width) , _playerTextSrc.height};
+            // Mantém o flip atual quando voltar para idle
+            _playerTextSrc.width = player->flipHorizontal ? -abs(_playerTextSrc.width) : abs(_playerTextSrc.width);
             player->sprite = playerIdleSprite;
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
@@ -389,52 +404,75 @@ void setPlayerSpriteAnimation(Player *player)
     Vector2 targetPos = player->currentTile->next->position;
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     direction = Vector2Normalize(direction);
+    TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
 
     float dx = direction.x;
     float dy = direction.y;
-
-    if (dx == 1 && dy == 0)
+    
+    // Tolerância para considerar movimento horizontal/vertical
+    const float tolerance = 0.3f;
+    
+    if (fabs(dy) < tolerance)  // Movimento principalmente horizontal
     {
         player->sprite = playerWalkSideSheet[currentSpriteIndex];
+        // Aplica flip horizontal se estiver indo para a esquerda
+        if (dx < 0) 
+        {
+            player->flipHorizontal = true;
+        }
+        else
+        {
+            player->flipHorizontal = false;
+        }
     }
-    else if (dy < 0)
+    else if (dy < -tolerance)  // Movimento para cima
     {
         player->sprite = playerWalkBackSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
     }
-    else if (dx == -1 && dy == 0)
+    else if (dy > tolerance)   // Movimento para baixo
     {
-        //_playerTextSrc = (Rectangle) {_playerTextSrc.x, _playerTextSrc.y, -_playerTextSrc.width , _playerTextSrc.height};
-        player->sprite = playerWalkSideSheet[currentSpriteIndex];
+        //player->sprite = playerWalkFrontSheet[currentSpriteIndex];
+        player->flipHorizontal = false;
     }
 }
 
 bool movePlayer(Player *player, bool forward) {
     if (player->currentTile == NULL || player->targetTile == NULL) return true;
 
-    // Posição destino temporária: a do próximo tile
-    Tile *nextTile = forward ? player->currentTile->next : player->currentTile->prev;
-    if (nextTile == NULL) return true;
+    // Se não tiver próximo tile definido, defina-o agora
+    if (player->nextTile == NULL) {
+        player->nextTile = forward ? player->currentTile->next : player->currentTile->prev;
+        if (player->nextTile == NULL) return true;
+    }
 
-    Vector2 targetPos = nextTile->position;
-
-    // Calcula a direção corretamente
+    Vector2 targetPos = player->nextTile->position;
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     float distance = Vector2Length(direction);
 
-    if (distance < 5.0f) {  // Chegou suficientemente perto do próximo tile
-        player->position = targetPos;  // Ajusta posição
+    if (distance < 3.0f) {
+        // Chegou ao próximo tile
+        player->position = targetPos;
         player->prevTile = player->currentTile;
-        player->currentTile = nextTile;
+        player->currentTile = player->nextTile;
+
+        // Verifica se chegou ao destino final
+        if (player->currentTile == player->targetTile) {
+            player->nextTile = NULL;
+            return true;
+        }
+
+        // Define o próximo tile novamente
+        player->nextTile = forward ? player->currentTile->next : player->currentTile->prev;
+        if (player->nextTile == NULL) return true;
     } else {
-        // Move o jogador gradualmente em direção ao próximo tile
+        // Movimento suave
         direction = Vector2Normalize(direction);
-        TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
-        Vector2 movement = Vector2Scale(direction, 300.0f * GetFrameTime()); // velocidade ajustável
+        Vector2 movement = Vector2Scale(direction, 250.0f * GetFrameTime());
         player->position = Vector2Add(player->position, movement);
     }
 
-    // Verifica se já chegou no tile destino
-    return player->currentTile == player->targetTile && Vector2Distance(player->position, player->currentTile->position) < 1.0f;
+    return false;
 }
 
 void drawPlayer(Player *p)
@@ -444,11 +482,13 @@ void drawPlayer(Player *p)
         p->position.y + (_playerTextSrc.height * PLAYER1_TEXT_SCALE)/2
     };
     
+
+
     // Draw player texture
     _playerTextDest = (Rectangle){
         p->position.x + p->number * 40, 
         p->position.y,
-        _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
+        p->flipHorizontal? -1 * _playerTextSrc.width * PLAYER1_TEXT_SCALE: _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
         _playerTextSrc.height * PLAYER1_TEXT_SCALE
     };
     DrawTexturePro(p->sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);

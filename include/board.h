@@ -33,9 +33,11 @@ typedef struct {
     Vector2 position;
     Vector2 prevPosition;
     Tile *currentTile;
+    Tile *nextTile;
     Tile *prevTile;
     Tile *targetTile;
     int number;
+    bool flipHorizontal;
     Color color;
     BoardState state;
     Texture2D sprite;
