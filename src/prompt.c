@@ -127,10 +127,10 @@ Question addQuestion(const char* topic, Theme theme)
                             printf("JSON extraído da resposta:\n%s\n", json_response);
 
                             // Tenta fazer parse do JSON extraído
-                            cJSON *question = cJSON_Parse(json_response);
+                            cJSON *question_json = cJSON_Parse(json_response);
                             free(json_response);
 
-                            if (!question) {
+                            if (!question_json) {
                                 const char *error_ptr = cJSON_GetErrorPtr();
                                 if (error_ptr != NULL) {
                                     fprintf(stderr, "Erro ao fazer parse do JSON extraído na posição: %s\n", error_ptr);
@@ -138,12 +138,28 @@ Question addQuestion(const char* topic, Theme theme)
                                     fprintf(stderr, "Erro desconhecido ao fazer parse do JSON extraído.\n");
                                 }
                                 printf("Texto bruto recebido:\n%s\n", text->valuestring);
+                                // *** TENTATIVA DE PARSE MAIS ROBUSTA ***
+                                const char *second_json_start = strchr(json_start + 1, '{');
+                                if (second_json_start && second_json_start < json_end) {
+                                    size_t first_json_length = second_json_start - json_start;
+                                    char *first_json_str = malloc(first_json_length + 1);
+                                    if (first_json_str) {
+                                        strncpy(first_json_str, json_start, first_json_length);
+                                        first_json_str[first_json_length] = '\0';
+                                        printf("Tentando parsear o PRIMEIRO JSON extraído:\n%s\n", first_json_str);
+                                        cJSON *first_question_json = cJSON_Parse(first_json_str);
+                                        free(first_json_str);
+                                        if (first_question_json) {
+                                            question_json = first_question_json; // Usa o primeiro JSON válido
+                                        }
+                                    }
+                                }
                             }
-                            
-                            if (question) {
-                                cJSON *enunciado_item = cJSON_GetObjectItem(question, "enunciado");
-                                cJSON *alternativas_item = cJSON_GetObjectItem(question, "alternativas");
-                                cJSON *resposta_correta_item = cJSON_GetObjectItem(question, "respostaCorreta");
+
+                            if (question_json) {
+                                cJSON *enunciado_item = cJSON_GetObjectItem(question_json, "enunciado");
+                                cJSON *alternativas_item = cJSON_GetObjectItem(question_json, "alternativas");
+                                cJSON *resposta_correta_item = cJSON_GetObjectItem(question_json, "respostaCorreta");
 
                                 char *enunciado_str = NULL;
                                 char *a_str = NULL;
@@ -164,9 +180,9 @@ Question addQuestion(const char* topic, Theme theme)
                                     correta_str = strdup(resposta_correta_item->valuestring);
                                 } else {
                                     // Tenta ler com os nomes "question" e "options"
-                                    cJSON *question_item = cJSON_GetObjectItem(question, "question");
-                                    cJSON *options_item = cJSON_GetObjectItem(question, "options");
-                                    cJSON *answer_item = cJSON_GetObjectItem(question, "answer");
+                                    cJSON *question_item = cJSON_GetObjectItem(question_json, "question");
+                                    cJSON *options_item = cJSON_GetObjectItem(question_json, "options");
+                                    cJSON *answer_item = cJSON_GetObjectItem(question_json, "answer");
 
                                     if (question_item && cJSON_IsString(question_item) &&
                                         options_item && cJSON_IsObject(options_item) &&
@@ -195,7 +211,7 @@ Question addQuestion(const char* topic, Theme theme)
                                 if (c_str) free(c_str);
                                 if (d_str) free(d_str);
                                 if (correta_str) free(correta_str);
-                                cJSON_Delete(question);
+                                cJSON_Delete(question_json);
                                 cJSON_Delete(root);
                                 return q;
                             } else {
