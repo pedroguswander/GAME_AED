@@ -11,6 +11,7 @@
 #include "prompt.h"
 #include "player_animation.h"
 #include "dice_animation.h"
+#include "rlgl.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -143,13 +144,6 @@ void createBoard() {
     InitAudioDevice();
     //BeginMode2D(_boardCamera);
 
-    _boardCamera = (Camera2D) {
-        (Vector2){GetScreenWidth()/2, GetScreenHeight()/2},
-        (Vector2) {0, 0},
-        0,
-        1
-    };
-
     _boardState = CAN_PLAY;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
@@ -189,6 +183,13 @@ void createBoard() {
             playerIdleSprite,
         };
     }
+
+    _boardCamera = (Camera2D) {
+        (Vector2){GetScreenWidth()/2, GetScreenHeight()/2},
+        _players->position,
+        0,
+        1
+    };
 }
 
 Vector2 getPositionOfTile(int tile) {
@@ -224,8 +225,13 @@ int getIndexOfTile(Tile *tile) {
 void updateBoard() {
     Player *player = &_players[_currentPlayerIndex];
 
+
         switch (_boardState) {
             case CAN_PLAY:
+
+                _boardCamera.target = player->position;
+
+                _boardCamera.zoom = 3.0f;
                 if (diceRolled) {
                     // Espera 0.8 segundos após o lançamento do dado antes de iniciar o movimento
                     if (GetTime() - diceRollTime >= 0.8) {
@@ -259,14 +265,20 @@ void updateBoard() {
             }
             
             // Mantém o flip atual quando voltar para idle
-            _playerTextSrc.width = player->flipHorizontal ? -abs(_playerTextSrc.width) : abs(_playerTextSrc.width);
             player->sprite = playerIdleSprite;
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
 
         case MOVING_BACKWARDS:
-            if (!movePlayer(player, false)) break;
+            if (!movePlayer(player, false))
+            {
+                UpdatePlayerAnimation();
+                setPlayerSpriteAnimation(player);
+                break;
+            } 
+
+            player->sprite = playerIdleSprite;
             finalizeTurn();
             break;
 
@@ -397,10 +409,18 @@ void drawBoard() {
             break;
 
         case CAN_PLAY:
-            DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
+
+
+            BeginMode2D(_boardCamera);
+            
+                DrawTexture(backgroundTexture, 0, 0, WHITE);
+                DrawCircle(_boardCamera.target.x, _boardCamera.target.y, 10, RED);
+                drawPlayer(&_players[_currentPlayerIndex]);
+
+            EndMode2D();
+
             drawDice();
             DrawText(TextFormat("P%d - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1), 595, 509, 20, BLACK);
-
             break;
         default:
             DrawTexture(backgroundTexture, 0, 0, WHITE);
@@ -436,7 +456,7 @@ void finalizeTurn() {
 
 void setPlayerSpriteAnimation(Player *player)
 {
-    Vector2 targetPos = player->currentTile->next->position;
+    Vector2 targetPos = player->nextTile->position;
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     direction = Vector2Normalize(direction);
     TraceLog(LOG_INFO,"(%f %f)", direction.x, direction.y);
@@ -467,7 +487,7 @@ void setPlayerSpriteAnimation(Player *player)
     }
     else if (dy > tolerance)   // Movimento para baixo
     {
-        //player->sprite = playerWalkFrontSheet[currentSpriteIndex];
+        player->sprite = playerWalkFrontSheet[currentSpriteIndex];
         player->flipHorizontal = false;
     }
 }
@@ -517,8 +537,6 @@ void drawPlayer(Player *p)
         p->position.y + (_playerTextSrc.height * PLAYER1_TEXT_SCALE)/2
     };
     
-
-
     // Draw player texture
     _playerTextDest = (Rectangle){
         p->position.x + p->number * 40, 

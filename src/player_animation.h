@@ -7,9 +7,11 @@
 
 extern Texture2D playerWalkBackSheet[PLAYER_WALK_SHEET_SIZE];
 extern Texture2D playerWalkSideSheet[PLAYER_WALK_SHEET_SIZE];
+extern Texture2D playerWalkFrontSheet[PLAYER_WALK_SHEET_SIZE];
 
 extern Texture2D playerIdleSprite;
 extern int currentSpriteIndex;
+
 
 void InitPlayerAnimation();
 void UpdatePlayerAnimation();
