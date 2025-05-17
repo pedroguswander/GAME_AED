@@ -77,7 +77,7 @@ int main() {
     titleFont = LoadFont("fonts/VT323-Regular.ttf");
     mainMenuFont = LoadFont("fonts/setback.png");
 
-    createBoard();
+    //createBoard();
     
     Rectangle topicButtons[4];
     for (int i = 0; i < 4; i++) {
@@ -176,7 +176,8 @@ int main() {
                             _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
-							 showPlayerNameInputScreen();
+							showPlayerNameInputScreen();
+                            createBoard();
                             _menuOption = TABULEIRO_MODE;
                             break;
                         case 2: // Hall da Fama

@@ -1678,3 +1678,46 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre recordes do Guinness Book em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de distopia futurista em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual desses filmes NÃO é tipicamente classificado como um filme de distopia futurista?\",\n  \"options\": {\n    \"A\": \"Blade Runner 2049\",\n    \"B\": \"Mad Max: Estrada da Fúria\",\n    \"C\": \"O Senhor dos Anéis: A Sociedade do Anel\",\n    \"D\": \"Jogos Vorazes\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Enquanto 'Blade Runner 2049', 'Mad Max: Estrada da Fúria' e 'Jogos Vorazes' retratam sociedades futuristas opressivas e disfuncionais, 'O Senhor dos Anéis: A Sociedade do Anel' é um filme de fantasia épica ambientado em um mundo medieval fictício, não em um futuro distópico.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0899232583602673
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 197,
+    "totalTokenCount": 237,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 197
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

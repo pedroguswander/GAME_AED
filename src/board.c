@@ -111,6 +111,8 @@ void resetBoard() {
     tileBeforePlaying = NULL;
     _playerColors[0] = RED;
     _playerColors[1] = BLUE;
+    strcpy(_playersNames[0], player1Name);
+    strcpy(_playersNames[1], player2Name);
 }
 
 
@@ -595,6 +597,7 @@ void freeBoard() {
 
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
+
 
     // Reseta questão atual
     memset(&_questionTile, 0, sizeof(Question));
