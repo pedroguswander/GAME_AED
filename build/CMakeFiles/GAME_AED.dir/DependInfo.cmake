@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/lib/cjson/cJSON.c" "CMakeFiles/GAME_AED.dir/lib/cjson/cJSON.c.o" "gcc" "CMakeFiles/GAME_AED.dir/lib/cjson/cJSON.c.o.d"
   "/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/src/api.c" "CMakeFiles/GAME_AED.dir/src/api.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/api.c.o.d"
   "/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/src/board.c" "CMakeFiles/GAME_AED.dir/src/board.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/board.c.o.d"
   "/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/src/dice_animation.c" "CMakeFiles/GAME_AED.dir/src/dice_animation.c.o" "gcc" "CMakeFiles/GAME_AED.dir/src/dice_animation.c.o.d"

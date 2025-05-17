@@ -284,7 +284,7 @@ void updateBoard() {
                         diceRolled = false; // Reset para o próximo turno
                     }
                 } else if (IsKeyPressed(KEY_SPACE)) {
-                    _dice = rand() % 3 + 1;
+                    _dice = rand() % 1 + 1;
                     setDiceResult(_dice);
                     diceRolled = true;
                     diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado

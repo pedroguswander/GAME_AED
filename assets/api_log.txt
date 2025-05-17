@@ -2001,3 +2001,2735 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com vilões memoráveis em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme apresenta um vilão amplamente considerado um dos mais memoráveis e icônicos da história do cinema, conhecido por sua inteligência, charme e crueldade?\",\n  \"options\": {\n    \"A\": \"O Poderoso Chefão\",\n    \"B\": \"Psicose\",\n    \"C\": \"O Silêncio dos Inocentes\",\n    \"D\": \"O Grande Ditador\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Hannibal Lecter, de 'O Silêncio dos Inocentes', é frequentemente citado como um dos maiores vilões do cinema, devido à sua complexidade, inteligência e impacto duradouro na cultura popular.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.090778028964996343
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 160,
+    "totalTokenCount": 200,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 160
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificação de triângulos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Classifique o triângulo com lados medindo 5cm, 5cm e 8cm:\",\n  \"alternativas\": {\n    \"A\": \"Equilátero\",\n    \"B\": \"Isósceles\",\n    \"C\": \"Escaleno\",\n    \"D\": \"Retângulo\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.06582662582397461
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 100,
+    "totalTokenCount": 139,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 100
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes do universo Marvel em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual destes eventos NÃO ocorreu diretamente em um filme principal do Universo Cinematográfico Marvel (MCU)?\",\n  \"options\": {\n    \"A\": \"A Batalha de Nova York (The Avengers)\",\n    \"B\": \"O Snap de Thanos (Avengers: Infinity War)\",\n    \"C\": \"A destruição de Sokovia (Avengers: Age of Ultron)\",\n    \"D\": \"O ataque de Thanos em Xandar (Guardiões da Galáxia Vol. 2)\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16932101582371911
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 129,
+    "totalTokenCount": 168,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 129
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre expressões numéricas simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Resolva a expressão numérica: 10 + 5 × 2 - 4\",\n  \"alternativas\": {\n    \"A\": \"16\",\n    \"B\": \"24\",\n    \"C\": \"14\",\n    \"D\": \"6\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048358917236328125
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 92,
+    "totalTokenCount": 131,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 92
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre array e lista encadeada em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?\",\n  \"alternativas\": {\n    \"A\": \"Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com cada elemento apontando para o próximo.\",\n    \"B\": \"Arrays são mais eficientes para inserção e remoção de elementos no meio da estrutura de dados, enquanto listas encadeadas são mais eficientes para acesso aleatório a elementos.\",\n    \"C\": \"Arrays possuem tamanho fixo definido na sua criação, enquanto listas encadeadas possuem tamanho dinâmico, podendo crescer ou diminuir durante a execução do programa.\",\n    \"D\": \"Arrays são implementados utilizando ponteiros, enquanto listas encadeadas utilizam apenas índices numéricos para acessar seus elementos.\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11989947465749887
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 208,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 208
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes de Christopher Nolan em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de Christopher Nolan NÃO apresenta uma estrutura narrativa não-linear?\",\n  \"options\": {\n    \"A\": \"Memento\",\n    \"B\": \"Dunkirk\",\n    \"C\": \"Interestelar\",\n    \"D\": \"O Cavaleiro das Trevas\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Embora 'O Cavaleiro das Trevas' tenha flashbacks e momentos que mostram eventos anteriores de forma intercalada, sua estrutura narrativa principal segue uma linha cronológica relativamente linear, ao contrário de filmes como Memento, Dunkirk e Interestelar, que utilizam estruturas temporais mais complexas e não-lineares.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17510042190551758
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 160,
+    "totalTokenCount": 199,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 160
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes dos anos 80 em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de ação dos anos 80, estrelado por Sylvester Stallone, apresenta um grupo de soldados americanos lutando para sobreviver atrás das linhas inimigas durante a Guerra do Vietnã?\",\n  \"options\": {\n    \"A\": \"Rambo: First Blood Part II\",\n    \"B\": \"Predator\",\n    \"C\": \"Die Hard\",\n    \"D\": \"Top Gun\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0829183696645551
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 113,
+    "totalTokenCount": 153,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 113
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre operações com medidas de tempo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma corrida começou às 8h15min e terminou às 10h48min. Qual foi a duração da corrida?\",\n  \"alternativas\": {\n    \"A\": \"2h33min\",\n    \"B\": \"1h33min\",\n    \"C\": \"2h13min\",\n    \"D\": \"1h53min\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11711045315391139
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 114,
+    "totalTokenCount": 153,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 114
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes de Christopher Nolan em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de Christopher Nolan NÃO apresenta um protagonista com amnésia ou perda significativa de memória como elemento central da trama?\",\n  \"options\": {\n    \"A\": \"Memento\",\n    \"B\": \"Insônia\",\n    \"C\": \"Interestelar\",\n    \"D\": \"Amnésia\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Enquanto Memento, Insônia e Amnésia giram em torno de personagens com amnésia ou perda de memória significativa, Interestelar foca em outros temas, como a exploração espacial e as relações familiares.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0862121515803867
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 144,
+    "totalTokenCount": 183,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 144
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificação de triângulos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Classifique o triângulo com lados medindo 5 cm, 5 cm e 8 cm.\",\n  \"alternativas\": {\n    \"A\": \"Triângulo equilátero\",\n    \"B\": \"Triângulo isósceles\",\n    \"C\": \"Triângulo escaleno\",\n    \"D\": \"Triângulo retângulo\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.038452399628502984
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 112,
+    "totalTokenCount": 151,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 112
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre sistemas de medida antigos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes unidades de medida antigas representava aproximadamente a distância que um homem podia percorrer em um dia?\",\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"Estádio\"},\n    {\"letter\": \"B\", \"text\": \"Polegada\"},\n    {\"letter\": \"C\", \"text\": \"Legua\"},\n    {\"letter\": \"D\", \"text\": \"Cúbito\"}\n  ],\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0663580438365107
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 115,
+    "totalTokenCount": 153,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com finais abertos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes filmes é conhecido por seu final aberto e ambíguo, deixando a interpretação final a cargo do espectador?\",\n  \"options\": {\n    \"A\": \"O Senhor dos Anéis: O Retorno do Rei\",\n    \"B\": \"Inception (A Origem)\",\n    \"C\": \"O Silêncio dos Inocentes\",\n    \"D\": \"Pulp Fiction\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Inception termina com um peão girando, deixando em aberto se o personagem principal está na realidade ou em um sonho. Os outros filmes possuem finais mais conclusivos.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10701648712158203
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 150,
+    "totalTokenCount": 189,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 150
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre implementação básica de estrutura de dados queue em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes opções descreve CORRETAMENTE a implementação básica de uma fila (queue) utilizando uma lista simplesmente encadeada?\",\n  \"options\": {\n    \"A\": \"Inserções são feitas no início da lista e remoções são feitas no fim da lista (LIFO - Last-In, First-Out).\",\n    \"B\": \"Inserções são feitas no fim da lista e remoções são feitas no início da lista (FIFO - First-In, First-Out).\",\n    \"C\": \"Inserções e remoções são feitas aleatoriamente em qualquer posição da lista.\",\n    \"D\": \"Inserções e remoções são feitas apenas no início da lista (LIFO - Last-In, First-Out).\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Uma fila segue o princípio FIFO (First-In, First-Out), onde o primeiro elemento a entrar é o primeiro a sair.  Uma lista encadeada é uma estrutura de dados adequada para implementar uma fila, com inserções no fim e remoções no início da lista.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0849824555066167
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 245,
+    "totalTokenCount": 287,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 245
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre principais estilos musicais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes estilos musicais é caracterizado por improvisação, uso de blues e swing, e geralmente apresenta instrumentos como saxofone, trompete e bateria?\",\n  \"options\": {\n    \"A\": \"Música Clássica\",\n    \"B\": \"Jazz\",\n    \"C\": \"Reggae\",\n    \"D\": \"Música Sertaneja\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.081030533863947943
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 142,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre uso de repetições (loops) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes opções descreve corretamente o propósito principal de estruturas de repetição (loops) em programação?\",\n  \"options\": {\n    \"A\": \"Executar um bloco de código apenas uma vez.\",\n    \"B\": \"Definir variáveis e constantes.\",\n    \"C\": \"Executar um bloco de código repetidamente enquanto uma condição for verdadeira ou um número específico de vezes.\",\n    \"D\": \"Tratar exceções e erros em um programa.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15877687072753907
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 125,
+    "totalTokenCount": 166,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 125
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre ordenação simples: selection sort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das opções descreve melhor a complexidade de tempo do algoritmo de ordenação Selection Sort no pior caso, melhor caso e caso médio?\",\n  \"alternativas\": {\n    \"A\": \"Pior caso: O(n log n), Melhor caso: O(n), Caso médio: O(n log n)\",\n    \"B\": \"Pior caso: O(n²), Melhor caso: O(n²), Caso médio: O(n²)\",\n    \"C\": \"Pior caso: O(n), Melhor caso: O(n), Caso médio: O(n)\",\n    \"D\": \"Pior caso: O(n²), Melhor caso: O(n²), Caso médio: O(n log n)\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.082939026847718256
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 189,
+    "totalTokenCount": 229,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 189
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre operações com porcentagens consecutivas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma loja oferece um desconto de 20% sobre o preço de um produto. Após isso, como uma promoção extra, oferece mais 10% de desconto sobre o preço já reduzido. Qual o desconto total aplicado sobre o preço original do produto?\",\n  \"alternativas\": {\n    \"A\": \"28%\",\n    \"B\": \"30%\",\n    \"C\": \"20%\",\n    \"D\": \"10%\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.072855178833007808
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 125,
+    "totalTokenCount": 166,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 125
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre perímetro de figuras planas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o perímetro de um retângulo com comprimento de 8 cm e largura de 5 cm?\",\n  \"options\": {\n    \"A\": \"13 cm\",\n    \"B\": \"26 cm\",\n    \"C\": \"40 cm\",\n    \"D\": \"80 cm\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.022484561230273956
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 94,
+    "totalTokenCount": 133,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 94
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conceito de função em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas melhor define o conceito de função em Matemática?\",\n  \"alternativas\": {\n    \"A\": \"Uma relação entre dois conjuntos onde cada elemento do conjunto de partida está associado a um ou mais elementos do conjunto de chegada.\",\n    \"B\": \"Uma operação aritmética que resulta em um único valor numérico.\",\n    \"C\": \"Uma relação entre dois conjuntos onde cada elemento do conjunto de partida está associado a exatamente um elemento do conjunto de chegada.\",\n    \"D\": \"Um conjunto de pares ordenados sem nenhuma restrição entre os elementos.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.091251492500305176
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 152,
+    "totalTokenCount": 189,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 152
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre progressões aritméticas com diferença pequena em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma progressão aritmética (PA) possui o primeiro termo igual a 3 e a razão igual a 2. Qual o valor do 5º termo dessa PA?\",\n  \"alternativas\": {\n    \"A\": \"7\",\n    \"B\": \"9\",\n    \"C\": \"11\",\n    \"D\": \"13\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.042680486043294268
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 147,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre hashing simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em um esquema de hashing simples, onde a tabela de hash tem tamanho M e a função de hash h(k) retorna um inteiro entre 0 e M-1, qual das alternativas descreve corretamente o que acontece quando duas chaves diferentes k1 e k2 produzem o mesmo valor de hash, ou seja, h(k1) = h(k2)?\",\n  \"options\": {\n    \"A\": \"Ocorre uma colisão, e uma técnica de resolução de colisões, como encadeamento separado ou sondagem linear, deve ser usada.\",\n    \"B\": \"A tabela de hash automaticamente redimensiona para acomodar as chaves adicionais.\",\n    \"C\": \"A chave k2 é simplesmente ignorada, pois já existe uma chave com o mesmo valor de hash.\",\n    \"D\": \"Um erro é gerado, indicando que a função de hash não é adequada para a tabela de hash.\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17398625995041034
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 36,
+    "candidatesTokenCount": 218,
+    "totalTokenCount": 254,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 218
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre resolução de equações com frações em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o valor de x que satisfaz a equação  (x/2) + (3/4) = (5x/8) - (1/2)?\",\n  \"options\": {\n    \"A\": \"-7/2\",\n    \"B\": \"-2/7\",\n    \"C\": \"7/2\",\n    \"D\": \"2/7\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12432312746660425
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 109,
+    "totalTokenCount": 150,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 109
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre resolução de equações com frações em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o valor de 'x' que satisfaz a equação  (x/2) + (x/3) = 5?\",\n  \"alternativas\": {\n    \"A\": \"x = 6\",\n    \"B\": \"x = 3\",\n    \"C\": \"x = 15/5\",\n    \"D\": \"x = 30/5\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.093528356307592153
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 158,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 117
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificação dos quadriláteros em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual dos quadriláteros abaixo possui apenas um par de lados paralelos?\",\n  \"alternativas\": {\n    \"A\": \"Retângulo\",\n    \"B\": \"Losango\",\n    \"C\": \"Trapézio\",\n    \"D\": \"Quadrado\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.045294655693901911
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 90,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 90
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre resolução de expressões algébricas simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Simplifique a expressão algébrica: 3x + 5y - 2x + y\",\n  \"alternativas\": {\n    \"A\": \"x + 6y\",\n    \"B\": \"5x + 4y\",\n    \"C\": \"x + 4y\",\n    \"D\": \"5x + 6y\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.049796633286909621
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 110,
+    "totalTokenCount": 152,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 110
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre ordenação simples: bubble sort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações sobre o algoritmo de ordenação Bubble Sort é FALSA?\",\n  \"options\": {\n    \"A\": \"O Bubble Sort compara pares de elementos adjacentes e os troca se estiverem na ordem errada.\",\n    \"B\": \"O Bubble Sort tem uma complexidade de tempo de caso médio e pior caso de O(n²), onde n é o número de elementos a serem ordenados.\",\n    \"C\": \"O Bubble Sort é um algoritmo de ordenação estável.\",\n    \"D\": \"O Bubble Sort tem uma complexidade de tempo de melhor caso de O(n log n).\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"A complexidade de tempo de melhor caso do Bubble Sort é O(n), não O(n log n). Isso ocorre quando a lista de entrada já está ordenada, e o algoritmo faz apenas uma passagem completa sem realizar trocas.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10952972016244564
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 212,
+    "totalTokenCount": 252,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 212
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre introdução ao algoritmo merge sort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal característica do algoritmo Merge Sort que o diferencia de algoritmos de ordenação como o Bubble Sort e o Insertion Sort?\",\n  \"options\": {\n    \"A\": \"Utiliza apenas comparações para ordenar os elementos, sem realizar trocas.\",\n    \"B\": \"Possui complexidade de tempo O(n) em todos os casos.\",\n    \"C\": \"É um algoritmo de ordenação in-place, ou seja, ordena os elementos diretamente no array original sem utilizar memória extra.\",\n    \"D\": \"É um algoritmo de ordenação baseado na técnica de dividir para conquistar (divide and conquer), quebrando recursivamente o problema em subproblemas menores até que sejam trivialmente solucionáveis.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11607338789570538
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 173,
+    "totalTokenCount": 213,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 173
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes baseados em livros em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de grande sucesso foi baseado no romance de mesmo nome da autora Suzanne Collins?\",\n  \"options\": {\n    \"A\": \"O Senhor dos Anéis: A Sociedade do Anel\",\n    \"B\": \"Harry Potter e a Pedra Filosofal\",\n    \"C\": \"Jogos Vorazes\",\n    \"D\": \"O Hobbit: Uma Jornada Inesperada\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.085920683834530887
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 109,
+    "totalTokenCount": 148,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 109
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes que se tornaram livros em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme foi adaptado para um livro com o mesmo título, escrito por seu diretor?\",\n  \"options\": {\n    \"A\": \"O Senhor dos Anéis\",\n    \"B\": \"O Silêncio dos Inocentes\",\n    \"C\": \"A Lista de Schindler\",\n    \"D\": \"Pulp Fiction\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13677389063733689
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 94,
+    "totalTokenCount": 134,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 94
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com duplas de protagonistas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual par de protagonistas marcou a era de ouro de Hollywood, conhecido por sua química inigualável na tela e por protagonizar diversos filmes clássicos juntos?\",\n  \"options\": {\n    \"A\": \"Humphrey Bogart e Ingrid Bergman\",\n    \"B\": \"Clark Gable e Vivien Leigh\",\n    \"C\": \"Fred Astaire e Ginger Rogers\",\n    \"D\": \"Marlon Brando e Elizabeth Taylor\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13231641963376836
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 118,
+    "totalTokenCount": 158,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 118
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre juros simples introdutórios. A resposta deve ser formatada como um objeto JSON com as seguintes chaves: "enunciado" (string com a pergunta), "alternativas" (um objeto JSON onde cada chave é uma letra maiúscula 'A', 'B', 'C', ou 'D' e o valor é a string da alternativa), e "resposta" (string com a letra da alternativa correta)."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Expected , or } after key:value pair.\n seguintes chaves: \"enunciado\" (string c\n                    ^",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre leitura e interpretação de mapas e plantas. A resposta deve ser formatada como um objeto JSON com as seguintes chaves: "enunciado" (string com a pergunta), "alternativas" (um objeto JSON onde cada chave é uma letra maiúscula 'A', 'B', 'C', ou 'D' e o valor é a string da alternativa), e "resposta" (string com a letra da alternativa correta)."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Expected , or } after key:value pair.\n seguintes chaves: \"enunciado\" (string c\n                    ^",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre múltiplos e divisores. A resposta deve ser formatada como um objeto JSON com as seguintes chaves: "enunciado" (string com a pergunta), "alternativas" (um objeto JSON onde cada chave é uma letra maiúscula 'A', 'B', 'C', ou 'D' e o valor é a string da alternativa), e "resposta" (string com a letra da alternativa correta)."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Expected , or } after key:value pair.\n seguintes chaves: \"enunciado\" (string c\n                    ^",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre adição e subtração de frações. A resposta deve ser formatada como um objeto JSON com as seguintes chaves: "enunciado" (string com a pergunta), "alternativas" (um objeto JSON onde cada chave é uma letra maiúscula 'A', 'B', 'C', ou 'D' e o valor é a string da alternativa), e "resposta" (string com a letra da alternativa correta)."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Expected , or } after key:value pair.\n seguintes chaves: \"enunciado\" (string c\n                    ^",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre problemas com calendário em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Um evento ocorre a cada 252 dias. Se o evento ocorreu pela primeira vez em 1º de janeiro de 2024, em que data ocorrerá a quinta vez?\",\n  \"options\": {\n    \"A\": \"11 de setembro de 2024\",\n    \"B\": \"28 de outubro de 2025\",\n    \"C\": \"1º de novembro de 2025\",\n    \"D\": \"21 de outubro de 2025\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Para determinar a data da quinta ocorrência, precisamos calcular o número total de dias: 4 eventos * 252 dias/evento = 1008 dias.  Adicionando 1008 dias a 1º de janeiro de 2024, chegamos a 1º de novembro de 2025.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21159541390158915
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 220,
+    "totalTokenCount": 258,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 220
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre resolução de problemas com estimativas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Você precisa comprar materiais para construir uma cerca de madeira em volta do seu jardim. O jardim tem aproximadamente formato retangular, medindo cerca de 10 metros de comprimento e 7 metros de largura.  Cada metro linear de cerca custa R$ 25,00.  Considerando que você precisará de material extra (cerca de 10%) para cortes e ajustes, qual a estimativa mais próxima do custo total do material?\",\n  \"options\": {\n    \"A\": \"R$ 437,50\",\n    \"B\": \"R$ 500,00\",\n    \"C\": \"R$ 1750,00\",\n    \"D\": \"R$ 600,00\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"O perímetro do jardim é aproximadamente 2 * (10m + 7m) = 34m. Adicionando 10% para cortes e ajustes, temos 34m * 1,1 = 37,4m. O custo total estimado é então 37,4m * R$ 25,00/m ≈ R$ 935,00.  A opção mais próxima é a D, considerando que é uma estimativa e arredondamentos podem ser feitos.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18159848822922003
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 305,
+    "totalTokenCount": 345,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 305
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre leitura e interpretação de horários em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Um evento começa às 14:30 e termina às 16:15. Quanto tempo durou o evento?\",\n  \"options\": {\n    \"A\": \"1 hora e 15 minutos\",\n    \"B\": \"1 hora e 45 minutos\",\n    \"C\": \"2 horas e 15 minutos\",\n    \"D\": \"2 horas e 45 minutos\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0396266854327658
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 115,
+    "totalTokenCount": 156,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre progressões aritméticas com diferença pequena em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma progressão aritmética (PA) possui o primeiro termo igual a 3 e a razão igual a 2. Qual o valor do 5º termo dessa PA?\",\n  \"alternativas\": {\n    \"A\": \"9\",\n    \"B\": \"11\",\n    \"C\": \"13\",\n    \"D\": \"7\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.035725898831804222
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 107,
+    "totalTokenCount": 149,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 107
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre medidas de tempo e conversões em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quantos segundos há em 3 horas e 15 minutos?\",\n  \"options\": {\n    \"A\": \"11700 segundos\",\n    \"B\": \"12000 segundos\",\n    \"C\": \"11400 segundos\",\n    \"D\": \"10800 segundos\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.058099226075775771
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre mediana e moda em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em um conjunto de dados {2, 4, 4, 6, 7, 8, 8, 8, 10}, qual é a mediana e a moda, respectivamente?\",\n  \"options\": {\n    \"A\": \"Mediana = 7; Moda = 8\",\n    \"B\": \"Mediana = 6; Moda = 8\",\n    \"C\": \"Mediana = 8; Moda = 7\",\n    \"D\": \"Mediana = 7; Moda = 4\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.038059131248847591
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 143,
+    "totalTokenCount": 180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 143
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conversão simples entre estruturas de dados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Enunciado:**\n\nVocê possui um objeto JSON representando um produto em um formato:\n\n```json\n{\n  \"nome\": \"Camiseta\",\n  \"preco\": 29.99,\n  \"cor\": \"Azul\"\n}\n```\n\nVocê precisa converter este objeto JSON para um array JSON com um único elemento, mantendo as informações do produto.  Qual das alternativas abaixo representa a conversão correta?\n\n\n**Alternativas:**\n\nA) `{\"nome\": \"Camiseta\", \"preco\": 29.99, \"cor\": \"Azul\"}`\n\nB) `[{\"nome\": \"Camiseta\", \"preco\": 29.99, \"cor\": \"Azul\"}]`\n\nC) `[\"Camiseta\", 29.99, \"Azul\"]`\n\nD) `[{\"nome\": \"Camiseta\"}, {\"preco\": 29.99}, {\"cor\": \"Azul\"}]`\n\n\n**Resposta Correta:** B\n\n\n**Explicação:** A alternativa B encapsula o objeto JSON original dentro de um array, resultando em um array JSON com um único elemento, que é o objeto contendo as informações do produto. As outras alternativas não representam a conversão correta para um array JSON.  A alternativa A permanece como um objeto JSON, enquanto C e D quebram a estrutura original do objeto em elementos separados.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15300013921032213
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 292,
+    "totalTokenCount": 334,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 292
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre representação de frações na reta numérica em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual ponto na reta numérica abaixo representa a fração 2/3?\",\n  \"imagem\": \"URL_DA_IMAGEM_DA_RETA_NUMERICA\",  // Substitua por uma URL real ou caminho para a imagem\n  \"alternativas\": [\n    {\"letra\": \"A\", \"texto\": \"Ponto A\"},\n    {\"letra\": \"B\", \"texto\": \"Ponto B\"},\n    {\"letra\": \"C\", \"texto\": \"Ponto C\"},\n    {\"letra\": \"D\", \"texto\": \"Ponto D\"}\n  ],\n  \"respostaCorreta\": \"C\"\n}\n```\n\n**Observações:**\n\n*  **URL_DA_IMAGEM_DA_RETA_NUMERICA:** Você precisa substituir isso por uma URL ou caminho de arquivo que aponte para uma imagem de uma reta numérica com os pontos A, B, C e D marcados.  A imagem deve mostrar claramente a localização de 2/3 na reta.  Sem a imagem, a questão fica incompleta.\n\n* Este JSON assume que o ponto C na reta numérica representa a fração 2/3.  Ajuste a `respostaCorreta` de acordo com a imagem que você utilizar.\n\n\nPara utilizar este JSON, você precisaria de um sistema que consiga processar este formato e exibir a questão, as alternativas e avaliar a resposta do usuário.  Bibliotecas em várias linguagens de programação podem fazer isso facilmente.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17323833501006797
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 323,
+    "totalTokenCount": 366,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 323
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos matemáticos com operações básicas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em um jogo matemático, você começa com o número 10.  Você adiciona 5, subtrai 2, multiplica por 3 e, finalmente, divide por 6. Qual o resultado final?\",\n  \"alternativas\": {\n    \"A\": \"11\",\n    \"B\": \"13\",\n    \"C\": \"12.5\",\n    \"D\": \"10.5\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11272351334734661
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 123,
+    "totalTokenCount": 163,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 123
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre relações de proporcionalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma receita de bolo exige 2 xícaras de farinha para cada 3 ovos. Se um padeiro deseja usar 6 xícaras de farinha, quantos ovos ele precisará?\",\n  \"alternativas\": {\n    \"A\": \"4 ovos\",\n    \"B\": \"6 ovos\",\n    \"C\": \"9 ovos\",\n    \"D\": \"12 ovos\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0700520051492227
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 111,
+    "totalTokenCount": 150,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 111
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre operações com expressões usando parênteses em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o resultado da expressão 10 + 5 * (2 + 3) - 4 / 2?\",\n  \"alternativas\": {\n    \"A\": \"28\",\n    \"B\": \"37\",\n    \"C\": \"17\",\n    \"D\": \"33\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.099753409015889069
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 141,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre propriedades da adição e multiplicação em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes propriedades NÃO é verdadeira para ambas a adição e a multiplicação de números reais?\",\n  \"options\": {\n    \"A\": \"Propriedade comutativa (a + b = b + a; a × b = b × a)\",\n    \"B\": \"Propriedade associativa ((a + b) + c = a + (b + c); (a × b) × c = a × (b × c))\",\n    \"C\": \"Propriedade distributiva (a × (b + c) = (a × b) + (a × c))\",\n    \"D\": \"Existência de elemento neutro (a + 0 = a; a × 1 = a)\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A propriedade distributiva relaciona adição e multiplicação, mas não é uma propriedade inerente a cada operação isoladamente.  A comutativa, associativa e a existência do elemento neutro são válidas para ambas as operações.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.098027316006747162
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 231,
+    "totalTokenCount": 272,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre progressões aritméticas com diferença pequena em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma progressão aritmética (PA) possui o primeiro termo igual a 3 e a razão igual a 2. Qual o valor do 5º termo dessa PA?\",\n  \"alternativas\": {\n    \"A\": \"7\",\n    \"B\": \"9\",\n    \"C\": \"11\",\n    \"D\": \"13\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.042262318020775208
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 147,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre problemas de matemática financeira elementar em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma pessoa aplicou R$ 10.000,00 a juros simples de 2% ao mês durante 6 meses. Qual o montante ao final desse período?\",\n  \"alternativas\": {\n    \"A\": \"R$ 11.200,00\",\n    \"B\": \"R$ 10.600,00\",\n    \"C\": \"R$ 11.000,00\",\n    \"D\": \"R$ 12.000,00\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.063577682940990893
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 154,
+    "totalTokenCount": 194,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 154
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificação dos quadriláteros em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas apresenta uma classificação CORRETA dos quadriláteros?\",\n  \"alternativas\": {\n    \"A\": \"Todos os paralelogramos são retângulos.\",\n    \"B\": \"Todos os losangos são quadrados.\",\n    \"C\": \"Todos os retângulos são paralelogramos.\",\n    \"D\": \"Todos os trapézios são paralelogramos.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.062780101742364661
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 113,
+    "totalTokenCount": 152,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 113
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre mediana e moda em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em um conjunto de dados {2, 4, 4, 6, 7, 7, 8, 9, 10}, qual é a mediana e a moda, respectivamente?\",\n  \"options\": {\n    \"A\": \"Mediana = 7, Moda = 4\",\n    \"B\": \"Mediana = 7, Moda = 7\",\n    \"C\": \"Mediana = 6, Moda = 4\",\n    \"D\": \"Mediana = 6, Moda = 7\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.078464628099561576
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 143,
+    "totalTokenCount": 180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 143
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre problemas com velocidade média em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Um carro percorreu a primeira metade de uma distância total de 120 km a uma velocidade média de 60 km/h, e a segunda metade a uma velocidade média de 40 km/h. Qual foi a velocidade média do carro durante toda a viagem?\",\n  \"options\": {\n    \"A\": \"50 km/h\",\n    \"B\": \"48 km/h\",\n    \"C\": \"52 km/h\",\n    \"D\": \"45 km/h\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048500181972116661
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 138,
+    "totalTokenCount": 176,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 138
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre progressões aritméticas com diferença pequena em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Uma progressão aritmética (PA) possui o primeiro termo igual a 2 e a razão igual a 3. Qual o valor do 5º termo dessa PA?\",\n  \"alternativas\": {\n    \"A\": \"11\",\n    \"B\": \"14\",\n    \"C\": \"17\",\n    \"D\": \"20\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.025043420702497536
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 107,
+    "totalTokenCount": 149,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 107
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre operações com expressões usando parênteses em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Resolva a expressão: 10 + 5 * (2 + 3) - 4 / 2\",\n  \"alternativas\": {\n    \"A\": \"28\",\n    \"B\": \"38\",\n    \"C\": \"18\",\n    \"D\": \"26\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11012245910336273
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 99,
+    "totalTokenCount": 142,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 99
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre estimativas e arredondamentos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Um supermercado está fazendo uma promoção de laranjas.  Uma caixa contém aproximadamente 25 laranjas.  Se o supermercado vendeu 12 caixas de laranjas, qual é a melhor estimativa do número total de laranjas vendidas?\",\n  \"options\": {\n    \"A\": \"250 laranjas\",\n    \"B\": \"300 laranjas\",\n    \"C\": \"275 laranjas\",\n    \"D\": \"350 laranjas\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Para estimar, podemos arredondar o número de laranjas por caixa para 25.  Multiplicando 25 (laranjas/caixa) por 12 (caixas), temos 300 laranjas.  As outras opções são menos precisas como estimativa.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.073027986746567949
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 208,
+    "totalTokenCount": 248,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 208
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificação de triângulos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Classifique o triângulo com lados medindo 5 cm, 5 cm e 8 cm:\",\n  \"alternativas\": {\n    \"A\": \"Equilátero\",\n    \"B\": \"Isósceles\",\n    \"C\": \"Escaleno\",\n    \"D\": \"Retângulo\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.02574301247644906
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 99,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 99
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre noções básicas de árvore binária de busca em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações sobre árvores binárias de busca (ABBs) é FALSA?\",\n  \"options\": {\n    \"A\": \"Em uma ABB, todos os nós à esquerda de um nó têm valores menores que o valor do nó.\",\n    \"B\": \"Em uma ABB, todos os nós à direita de um nó têm valores maiores que o valor do nó.\",\n    \"C\": \"A busca em uma ABB balanceada tem complexidade de tempo O(n), onde n é o número de nós.\",\n    \"D\": \"Uma ABB permite buscas, inserções e deleções eficientes de nós.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A busca em uma ABB balanceada tem complexidade de tempo O(log n), não O(n).  O(n) seria o caso de uma árvore degenerada (que se assemelha a uma lista linear).\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.05345732002442586
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 207,
+    "totalTokenCount": 250,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 207
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre noções básicas de algoritmo de busca em largura em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações sobre o algoritmo de busca em largura (Breadth-First Search - BFS) é FALSA?\",\n  \"options\": {\n    \"A\": \"O BFS explora todos os nós a uma determinada distância da raiz antes de explorar nós a uma distância maior.\",\n    \"B\": \"O BFS utiliza uma fila (queue) para gerenciar a ordem de visita dos nós.\",\n    \"C\": \"O BFS garante encontrar o caminho mais curto entre um nó inicial e um nó alvo em um grafo não ponderado.\",\n    \"D\": \"O BFS é um algoritmo recursivo que utiliza a pilha de chamadas para controlar a ordem de visita dos nós.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"O BFS utiliza uma fila (FIFO) para controlar a ordem de visita dos nós, não a pilha de chamadas como um algoritmo recursivo. A recursividade é mais comumente associada ao algoritmo de busca em profundidade (Depth-First Search - DFS).\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12140107362166695
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 230,
+    "totalTokenCount": 273,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 230
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre inserção em listas encadeadas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a complexidade de tempo da inserção de um novo nó no início de uma lista encadeada simples?\",\n  \"options\": {\n    \"A\": \"O(n)\",\n    \"B\": \"O(log n)\",\n    \"C\": \"O(1)\",\n    \"D\": \"O(n^2)\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A inserção no início de uma lista encadeada simples requer apenas a atualização do ponteiro para o primeiro nó e a criação de um novo nó.  Essa operação leva um tempo constante, independente do tamanho da lista.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.07999356801077824
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 149,
+    "totalTokenCount": 190,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 149
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"O que é um algoritmo?\",\n  \"options\": {\n    \"A\": \"Um programa de computador escrito em linguagem de máquina.\",\n    \"B\": \"Uma sequência finita de instruções bem definidas e não ambíguas, executadas em uma ordem específica para solucionar um problema ou realizar uma tarefa.\",\n    \"C\": \"Um tipo de dado utilizado para armazenar informações em um banco de dados.\",\n    \"D\": \"Um dispositivo de hardware responsável pelo processamento de informações.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0974268913269043
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 128,
+    "totalTokenCount": 167,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 128
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes da Illumination em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes filmes NÃO foi produzido pela Illumination?\",\n  \"options\": {\n    \"A\": \"Meu Malvado Favorito\",\n    \"B\": \"Minions\",\n    \"C\": \"A Era do Gelo\",\n    \"D\": \"Sing: Quem Canta Seus Males Espanta\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.057660943718366726
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 93,
+    "totalTokenCount": 131,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 93
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos de força bruta em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações melhor descreve a característica principal de um algoritmo de força bruta?\",\n  \"options\": {\n    \"A\": \"Utiliza heurísticas e otimizações para encontrar a solução mais eficiente possível.\",\n    \"B\": \"Explora sistematicamente todas as possibilidades para encontrar uma solução, sem otimizações significativas.\",\n    \"C\": \"Refinará a solução ao longo do tempo, aprendendo com os erros para encontrar a resposta mais eficiente.\",\n    \"D\": \"Depende de dados de entrada específicos para determinar o melhor caminho para encontrar a solução.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Algoritmos de força bruta, também conhecidos como algoritmos de busca exaustiva, examinam todas as possibilidades para encontrar uma solução.  Eles não utilizam heurísticas ou otimizações para acelerar o processo, o que os torna simples de implementar, mas frequentemente ineficientes para grandes conjuntos de dados.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22843598881992724
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 218,
+    "totalTokenCount": 258,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 218
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes lançados direto em streaming em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes filmes foi lançado diretamente no streaming, sem passar pelos cinemas?\",\n  \"options\": {\n    \"A\": \"Avatar: O Caminho da Água\",\n    \"B\": \"Enola Holmes 2\",\n    \"C\": \"Pantera Negra: Wakanda Para Sempre\",\n    \"D\": \"Alerta Vermelho\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.061015888136260361
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre percurso em árvore (em-ordem) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a sequência de nós visitados em uma travessia em-ordem (inorder) na seguinte árvore binária de busca?\",\n  \"image\": \"url_para_imagem_da_arvore.png\",  //Substitua por uma URL ou caminho para a imagem da árvore.  Se não houver imagem, remova esta linha.\n  \"options\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"4, 2, 5, 1, 6, 3, 7\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"1, 2, 4, 5, 3, 6, 7\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"7, 6, 3, 5, 4, 2, 1\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"1, 4, 2, 5, 6, 7, 3\"\n    }\n  ],\n  \"answer\": \"B\",\n  \"explanation\": \"A travessia em-ordem visita primeiro o subárvore esquerda, depois a raiz e por fim a subárvore direita.\"\n}\n```\n\n**Observação:**  Para que a questão funcione completamente, você precisa substituir `\"url_para_imagem_da_arvore.png\"` por uma URL ou caminho válido para uma imagem que represente a árvore binária de busca.  A questão assume que a imagem mostre uma árvore com os nós 1, 2, 3, 4, 5, 6, 7.  A ordem correta da alternativa B reflete uma possível disposição desses nós em uma árvore de busca binária.  Sem a imagem, a questão fica incompleta e ambígua.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15120184736000261
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 417,
+    "totalTokenCount": 460,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 417
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre números decimais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o resultado da soma 3,25 + 1,7 + 0,05?\",\n  \"options\": {\n    \"A\": \"4,95\",\n    \"B\": \"5,00\",\n    \"C\": \"4,00\",\n    \"D\": \"5,10\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.063608369048760868
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 135,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre problemas com velocidade média em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Um carro percorre a primeira metade de uma viagem a uma velocidade média de 60 km/h e a segunda metade a uma velocidade média de 90 km/h. Qual a velocidade média do carro durante toda a viagem?\",\n  \"options\": {\n    \"A\": \"72 km/h\",\n    \"B\": \"75 km/h\",\n    \"C\": \"78 km/h\",\n    \"D\": \"80 km/h\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Para calcular a velocidade média em um percurso com velocidades diferentes, não basta fazer a média aritmética das velocidades.  Devemos considerar o tempo gasto em cada trecho.  Suponha que a distância total seja 2d. O tempo na primeira metade é d/60 e na segunda metade é d/90. O tempo total é (d/60) + (d/90) = 5d/180 = d/36. A velocidade média é a distância total dividida pelo tempo total: (2d) / (d/36) = 72 km/h.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0516567556577037
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 263,
+    "totalTokenCount": 301,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 263
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre MMC e MDC em problemas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Dois ônibus saem do mesmo terminal rodoviário. O ônibus A parte a cada 12 horas e o ônibus B parte a cada 18 horas.  Se ambos os ônibus partiram juntos hoje às 8h da manhã, em que horário eles partirão juntos novamente?\",\n  \"alternativas\": {\n    \"A\": \"Às 8h da manhã de amanhã\",\n    \"B\": \"Às 20h de hoje\",\n    \"C\": \"Às 8h da manhã de depois de amanhã\",\n    \"D\": \"Às 12h de amanhã\"\n  },\n  \"resposta_correta\": \"C\",\n  \"explicacao\": \"Para determinar quando os ônibus partirão juntos novamente, precisamos encontrar o mínimo múltiplo comum (MMC) entre 12 e 18.  O MMC(12, 18) = 36 horas.  Como eles partiram às 8h da manhã, eles partirão juntos novamente após 36 horas, ou seja, às 8h da manhã de depois de amanhã.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.080047917744470024
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 252,
+    "totalTokenCount": 291,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 252
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre semelhança de figuras geométricas simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Observe as figuras abaixo.  Qual par de figuras é semelhante?\",\n  \"alternativas\": {\n    \"A\": \"Um quadrado de lado 2cm e um retângulo de lados 2cm e 3cm\",\n    \"B\": \"Um triângulo equilátero de lado 5cm e um triângulo isósceles de lados 5cm, 5cm e 6cm\",\n    \"C\": \"Um círculo de raio 3cm e um círculo de raio 6cm\",\n    \"D\": \"Um quadrado de lado 4cm e um pentágono regular de lado 4cm\"\n  },\n  \"resposta_correta\": \"C\",\n  \"explicação\": \"Figuras semelhantes possuem a mesma forma, mas não necessariamente o mesmo tamanho.  Círculos, independente do raio, sempre são semelhantes. As demais alternativas apresentam figuras com formas diferentes.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.081219171460770886
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 211,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 211
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conversão de unidades de medida de área em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o equivalente em metros quadrados (m²) de uma área de 2500 centímetros quadrados (cm²)?\",\n  \"alternativas\": {\n    \"A\": \"0,25 m²\",\n    \"B\": \"2,5 m²\",\n    \"C\": \"25 m²\",\n    \"D\": \"250 m²\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.029299210224832808
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 112,
+    "totalTokenCount": 154,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 112
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre operações com expressões usando parênteses em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o resultado da expressão 10 + 5 * (2 + 3) - 4 ?\",\n  \"options\": {\n    \"A\": \"21\",\n    \"B\": \"31\",\n    \"C\": \"16\",\n    \"D\": \"41\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.061531162261962889
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 90,
+    "totalTokenCount": 133,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 90
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conversão de unidades de medida de área em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a área equivalente a 5000 metros quadrados (m²) expressa em hectares (ha)?\",\n  \"alternativas\": {\n    \"A\": \"0,5 ha\",\n    \"B\": \"5 ha\",\n    \"C\": \"50 ha\",\n    \"D\": \"500 ha\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.056312266518087947
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 102,
+    "totalTokenCount": 144,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 102
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre resolução de problemas com tabelas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Enunciado:**\n\nConsidere o seguinte arquivo JSON representando dados de vendas de produtos:\n\n```json\n{\n  \"vendas\": [\n    {\"produto\": \"A\", \"quantidade\": 10, \"preco\": 10.50},\n    {\"produto\": \"B\", \"quantidade\": 5, \"preco\": 25.00},\n    {\"produto\": \"A\", \"quantidade\": 15, \"preco\": 10.50},\n    {\"produto\": \"C\", \"quantidade\": 8, \"preco\": 12.75}\n  ]\n}\n```\n\nQual o valor total da receita gerada pela venda do produto \"A\"?\n\n**Alternativas:**\n\nA) R$ 262,50\nB) R$ 157,50\nC) R$ 210,00\nD) R$ 105,00\n\n\n**Resposta Correta:** A) R$ 262,50\n\n\n**Explicação:** O produto \"A\" foi vendido em duas ocasiões: 10 unidades a R$ 10,50 e 15 unidades a R$ 10,50.  O cálculo é (10 * 10.50) + (15 * 10.50) = 105 + 157.50 = R$ 262,50\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.038419101679212996
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 319,
+    "totalTokenCount": 359,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 319
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
