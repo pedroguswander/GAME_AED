@@ -13,6 +13,7 @@
 #include "dice_animation.h"
 #include "rlgl.h"
 #include "main_menu.h"
+#include "player_names.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -39,6 +40,8 @@ Tile *_tilesHEAD = NULL;
 Tile *_tilesTAIL = NULL;
 
 Player _players[MAX_PLAYERS];
+Tile *tileBeforePlaying = NULL;
+Color _playerColors[] = {RED, BLUE};
 
 Rectangle _playerTextSrc = {0};
 Rectangle _playerTextDest = {0};
@@ -52,6 +55,8 @@ char *labels[] = {"A", "B", "C", "D"};
 Rectangle optionRects[4];
 Rectangle nextQuestionButton = {1920/4, 1080-100, 480, 320};
 
+char *_playersNames[] = {player1Name, player2Name};
+
 int startY = 100;
 int _dice;
 int _targetTile = 0;
@@ -63,8 +68,6 @@ float stepDelay = 0.5f;
 bool isWaiting = false;
 float waitingToEndTimer = 0.0f;
 float waitingToEndDuration = 0.5f;
-Tile *tileBeforePlaying = NULL;
-Color _playerColors[] = {RED, BLUE};
 
 static bool diceRolled = false;
 static double diceRollTime = 0;
@@ -192,7 +195,7 @@ void createBoard() {
             _playerColors[i],
             CAN_PLAY,
             (Texture2D) {0},
-            "OLA",
+            _playersNames[i],
         };
 
         setSpriteToIdle(&_players[i]);
@@ -243,6 +246,8 @@ void updateBoard() {
         switch (_boardState) {
 
             case CAN_PLAY_TRANSITION:
+                TraceLog(LOG_INFO, "%s", player1Name);
+                TraceLog(LOG_INFO, "%s", player2Name);
                 // Transição suave para o zoom de 3.0f
                 _boardCamera.target = player->position;
 
@@ -427,7 +432,8 @@ void drawBoard() {
 
                 case EVENT_QUESTION:
                     drawQuestion(options, _questionTile);
-                    DrawText(TextFormat("P%d: NOME", _currentPlayerIndex + 1), 540, 900, 32, _playerColors[_currentPlayerIndex]);
+                    DrawText(TextFormat("P%d: %s", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name),
+                     540, 900, 32, _playerColors[_currentPlayerIndex]);
                     break;
 
                 default:
@@ -446,7 +452,7 @@ void drawBoard() {
 
         case END:
             DrawRectangleRec((Rectangle){0, 0, 1920, 1080}, Fade(PINK, 0.3f));
-            DrawText(TextFormat("P%d - NOME venceu!!", _currentPlayerIndex + 1),
+            DrawText(TextFormat("P%d - %s venceu!!", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name),
                      1920/2, 1080/2, 20, _players[_currentPlayerIndex].color);
             break;
 
@@ -471,7 +477,9 @@ void drawBoard() {
             EndMode2D();
 
             drawDice();
-            DrawText(TextFormat("P%d - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1), 595, 509, 20, BLACK);
+            DrawText(TextFormat("P%d - %s - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1,
+                _players[_currentPlayerIndex].name),
+                595, 509, 20, BLACK);
             break;
 
         default:
@@ -479,7 +487,7 @@ void drawBoard() {
             const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
             DrawText(msg, GetScreenWidth()/2 - MeasureText(msg, 20)/2, 20, 20, BLACK);
             DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
-            DrawText(TextFormat("Vez do Jogador %d", _currentPlayerIndex + 1), 540, 900, 20, BLACK);
+            DrawText(TextFormat("Vez de P%d- %s", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name), 540, 900, 20, BLACK);
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];

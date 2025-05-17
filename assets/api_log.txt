@@ -1598,3 +1598,83 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre músicas infantis conhecidas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dessas músicas infantis fala sobre um animal que vive na floresta e adora comer mel?\",\n  \"options\": {\n    \"A\": \"A Casa da Barbie\",\n    \"B\": \"O Sapo Não Lava o Pé\",\n    \"C\": \"Ciranda, Ciranda\",\n    \"D\": \"Ursinho Pooh\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11070043213513432
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 137,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre continentes e suas características em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual continente é conhecido por sua vasta extensão territorial, abrangendo diversos climas e biomas, desde desertos áridos até florestas tropicais úmidas, e por ser o lar de uma grande diversidade de espécies animais e vegetais?\",\n  \"options\": {\n    \"A\": \"Europa\",\n    \"B\": \"África\",\n    \"C\": \"Oceania\",\n    \"D\": \"América do Sul\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A África possui uma grande variedade de ecossistemas e é o lar de uma biodiversidade excepcional, devido à sua localização geográfica e à sua história geológica.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15649339687899225
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 159,
+    "totalTokenCount": 198,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 159
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

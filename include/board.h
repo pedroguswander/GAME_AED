@@ -45,7 +45,7 @@ typedef struct {
     Color color;
     BoardState state;
     Texture2D sprite;
-    char name[NAME_LENGTH];
+    char *name;
 } Player;
 
 void createTile(TileType type, const char *topic, int casa);
