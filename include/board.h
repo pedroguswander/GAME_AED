@@ -6,7 +6,6 @@
 #define NAME_LENGTH 9
 
 typedef enum {
-    GET_PLAYERS_NAME,
     CAN_PLAY_TRANSITION,
     CAN_PLAY,
     MOVING,
@@ -49,11 +48,6 @@ typedef struct {
     char name[NAME_LENGTH];
 } Player;
 
-typedef struct PlayerNameChar {
-    char ch;
-    struct PlayerNameChar *next;  // Usa 'struct PlayerNameChar' aqui
-} PlayerNameChar;
-
 void createTile(TileType type, const char *topic, int casa);
 Vector2 getPositionOfTile(int casa);
 Tile *getTileByTile(int tile);
@@ -66,9 +60,5 @@ void changePlayerWalkAnimationSprite(void);
 void drawPlayer(Player *p);
 void freeBoard();
 void resetBoard();
-void playerNamePrint();
-void playerNamePush(char ch);
-void playerNamePop();
-void playerNameToString(char *dest);
 
 #endif

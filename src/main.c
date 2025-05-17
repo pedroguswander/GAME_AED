@@ -32,7 +32,6 @@ TurnPhase phase = ROLL_DICE;
 int diceResult = 0;
 bool questionAnsweredCorrectly = false;
 
-
 typedef enum {
     TOPIC_SELECTION_SCREEN =0,
     LOADING_SCREEN = 1,
@@ -42,16 +41,6 @@ typedef enum {
     TABULEIRO_QUESTION_SCREEN = 5 
 } QuizScreen;
 
-/*typedef enum {
-    MAIN_MENU=0,
-    QUIZ_MODE=1,
-    TABULEIRO_MODE=2,
-    HALL_OF_FAME=3,
-    CREDITS=4,
-    FINAL_MENU_SCREEN = 5,
-} MenuOption;*/
-
-//MenuOption _menuOption = MAIN_MENU;
 QuizScreen _quizScreen = 0;
 char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
 bool _gotItRight = false;
@@ -69,6 +58,7 @@ const char *topics[] = {
 
 Font titleFont = {0};
 Font mainMenuFont = {0};
+const char *titulo = "MIND RUNNER";
 
 void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
@@ -285,9 +275,8 @@ int main() {
                     DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
                 }
 
-                const char *titulo = "MIND RUNNER";
-                Vector2 textSize0 = MeasureTextEx(titleFont, titulo, 80, 2);
-                DrawTextEx(titleFont, titulo, (Vector2){screenWidth/2 - textSize0.x/2, 80}, 80, 2, YELLOW);
+                Vector2 textSizeTitulo = MeasureTextEx(titleFont, titulo, 80, 2);
+                DrawTextEx(titleFont, titulo, (Vector2){screenWidth/2 - textSizeTitulo.x/2, 80}, 80, 2, YELLOW);
 
                 for (int i = 0; i < 5; i++) {
                     if (CheckCollisionPointRec(GetMousePosition(), mainMenuButtons[i]))

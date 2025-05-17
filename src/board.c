@@ -26,13 +26,10 @@ typedef enum {
     EVENT_QUESTION,
 } EventState;
 
-char _name[NAME_LENGTH];
-PlayerNameChar *playerNameStack = NULL;
-
 Font font1 = {0};
 
 Texture2D backgroundTexture;
-BoardState _boardState = GET_PLAYERS_NAME;
+BoardState _boardState = CAN_PLAY;
 EventState _eventState = EVENT_NONE;
 
 Camera2D _boardCamera = {0};
@@ -144,82 +141,13 @@ void createTile(TileType type, const char *topic, int tile) {
     }
 }
 
-void playerNameToString(char *dest)
-{
-    // Primeiro, vamos contar quantos caracteres existem
-    int count = 0;
-    PlayerNameChar *iter = playerNameStack;
-    while (iter != NULL)
-    {
-        count++;
-        iter = iter->next;
-    }
-
-    // Agora copiamos em ordem reversa
-    iter = playerNameStack;
-    for (int i = count - 1; i >= 0; i--)
-    {
-        dest[i] = iter->ch;
-        iter = iter->next;
-    }
-
-    dest[count] = '\0'; // Null-terminador
-}
-
-void playerNamePush(char ch)
-{
-    PlayerNameChar *new = (PlayerNameChar *) malloc(sizeof(PlayerNameChar));
-    new->ch = ch;
-
-    int itens = 0;
-
-    if (playerNameStack != NULL)
-    {
-        PlayerNameChar *iter = playerNameStack;
-        while (iter != NULL)
-        {
-            itens++;
-            iter = iter->next;
-        }
-    }
-
-    if (itens < NAME_LENGTH)
-    {
-        new->next = playerNameStack;
-        playerNameStack = new;
-    }
-}
-
-void playerNamePop()
-{
-    if (playerNameStack != NULL)
-    {
-        PlayerNameChar *temp = playerNameStack;
-        playerNameStack = playerNameStack->next;
-        free(playerNameStack);
-    }
-
-}
-
-void playerNamePrint() {
-    if (playerNameStack) {
-        fprintf(stderr, "[PLAYER NAME] ");
-        for (PlayerNameChar *iter = playerNameStack; iter; iter = iter->next) {
-            fprintf(stderr, "%c", iter->ch);
-        }
-        fprintf(stderr, "\n");
-    } else {
-        fprintf(stderr, "[PLAYER NAME] (empty)\n");
-    }
-}
-
 void createBoard() {
     resetBoard();
 
     InitAudioDevice();
     //BeginMode2D(_boardCamera);
 
-    _boardState = GET_PLAYERS_NAME;
+    _boardState = CAN_PLAY_TRANSITION;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
@@ -303,28 +231,6 @@ void updateBoard() {
 
 
         switch (_boardState) {
-            case GET_PLAYERS_NAME:
-                int key = GetKeyPressed();
-
-                if (key != 0)
-                {
-                    if ((key >= 65 && key <= 90) || (key >= 97 && key <= 122)) // letras
-                    {
-                        playerNamePush((char) key);
-                        playerNameToString(player->name);
-                    }
-                    else if (key == 259) // BACKSPACE
-                    {
-                        playerNamePop();
-                    }
-                    else if (key == 257) // ENTER
-                    {
-                        playerNameToString(player->name); // Copia da pilha para o player
-                        _boardState = CAN_PLAY_TRANSITION;
-                    }
-                }
-
-                break;
 
             case CAN_PLAY_TRANSITION:
                 // Transição suave para o zoom de 3.0f
@@ -515,27 +421,6 @@ void drawBoard() {
 
             break;
 
-        case GET_PLAYERS_NAME:
-            float t = GetTime();
-            int r = 30 + 20 * sinf(t);
-            int g = 50 + 20 * sinf(t + 1.0f);
-            int b = 70 + 20 * sinf(t + 2.0f);
-            ClearBackground((Color){ r, g, b, 255 });
-
-            // Bolhas subindo
-            for (int i = 0; i < 50; i++) {
-                float y = (float)(GetScreenHeight() - fmod(GetTime() * 50 + i * 40, GetScreenHeight()));
-                float x = 100 + (i * 30) % GetScreenWidth();
-                DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
-            }
-            
-            char tempWithCursor[NAME_LENGTH + 2]; // +1 para o '|', +1 para '\0'
-            snprintf(tempWithCursor, sizeof(tempWithCursor), "%s|", _players[_currentPlayerIndex].name);
-
-            DrawText(tempWithCursor, GetScreenWidth()/2, GetScreenHeight()/2, 48, GREEN);
-            DrawTextEx(font1, "ENTER - CONFIRMAR", (Vector2){GetScreenWidth()/2, GetScreenHeight()/2 - 200}, 48, 2, GREEN);
-            break;
-
         case SHOW_ANSWER:
             DrawText("Gabarito:", 50, 100, 28, YELLOW);
             DrawText(_questionTile.answer, 200, 100, 28, WHITE);
@@ -619,23 +504,19 @@ bool movePlayer(Player *player, bool forward) {
     Vector2 direction = Vector2Subtract(targetPos, player->position);
     float distance = Vector2Length(direction);
 
-    if (distance < 3.0f) {
-        // Chegou ao próximo tile
+    if (distance < 10.0f) {
         player->position = targetPos;
         player->prevTile = player->currentTile;
         player->currentTile = player->nextTile;
 
-        // Verifica se chegou ao destino final
         if (player->currentTile == player->targetTile) {
             player->nextTile = NULL;
             return true;
         }
 
-        // Define o próximo tile novamente
         player->nextTile = forward ? player->currentTile->next : player->currentTile->prev;
         if (player->nextTile == NULL) return true;
     } else {
-        // Movimento suave
         direction = Vector2Normalize(direction);
         Vector2 movement = Vector2Scale(direction, 250.0f * GetFrameTime());
         player->position = Vector2Add(player->position, movement);
