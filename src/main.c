@@ -16,6 +16,7 @@
 #include "time.h"
 #include "string.h"
 #include "board.h"
+#include "player_names.h"
 #include <subthemes.h>
 
 
@@ -168,6 +169,7 @@ int main() {
                             _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
+							 showPlayerNameInputScreen();
                             _menuOption = TABULEIRO_MODE;
                             break;
                         case 2: // Hall da Fama
