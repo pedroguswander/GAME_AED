@@ -186,9 +186,9 @@ void createBoard() {
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
         _players[i] = (Player){
-            _tilesHEAD->position,
+            _tilesHEAD->next->next->next->position,
             (Vector2){0, 0},
-            _tilesHEAD,
+            _tilesHEAD->next->next->next,
             NULL,
             NULL,
             NULL,
@@ -561,7 +561,7 @@ void drawPlayer(Player *p)
     _playerTextDest = (Rectangle){
         p->position.x + p->number * 40, 
         p->position.y,
-        p->flipHorizontal? -1 * _playerTextSrc.width * PLAYER1_TEXT_SCALE: _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
+        _playerTextSrc.width * PLAYER1_TEXT_SCALE, 
         _playerTextSrc.height * PLAYER1_TEXT_SCALE
     };
     DrawTexturePro(p->sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);

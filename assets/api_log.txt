@@ -1721,3 +1721,283 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre costumes da China em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual costume chinês é tradicionalmente associado à celebração do Ano Novo Lunar?\",\n  \"options\": {\n    \"A\": \"Comer peru assado e pudim de Natal\",\n    \"B\": \"Trocar presentes em forma de dinheiro em envelopes vermelhos (hongbao)\",\n    \"C\": \"Fazer piquenique em parques e jardins públicos\",\n    \"D\": \"Celebrar o Dia de Ação de Graças com a família\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Os envelopes vermelhos (hongbao) são uma tradição fundamental do Ano Novo Lunar chinês, contendo dinheiro e simbolizando boa sorte e prosperidade para o ano que se inicia.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19503832148934552
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 167,
+    "totalTokenCount": 204,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com crianças como protagonistas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de animação da Pixar apresenta uma menina de 11 anos que descobre um mundo mágico de monstros sob sua cama?\",\n  \"options\": {\n    \"A\": \"Procurando Nemo\",\n    \"B\": \"WALL-E\",\n    \"C\": \"Monstros S.A.\",\n    \"D\": \"Up - Altas Aventuras\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11726452269644108
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 106,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 106
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre sequências numéricas simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o próximo número na sequência 2, 4, 6, 8, ?\",\n  \"alternativas\": {\n    \"A\": \"9\",\n    \"B\": \"10\",\n    \"C\": \"11\",\n    \"D\": \"12\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.039682244206522846
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 91,
+    "totalTokenCount": 130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 91
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre invenções que mudaram o mundo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes invenções teve o maior impacto na revolução da comunicação global?\",\n  \"alternativas\": {\n    \"A\": \"Máquina a vapor\",\n    \"B\": \"Imprensa de Gutenberg\",\n    \"C\": \"Internet\",\n    \"D\": \"Lâmpada incandescente\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10248445727161526
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de zumbis em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de zumbis é amplamente considerado o marco do gênero, influenciando inúmeros filmes posteriores?\",\n  \"options\": {\n    \"A\": \"Guerra Mundial Z\",\n    \"B\": \"Zumbilândia\",\n    \"C\": \"Madrugada dos Mortos (1968)\",\n    \"D\": \"A Noite dos Mortos-Vivos (1968)\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.073649642741785634
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 113,
+    "totalTokenCount": 152,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 113
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de espionagem em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de espionagem é conhecido por sua icônica cena de perseguição de carro em um Fiat 500 pela cidade de Roma?\",\n  \"options\": {\n    \"A\": \"007 - Cassino Royale\",\n    \"B\": \"Missão Impossível - Protocolo Fantasma\",\n    \"C\": \"Agente 007 contra o Dr. No\",\n    \"D\": \"Agente 007 - Operação Relâmpago\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"A cena de perseguição de carro em um Fiat 500 pelas ruas de Roma é uma das mais memoráveis de 'Agente 007 - Operação Relâmpago' (The Man with the Golden Gun, 1974).\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13903025682059883
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 191,
+    "totalTokenCount": 230,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 191
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre notação musical básica em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual símbolo representa uma semínima na notação musical?\",\n  \"alternativas\": {\n    \"A\": \"♩\",\n    \"B\": \"♪\",\n    \"C\": \"♫\",\n    \"D\": \"♬\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13223928286705489
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 81,
+    "totalTokenCount": 119,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 81
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

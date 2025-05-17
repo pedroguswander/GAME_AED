@@ -21,10 +21,16 @@ static const char *playerWalkFrontFiles[PLAYER_WALK_SHEET_SIZE] = {
     "hero-walk-front-4.png", "hero-walk-front-5.png", "hero-walk-front-6.png",
 };
 
+static char playerWalkReversePath[1000] = "player/walk/hero-walk-reverse/";
+static const char *playerWalkReverseFiles[PLAYER_WALK_SHEET_SIZE] = {
+    "hero-walk-reverse-6.png", "hero-walk-reverse-5.png", "hero-walk-reverse-4.png",
+    "hero-walk-reverse-3.png", "hero-walk-reverse-2.png", "hero-walk-reverse-1.png",
+};
 
 Texture2D playerWalkBackSheet[PLAYER_WALK_SHEET_SIZE];
 Texture2D playerWalkSideSheet[PLAYER_WALK_SHEET_SIZE];
 Texture2D playerWalkFrontSheet[PLAYER_WALK_SHEET_SIZE];
+Texture2D playerWalkReverseSheet[PLAYER_WALK_SHEET_SIZE];
 
 Texture2D playerIdleSprite;
 int currentSpriteIndex = 0;
@@ -50,6 +56,7 @@ void setPlayerSpriteAnimation(Player *player)
         // Aplica flip horizontal se estiver indo para a esquerda
         if (dx < 0) 
         {
+            player->sprite = playerWalkReverseSheet[currentSpriteIndex];
             player->flipHorizontal = true;
         }
         else
@@ -88,6 +95,9 @@ void InitPlayerAnimation() {
 
         snprintf(filePath, sizeof(filePath), "%s%s", playerWalkFrontPath, playerWalkFrontFiles[i]);
         playerWalkFrontSheet[i] = LoadTexture(filePath);
+
+        snprintf(filePath, sizeof(filePath), "%s%s", playerWalkReversePath, playerWalkReverseFiles[i]);
+        playerWalkReverseSheet[i] = LoadTexture(filePath);
     }
 
     playerIdleSprite = LoadTexture("player/hero-idle-front.png");
