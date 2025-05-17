@@ -5853,3 +5853,163 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre cientistas renomados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual cientista é amplamente reconhecido por sua teoria da relatividade, que revolucionou a física moderna?\",\n  \"alternativas\": {\n    \"A\": \"Isaac Newton\",\n    \"B\": \"Albert Einstein\",\n    \"C\": \"Marie Curie\",\n    \"D\": \"Charles Darwin\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.057946970065434776
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 96,
+    "totalTokenCount": 134,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 96
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre classificacao de triangulos por lados e angulos textual em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Classifique o triângulo com lados medindo 5 cm, 5 cm e 7 cm e ângulos internos medindo 70°, 70° e 40°:\",\n  \"alternativas\": {\n    \"A\": \"Triângulo escaleno e retângulo\",\n    \"B\": \"Triângulo isósceles e acutângulo\",\n    \"C\": \"Triângulo equilátero e acutângulo\",\n    \"D\": \"Triângulo isósceles e obtusângulo\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.038210363577533241
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 151,
+    "totalTokenCount": 197,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 151
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre rock internacional classico em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual banda é creditada como pioneira do grunge, um subgênero do rock alternativo que surgiu na década de 1980 em Seattle, Washington?\",\n  \"options\": {\n    \"A\": \"The Rolling Stones\",\n    \"B\": \"Led Zeppelin\",\n    \"C\": \"Nirvana\",\n    \"D\": \"Queen\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17254692077636719
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 100,
+    "totalTokenCount": 137,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 100
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes dirigidos por mulheres em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual dos seguintes filmes NÃO foi dirigido por uma mulher?\",\n  \"alternativas\": {\n    \"A\": \"Mulher-Maravilha 1984\",\n    \"B\": \"O Silêncio dos Inocentes\",\n    \"C\": \"Nomadland\",\n    \"D\": \"Little Women (2019)\"\n  },\n  \"resposta_correta\": \"B\",\n  \"explicacao\": \"O Silêncio dos Inocentes foi dirigido por Jonathan Demme.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067257741602455692
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 123,
+    "totalTokenCount": 163,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 123
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

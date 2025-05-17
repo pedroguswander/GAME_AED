@@ -173,10 +173,11 @@ int main() {
                 if (CheckCollisionPointRec(mouse, mainMenuButtons[i])) {
                     switch(i) {
                         case 0: // Modo Normal
+                            showPlayerNameInputScreen(QUIZ_MODE);
                             _menuOption = QUIZ_MODE;
                             break;
                         case 1: // Modo Tabuleiro
-							showPlayerNameInputScreen();
+							showPlayerNameInputScreen(TABULEIRO_MODE);
                             createBoard();
                             _menuOption = TABULEIRO_MODE;
                             break;
@@ -239,7 +240,7 @@ int main() {
                 if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
                     _quizScreen = TOPIC_SELECTION_SCREEN;
                     _menuOption = MAIN_MENU;
-                    saveScore("Nataniel");
+                    saveScore(player1Name);
                 } else if (_quizScreen == ANSWER_SCREEN) {
                     _currentQuestion++;
                     if (_currentQuestion >= 5) {

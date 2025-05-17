@@ -10,7 +10,7 @@
 char player1Name[MAX_NAME_LENGTH] = "";
 char player2Name[MAX_NAME_LENGTH] = "";
 
-void showPlayerNameInputScreen() {
+void showPlayerNameInputScreen(MenuOption option) {
     char inputText[MAX_NAME_LENGTH] = "";
     int currentPlayer = 1;
     bool nameEntered = false;
@@ -63,7 +63,7 @@ void showPlayerNameInputScreen() {
         }
 
         if (IsKeyPressed(KEY_ENTER)) {
-            if (currentPlayer == 1) {
+            if (currentPlayer == 1 && option != QUIZ_MODE) {
                 strcpy(player1Name, inputText);
                 currentPlayer = 2;
                 inputText[0] = '\0'; // limpa campo
