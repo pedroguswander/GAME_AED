@@ -320,10 +320,27 @@ void updateBoard() {
                     else if (key == 257) // ENTER
                     {
                         playerNameToString(player->name); // Copia da pilha para o player
-                        _boardState = CAN_PLAY;
+                        _boardState = CAN_PLAY_TRANSITION;
                     }
                 }
 
+                break;
+
+            case CAN_PLAY_TRANSITION:
+                // Transição suave para o zoom de 3.0f
+                _boardCamera.target = player->position;
+
+                float zoomSpeed = 0.05f; // ajuste conforme necessário
+                float targetZoom = 3.0f;
+
+                // Interpola o zoom suavemente
+                _boardCamera.zoom += (targetZoom - _boardCamera.zoom) * zoomSpeed;
+
+                // Quando estiver suficientemente próximo do zoom alvo, muda para CAN_PLAY
+                if (fabsf(_boardCamera.zoom - targetZoom) < 0.05f) {
+                    _boardCamera.zoom = targetZoom; // garante valor exato
+                    _boardState = CAN_PLAY;
+                }   
                 break;
 
             case CAN_PLAY:
@@ -533,6 +550,17 @@ void drawBoard() {
                      1920/2, 1080/2, 20, _players[_currentPlayerIndex].color);
             break;
 
+        
+        case CAN_PLAY_TRANSITION:
+            BeginMode2D(_boardCamera);
+
+                DrawTexture(backgroundTexture, 0, 0, WHITE);
+                DrawCircle(_boardCamera.target.x, _boardCamera.target.y, 10, RED);
+                drawPlayer(&_players[_currentPlayerIndex]);
+
+            EndMode2D();
+            break;
+
         case CAN_PLAY:
             BeginMode2D(_boardCamera);
 
@@ -545,6 +573,7 @@ void drawBoard() {
             drawDice();
             DrawText(TextFormat("P%d - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1), 595, 509, 20, BLACK);
             break;
+
         default:
             DrawTexture(backgroundTexture, 0, 0, WHITE);
             const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
@@ -574,7 +603,7 @@ void drawBoard() {
 void finalizeTurn() {
     tileBeforePlaying = NULL;
     _currentPlayerIndex = (_currentPlayerIndex + 1) % MAX_PLAYERS;
-    _boardState = CAN_PLAY;
+    _boardState = CAN_PLAY_TRANSITION;
 }
 
 bool movePlayer(Player *player, bool forward) {
