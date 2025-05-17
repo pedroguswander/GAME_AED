@@ -1198,3 +1198,403 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre formas de governo pelo mundo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes formas de governo é caracterizada pela concentração de poder nas mãos de uma única pessoa, geralmente sem limites constitucionais?\",\n  \"alternativas\": {\n    \"A\": \"Democracia Parlamentar\",\n    \"B\": \"República Federativa\",\n    \"C\": \"Monarquia Absoluta\",\n    \"D\": \"República Presidencialista\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1071552883494984
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 110,
+    "totalTokenCount": 149,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 110
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre música e esporte (hinos, trilhas) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes músicas é amplamente reconhecida como um hino não oficial associado a um evento esportivo específico?\",\n  \"options\": {\n    \"A\": \"Bohemian Rhapsody - Queen\",\n    \"B\": \"We Are the Champions - Queen\",\n    \"C\": \"Imagine - John Lennon\",\n    \"D\": \"Hotel California - Eagles\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"“We Are the Champions” do Queen é frequentemente tocada em eventos esportivos, particularmente após vitórias, tornando-se um hino não oficial para celebrações esportivas.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10901972982618544
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 144,
+    "totalTokenCount": 188,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 144
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre principais vozes no coral em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Quais são as principais vozes que compõem a maioria dos corais?\",\n  \"alternativas\": {\n    \"A\": \"Soprano, Contralto, Tenor e Baixo\",\n    \"B\": \"Meio-soprano, Alto, Barítono e Grave\",\n    \"C\": \"Primeiro Tenor, Segundo Tenor, Primeiro Baixo e Segundo Baixo\",\n    \"D\": \"Soprano, Alto, Barítono e Baixo\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.080779662499061
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 130,
+    "totalTokenCount": 169,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com viagem no tempo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme apresenta uma viagem no tempo paradoxal onde o protagonista altera eventos do passado, criando uma realidade alternativa e impactando seu próprio futuro de forma inesperada?\",\n  \"options\": {\n    \"A\": \"De Volta para o Futuro\",\n    \"B\": \"12 Macacos\",\n    \"C\": \"Efeito Borboleta\",\n    \"D\": \"A Máquina do Tempo\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora todos os filmes listados envolvam viagens no tempo, 'Efeito Borboleta' se destaca por sua exploração do paradoxo da viagem no tempo, onde pequenas mudanças no passado causam consequências drásticas e imprevisíveis no futuro do protagonista.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17658372258031091
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 172,
+    "totalTokenCount": 211,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 172
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com trilha sonora marcante em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual destes filmes é amplamente reconhecido por sua trilha sonora icônica e marcante, que contribui significativamente para a atmosfera e o impacto emocional da narrativa?\",\n  \"options\": {\n    \"A\": \"O Poderoso Chefão\",\n    \"B\": \"A Origem\",\n    \"C\": \"Interestelar\",\n    \"D\": \"O Senhor dos Anéis: A Sociedade do Anel\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Embora todos os filmes listados possuam trilhas sonoras memoráveis, a trilha sonora de 'O Poderoso Chefão', composta por Nino Rota, é frequentemente citada como uma das mais influentes e icônicas da história do cinema, intrinsecamente ligada à identidade e impacto do filme.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11015958371369736
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 184,
+    "totalTokenCount": 224,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 184
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes dos anos 90 em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de ação dos anos 90, estrelado por Arnold Schwarzenegger, apresentava um personagem ciborgue que viaja no tempo para evitar um futuro distópico?\",\n  \"options\": {\n    \"A\": \"Predador\",\n    \"B\": \"O Exterminador do Futuro 2: O Julgamento Final\",\n    \"C\": \"Duro de Matar\",\n    \"D\": \"O Predador 2\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14166937755937337
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 159,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 119
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre curiosidades sobre vulcões em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual país abriga o maior número de vulcões ativos?\",\n  \"alternativas\": {\n    \"A\": \"Estados Unidos\",\n    \"B\": \"Indonésia\",\n    \"C\": \"Japão\",\n    \"D\": \"Itália\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.050930182139078774
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 87,
+    "totalTokenCount": 127,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 87
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre música no TikTok e redes sociais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o impacto mais significativo da música no TikTok e outras redes sociais?\",\n  \"options\": {\n    \"A\": \"Diminuição da diversidade musical, com a popularização apenas de poucos gêneros.\",\n    \"B\": \"Fortalecimento da indústria fonográfica tradicional, que se beneficia diretamente das visualizações.\",\n    \"C\": \"Desenvolvimento de novos artistas e gêneros musicais, impulsionados pela viralização de áudios e vídeos.\",\n    \"D\": \"Redução do consumo de música fora das plataformas digitais, devido à facilidade de acesso.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O TikTok e outras redes sociais se tornaram plataformas importantes para o lançamento e divulgação de músicas, permitindo que artistas independentes alcancem um público global e contribuindo para o surgimento de novos gêneros e tendências musicais.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18787104540532179
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 202,
+    "totalTokenCount": 242,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 202
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre acontecimentos marcantes do século XXI em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes eventos NÃO ocorreu no século XXI?\",\n  \"options\": {\n    \"A\": \"Ataques terroristas de 11 de setembro de 2001 nos Estados Unidos\",\n    \"B\": \"O início da Guerra Fria\",\n    \"C\": \"A crise financeira mundial de 2008\",\n    \"D\": \"A pandemia de COVID-19\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A Guerra Fria ocorreu entre o fim da Segunda Guerra Mundial (1947) e a dissolução da União Soviética (1991), portanto, no século XX.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.076713549785124943
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 156,
+    "totalTokenCount": 197,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 156
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre curtas-metragens famosos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual curta-metragem de animação, conhecido por sua narrativa silenciosa e impactante sobre a violência e a perda de inocência, foi dirigido por Walt Disney e ganhou um Oscar em 1932?\",\n  \"alternativas\": {\n    \"A\": \"Steamboat Willie\",\n    \"B\": \"Flowers and Trees\",\n    \"C\": \"Plane Crazy\",\n    \"D\": \"The Old Mill Pond\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16264086864033683
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 122,
+    "totalTokenCount": 162,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 122
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

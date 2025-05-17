@@ -14,6 +14,19 @@ hall.txt
 
 raylib/
 
+game_log.txt
+assets/api_log.txt
+
+# Arquivos do Premake
+build/premake5
+build/premake5.exe
+build/premake5.osx
+build/premake5.lua
+build/premake-5.0.0-beta2-linux.tar.gz
+
+# Bibliotecas compartilhadas
+build/libluasocket.so
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
