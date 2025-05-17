@@ -2,7 +2,12 @@
 #define BOARD_H_
 #include "raylib.h"
 
+#define TILE_DISTANCE 150
+#define NAME_LENGTH 9
+
 typedef enum {
+    GET_PLAYERS_NAME,
+    CAN_PLAY_TRANSITION,
     CAN_PLAY,
     MOVING,
     MOVING_BACKWARDS,
@@ -41,9 +46,13 @@ typedef struct {
     Color color;
     BoardState state;
     Texture2D sprite;
+    char name[NAME_LENGTH];
 } Player;
 
-#define TILE_DISTANCE 150
+typedef struct PlayerNameChar {
+    char ch;
+    struct PlayerNameChar *next;  // Usa 'struct PlayerNameChar' aqui
+} PlayerNameChar;
 
 void createTile(TileType type, const char *topic, int casa);
 Vector2 getPositionOfTile(int casa);
@@ -57,7 +66,9 @@ void changePlayerWalkAnimationSprite(void);
 void drawPlayer(Player *p);
 void freeBoard();
 void resetBoard();
-
-
+void playerNamePrint();
+void playerNamePush(char ch);
+void playerNamePop();
+void playerNameToString(char *dest);
 
 #endif

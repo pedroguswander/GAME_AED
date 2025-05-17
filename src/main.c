@@ -16,7 +16,9 @@
 #include "time.h"
 #include "string.h"
 #include "board.h"
+#include "main_menu.h"
 
+#define MENU_OPTIONS_FONT_SIZE 64
 
 typedef enum {
     ROLL_DICE,
@@ -40,16 +42,16 @@ typedef enum {
     TABULEIRO_QUESTION_SCREEN = 5 
 } QuizScreen;
 
-typedef enum {
+/*typedef enum {
     MAIN_MENU=0,
     QUIZ_MODE=1,
     TABULEIRO_MODE=2,
     HALL_OF_FAME=3,
     CREDITS=4,
     FINAL_MENU_SCREEN = 5,
-} MenuOption;
+} MenuOption;*/
 
-MenuOption _menuOption = MAIN_MENU;
+//MenuOption _menuOption = MAIN_MENU;
 QuizScreen _quizScreen = 0;
 char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
 bool _gotItRight = false;
@@ -65,6 +67,8 @@ const char *topics[] = {
     "Historia do Brasil"
     };
 
+Font titleFont = {0};
+Font mainMenuFont = {0};
 
 void checkIfAnswerIsRight(Option *options, Question question);
 void *loadQuestionsThread(void *arg);
@@ -78,6 +82,9 @@ int main() {
     SearchAndSetResourceDir("assets");
     lerJsonDeFormatacao("exemplo_questao.json");
 
+    titleFont = LoadFont("fonts/VT323-Regular.ttf");
+    mainMenuFont = LoadFont("fonts/setback.png");
+
     createBoard();
     
     Rectangle topicButtons[4];
@@ -90,11 +97,24 @@ int main() {
         "Modo Normal",
         "Modo Tabuleiro",
         "Hall da Fama",
-        "Créditos",
+        "Creditos",
 		"Sair do Jogo"
     };
+
+    int menuOptionsSpacing = 150;
+    int menuOptionStartY = 250;
+
     for (int i = 0; i < 5; i++) {
-        mainMenuButtons[i] = (Rectangle){ screenWidth/2 - 200, 200 + i*100, 400, 60 };
+        const char *upperText = TextToUpper(mainMenuLabels[i]);
+        Vector2 textSize = MeasureTextEx(mainMenuFont, upperText, MENU_OPTIONS_FONT_SIZE, 2);
+
+        // Centraliza o botão em relação ao texto já centralizado
+        float rectX = screenWidth/2 - textSize.x/2 - 20; // 20 de padding horizontal
+        float rectY = menuOptionStartY + i * menuOptionsSpacing;
+        float rectWidth = textSize.x + 40; // 20 de padding dos dois lados
+        float rectHeight = textSize.y + 20; // padding vertical
+
+        mainMenuButtons[i] = (Rectangle){ rectX, rectY, rectWidth, rectHeight };
     }
 
     const char* tileLabels[3] = {
@@ -152,9 +172,6 @@ int main() {
                 }
             }
         }
-
-
-
 
         //UPTADE
 
@@ -268,15 +285,24 @@ int main() {
                     DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
                 }
 
-                // Título centralizado
-                const char *titulo = "MENU PRINCIPAL";
-                int larguraTexto = MeasureText(titulo, 40);
-                DrawText(titulo, screenWidth/2 - larguraTexto/2, 80, 40, YELLOW);
+                const char *titulo = "MIND RUNNER";
+                Vector2 textSize0 = MeasureTextEx(titleFont, titulo, 80, 2);
+                DrawTextEx(titleFont, titulo, (Vector2){screenWidth/2 - textSize0.x/2, 80}, 80, 2, YELLOW);
 
-                // Botões do menu
                 for (int i = 0; i < 5; i++) {
-                    DrawRectangleRec(mainMenuButtons[i], DARKGRAY);
-                    DrawText(mainMenuLabels[i], mainMenuButtons[i].x + 20, mainMenuButtons[i].y + 15, 24, WHITE);
+                    if (CheckCollisionPointRec(GetMousePosition(), mainMenuButtons[i]))
+                    {
+                        DrawRectangleRounded(mainMenuButtons[i], 0.5f, 10, DARKGRAY);
+                    }
+                    
+                    const char *upperText = TextToUpper(mainMenuLabels[i]);
+                    Vector2 textSize = MeasureTextEx(mainMenuFont, upperText, MENU_OPTIONS_FONT_SIZE, 2);
+                    DrawTextEx(mainMenuFont, upperText,
+                        (Vector2){
+                            mainMenuButtons[i].x + (mainMenuButtons[i].width - textSize.x)/2,
+                            mainMenuButtons[i].y + (mainMenuButtons[i].height - textSize.y)/2
+                        },
+                        MENU_OPTIONS_FONT_SIZE, 2, WHITE);
                 }
                 break;
             }
