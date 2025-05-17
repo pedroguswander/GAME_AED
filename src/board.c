@@ -91,9 +91,9 @@ const Vector2 tilePositions[BOARD_SIZE] = {
 };
 
 const char* tileLabels[BOARD_SIZE] = {
-    "Início", "Conhecimentos Gerais", "Filmes", "Músicas", "Matemática",
+    "Início", "Conhecimentos Gerais", "Filmes", "Músicas", "Video-Games",
     "Boss Node AED", "Filmes", "Músicas", "Conhecimentos Gerais", "Filmes",
-    "Boss Node AED", "Matemática", "Conhecimentos Gerais", "Músicas", "Final"
+    "Boss Node AED", "Video-Games", "Conhecimentos Gerais", "Músicas", "Final"
 };
 
 void resetBoard() {
@@ -162,7 +162,7 @@ void createBoard() {
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
-    backgroundTexture = LoadTexture("background-board-mode-1.png");
+    backgroundTexture = LoadTexture("background-board-mode-2.png");
     victoyTheme = LoadSound("music/videoplayback.wav");
 
     InitPlayerAnimation();
@@ -284,7 +284,8 @@ void updateBoard() {
                         diceRolled = false; // Reset para o próximo turno
                     }
                 } else if (IsKeyPressed(KEY_SPACE)) {
-                    _dice = rand() % 6 + 1;
+                    // _dice = rand() % 6 + 1;
+                    _dice = 1;
                     setDiceResult(_dice);
                     diceRolled = true;
                     diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
