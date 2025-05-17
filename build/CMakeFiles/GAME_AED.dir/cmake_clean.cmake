@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GAME_AED.dir/src/hall.c.o.d"
   "CMakeFiles/GAME_AED.dir/src/main.c.o"
   "CMakeFiles/GAME_AED.dir/src/main.c.o.d"
+  "CMakeFiles/GAME_AED.dir/src/main_menu.c.o"
+  "CMakeFiles/GAME_AED.dir/src/main_menu.c.o.d"
   "CMakeFiles/GAME_AED.dir/src/player_animation.c.o"
   "CMakeFiles/GAME_AED.dir/src/player_animation.c.o.d"
   "CMakeFiles/GAME_AED.dir/src/player_names.c.o"
