@@ -6013,3 +6013,1726 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de investigação policial em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de investigação policial é conhecido por sua complexa trama de múltiplos suspeitos e reviravoltas surpreendentes, explorando temas de moralidade ambígua e a natureza da justiça?\",\n  \"options\": {\n    \"A\": \"O Silêncio dos Inocentes\",\n    \"B\": \"Se7en: Os Sete Crimes Capitais\",\n    \"C\": \"L.A. Confidential\",\n    \"D\": \"Os Suspeitos\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora todos os filmes listados sejam excelentes exemplos do gênero, L.A. Confidential se destaca por sua trama intrincada com múltiplos personagens, cada um com seus próprios segredos e motivações, levando a um final surpreendente que questiona a justiça e a moralidade.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16646299864116468
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 190,
+    "totalTokenCount": 228,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 190
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre potenciacao com numeros naturais calculo simples em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o resultado da operação 2³?\",\n  \"alternativas\": {\n    \"A\": \"2\",\n    \"B\": \"6\",\n    \"C\": \"8\",\n    \"D\": \"9\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.06012008159975462
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 79,
+    "totalTokenCount": 121,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre descobertas cientificas famosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual cientista é creditado pela descoberta da estrutura da dupla hélice do DNA?\",\n  \"options\": {\n    \"A\": \"Gregor Mendel\",\n    \"B\": \"Isaac Newton\",\n    \"C\": \"James Watson e Francis Crick\",\n    \"D\": \"Albert Einstein\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.021643725673804123
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre descobrimentos historicos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual navegador português é creditado com a primeira viagem europeia documentada a alcançar a Índia pelo caminho marítimo?\",\n  \"options\": {\n    \"A\": \"Cristóvão Colombo\",\n    \"B\": \"Vasco da Gama\",\n    \"C\": \"Fernando de Magalhães\",\n    \"D\": \"Bartolomeu Dias\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069174247212929307
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 101,
+    "totalTokenCount": 139,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 101
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"O que é um algoritmo?\",\n  \"alternativas\": {\n    \"A\": \"Um programa de computador escrito em linguagem de máquina.\",\n    \"B\": \"Uma sequência finita de instruções bem definidas, ordenadas e executáveis que visa solucionar um problema ou executar uma tarefa.\",\n    \"C\": \"Um tipo de dado utilizado para armazenar informações complexas.\",\n    \"D\": \"Uma estrutura de dados utilizada para organizar informações de forma hierárquica.\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1269338901226337
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 130,
+    "totalTokenCount": 169,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Johnny Depp em filmes excêntricos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em qual desses filmes excêntricos Johnny Depp interpretou um personagem marcantemente peculiar?\",\n  \"options\": {\n    \"A\": \"Piratas do Caribe: A Maldição do Pérola Negra\",\n    \"B\": \"Sweeney Todd: O Barbeiro Demoníaco de Fleet Street\",\n    \"C\": \"Titanic\",\n    \"D\": \"O Turista\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Embora Depp tenha feito personagens excêntricos em outros filmes, sua atuação como o barbeiro assassino em Sweeney Todd é amplamente considerada uma das mais excêntricas e memoráveis de sua carreira.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12991916146248009
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 157,
+    "totalTokenCount": 199,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 157
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre guerras mundiais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual tratado é considerado o principal responsável por estabelecer as condições que levaram à Primeira Guerra Mundial?\",\n  \"options\": {\n    \"A\": \"Tratado de Versalhes\",\n    \"B\": \"Tratado de Tordesilhas\",\n    \"C\": \"Tratado de Brest-Litovsk\",\n    \"D\": \"Congresso de Viena\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"O Congresso de Viena, realizado após as Guerras Napoleônicas, redefiniu o mapa da Europa, criando um equilíbrio de poder instável que, combinado com outros fatores, contribuiu para o cenário tenso que culminou na Primeira Guerra Mundial.  Os outros tratados mencionados foram consequências ou eventos posteriores à Primeira Guerra Mundial.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15309381221539409
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 181,
+    "totalTokenCount": 218,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 181
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre religiao e simbolos religiosos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual símbolo religioso está frequentemente associado à paz e à não-violência?\",\n  \"alternativas\": {\n    \"A\": \"Cruz Cristã\",\n    \"B\": \"Estrela de Davi\",\n    \"C\": \"Lua Crescente Islâmica\",\n    \"D\": \"Símbolo da Paz (círculo com três linhas)\"\n  },\n  \"resposta_correta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.085762550717308414
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes da Illumination em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes filmes NÃO é uma produção da Illumination Studios?\",\n  \"options\": {\n    \"A\": \"Minions\",\n    \"B\": \"Meu Malvado Favorito\",\n    \"C\": \"A Era do Gelo\",\n    \"D\": \"Sing: Quem Canta Seus Males Espanta\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048688873331597514
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 94,
+    "totalTokenCount": 132,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 94
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Leonardo DiCaprio e sua filmografia em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de Leonardo DiCaprio NÃO lhe rendeu uma indicação ao Oscar de Melhor Ator?\",\n  \"options\": {\n    \"A\": \"O Lobo de Wall Street\",\n    \"B\": \"Django Livre\",\n    \"C\": \"O Aviador\",\n    \"D\": \"O Regresso\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Leonardo DiCaprio foi indicado ao Oscar de Melhor Ator por suas performances em 'O Lobo de Wall Street', 'O Aviador' e 'O Regresso'. Ele não foi indicado por 'Django Livre', onde interpretou um papel coadjuvante.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069354582152910682
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 149,
+    "totalTokenCount": 189,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 149
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre orgaos e funcoes do corpo humano em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual órgão é responsável pela produção de bile, essencial para a digestão de gorduras?\",\n  \"options\": {\n    \"A\": \"Pâncreas\",\n    \"B\": \"Estômago\",\n    \"C\": \"Fígado\",\n    \"D\": \"Intestino delgado\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.019980843250568096
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 91,
+    "totalTokenCount": 134,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 91
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre trailers que enganaram o público em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme teve um trailer que gerou grande expectativa, mas acabou divergindo significativamente do produto final, levando muitos espectadores a se sentirem enganados pela campanha de marketing?\",\n  \"options\": {\n    \"A\": \"O Regresso\",\n    \"B\": \"O Silêncio dos Inocentes\",\n    \"C\": \"A Chegada\",\n    \"D\": \"Vingadores: Ultimato\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Embora todos os filmes listados tenham trailers eficazes, 'O Regresso' é conhecido por ter um trailer que sugeria um filme de ação e aventura mais frenético do que o filme lento e contemplativo que realmente foi. Muitos espectadores se sentiram desapontados com a discrepância entre o que o trailer prometia e o que o filme entregou.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23179313114711217
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 196,
+    "totalTokenCount": 236,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 196
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre a saga Crepúsculo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual habilidade sobrenatural Bella Swan desenvolve após se casar com Edward Cullen?\",\n  \"options\": {\n    \"A\": \"Telepatia\",\n    \"B\": \"Telecinese\",\n    \"C\": \"Controle sobre o elemento fogo\",\n    \"D\": \"Visão noturna e velocidade sobre-humana\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16401600591915169
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 136,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre a musica nos videogames trilhas sonoras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o impacto significativo das trilhas sonoras nos videogames?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"Apenas aumentam o apelo estético do jogo, sem influenciar a jogabilidade.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"Criam uma atmosfera imersiva, melhorando a experiência do jogador e impactando suas emoções, mas sem afetar a jogabilidade diretamente.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"Influenciam diretamente a jogabilidade, fornecendo pistas sonoras que auxiliam o jogador e impactando suas decisões, além de criar atmosfera.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"São um elemento secundário que pode ser facilmente removido sem afetar a experiência geral do jogo.\"\n    }\n  ],\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24078118855057798
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 221,
+    "totalTokenCount": 264,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 221
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre guerras mundiais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre historia dos videogames em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual console é considerado o precursor dos consoles modernos, popularizando o conceito de jogos em cartuchos intercambiáveis e marcando o início da era de ouro dos videogames?\",\n  \"options\": {\n    \"A\": \"Atari 2600\",\n    \"B\": \"Magnavox Odyssey\",\n    \"C\": \"Nintendo Entertainment System (NES)\",\n    \"D\": \"ColecoVision\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Embora o Magnavox Odyssey tenha sido o primeiro console doméstico, o Atari 2600 popularizou o conceito de jogos em cartuchos, permitindo uma variedade maior de títulos e impulsionando a indústria de videogames para uma nova era.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.066510970132392752
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 171,
+    "totalTokenCount": 209,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 171
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre desenvolvedoras de jogos famosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes desenvolvedoras de jogos é conhecida por franquias como Tomb Raider e Deus Ex?\",\n  \"options\": {\n    \"A\": \"Nintendo\",\n    \"B\": \"Rockstar Games\",\n    \"C\": \"Square Enix\",\n    \"D\": \"Eidos Interactive\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.074826219108667269
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre termos comuns no mundo dos games em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual termo descreve um jogo que utiliza elementos de diferentes gêneros para criar uma experiência única?\",\n  \"options\": {\n    \"A\": \"MMORPG\",\n    \"B\": \"Indie\",\n    \"C\": \"Híbrido\",\n    \"D\": \"Metroidvania\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.090119758348786425
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos de simulacao conhecidos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes jogos é conhecido por sua simulação detalhada de construção e gerenciamento de cidades?\",\n  \"options\": {\n    \"A\": \"Grand Theft Auto V\",\n    \"B\": \"The Sims 4\",\n    \"C\": \"Cities: Skylines\",\n    \"D\": \"Counter-Strike: Global Offensive\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.058950798852103095
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos de plataforma classicos em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual jogo NÃO é plataforma clássico?\",\n  \"options\": {\n    \"A\": \"Super Mario Bros.\",\n    \"B\": \"Sonic the Hedgehog\",\n    \"C\": \"Pac-Man\",\n    \"D\": \"Mega Man\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.035306710463303789
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 78,
+    "totalTokenCount": 131,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 78
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre curiosidades sobre o corpo humano em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o músculo mais forte do corpo?\",\n  \"alternativas\": {\n    \"A\": \"Bíceps\",\n    \"B\": \"Glúteo máximo\",\n    \"C\": \"Língua\",\n    \"D\": \"Coração\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.025587052833743212
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 82,
+    "totalTokenCount": 136,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 82
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre mares e oceanos em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o maior oceano do mundo?\",\n  \"options\": {\n    \"A\": \"Oceano Atlântico\",\n    \"B\": \"Oceano Índico\",\n    \"C\": \"Oceano Pacífico\",\n    \"D\": \"Oceano Ártico\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0054110281846740027
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 88,
+    "totalTokenCount": 140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 88
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre sagas com mais de três filmes em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual saga tem mais de 3 filmes?\",\n  \"alternativas\": {\n    \"A\": \"O Hobbit\",\n    \"B\": \"Toy Story\",\n    \"C\": \"Harry Potter\",\n    \"D\": \"O Senhor dos Anéis\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0646270556622241
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 55,
+    "candidatesTokenCount": 83,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 55
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 83
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre quimica do dia a dia em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual substância é um ácido fraco?\",\n  \"alternativas\": {\n    \"A\": \"Ácido sulfúrico\",\n    \"B\": \"Ácido clorídrico\",\n    \"C\": \"Ácido acético\",\n    \"D\": \"Ácido nítrico\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0489270634121365
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 90,
+    "totalTokenCount": 144,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 90
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre historia do funk brasileiro em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a origem do funk brasileiro?\",\n  \"alternativas\": {\n    \"A\": \"Música clássica europeia\",\n    \"B\": \"Música sertaneja brasileira\",\n    \"C\": \"Funk americano dos anos 70\",\n    \"D\": \"Música popular brasileira dos anos 60\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0970990632709704
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 95,
+    "totalTokenCount": 147,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 95
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de distopia futurista em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme NÃO é uma distopia futurista?\",\n  \"options\": {\n    \"A\": \"Blade Runner 2049\",\n    \"B\": \"Mad Max: Estrada da Fúria\",\n    \"C\": \"O Senhor dos Anéis\",\n    \"D\": \"Divergente\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.011655111675677092
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 92,
+    "totalTokenCount": 146,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 92
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre caracteristicas do sertanejo em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual característica NÃO define o sertanejo?\",\n  \"alternativas\": {\n    \"A\": \"Resiliência\",\n    \"B\": \"Individualismo extremo\",\n    \"C\": \"Fé religiosa\",\n    \"D\": \"Adaptação ao clima\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.045122744089149569
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 83,
+    "totalTokenCount": 137,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 83
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre forro e suas variacoes em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual material NÃO é usado em forros?\",\n  \"alternativas\": {\n    \"A\": \"Gesso\",\n    \"B\": \"PVC\",\n    \"C\": \"Madeira\",\n    \"D\": \"Concreto Armado\"\n  },\n  \"resposta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.026803897648322875
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 82,
+    "totalTokenCount": 135,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 82
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos indie de sucesso em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual indie fez mais de 10 milhões?\",\n  \"options\": {\n    \"A\": \"Celeste\",\n    \"B\": \"Stardew Valley\",\n    \"C\": \"Undertale\",\n    \"D\": \"Hollow Knight\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.045065225699009039
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 78,
+    "totalTokenCount": 130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 78
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre artistas da MPB em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual artista NÃO é ícone da MPB?\",\n  \"alternativas\": {\n    \"A\": \"Chico Buarque\",\n    \"B\": \"Caetano Veloso\",\n    \"C\": \"Michael Jackson\",\n    \"D\": \"Gilberto Gil\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.011663079971358889
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 84,
+    "totalTokenCount": 136,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 84
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos de estrategia marcantes em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual jogo de estratégia marcou época?\",\n  \"alternativas\": {\n    \"A\": \"StarCraft II\",\n    \"B\": \"Age of Empires II\",\n    \"C\": \"Civilization IV\",\n    \"D\": \"Warcraft III\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0075951112168175837
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 84,
+    "totalTokenCount": 137,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 84
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos de RPG classicos em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual RPG clássico usa dados de 20 lados?\",\n  \"options\": {\n    \"A\": \"Diablo\",\n    \"B\": \"Final Fantasy VII\",\n    \"C\": \"Dungeon Master\",\n    \"D\": \"Baldur's Gate\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0913389892112918
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 82,
+    "totalTokenCount": 135,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 82
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre realidade virtual nos videogames em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal vantagem da RV em games?\",\n  \"options\": {\n    \"A\": \"Gráficos mais realistas\",\n    \"B\": \"Imersividade aprimorada\",\n    \"C\": \"Maior facilidade de jogar\",\n    \"D\": \"Melhora no desempenho do PC\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11887841639311417
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 92,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 92
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre jogos de RPG classicos em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual RPG clássico usa dados de 20 lados?\",\n  \"options\": {\n    \"A\": \"Dungeon & Dragons\",\n    \"B\": \"Traveller\",\n    \"C\": \"Call of Cthulhu\",\n    \"D\": \"RuneQuest\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067007216011605614
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 82,
+    "totalTokenCount": 135,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 82
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conceito de função em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"O que define uma função matemática?\",\n  \"alternativas\": {\n    \"A\": \"Uma sequência numérica.\",\n    \"B\": \"Uma relação de dependência entre conjuntos.\",\n    \"C\": \"Um conjunto de pontos no plano.\",\n    \"D\": \"Uma operação aritmética.\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12306767321647481
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 94,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 94
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre mitologias gregas e romanas em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual deus romano equivale a Zeus?\",\n  \"options\": {\n    \"A\": \"Poseidon\",\n    \"B\": \"Hades\",\n    \"C\": \"Júpiter\",\n    \"D\": \"Ares\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.018607882229057519
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 56,
+    "candidatesTokenCount": 74,
+    "totalTokenCount": 130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 56
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 74
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre invenções que mudaram o mundo em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual invenção revolucionou as comunicações?\",\n  \"alternativas\": {\n    \"A\": \"Imprensa de Gutenberg\",\n    \"B\": \"Lâmpada incandescente\",\n    \"C\": \"Internet\",\n    \"D\": \"Máquina a vapor\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.066039681434631348
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 55,
+    "candidatesTokenCount": 88,
+    "totalTokenCount": 143,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 55
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 88
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de monstros gigantes em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme mostra Godzilla lutando contra Mothra?\",\n  \"options\": {\n    \"A\": \"Godzilla vs. Kong\",\n    \"B\": \"Godzilla (1954)\",\n    \"C\": \"Godzilla vs. Mechagodzilla\",\n    \"D\": \"Godzilla vs. Mothra\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048132922338402787
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 92,
+    "totalTokenCount": 144,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 92
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre mares e oceanos em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o maior oceano do mundo?\",\n  \"options\": {\n    \"A\": \"Oceano Atlântico\",\n    \"B\": \"Oceano Índico\",\n    \"C\": \"Oceano Pacífico\",\n    \"D\": \"Oceano Ártico\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.00505205514756116
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 88,
+    "totalTokenCount": 140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 88
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre bandas de rock famosas em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual banda lançou o álbum \\\"Nevermind\\\"?\",\n  \"alternativas\": {\n    \"A\": \"Led Zeppelin\",\n    \"B\": \"Nirvana\",\n    \"C\": \"AC/DC\",\n    \"D\": \"Queen\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0734320342540741
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 80,
+    "totalTokenCount": 132,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 80
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre órgãos e funções do corpo humano em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual órgão filtra o sangue?\",\n  \"options\": {\n    \"A\": \"Coração\",\n    \"B\": \"Pulmão\",\n    \"C\": \"Fígado\",\n    \"D\": \"Rim\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.011654736995697022
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 75,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 75
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre história dos videogames em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual jogo é considerado o primeiro videogame?\",\n  \"options\": {\n    \"A\": \"Space Invaders\",\n    \"B\": \"Pong\",\n    \"C\": \"Pac-Man\",\n    \"D\": \"Tennis for Two\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.044306593063550115
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 78,
+    "totalTokenCount": 130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 78
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com crianças como protagonistas em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual filme infantil mostra uma garota órfã?\",\n  \"alternativas\": {\n    \"A\": \"Procurando Nemo\",\n    \"B\": \"Divertida Mente\",\n    \"C\": \"A Noviça Rebelde\",\n    \"D\": \"Annie\"\n  },\n  \"resposta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14593802923443674
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 87,
+    "totalTokenCount": 140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 87
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre história dos jogos online em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual jogo é precursor dos MMORPGs?\",\n  \"options\": {\n    \"A\": \"Doom\",\n    \"B\": \"Spacewar!\",\n    \"C\": \"Ultima Online\",\n    \"D\": \"MUD1\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.035763244879873174
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 76,
+    "totalTokenCount": 128,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 76
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

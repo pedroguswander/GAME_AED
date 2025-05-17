@@ -59,13 +59,13 @@ const char (*getThemesOfTopic(const char *topic))[100] {
         return MUSICAS_THEMES;
     }
     else if (strcmp(topic, "Matemática") == 0) {
-        return MATEMATICA_THEMES;
+        return THEME_VIDEO_GAMES;
     }
     return NULL;
 }
 
 Theme topicToTheme(const char *topic) {
-    if (strcmp(topic, "Matemática") == 0) return THEME_MATEMATICA;
+    if (strcmp(topic, "Video-Games") == 0) return THEME_VIDEO_GAMES;
     if (strcmp(topic, "Músicas") == 0) return THEME_MUSICA;
     if (strcmp(topic, "Filmes") == 0) return THEME_FILMES;
     if (strcmp(topic, "Conhecimentos Gerais") == 0) return THEME_CONHECIMENTOS_GERAIS;

@@ -3,72 +3,105 @@
 #include <string.h>
 #include <stdio.h>
 
-const char* subthemes_math[] = {
-    "adicao e subtracao de numeros inteiros",
-    "multiplicacao e divisao de numeros inteiros",
-    "ordem das operacoes",
-    "fracoes equivalentes",
-    "adicao e subtracao de fracoes",
-    "multiplicacao e divisao de fracoes",
-    "numeros decimais",
-    "conversao entre fracoes e decimais",
-    "porcentagem e descontos simples",
-    "porcentagem no cotidiano",
-    "proporcoes e regras de tres simples",
-    "multiplos e divisores",
-    "MMC e MDC em problemas com enfase na resposta numerica",
-    "numeros primos conceito e identificacao",
-    "potenciacao com numeros naturais calculo simples",
-    "radiciacao simples raizes exatas",
-    "propriedades da adicao e multiplicacao identificacao",
-    "expressoes numericas simples",
-    "valor absoluto conceito e calculo",
-    "conjuntos e subconjuntos simples conceito e exemplos",
-    "unidades de medida comprimento massa tempo conversoes basicas",
-    "media aritmetica simples calculo",
-    "mediana e moda identificacao em conjuntos pequenos",
-    "probabilidade basica com dados ou moedas resultado numerico",
-    "nocoes de estatistica no cotidiano interpretacao textual",
-    "angulos retos agudos e obtusos identificacao",
-    "operacoes com angulos adicao e subtracao simples",
-    "classificacao de triangulos por lados e angulos textual",
-    "soma dos angulos internos de triangulos conceito",
-    "introducao a algebra o que e uma variavel"
+// const char* subthemes_math[] = {
+//     "adicao e subtracao de numeros inteiros",
+//     "multiplicacao e divisao de numeros inteiros",
+//     "ordem das operacoes",
+//     "fracoes equivalentes",
+//     "adicao e subtracao de fracoes",
+//     "multiplicacao e divisao de fracoes",
+//     "numeros decimais",
+//     "conversao entre fracoes e decimais",
+//     "porcentagem e descontos simples",
+//     "porcentagem no cotidiano",
+//     "proporcoes e regras de tres simples",
+//     "multiplos e divisores",
+//     "MMC e MDC em problemas com enfase na resposta numerica",
+//     "numeros primos conceito e identificacao",
+//     "potenciacao com numeros naturais calculo simples",
+//     "radiciacao simples raizes exatas",
+//     "propriedades da adicao e multiplicacao identificacao",
+//     "expressoes numericas simples",
+//     "valor absoluto conceito e calculo",
+//     "conjuntos e subconjuntos simples conceito e exemplos",
+//     "unidades de medida comprimento massa tempo conversoes basicas",
+//     "media aritmetica simples calculo",
+//     "mediana e moda identificacao em conjuntos pequenos",
+//     "probabilidade basica com dados ou moedas resultado numerico",
+//     "nocoes de estatistica no cotidiano interpretacao textual",
+//     "angulos retos agudos e obtusos identificacao",
+//     "operacoes com angulos adicao e subtracao simples",
+//     "classificacao de triangulos por lados e angulos textual",
+//     "soma dos angulos internos de triangulos conceito",
+//     "introducao a algebra o que e uma variavel"
+// };
+
+const char* subthemes_videogames[] = {
+    "história dos videogames",
+    "consoles de videogame clássicos",
+    "consoles de videogame atuais",
+    "gêneros de jogos mais populares",
+    "jogos de aventura famosos",
+    "jogos de ação populares",
+    "jogos de estratégia marcantes",
+    "jogos de RPG clássicos",
+    "jogos de simulação conhecidos",
+    "jogos de esporte populares",
+    "jogos de corrida famosos",
+    "jogos de luta icônicos",
+    "jogos de plataforma clássicos",
+    "jogos indie de sucesso",
+    "desenvolvedoras de jogos famosas",
+    "personagens de videogames clássicos",
+    "personagens de videogames atuais",
+    "mundos de jogos memoráveis",
+    "mecânicas de jogo inovadoras",
+    "a música nos videogames trilhas sonoras",
+    "a influência dos videogames na cultura",
+    "eSports e jogos competitivos",
+    "história dos jogos online",
+    "plataformas de streaming de jogos",
+    "termos comuns no mundo dos games",
+    "curiosidades sobre videogames",
+    "a evolução dos gráficos nos games",
+    "realidade virtual nos videogames",
+    "realidade aumentada nos videogames",
+    "jogos mobile de sucesso"
 };
 
-const int subthemes_math_count = sizeof(subthemes_math) / sizeof(subthemes_math[0]);
+const int subthemes_videogames_count = sizeof(subthemes_videogames) / sizeof(subthemes_videogames[0]);
 
 const char* subthemes_musics[] = {
-    "notas musicais basicas",
+    "notas musicais básicas",
     "escala musical natural",
     "instrumentos de corda",
     "instrumentos de sopro",
-    "instrumentos de percussao",
-    "instrumentos eletronicos",
+    "instrumentos de percussão",
+    "instrumentos eletrônicos",
     "vozes masculinas e femininas",
     "principais estilos musicais",
     "ritmos populares do Brasil",
     "ritmos populares do mundo",
     "samba e sua origem",
-    "forro e suas variacoes",
+    "forró e suas variações",
     "bossa nova e seus representantes",
     "rock nacional anos 80",
-    "rock internacional classico",
+    "rock internacional clássico",
     "pop internacional atual",
     "artistas da MPB",
     "bandas de rock famosas",
     "cantores pop dos anos 2000",
-    "historia do funk brasileiro",
-    "caracteristicas do sertanejo",
-    "musica classica para iniciantes",
-    "compositores classicos famosos",
-    "elementos da musica ritmo melodia harmonia",
-    "notacao musical basica",
-    "figuras ritmicas simples seminima minima colcheia",
+    "história do funk brasileiro",
+    "características do sertanejo",
+    "música clássica para iniciantes",
+    "compositores clássicos famosos",
+    "elementos da música ritmo melodia harmonia",
+    "notação musical básica",
+    "figuras rítmicas simples seminima mínima colcheia",
     "tempo e compasso musical",
-    "leitura de partitura basica",
-    "diferenca entre ritmo e melodia",
-    "o que e um refrao"
+    "leitura de partitura básica",
+    "diferença entre ritmo e melodia",
+    "o que é um refrão"
 };
 
 const int subthemes_musics_count = sizeof(subthemes_musics) / sizeof(subthemes_musics[0]);
@@ -185,36 +218,36 @@ const char* subthemes_movies[] = {
 const int subthemes_movies_count = sizeof(subthemes_movies) / sizeof(subthemes_movies[0]);
 
 const char* subthemes_general_knowledge[] = {
-    "capitais dos paises",
+    "capitais dos países",
     "bandeiras nacionais",
     "idiomas oficiais ao redor do mundo",
     "principais rios do mundo",
     "maiores desertos da Terra",
     "cordilheiras e montanhas famosas",
     "mares e oceanos",
-    "continentes e suas caracteristicas",
+    "continentes e suas características",
     "geografia do Brasil",
     "estados e capitais brasileiras",
     "biomas brasileiros",
-    "animais ameacados de extincao",
-    "invencoes que mudaram o mundo",
-    "descobrimentos historicos",
-    "personagens historicos importantes",
+    "animais ameaçados de extinção",
+    "invenções que mudaram o mundo",
+    "descobrimentos históricos",
+    "personagens históricos importantes",
     "guerras mundiais",
     "mitologias gregas e romanas",
-    "religiao e simbolos religiosos",
-    "festas e tradicoes culturais",
-    "alimentos tipicos de diversos paises",
+    "religião e símbolos religiosos",
+    "festas e tradições culturais",
+    "alimentos típicos de diversos países",
     "costumes de diferentes culturas",
     "curiosidades sobre o corpo humano",
-    "orgaos e funcoes do corpo humano",
+    "órgãos e funções do corpo humano",
     "sistemas do corpo humano",
-    "descobertas cientificas famosas",
+    "descobertas científicas famosas",
     "cientistas renomados",
-    "teorias da fisica classica",
-    "quimica do dia a dia",
-    "simbolos da tabela periodica",
-    "energia renovavel e sustentavel"
+    "teorias da física clássica",
+    "química do dia a dia",
+    "símbolos da tabela periódica",
+    "energia renovável e sustentável"
 };
 
 
@@ -229,10 +262,9 @@ const char* subthemes_aed[] = {
     "diferença entre for e while",
     "variáveis em algoritmos",
     "entrada e saída de dados",
-    "conceito de função",
-    "funções simples e chamadas"
+    "conceito de função em programação",
+    "funções simples e chamadas em programação"
 };
-
 
 const int subthemes_aed_count = sizeof(subthemes_aed) / sizeof(subthemes_aed[0]);
 
@@ -240,10 +272,10 @@ const char* get_random_subtheme(Theme theme) {
     printf("get_random_subtheme chamado com tema: %d\n", theme);
     int index = 0;
     switch (theme) {
-        case THEME_MATEMATICA:
-            index = rand() % subthemes_math_count;
-            printf("Tema MATEMATICA, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_math[index]);
-            return subthemes_math[index];
+        case THEME_VIDEO_GAMES:
+            index = rand() % subthemes_videogames_count;
+            printf("Tema MATEMATICA, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_videogames[index]);
+            return subthemes_videogames[index];
         case THEME_MUSICA:
             index = rand() % subthemes_musics_count;
             printf("Tema MUSICA, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_musics[index]);

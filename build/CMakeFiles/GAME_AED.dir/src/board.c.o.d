@@ -83,4 +83,5 @@ CMakeFiles/GAME_AED.dir/src/board.c.o: \
  /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/dice_animation.h \
  /usr/local/include/rlgl.h \
  /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/main_menu.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/player_names.h
+ /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/player_names.h \
+ /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/main_menu.h

@@ -3,7 +3,7 @@
 #define SUBTHEMES_H
 
 typedef enum {
-    THEME_MATEMATICA,
+    THEME_VIDEO_GAMES,
     THEME_MUSICA,
     THEME_FILMES,
     THEME_CONHECIMENTOS_GERAIS,
@@ -13,8 +13,8 @@ typedef enum {
 
 const char* get_random_subtheme(Theme theme);
 
-extern const char* subthemes_math[];
-extern const int subthemes_math_count;
+extern const char* subthemes_videogames[];
+extern const int subthemes_videogames_count;
 
 extern const char* subthemes_musics[];
 extern const int subthemes_musics_count;

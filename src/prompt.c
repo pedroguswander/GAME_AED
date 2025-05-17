@@ -48,10 +48,11 @@ Question addQuestion(const char* topic, Theme theme)
 
     char prompt[1024];
     snprintf(prompt, sizeof(prompt),
-        "Crie uma questão de múltipla escolha sobre %s em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta.",
+        "Crie uma questão de múltipla escolha sobre %s em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta.",
         subtema
     );
 
+    
     printf("Prompt enviado para a API (final):\n%s\n", prompt);
 
     char* response = ask_gemini(prompt);
@@ -158,7 +159,10 @@ Question addQuestion(const char* topic, Theme theme)
                                 if (!enunciado_item) {
                                     enunciado_item = cJSON_GetObjectItem(question_json, "enunciado");
                                     if (!enunciado_item) {
+                                        enunciado_item = cJSON_GetObjectItem(question_json, "pergunta");
+                                        if (!enunciado_item) {
                                         printf("Erro: Campo 'question' ou 'enunciado' não encontrado no JSON parseado.\n");
+                                        }
                                     }
                                 }
 
