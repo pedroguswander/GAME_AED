@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GAME_AED.dir/lib/cjson/cJSON.c.o"
+  "CMakeFiles/GAME_AED.dir/lib/cjson/cJSON.c.o.d"
   "CMakeFiles/GAME_AED.dir/src/api.c.o"
   "CMakeFiles/GAME_AED.dir/src/api.c.o.d"
   "CMakeFiles/GAME_AED.dir/src/board.c.o"

@@ -1,8 +1,6 @@
-CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/src/prompt.c \
- /usr/include/stdc-predef.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/prompt.h \
- /usr/include/string.h \
+CMakeFiles/GAME_AED.dir/lib/cjson/cJSON.c.o: \
+ /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/lib/cjson/cJSON.c \
+ /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -14,11 +12,8 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/question.h \
- /usr/local/include/raylib.h \
+ /usr/include/strings.h /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -31,7 +26,14 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
@@ -57,28 +59,6 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/topics.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/subthemes.h \
- /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include/api.h \
- /usr/include/x86_64-linux-gnu/curl/curl.h \
- /usr/include/x86_64-linux-gnu/curl/curlver.h \
- /usr/include/x86_64-linux-gnu/curl/system.h \
- /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -86,19 +66,6 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/sys/time.h \
- /usr/include/x86_64-linux-gnu/curl/easy.h \
- /usr/include/x86_64-linux-gnu/curl/multi.h \
- /usr/include/x86_64-linux-gnu/curl/curl.h \
- /usr/include/x86_64-linux-gnu/curl/urlapi.h \
- /usr/include/x86_64-linux-gnu/curl/options.h \
- /usr/include/x86_64-linux-gnu/curl/header.h \
- /usr/include/x86_64-linux-gnu/curl/websockets.h \
- /usr/include/x86_64-linux-gnu/curl/mprintf.h \
- /usr/include/x86_64-linux-gnu/curl/typecheck-gcc.h \
- /usr/include/cjson/cJSON.h /usr/include/ctype.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/ctype.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/lib/cjson/cJSON.h

@@ -4,7 +4,7 @@
 # compile C with /bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include
+C_INCLUDES = -I/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/include -I/home/fernando/Desktop/ubuntu_note/Desktop/Developer/projetos_cesar/periodo_03/game_aed_5/GAME_AED/lib/cjson
 
 C_FLAGS = -std=gnu99 -I/usr/local/include
 
