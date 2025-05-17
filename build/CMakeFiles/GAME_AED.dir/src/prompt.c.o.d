@@ -56,6 +56,7 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/antonio/CLionProjects/GAME_AED/include/topics.h \
+ /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
  /home/antonio/CLionProjects/GAME_AED/include/api.h \
  /usr/include/x86_64-linux-gnu/curl/curl.h \
  /usr/include/x86_64-linux-gnu/curl/curlver.h \
@@ -91,4 +92,4 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: \
  /usr/include/x86_64-linux-gnu/curl/curl.h \
  /usr/include/x86_64-linux-gnu/curl/urlapi.h \
  /usr/include/x86_64-linux-gnu/curl/typecheck-gcc.h \
- /usr/include/cjson/cJSON.h
+ /usr/include/cjson/cJSON.h /usr/include/ctype.h

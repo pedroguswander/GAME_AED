@@ -71,6 +71,9 @@ CMakeFiles/GAME_AED.dir/src/board.c.o: \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
- /home/antonio/CLionProjects/GAME_AED/include/question.h \
  /home/antonio/CLionProjects/GAME_AED/include/topics.h \
- /home/antonio/CLionProjects/GAME_AED/src/player_animation.h
+ /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
+ /home/antonio/CLionProjects/GAME_AED/include/player_animation.h \
+ /home/antonio/CLionProjects/GAME_AED/include/board.h \
+ /home/antonio/CLionProjects/GAME_AED/include/dice_animation.h \
+ /usr/local/include/rlgl.h

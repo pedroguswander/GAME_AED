@@ -20,6 +20,6 @@ typedef struct Option
 
 Question createQuestion(char *statement, char *optionA, char *optionB, char *optionC,char *optionD, char *anwser);
 void drawQuestion(Option *options, Question question);
-//Question loadQuestion();
+void freeQuestion(Question question);
 
 #endif

@@ -1,0 +1,1200 @@
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre array e lista encadeada em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre um array e uma lista encadeada em termos de armazenamento de dados na memória?\",\n  \"alternativas\": {\n    \"A\": \"Arrays armazenam dados de forma sequencial na memória, enquanto listas encadeadas armazenam dados de forma não sequencial, com ponteiros indicando o próximo elemento.\",\n    \"B\": \"Arrays são mais eficientes para inserções e remoções de elementos no meio da estrutura, enquanto listas encadeadas são mais eficientes para acessos aleatórios.\",\n    \"C\": \"Listas encadeadas utilizam menos memória que arrays, independente do tamanho dos dados.\",\n    \"D\": \"Arrays são estruturas dinâmicas, enquanto listas encadeadas são estruturas estáticas.\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13689927432848059
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 184,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 184
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre efeitos musicais em filmes de terror em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes efeitos musicais é MAIS comumente usado em filmes de terror para criar uma sensação de suspense e apreensão antes de um momento assustador?\",\n  \"options\": {\n    \"A\": \"Um coral pesado e grandioso\",\n    \"B\": \"Um solo de trompete vibrante e otimista\",\n    \"C\": \"Uma música alta e dissonante com instrumentos de percussão pesados\",\n    \"D\": \"Uma melodia baixa, discordante e crescente, frequentemente com instrumentos de cordas\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Uma melodia baixa, discordante e crescente, muitas vezes com instrumentos de cordas, é uma técnica clássica para criar suspense e expectativa.  As outras opções podem ser usadas em filmes de terror, mas não são tão comumente associadas à construção de suspense antes de um susto.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24678719397818688
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 202,
+    "totalTokenCount": 243,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 202
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de sobrevivência na natureza em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em qual filme de sobrevivência na natureza um homem sofre um acidente de avião e precisa sobreviver em uma ilha deserta, utilizando seus conhecimentos de engenharia para construir abrigos e caçar?\",\n{\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"127 Horas\"},\n    {\"letter\": \"B\", \"text\": \"Náufrago\"},\n    {\"letter\": \"C\", \"text\": \"A Floresta\"},\n    {\"letter\": \"D\", \"text\": \"O Regresso\"}\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14957633488614794
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 142,
+    "totalTokenCount": 183,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 142
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre percurso em árvore (em-ordem) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a sequência de nós visitados em uma árvore binária de busca (ABB) utilizando a travessia em-ordem (inorder traversal) para a seguinte árvore:\\n\\n     4\\n    / \\\\\\n   2   5\\n  / \\\\ \\n 1   3\\n\\n\",\n  \"alternativas\": {\n    \"A\": \"4, 2, 1, 3, 5\",\n    \"B\": \"1, 2, 3, 4, 5\",\n    \"C\": \"5, 4, 3, 2, 1\",\n    \"D\": \"1, 3, 2, 4, 5\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.080621708822513807
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 181,
+    "totalTokenCount": 224,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 181
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre química do dia a dia em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes processos NÃO é um exemplo de reação química que ocorre no dia a dia?\",\n  \"options\": {\n    \"A\": \"A queima de uma vela\",\n    \"B\": \"O derretimento de um cubo de gelo\",\n    \"C\": \"A ferrugem em um prego de ferro\",\n    \"D\": \"A digestão dos alimentos no estômago\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"O derretimento de um cubo de gelo é uma mudança física, onde a água muda de estado sólido para líquido, sem alterar sua composição química. Os outros exemplos envolvem reações químicas que alteram a composição da matéria.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1019850954597379
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 201,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre adição e subtração de números inteiros em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o resultado da operação (-5) + (+8) - (-3) ?\",\n  \"alternativas\": {\n    \"A\": \"-16\",\n    \"B\": \"6\",\n    \"C\": \"-10\",\n    \"D\": \"0\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.09291185957662175
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 132,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre a saga Crepúsculo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual é o nome do lobo que se torna o companheiro de Jacob Black?\",\n  \"options\": {\n    \"A\": \"Sam Uley\",\n    \"B\": \"Paul Lahote\",\n    \"C\": \"Embry Call\",\n    \"D\": \"Jared Cameron\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Embora Jacob se torne um lobisomem e tenha laços com todos os membros da sua alcateia, o lobo que é especificamente seu companheiro é Sam Uley. Os outros são membros da alcateia Quileute.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13649220533773931
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 142,
+    "totalTokenCount": 181,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 142
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes da DreamWorks em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes filmes NÃO é uma produção da DreamWorks Animation?\",\n  \"options\": {\n    \"A\": \"Shrek\",\n    \"B\": \"Madagascar\",\n    \"C\": \"Procurando Nemo\",\n    \"D\": \"Como Treinar o Seu Dragão\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.057223508524340251
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 86,
+    "totalTokenCount": 125,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 86
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre culturas indígenas brasileiras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dessas características NÃO é comumente associada às culturas indígenas brasileiras em sua diversidade?\",\n  \"options\": {\n    \"A\": \"Sistemas complexos de conhecimento sobre plantas medicinais e seus usos.\",\n    \"B\": \"Organização social baseada exclusivamente em estruturas hierárquicas centralizadas.\",\n    \"C\": \"Práticas agrícolas adaptadas aos diferentes biomas brasileiros.\",\n    \"D\": \"Rica tradição oral, incluindo mitos, lendas e narrativas históricas.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Enquanto algumas culturas indígenas podem apresentar hierarquias, a organização social indígena é bastante diversa e não se limita exclusivamente a estruturas centralizadas. Muitas sociedades indígenas são organizadas de forma mais horizontal, com liderança coletiva ou baseada em conselhos.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18918070717463417
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 189,
+    "totalTokenCount": 227,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 189
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre noções básicas de complexidade espacial em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas melhor descreve a complexidade espacial de um algoritmo?\",\n  \"alternativas\": {\n    \"A\": \"Refere-se ao tempo de execução do algoritmo em função do tamanho da entrada.\",\n    \"B\": \"Refere-se à quantidade de memória (espaço) utilizada pelo algoritmo durante sua execução em função do tamanho da entrada.\",\n    \"C\": \"Refere-se ao número de comparações realizadas durante a execução do algoritmo.\",\n    \"D\": \"Refere-se ao número de iterações necessárias para o algoritmo completar sua execução.\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10004694730240778
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 151,
+    "totalTokenCount": 192,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 151
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes de Alfred Hitchcock em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de Alfred Hitchcock é famoso por sua icônica cena no chuveiro?\",\n  \"options\": {\n    \"A\": \"Psicose\",\n    \"B\": \"Os Pássaros\",\n    \"C\": \"Rebecca, a Inominável\",\n    \"D\": \"Vertigo: De Entre as Sombras\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0670995417329454
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 136,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com robôs ou inteligência artificial em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme apresenta uma inteligência artificial avançada que se torna autoconsciente e desenvolve sentimentos complexos, levando a um conflito existencial?\",\n  \"options\": {\n    \"A\": \"Exterminador do Futuro 2: O Julgamento Final\",\n    \"B\": \"Wall-E\",\n    \"C\": \"Her\",\n    \"D\": \"Guerra nas Estrelas: Episódio IV - Uma Nova Esperança\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Em 'Her', o protagonista desenvolve um relacionamento emocional profundo com um sistema operacional de inteligência artificial.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12115890032624545
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 146,
+    "totalTokenCount": 188,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 146
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre área de triângulo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a área de um triângulo com base 10cm e altura 6cm?\",\n  \"alternativas\": {\n    \"A\": \"16cm²\",\n    \"B\": \"20cm²\",\n    \"C\": \"30cm²\",\n    \"D\": \"60cm²\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.05243854239435479
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 101,
+    "totalTokenCount": 140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 101
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre locais mais quentes da Terra em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes regiões é considerada, em média, o lugar mais quente da Terra?\",\n  \"options\": {\n    \"A\": \"Vale da Morte, Califórnia, EUA\",\n    \"B\": \"Deserto do Saara, África\",\n    \"C\": \"Dallol, Etiópia\",\n    \"D\": \"Austrália Ocidental\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora o Vale da Morte registre temperaturas extremamente altas, Dallol, na Etiópia, possui a temperatura média anual mais alta do planeta.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.076345232554844447
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 140,
+    "totalTokenCount": 180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 140
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Denzel Washington e seus filmes premiados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Denzel Washington ganhou dois Oscars de Melhor Ator. Por qual(is) filme(s) ele recebeu essa premiação?\",\n  \"options\": {\n    \"A\": \"Glory e Malcolm X\",\n    \"B\": \"Training Day e Fences\",\n    \"C\": \"Glory e Fences\",\n    \"D\": \"Malcolm X e The Hurricane\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.052281049581674427
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 146,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre DJ e produtor musical em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal diferença entre um DJ e um produtor musical?\",\n  \"options\": {\n    \"A\": \"O DJ cria músicas originais, enquanto o produtor musical apenas seleciona e mixa faixas existentes.\",\n    \"B\": \"O produtor musical toca músicas em eventos, enquanto o DJ cria e edita gravações em estúdio.\",\n    \"C\": \"O DJ foca principalmente na seleção, mixagem e performance de músicas gravadas, enquanto o produtor musical cria, grava e edita músicas originais.\",\n    \"D\": \"Não há diferença significativa entre as duas profissões; ambos criam e tocam música.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14128239554648073
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 161,
+    "totalTokenCount": 202,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 161
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes que foram rebootados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual destes filmes teve um reboot nos cinemas nos últimos anos?\",\n  \"options\": {\n    \"A\": \"E.T. - O Extraterrestre\",\n    \"B\": \"O Rei Leão\",\n    \"C\": \"O Poderoso Chefão\",\n    \"D\": \"2001: Uma Odisséia no Espaço\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.04513558137764051
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 103,
+    "totalTokenCount": 143,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 103
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre governos e sistemas políticos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual sistema político se caracteriza pela ausência de governos e pela organização social baseada em princípios de autogestão e coletivismo?\",\n  \"options\": {\n    \"A\": \"Monarquia\",\n    \"B\": \"Anarquia\",\n    \"C\": \"Democracia\",\n    \"D\": \"Ditadura\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067246471483682846
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 136,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre instrumentos de corda em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes instrumentos NÃO é um instrumento de corda?\",\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"Violino\"},\n    {\"letter\": \"B\", \"text\": \"Flauta\"},\n    {\"letter\": \"C\", \"text\": \"Violoncelo\"},\n    {\"letter\": \"D\", \"text\": \"Guitarra\"}\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048353979220757119
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 141,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre alimentos e culinária internacional em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual prato é tradicionalmente associado à culinária italiana e consiste em massa fresca servida com molho à base de tomate, manjericão e queijo?\",\n  \"alternativas\": {\n    \"A\": \"Paella\",\n    \"B\": \"Sushi\",\n    \"C\": \"Spaghetti alla Puttanesca\",\n    \"D\": \"Spaghetti al Pomodoro\"\n  },\n  \"resposta_correta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10002988412839557
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 109,
+    "totalTokenCount": 148,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 109
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de ação com perseguições em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de ação é famoso por sua extensa e icônica perseguição de carros em alta velocidade pelas ruas de Los Angeles?\",\n  \"options\": {\n    \"A\": \"Mad Max: Estrada da Fúria\",\n    \"B\": \"Baby Driver\",\n    \"C\": \"Velozes e Furiosos\",\n    \"D\": \"Bullitt\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086492447626023067
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 146,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre astrofísica básica em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dessas opções descreve melhor uma nebulosa?\",\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"Um buraco negro supermassivo no centro de uma galáxia.\"},\n    {\"letter\": \"B\", \"text\": \"Uma grande nuvem de gás e poeira no espaço, onde estrelas podem se formar ou onde estrelas morreram e explodiram.\"},\n    {\"letter\": \"C\", \"text\": \"Um tipo específico de estrela de nêutrons que emite pulsos regulares de radiação.\"},\n    {\"letter\": \"D\", \"text\": \"Um planeta gasoso gigante com anéis proeminentes.\"}\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18828390872839726
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 165,
+    "totalTokenCount": 202,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 165
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre tecnologia dos celulares em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual tecnologia de comunicação sem fio é PRIMORDIALMENTE utilizada para conectar smartphones à internet?\",\n  \"options\": {\n    \"A\": \"Bluetooth\",\n    \"B\": \"Wi-Fi\",\n    \"C\": \"NFC\",\n    \"D\": \"Infrared\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Embora Bluetooth, NFC e Infrared tenham suas aplicações em smartphones, o Wi-Fi é a tecnologia sem fio predominantemente usada para conectar dispositivos móveis à internet, oferecendo maior velocidade e alcance.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14271526336669921
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 130,
+    "totalTokenCount": 167,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre famílias dos instrumentos musicais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes opções representa uma família de instrumentos musicais?\",\n  \"alternativas\": {\n    \"A\": \"Sopros, Cordas e Metais\",\n    \"B\": \"Guitarras, Violões e Flautas\",\n    \"C\": \"Piano, bateria e saxofone\",\n    \"D\": \"Percussão, teclado e instrumentos eletrônicos\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19593417427756571
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 110,
+    "totalTokenCount": 149,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 110
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sandra Bullock em comédias e dramas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Sandra Bullock é conhecida por sua versatilidade em interpretar papéis em comédias e dramas.  Em qual filme ela demonstra essa versatilidade de forma mais marcante, transitando entre humor e momentos de profunda emoção?\",\n  \"options\": {\n    \"A\": \"Miss Congeniality (Miss Simpatia)\",\n    \"B\": \"Gravity (Gravidade)\",\n    \"C\": \"The Blind Side (Um Sonho Possível)\",\n    \"D\": \"Ocean's 8 (Onze em Oceano)\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora Sandra Bullock tenha demonstrado sua versatilidade em todos os filmes listados, 'Um Sonho Possível' apresenta uma transição mais notável entre humor e momentos de intensa emoção, mostrando a força e a sensibilidade de sua personagem.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18520425290477519
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 196,
+    "totalTokenCount": 238,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 196
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre impérios antigos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos impérios antigos abaixo era conhecido por sua extensa rede de estradas, aquedutos e um sistema jurídico altamente desenvolvido?\",\n  \"options\": {\n    \"A\": \"Império Inca\",\n    \"B\": \"Império Romano\",\n    \"C\": \"Império Maurya\",\n    \"D\": \"Império Persa Aquemênida\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.09084009443010603
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 142,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre principais trilhas sonoras de animes em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes trilhas sonoras é amplamente considerada uma das mais icônicas e influentes na história do anime?\",\n  \"alternativas\": {\n    \"A\": \"Trilha sonora de Death Note\",\n    \"B\": \"Trilha sonora de Attack on Titan\",\n    \"C\": \"Trilha sonora de Cowboy Bebop\",\n    \"D\": \"Trilha sonora de My Hero Academia\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.045588020585541032
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 158,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 117
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre função de um backing vocal em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal função de um backing vocal em uma performance musical?\",\n  \"alternativas\": {\n    \"A\": \"Improvisar melodias principais e solos, adicionando variações à música.\",\n    \"B\": \"Manter o ritmo e a batida da música, garantindo a sincronia entre os instrumentos.\",\n    \"C\": \"Harmonizar com a voz principal, criando texturas e reforçando a melodia.\",\n    \"D\": \"Criar efeitos sonoros e percussão vocal, adicionando elementos não-melódicos à música.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20687578188492947
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 149,
+    "totalTokenCount": 188,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 149
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre organizações internacionais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual organização internacional é responsável pela manutenção da paz e segurança internacionais?\",\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"Organização Mundial do Comércio (OMC)\"},\n    {\"letter\": \"B\", \"text\": \"Organização das Nações Unidas (ONU)\"},\n    {\"letter\": \"C\", \"text\": \"Fundo Monetário Internacional (FMI)\"},\n    {\"letter\": \"D\", \"text\": \"Banco Mundial\"}\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069261566041007874
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 126,
+    "totalTokenCount": 163,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 126
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre guerras mundiais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual evento é amplamente considerado o gatilho para o início da Primeira Guerra Mundial?\",\n  \"options\": {\n    \"A\": \"O assassinato do Arquiduque Francisco Ferdinando\",\n    \"B\": \"A invasão da Polônia pela Alemanha\",\n    \"C\": \"O ataque a Pearl Harbor pelo Japão\",\n    \"D\": \"A assinatura do Tratado de Versalhes\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.050673467618925078
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 111,
+    "totalTokenCount": 148,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 111
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

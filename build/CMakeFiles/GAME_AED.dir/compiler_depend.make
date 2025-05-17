@@ -99,10 +99,12 @@ CMakeFiles/GAME_AED.dir/src/api.c.o: /home/antonio/CLionProjects/GAME_AED/src/ap
 
 CMakeFiles/GAME_AED.dir/src/board.c.o: /home/antonio/CLionProjects/GAME_AED/src/board.c \
   /home/antonio/CLionProjects/GAME_AED/include/board.h \
+  /home/antonio/CLionProjects/GAME_AED/include/dice_animation.h \
+  /home/antonio/CLionProjects/GAME_AED/include/player_animation.h \
   /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
   /home/antonio/CLionProjects/GAME_AED/include/question.h \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
   /home/antonio/CLionProjects/GAME_AED/include/topics.h \
-  /home/antonio/CLionProjects/GAME_AED/src/player_animation.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features.h \
@@ -179,7 +181,15 @@ CMakeFiles/GAME_AED.dir/src/board.c.o: /home/antonio/CLionProjects/GAME_AED/src/
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/local/include/raylib.h \
-  /usr/local/include/raymath.h
+  /usr/local/include/raymath.h \
+  /usr/local/include/rlgl.h
+
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.o: /home/antonio/CLionProjects/GAME_AED/src/dice_animation.c \
+  /home/antonio/CLionProjects/GAME_AED/include/dice_animation.h \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+  /usr/local/include/raylib.h
 
 CMakeFiles/GAME_AED.dir/src/hall.c.o: /home/antonio/CLionProjects/GAME_AED/src/hall.c \
   /home/antonio/CLionProjects/GAME_AED/include/hall.h \
@@ -218,10 +228,12 @@ CMakeFiles/GAME_AED.dir/src/main.c.o: /home/antonio/CLionProjects/GAME_AED/src/m
   /home/antonio/CLionProjects/GAME_AED/include/api.h \
   /home/antonio/CLionProjects/GAME_AED/include/board.h \
   /home/antonio/CLionProjects/GAME_AED/include/hall.h \
+  /home/antonio/CLionProjects/GAME_AED/include/player_names.h \
   /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
   /home/antonio/CLionProjects/GAME_AED/include/question.h \
   /home/antonio/CLionProjects/GAME_AED/include/resource_dir.h \
   /home/antonio/CLionProjects/GAME_AED/include/score.h \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
   /home/antonio/CLionProjects/GAME_AED/include/topics.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -335,15 +347,73 @@ CMakeFiles/GAME_AED.dir/src/main.c.o: /home/antonio/CLionProjects/GAME_AED/src/m
   /usr/local/include/raymath.h
 
 CMakeFiles/GAME_AED.dir/src/player_animation.c.o: /home/antonio/CLionProjects/GAME_AED/src/player_animation.c \
-  /home/antonio/CLionProjects/GAME_AED/src/player_animation.h \
+  /home/antonio/CLionProjects/GAME_AED/include/board.h \
+  /home/antonio/CLionProjects/GAME_AED/include/player_animation.h \
   /usr/include/features.h \
+  /usr/include/math.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/local/include/raylib.h \
+  /usr/local/include/raymath.h
+
+CMakeFiles/GAME_AED.dir/src/player_names.c.o: /home/antonio/CLionProjects/GAME_AED/src/player_names.c \
+  /home/antonio/CLionProjects/GAME_AED/include/player_names.h \
+  /usr/include/features.h \
+  /usr/include/math.h \
   /usr/include/stdc-predef.h \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -357,6 +427,7 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: /home/antonio/CLionProjects/GAME_AED/src
   /home/antonio/CLionProjects/GAME_AED/include/api.h \
   /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
   /home/antonio/CLionProjects/GAME_AED/include/question.h \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
   /home/antonio/CLionProjects/GAME_AED/include/topics.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -364,6 +435,7 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: /home/antonio/CLionProjects/GAME_AED/src
   /usr/include/asm-generic/socket.h \
   /usr/include/asm-generic/sockios.h \
   /usr/include/cjson/cJSON.h \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/features.h \
   /usr/include/limits.h \
@@ -457,6 +529,7 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.o: /home/antonio/CLionProjects/GAME_AED/src
 CMakeFiles/GAME_AED.dir/src/question.c.o: /home/antonio/CLionProjects/GAME_AED/src/question.c \
   /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
   /home/antonio/CLionProjects/GAME_AED/include/question.h \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
   /home/antonio/CLionProjects/GAME_AED/include/topics.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
@@ -578,7 +651,67 @@ CMakeFiles/GAME_AED.dir/src/score.c.o: /home/antonio/CLionProjects/GAME_AED/src/
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/local/include/raylib.h
 
+CMakeFiles/GAME_AED.dir/src/subthemes.c.o: /home/antonio/CLionProjects/GAME_AED/src/subthemes.c \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h
+
 CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src/topics.c \
+  /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
   /home/antonio/CLionProjects/GAME_AED/include/topics.h \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \
@@ -611,6 +744,16 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /home/antonio/CLionProjects/GAME_AED/src/topics.c:
 
+/home/antonio/CLionProjects/GAME_AED/src/subthemes.c:
+
+/home/antonio/CLionProjects/GAME_AED/src/score.c:
+
+/usr/include/ctype.h:
+
+/home/antonio/CLionProjects/GAME_AED/src/player_names.c:
+
+/home/antonio/CLionProjects/GAME_AED/include/resource_dir.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
@@ -636,6 +779,12 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/home/antonio/CLionProjects/GAME_AED/src/question.c:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+
+/home/antonio/CLionProjects/GAME_AED/include/dice_animation.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
@@ -675,8 +824,6 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/endian.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/linux/stddef.h:
@@ -699,15 +846,13 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket_type.h:
-
-/home/antonio/CLionProjects/GAME_AED/src/question.c:
-
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/local/include/rlgl.h:
 
 /usr/include/stdc-predef.h:
 
@@ -720,6 +865,14 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 /usr/include/cjson/cJSON.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/home/antonio/CLionProjects/GAME_AED/include/subthemes.h:
+
+/home/antonio/CLionProjects/GAME_AED/src/player_animation.c:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -744,6 +897,10 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/endian.h:
+
+/home/antonio/CLionProjects/GAME_AED/src/dice_animation.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
@@ -781,8 +938,6 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /usr/include/x86_64-linux-gnu/curl/curlver.h:
 
-/home/antonio/CLionProjects/GAME_AED/include/resource_dir.h:
-
 /usr/include/x86_64-linux-gnu/curl/system.h:
 
 /usr/include/x86_64-linux-gnu/curl/typecheck-gcc.h:
@@ -817,7 +972,7 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /home/antonio/CLionProjects/GAME_AED/include/prompt.h:
 
-/home/antonio/CLionProjects/GAME_AED/src/player_animation.h:
+/home/antonio/CLionProjects/GAME_AED/include/player_animation.h:
 
 /usr/include/math.h:
 
@@ -847,20 +1002,14 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket.h:
-
-/home/antonio/CLionProjects/GAME_AED/include/score.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/home/antonio/CLionProjects/GAME_AED/src/player_animation.c:
+/home/antonio/CLionProjects/GAME_AED/src/prompt.c:
 
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h:
 
-/home/antonio/CLionProjects/GAME_AED/src/prompt.c:
+/usr/include/x86_64-linux-gnu/bits/socket.h:
 
-/home/antonio/CLionProjects/GAME_AED/src/score.c:
+/home/antonio/CLionProjects/GAME_AED/include/score.h:
+
+/home/antonio/CLionProjects/GAME_AED/include/player_names.h:

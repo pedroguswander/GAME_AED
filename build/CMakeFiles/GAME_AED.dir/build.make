@@ -97,10 +97,24 @@ CMakeFiles/GAME_AED.dir/src/board.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/board.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/board.c -o CMakeFiles/GAME_AED.dir/src/board.c.s
 
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.o: CMakeFiles/GAME_AED.dir/flags.make
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.o: /home/antonio/CLionProjects/GAME_AED/src/dice_animation.c
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GAME_AED.dir/src/dice_animation.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/dice_animation.c.o -MF CMakeFiles/GAME_AED.dir/src/dice_animation.c.o.d -o CMakeFiles/GAME_AED.dir/src/dice_animation.c.o -c /home/antonio/CLionProjects/GAME_AED/src/dice_animation.c
+
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GAME_AED.dir/src/dice_animation.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonio/CLionProjects/GAME_AED/src/dice_animation.c > CMakeFiles/GAME_AED.dir/src/dice_animation.c.i
+
+CMakeFiles/GAME_AED.dir/src/dice_animation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/dice_animation.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/dice_animation.c -o CMakeFiles/GAME_AED.dir/src/dice_animation.c.s
+
 CMakeFiles/GAME_AED.dir/src/hall.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/hall.c.o: /home/antonio/CLionProjects/GAME_AED/src/hall.c
 CMakeFiles/GAME_AED.dir/src/hall.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GAME_AED.dir/src/hall.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GAME_AED.dir/src/hall.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/hall.c.o -MF CMakeFiles/GAME_AED.dir/src/hall.c.o.d -o CMakeFiles/GAME_AED.dir/src/hall.c.o -c /home/antonio/CLionProjects/GAME_AED/src/hall.c
 
 CMakeFiles/GAME_AED.dir/src/hall.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/GAME_AED.dir/src/hall.c.s: cmake_force
 CMakeFiles/GAME_AED.dir/src/main.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/main.c.o: /home/antonio/CLionProjects/GAME_AED/src/main.c
 CMakeFiles/GAME_AED.dir/src/main.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GAME_AED.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/GAME_AED.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/main.c.o -MF CMakeFiles/GAME_AED.dir/src/main.c.o.d -o CMakeFiles/GAME_AED.dir/src/main.c.o -c /home/antonio/CLionProjects/GAME_AED/src/main.c
 
 CMakeFiles/GAME_AED.dir/src/main.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/GAME_AED.dir/src/main.c.s: cmake_force
 CMakeFiles/GAME_AED.dir/src/player_animation.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/player_animation.c.o: /home/antonio/CLionProjects/GAME_AED/src/player_animation.c
 CMakeFiles/GAME_AED.dir/src/player_animation.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/GAME_AED.dir/src/player_animation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/GAME_AED.dir/src/player_animation.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/player_animation.c.o -MF CMakeFiles/GAME_AED.dir/src/player_animation.c.o.d -o CMakeFiles/GAME_AED.dir/src/player_animation.c.o -c /home/antonio/CLionProjects/GAME_AED/src/player_animation.c
 
 CMakeFiles/GAME_AED.dir/src/player_animation.c.i: cmake_force
@@ -139,10 +153,24 @@ CMakeFiles/GAME_AED.dir/src/player_animation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/player_animation.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/player_animation.c -o CMakeFiles/GAME_AED.dir/src/player_animation.c.s
 
+CMakeFiles/GAME_AED.dir/src/player_names.c.o: CMakeFiles/GAME_AED.dir/flags.make
+CMakeFiles/GAME_AED.dir/src/player_names.c.o: /home/antonio/CLionProjects/GAME_AED/src/player_names.c
+CMakeFiles/GAME_AED.dir/src/player_names.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/GAME_AED.dir/src/player_names.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/player_names.c.o -MF CMakeFiles/GAME_AED.dir/src/player_names.c.o.d -o CMakeFiles/GAME_AED.dir/src/player_names.c.o -c /home/antonio/CLionProjects/GAME_AED/src/player_names.c
+
+CMakeFiles/GAME_AED.dir/src/player_names.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GAME_AED.dir/src/player_names.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonio/CLionProjects/GAME_AED/src/player_names.c > CMakeFiles/GAME_AED.dir/src/player_names.c.i
+
+CMakeFiles/GAME_AED.dir/src/player_names.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/player_names.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/player_names.c -o CMakeFiles/GAME_AED.dir/src/player_names.c.s
+
 CMakeFiles/GAME_AED.dir/src/prompt.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/prompt.c.o: /home/antonio/CLionProjects/GAME_AED/src/prompt.c
 CMakeFiles/GAME_AED.dir/src/prompt.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/GAME_AED.dir/src/prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/GAME_AED.dir/src/prompt.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/prompt.c.o -MF CMakeFiles/GAME_AED.dir/src/prompt.c.o.d -o CMakeFiles/GAME_AED.dir/src/prompt.c.o -c /home/antonio/CLionProjects/GAME_AED/src/prompt.c
 
 CMakeFiles/GAME_AED.dir/src/prompt.c.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/GAME_AED.dir/src/prompt.c.s: cmake_force
 CMakeFiles/GAME_AED.dir/src/question.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/question.c.o: /home/antonio/CLionProjects/GAME_AED/src/question.c
 CMakeFiles/GAME_AED.dir/src/question.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/GAME_AED.dir/src/question.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/GAME_AED.dir/src/question.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/question.c.o -MF CMakeFiles/GAME_AED.dir/src/question.c.o.d -o CMakeFiles/GAME_AED.dir/src/question.c.o -c /home/antonio/CLionProjects/GAME_AED/src/question.c
 
 CMakeFiles/GAME_AED.dir/src/question.c.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/GAME_AED.dir/src/question.c.s: cmake_force
 CMakeFiles/GAME_AED.dir/src/score.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/score.c.o: /home/antonio/CLionProjects/GAME_AED/src/score.c
 CMakeFiles/GAME_AED.dir/src/score.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/GAME_AED.dir/src/score.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/GAME_AED.dir/src/score.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/score.c.o -MF CMakeFiles/GAME_AED.dir/src/score.c.o.d -o CMakeFiles/GAME_AED.dir/src/score.c.o -c /home/antonio/CLionProjects/GAME_AED/src/score.c
 
 CMakeFiles/GAME_AED.dir/src/score.c.i: cmake_force
@@ -181,10 +209,24 @@ CMakeFiles/GAME_AED.dir/src/score.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/score.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/score.c -o CMakeFiles/GAME_AED.dir/src/score.c.s
 
+CMakeFiles/GAME_AED.dir/src/subthemes.c.o: CMakeFiles/GAME_AED.dir/flags.make
+CMakeFiles/GAME_AED.dir/src/subthemes.c.o: /home/antonio/CLionProjects/GAME_AED/src/subthemes.c
+CMakeFiles/GAME_AED.dir/src/subthemes.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/GAME_AED.dir/src/subthemes.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/subthemes.c.o -MF CMakeFiles/GAME_AED.dir/src/subthemes.c.o.d -o CMakeFiles/GAME_AED.dir/src/subthemes.c.o -c /home/antonio/CLionProjects/GAME_AED/src/subthemes.c
+
+CMakeFiles/GAME_AED.dir/src/subthemes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GAME_AED.dir/src/subthemes.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonio/CLionProjects/GAME_AED/src/subthemes.c > CMakeFiles/GAME_AED.dir/src/subthemes.c.i
+
+CMakeFiles/GAME_AED.dir/src/subthemes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GAME_AED.dir/src/subthemes.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonio/CLionProjects/GAME_AED/src/subthemes.c -o CMakeFiles/GAME_AED.dir/src/subthemes.c.s
+
 CMakeFiles/GAME_AED.dir/src/topics.c.o: CMakeFiles/GAME_AED.dir/flags.make
 CMakeFiles/GAME_AED.dir/src/topics.c.o: /home/antonio/CLionProjects/GAME_AED/src/topics.c
 CMakeFiles/GAME_AED.dir/src/topics.c.o: CMakeFiles/GAME_AED.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/GAME_AED.dir/src/topics.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/GAME_AED.dir/src/topics.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GAME_AED.dir/src/topics.c.o -MF CMakeFiles/GAME_AED.dir/src/topics.c.o.d -o CMakeFiles/GAME_AED.dir/src/topics.c.o -c /home/antonio/CLionProjects/GAME_AED/src/topics.c
 
 CMakeFiles/GAME_AED.dir/src/topics.c.i: cmake_force
@@ -199,12 +241,15 @@ CMakeFiles/GAME_AED.dir/src/topics.c.s: cmake_force
 GAME_AED_OBJECTS = \
 "CMakeFiles/GAME_AED.dir/src/api.c.o" \
 "CMakeFiles/GAME_AED.dir/src/board.c.o" \
+"CMakeFiles/GAME_AED.dir/src/dice_animation.c.o" \
 "CMakeFiles/GAME_AED.dir/src/hall.c.o" \
 "CMakeFiles/GAME_AED.dir/src/main.c.o" \
 "CMakeFiles/GAME_AED.dir/src/player_animation.c.o" \
+"CMakeFiles/GAME_AED.dir/src/player_names.c.o" \
 "CMakeFiles/GAME_AED.dir/src/prompt.c.o" \
 "CMakeFiles/GAME_AED.dir/src/question.c.o" \
 "CMakeFiles/GAME_AED.dir/src/score.c.o" \
+"CMakeFiles/GAME_AED.dir/src/subthemes.c.o" \
 "CMakeFiles/GAME_AED.dir/src/topics.c.o"
 
 # External object files for target GAME_AED
@@ -212,17 +257,20 @@ GAME_AED_EXTERNAL_OBJECTS =
 
 GAME_AED: CMakeFiles/GAME_AED.dir/src/api.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/board.c.o
+GAME_AED: CMakeFiles/GAME_AED.dir/src/dice_animation.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/hall.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/main.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/player_animation.c.o
+GAME_AED: CMakeFiles/GAME_AED.dir/src/player_names.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/prompt.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/question.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/score.c.o
+GAME_AED: CMakeFiles/GAME_AED.dir/src/subthemes.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/src/topics.c.o
 GAME_AED: CMakeFiles/GAME_AED.dir/build.make
 GAME_AED: /usr/local/lib/libraylib.a
 GAME_AED: CMakeFiles/GAME_AED.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable GAME_AED"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/antonio/CLionProjects/GAME_AED/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable GAME_AED"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GAME_AED.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

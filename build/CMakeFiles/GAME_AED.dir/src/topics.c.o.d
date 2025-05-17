@@ -12,8 +12,9 @@ CMakeFiles/GAME_AED.dir/src/topics.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /usr/include/stdio.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+ /usr/include/strings.h \
+ /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
+ /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \

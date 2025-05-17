@@ -399,3 +399,7 @@ raylib-master
 Makefile
 /*.sln
 
+# Logs
+
+game_log.txt
+assets/api_log.txt

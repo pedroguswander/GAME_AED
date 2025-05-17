@@ -98,13 +98,13 @@ CMakeFiles/GAME_AED.dir/src/main.c.o: \
  /home/antonio/CLionProjects/GAME_AED/include/prompt.h \
  /home/antonio/CLionProjects/GAME_AED/include/question.h \
  /home/antonio/CLionProjects/GAME_AED/include/topics.h \
+ /home/antonio/CLionProjects/GAME_AED/include/subthemes.h \
  /home/antonio/CLionProjects/GAME_AED/include/score.h \
- /home/antonio/CLionProjects/GAME_AED/include/question.h \
- /home/antonio/CLionProjects/GAME_AED/include/topics.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /home/antonio/CLionProjects/GAME_AED/include/hall.h \
- /home/antonio/CLionProjects/GAME_AED/include/board.h
+ /home/antonio/CLionProjects/GAME_AED/include/board.h \
+ /home/antonio/CLionProjects/GAME_AED/include/player_names.h
