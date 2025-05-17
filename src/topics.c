@@ -70,5 +70,6 @@ Theme topicToTheme(const char *topic) {
     if (strcmp(topic, "Filmes") == 0) return THEME_FILMES;
     if (strcmp(topic, "Conhecimentos Gerais") == 0) return THEME_CONHECIMENTOS_GERAIS;
     if (strcmp(topic, "Boss Node AED") == 0) return THEME_AED;
+    if (strcmp(topic, "Final") == 0) return THEME_FILMES;
     return THEME_COUNT; // valor padrão para erro
 }

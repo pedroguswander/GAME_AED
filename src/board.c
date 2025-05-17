@@ -186,9 +186,9 @@ void createBoard() {
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
         _players[i] = (Player){
-            _tilesHEAD->next->next->next->position,
+            _tilesHEAD->position,
             (Vector2){0, 0},
-            _tilesHEAD->next->next->next,
+            _tilesHEAD,
             NULL,
             NULL,
             NULL,
@@ -284,7 +284,7 @@ void updateBoard() {
                         diceRolled = false; // Reset para o próximo turno
                     }
                 } else if (IsKeyPressed(KEY_SPACE)) {
-                    _dice = rand() % 1 + 1;
+                    _dice = rand() % 6 + 1;
                     setDiceResult(_dice);
                     diceRolled = true;
                     diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
