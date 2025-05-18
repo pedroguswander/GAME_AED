@@ -240,7 +240,7 @@ int main() {
                 if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
                     _quizScreen = TOPIC_SELECTION_SCREEN;
                     _menuOption = MAIN_MENU;
-                    saveScore(player1Name);
+                        saveScore(player1Name);
                 } else if (_quizScreen == ANSWER_SCREEN) {
                     _currentQuestion++;
                     if (_currentQuestion >= 5) {
