@@ -1,4 +1,4 @@
-# 🧠 MIND RUNNER - Jogo de Perguntas e Respostas Interativo
+# 🧠 MIND RUNNERS - Jogo de Perguntas e Respostas Interativo
 
 > Um jogo educacional em C com Raylib, desenvolvido para a disciplina de Algoritmos e Estruturas de Dados. Inspirado em jogos de tabuleiro como *Kahoot!* e *Perguntados*, com perguntas carregadas de forma dinâmica por uma IA.
 
