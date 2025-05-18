@@ -6973,3 +6973,1409 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lord Voldemort: horcruxes e busca pela imortalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual era a motivação principal de Lord Voldemort em criar Horcruxes, e qual era o seu objetivo final ao fazê-lo?\",\n  \"options\": {\n    \"A\": \"Conseguir mais poder mágico através da fragmentação de sua alma.\",\n    \"B\": \"Obter imortalidade, protegendo partes de sua alma em objetos distintos.\",\n    \"C\": \"Criar armas poderosas para dominar o mundo mágico.\",\n    \"D\": \"Proteger-se de feitiços de morte, tornando-se invulnerável a qualquer malefício.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A criação dos Horcruxes era o plano de Voldemort para alcançar a imortalidade, dividindo sua alma em várias partes e escondendo-as em objetos diferentes.  Embora isso lhe desse poder adicional, seu objetivo primário era evitar a morte.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2600216356295984
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 206,
+    "totalTokenCount": 252,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 206
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Testrálio: como são vistos e ligação com a morte em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, como os Testrálios são vistos e qual sua ligação com a morte?\",\n  \"options\": {\n    \"A\": \"Apenas bruxos que presenciaram a morte podem vê-los; são criaturas associadas à morte, transportando almas para o além.\",\n    \"B\": \"Todos podem vê-los, mas apenas bruxos que superaram a morte podem montá-los; são criaturas pacíficas que protegem os mortos.\",\n    \"C\": \"Apenas bruxos com afinidade com a magia negra podem vê-los; são criaturas malévolas que se alimentam de energia vital.\",\n    \"D\": \"São invisíveis a todos, exceto aos Animagos; são criaturas neutras que não têm relação com a morte.\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23617210794002452
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 234,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Pedra Filosofal: criação e propósito de Nicolas Flamel em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Na obra 'Pedra Filosofal', de J. K. Rowling, qual era o propósito principal de Nicolas Flamel na criação da Pedra?\",\n  \"alternativas\": {\n    \"A\": \"Conquistar o poder político e dominar o mundo bruxo.\",\n    \"B\": \"Obter riqueza e imortalidade apenas para si e sua esposa.\",\n    \"C\": \"Alcançar a imortalidade e usar a pedra para criar outras maravilhas mágicas, mas sempre com responsabilidade e boa intenção.\",\n    \"D\": \"Destruir a pedra, pois acreditava que era uma ameaça à humanidade.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28809811156473042
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 208,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Severo Snape: lealdade dupla e memórias no Pensador em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Em qual aspecto a lealdade dupla de Severo Snape e suas memórias guardadas no Pensador são mais conflitantes?\",\n  \"alternativas\": {\n    \"A\": \"Sua lealdade à Ordem da Fênix o obrigava a proteger Harry, conflitando com suas memórias de seu passado com Voldemort.\",\n    \"B\": \"Suas memórias felizes com Lily Evans, guardadas em segredo, contrastavam com sua lealdade aparente a Voldemort.\",\n    \"C\": \"A necessidade de esconder suas memórias de Dumbledore no Pensador conflitava com sua obrigação de proteger os segredos da Ordem da Fênix.\",\n    \"D\": \"O ato de guardar suas memórias no Pensador expunha sua lealdade dupla, tornando-o vulnerável a Voldemort e à Ordem da Fênix simultaneamente.\"\n  },\n  \"respostaCorreta\": \"B\",\n  \"explicacao\": \"A lealdade de Snape a Voldemort era uma fachada para proteger Harry, filho de Lily. Suas memórias afetivas com Lily são o ponto crucial do conflito interno, mostrando uma profunda contradição entre suas ações e suas verdadeiras emoções e lealdades.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.35484241989423643
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 265,
+    "totalTokenCount": 312,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 265
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sonserina: características e membros famosos (Draco, Snape, Voldemort) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações melhor caracteriza a Casa Sonserina e seus membros famosos, como Draco Malfoy, Severus Snape e Lord Voldemort?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"Sonserina valoriza a lealdade acima de tudo, mesmo que isso signifique ignorar a justiça e a compaixão.  Seus membros são geralmente bondosos e altruístas, apesar de sua ambição.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"Sonserina é conhecida por sua ambição, astúcia e inteligência, mas também abriga indivíduos com grande capacidade de amor e compaixão, como demonstrado por Snape.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"Sonserina prima pela justiça e pelo bem comum,  seus membros são conhecidos por sua retidão e honestidade, mesmo quando enfrentam grandes desafios.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"Sonserina é composta exclusivamente por bruxos e bruxas cruéis e sem moral, exemplificado pela trajetória de Draco, Snape e Voldemort.\"\n    }\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21596459312306049
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 287,
+    "totalTokenCount": 336,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 287
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre laços `for` e `while` em programação?\",\n  \"alternativas\": {\n    \"A\": \"O laço `for` é usado apenas para iterar sobre arrays, enquanto o laço `while` pode iterar sobre qualquer tipo de dado.\",\n    \"B\": \"O laço `while` sempre executa ao menos uma vez, enquanto o laço `for` pode não executar nenhuma vez.\",\n    \"C\": \"O laço `for` é ideal para iterações com um número conhecido de repetições, enquanto o laço `while` é mais adequado para iterações com uma condição de parada.\",\n    \"D\": \"O laço `for` é mais eficiente que o laço `while`, independente da situação.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.090511750409947356
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 187,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 187
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre passos para criar um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quais são os passos corretos para criar um algoritmo eficiente, em ordem sequencial?\",\n  \"options\": {\n    \"A\": \"1. Escrever o código; 2. Definir o problema; 3. Testar o código; 4. Desenvolver o algoritmo.\",\n    \"B\": \"1. Definir o problema; 2. Desenvolver o algoritmo; 3. Escrever o código; 4. Testar o código.\",\n    \"C\": \"1. Testar o código; 2. Definir o problema; 3. Escrever o código; 4. Desenvolver o algoritmo.\",\n    \"D\": \"1. Desenvolver o algoritmo; 2. Definir o problema; 3. Testar o código; 4. Escrever o código.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A criação de um algoritmo começa com a clara definição do problema a ser resolvido.  Em seguida, o algoritmo é desenvolvido, representando a solução lógica.  Depois, o algoritmo é traduzido para um código em uma linguagem de programação e, finalmente, testado para garantir sua correção e eficiência.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.080038020673316071
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 267,
+    "totalTokenCount": 306,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 267
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre as estruturas de repetição `for` e `while` em programação?\",\n  \"alternativas\": {\n    \"A\": \"O loop `for` é usado apenas para iterar sobre listas, enquanto o loop `while` pode ser usado para qualquer tipo de repetição.\",\n    \"B\": \"O loop `while` sempre executa pelo menos uma vez, enquanto o loop `for` pode não executar nenhuma vez.\",\n    \"C\": \"O loop `for` requer um contador explicitamente definido, enquanto o loop `while` não precisa de um contador.\",\n    \"D\": \"O loop `for` é geralmente usado quando o número de iterações é conhecido antecipadamente, enquanto o loop `while` é usado quando a condição de parada depende de uma condição lógica que pode ser avaliada durante a execução.\"\n  },\n  \"respostaCorreta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.06919265251893264
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 208,
+    "totalTokenCount": 247,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 208
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conceito de função em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas melhor define o conceito de função em Matemática?\",\n  \"alternativas\": {\n    \"A\": \"Uma relação entre dois conjuntos onde cada elemento do primeiro conjunto se relaciona com um ou mais elementos do segundo conjunto.\",\n    \"B\": \"Uma sequência ordenada de números.\",\n    \"C\": \"Uma relação entre dois conjuntos onde cada elemento do primeiro conjunto se relaciona com exatamente um elemento do segundo conjunto.\",\n    \"D\": \"Um conjunto de pares ordenados sem nenhuma restrição.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086835719920970778
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 172,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 135
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos com decisões (if/else) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o resultado da seguinte sequência de comandos, considerando a variável 'x' inicialmente com o valor 5?\",\n  \"code\": \"if (x \u003e 10) {\\n  x = x + 10;\\n} else if (x \u003e 5) {\\n  x = x * 2;\\n} else {\\n  x = x - 5;\\n}\",\n  \"options\": {\n    \"A\": \"x = 0\",\n    \"B\": \"x = 10\",\n    \"C\": \"x = 15\",\n    \"D\": \"x = 0\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"Como x é 5, a primeira condição (x \u003e 10) é falsa. A segunda condição (x \u003e 5) também é falsa. Portanto, o bloco 'else' é executado, resultando em x = 5 - 5 = 0.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.064175950629370551
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 224,
+    "totalTokenCount": 267,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 224
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos com decisões (if/else) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o resultado da execução do seguinte código?\\n\\n```python\\nx = 10\\ny = 5\\n\\nif x \u003e y:\\n    z = x - y\\nelse:\\n    z = y - x\\n\\nprint(z)```\",\n  \"alternativas\": {\n    \"A\": \"0\",\n    \"B\": \"5\",\n    \"C\": \"-5\",\n    \"D\": \"15\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067519760131835943
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 130,
+    "totalTokenCount": 173,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre variáveis em algoritmos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em algoritmos, qual das alternativas melhor define o conceito de variável?\",\n  \"options\": {\n    \"A\": \"Uma sequência fixa de instruções que executa uma tarefa específica.\",\n    \"B\": \"Um espaço na memória do computador que armazena um valor, podendo este ser alterado durante a execução do algoritmo.\",\n    \"C\": \"Um símbolo que representa uma operação matemática, como adição ou subtração.\",\n    \"D\": \"Um conjunto de regras que definem a sintaxe e a semântica de uma linguagem de programação.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13714666769538128
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 142,
+    "totalTokenCount": 181,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 142
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre uso de repetições (loops) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual estrutura de repetição é mais adequada para iterar sobre um array de tamanho conhecido, sabendo-se o número exato de iterações?\",\n  \"options\": {\n    \"A\": \"While\",\n    \"B\": \"Do-While\",\n    \"C\": \"For\",\n    \"D\": \"Foreach (ou similar)\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O loop 'for' é ideal quando se conhece o número de iterações antecipadamente, permitindo um controle preciso sobre o início, fim e incremento do contador. 'While' e 'Do-While' são mais indicados para situações em que a condição de parada não é determinada a priori pelo número de iterações. 'Foreach' é ótimo para percorrer elementos de coleções, mas não oferece controle direto sobre o índice.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17369275215344551
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 195,
+    "totalTokenCount": 236,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 195
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal diferença entre estruturas de repetição 'for' e 'while' em programação?\",\n  \"options\": {\n    \"A\": \"O 'for' é usado apenas para iterar sobre strings, enquanto o 'while' pode iterar sobre qualquer tipo de dado.\",\n    \"B\": \"O 'while' exige uma condição de parada explícita, enquanto o 'for' sempre itera um número fixo de vezes.\",\n    \"C\": \"O 'for' é mais eficiente que o 'while' em qualquer situação.\",\n    \"D\": \"O 'for' é geralmente usado para iterar sobre sequências (listas, tuplas, etc.) ou intervalos numéricos, enquanto o 'while' continua a execução enquanto uma condição for verdadeira.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1573572005817597
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 187,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 187
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos sequenciais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das alternativas descreve corretamente um algoritmo sequencial?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"Um algoritmo que executa instruções em ordem aleatória, sem uma sequência definida.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"Um algoritmo que utiliza estruturas de decisão (como 'se-então-senão') para controlar o fluxo de execução.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"Um algoritmo que executa instruções em uma ordem específica, uma após a outra, sem saltos ou repetições condicionais.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"Um algoritmo que repete um bloco de instruções até que uma condição seja satisfeita.\"\n    }\n  ],\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067967368784734014
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 207,
+    "totalTokenCount": 245,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 207
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre passos para criar um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quais são os passos corretos para criar um algoritmo eficiente, na ordem ideal?\",\n  \"options\": {\n    \"A\": \"1. Escrever o código; 2. Definir a saída desejada; 3. Criar o fluxograma; 4. Definir a entrada.\",\n    \"B\": \"1. Definir a entrada; 2. Definir a saída desejada; 3. Criar o fluxograma/pseudocódigo; 4. Escrever o código.\",\n    \"C\": \"1. Escrever o código; 2. Criar o fluxograma; 3. Definir a entrada; 4. Definir a saída desejada.\",\n    \"D\": \"1. Criar o fluxograma; 2. Definir a saída desejada; 3. Escrever o código; 4. Definir a entrada.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A ordem ideal para criar um algoritmo eficiente é: primeiro definir a entrada (dados de início), depois a saída desejada (resultado esperado), em seguida, planejar o processo com fluxograma ou pseudocódigo e, finalmente, escrever o código que implementa o algoritmo.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10119195924188099
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 274,
+    "totalTokenCount": 313,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 274
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal diferença entre laços `for` e `while` em programação?\",\n  \"alternativas\": {\n    \"A\": \"O laço `for` é usado para iterar sobre sequências, enquanto o laço `while` é usado apenas para contagem.\",\n    \"B\": \"O laço `while` sempre executa pelo menos uma vez, enquanto o laço `for` pode não executar nenhuma vez.\",\n    \"C\": \"O laço `for` requer um contador explicitamente definido, enquanto o laço `while` não.\",\n    \"D\": \"O laço `for` é ideal para iterações com número de repetições conhecido antecipadamente, enquanto o laço `while` é mais adequado para iterações com condição de parada dependente de eventos ou cálculos durante a execução.\"\n  },\n  \"resposta_correta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0743660854204052
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 197,
+    "totalTokenCount": 236,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 197
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre entrada e saída de dados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Enunciado:**\n\nQual das seguintes afirmações sobre entrada e saída de dados em formato JSON (JavaScript Object Notation) é **FALSA**?\n\nA)  JSON é um formato de texto leve e de fácil leitura para troca de dados.\nB)  A estrutura de dados JSON é baseada em pares chave-valor, similar a um dicionário ou objeto em muitas linguagens de programação.\nC)  Bibliotecas para processamento JSON estão disponíveis na maioria das linguagens de programação populares, facilitando a leitura e escrita de arquivos JSON.\nD)  Arquivos JSON sempre requerem a utilização de tags de abertura e fechamento, como em XML, para definir os elementos.\n\n\n**Resposta correta:** D\n\n\n**Explicação:**  A afirmação D é falsa.  JSON não utiliza tags de abertura e fechamento como XML.  Sua estrutura é mais simples e baseada em chaves e colchetes para definir objetos e arrays.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18693114771987451
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 198,
+    "totalTokenCount": 237,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 198
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre funções simples e chamadas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes opções representa a correta chamada de uma função em JavaScript, considerando a função definida como `function somar(a, b) { return a + b; }`?\",\n  \"options\": {\n    \"A\": \"somar(2, 3);\",\n    \"B\": \"somar a + b;\",\n    \"C\": \"somar(2 + 3);\",\n    \"D\": \"return somar(2, 3);\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"A opção A demonstra a chamada correta da função `somar`, passando dois argumentos (2 e 3) entre parênteses.  As outras opções são incorretas: B tenta chamar a função sem parênteses, C passa uma única expressão como argumento, e D tenta retornar o resultado da chamada de função fora do contexto da função principal.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18552041521259383
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 204,
+    "totalTokenCount": 243,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 204
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"O que é um algoritmo?\",\n  \"options\": {\n    \"A\": \"Uma linguagem de programação específica utilizada para desenvolver softwares.\",\n    \"B\": \"Um conjunto de instruções passo a passo para resolver um problema ou realizar uma tarefa.\",\n    \"C\": \"Um tipo de dado utilizado para armazenar informações em um computador.\",\n    \"D\": \"Um programa de computador que executa tarefas automaticamente sem intervenção humana.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0795518626337466
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 115,
+    "totalTokenCount": 154,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre passos para criar um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quais são os passos CORRETOS para criar um algoritmo eficiente, seguindo uma boa prática de desenvolvimento?\",\n  \"options\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"1. Escrever o código diretamente. 2. Testar o código. 3. Depurar o código. 4. Documentar o código.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"1. Definir o problema. 2. Criar um fluxograma ou pseudocódigo. 3. Escrever o código. 4. Testar e depurar o código. 5. Documentar o código.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"1. Escrever o código. 2. Definir o problema. 3. Testar o código. 4. Criar a documentação.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"1. Testar o código. 2. Definir o problema. 3. Escrever o código. 4. Criar um fluxograma.\"\n    }\n  ],\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.073957477790721954
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 276,
+    "totalTokenCount": 315,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 276
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre entrada e saída de dados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Enunciado:**\n\nQual das alternativas descreve corretamente uma das principais vantagens de utilizar o formato JSON (JavaScript Object Notation) para entrada e saída de dados em aplicações?\n\nA)  JSON possui maior capacidade de armazenamento de dados complexos em comparação a XML, mesmo com arquivos de tamanho similar.\n\nB)  JSON é intrinsecamente mais seguro que outros formatos de troca de dados, protegendo contra ataques de injeção de código.\n\nC)  JSON oferece suporte nativo a tipos de dados binários, tornando-o ideal para transmitir imagens e arquivos de áudio diretamente.\n\nD)  JSON é um formato leve e de fácil leitura tanto para humanos quanto para máquinas, facilitando o desenvolvimento e a depuração de aplicações.\n\n\n**Resposta correta:** D\n\n\n**Justificativa:**\n\nA alternativa D é a correta porque a principal vantagem do JSON é sua simplicidade e legibilidade.  As demais alternativas estão incorretas:\n\n* **A:**  A capacidade de armazenamento de dados complexos entre JSON e XML é comparável, dependendo da complexidade dos dados.  A diferença de tamanho de arquivo pode variar.\n* **B:**  A segurança não é uma característica inerente ao formato JSON, mas sim à forma como ele é implementado e usado na aplicação.  Medidas de segurança adicionais são necessárias.\n* **C:** JSON não possui suporte nativo para dados binários.  Para transmitir dados binários, é necessário codificá-los (como base64).\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.26643214071950605
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 310,
+    "totalTokenCount": 349,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 310
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos sequenciais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas descreve corretamente a característica principal de um algoritmo sequencial?\",\n  \"alternativas\": {\n    \"A\": \"Executa as instruções em ordem aleatória, dependendo de condições pré-definidas.\",\n    \"B\": \"Executa as instruções repetidamente até que uma condição seja satisfeita.\",\n    \"C\": \"Executa as instruções na ordem em que são escritas, uma após a outra.\",\n    \"D\": \"Executa instruções concorrentemente, dividindo tarefas entre diferentes processadores.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10341663497815029
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 139,
+    "totalTokenCount": 177,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 139
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre funções simples e chamadas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual é o resultado da execução do seguinte código Python?\",\n  \"code\": \"def soma(a, b):\\n  return a + b\\n\\nresultado = soma(5, 3)\\nprint(resultado)\",\n  \"options\": [\n    {\"letter\": \"A\", \"text\": \"8\"},\n    {\"letter\": \"B\", \"text\": \"53\"},\n    {\"letter\": \"C\", \"text\": \"15\"},\n    {\"letter\": \"D\", \"text\": \"2\"}\n  ],\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0638130791753316
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 139,
+    "totalTokenCount": 178,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 139
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre conceito de função em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das alternativas abaixo melhor define o conceito de função em Matemática?\",\n  \"options\": {\n    \"A\": \"Uma relação entre dois conjuntos em que cada elemento do primeiro conjunto está associado a um ou mais elementos do segundo conjunto.\",\n    \"B\": \"Uma sequência de operações aritméticas que resultam em um único valor numérico.\",\n    \"C\": \"Uma relação entre dois conjuntos em que cada elemento do primeiro conjunto está associado a exatamente um elemento do segundo conjunto.\",\n    \"D\": \"Uma equação que relaciona duas variáveis independentes.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.094533407277074349
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 145,
+    "totalTokenCount": 182,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 145
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre entrada e saída de dados em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**Enunciado:**\n\nQual das alternativas abaixo descreve corretamente a principal vantagem de utilizar o formato JSON (JavaScript Object Notation) para entrada e saída de dados em aplicações web?\n\n\nA) JSON é mais eficiente em termos de processamento do que XML, pois utiliza menos caracteres para representar a mesma informação.  Além disso, é mais fácil de ser parseado (analisado) pela maioria das linguagens de programação.\n\nB) JSON suporta uma gama maior de tipos de dados complexos do que o XML, permitindo a representação de estruturas de dados hierárquicas mais elaboradas.\n\nC) JSON oferece maior segurança em comparação com XML, pois possui mecanismos de criptografia embutidos que protegem os dados durante a transmissão.\n\nD) JSON é independente de plataforma, mas sua principal vantagem reside na compatibilidade com linguagens de programação orientadas a objetos, como Java e C#, facilitando a integração com esses sistemas.\n\n\n**Resposta correta:** A\n\n**Explicação:**  A alternativa A destaca a principal vantagem do JSON: sua concisão e facilidade de parsing. Embora as outras alternativas apresentem aspectos relevantes sobre JSON ou outras tecnologias, nenhuma delas descreve sua vantagem principal tão diretamente quanto a alternativa A.  O JSON não possui mecanismos de criptografia embutidos (C) e sua facilidade de uso não está diretamente ligada à orientação a objetos (D).  Embora possa suportar estruturas complexas, esta não é sua principal vantagem sobre outras tecnologias como XML (B).\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.39739755483774036
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 312,
+    "totalTokenCount": 351,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 312
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre funções simples e chamadas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual é o resultado da execução do seguinte código Python?\",\n  \"code\": \"def minha_funcao(x, y):\\n  return x + y\\n\\nresultado = minha_funcao(5, 3)\\nprint(resultado)\",\n  \"options\": [\n    {\"letter\": \"A\", \"text\": \"8\"},\n    {\"letter\": \"B\", \"text\": \"53\"},\n    {\"letter\": \"C\", \"text\": \"15\"},\n    {\"letter\": \"D\", \"text\": \"2\"}\n  ],\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.058973318954993942
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 145,
+    "totalTokenCount": 184,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 145
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal diferença entre laços `for` e `while` em programação?\",\n  \"options\": {\n    \"A\": \"O laço `for` é usado apenas para iterar sobre listas, enquanto o laço `while` pode iterar sobre qualquer tipo de dado.\",\n    \"B\": \"O laço `while` sempre executa pelo menos uma vez, enquanto o laço `for` pode não executar nenhuma vez.\",\n    \"C\": \"O laço `for` é ideal para iterações com número de repetições conhecido previamente, enquanto o laço `while` é mais adequado para iterações com condição de parada dependente de eventos durante a execução.\",\n    \"D\": \"O laço `for` é mais eficiente que o laço `while` em todas as situações.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.051603053478484456
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 227,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre for e while em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal diferença entre laços `for` e `while` em programação?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"O laço `for` é usado apenas para iterar sobre arrays, enquanto o laço `while` pode iterar sobre qualquer tipo de dado.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"O laço `while` sempre executa pelo menos uma vez, enquanto o laço `for` pode não executar nenhuma vez.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"O laço `for` é geralmente usado quando o número de iterações é conhecido antecipadamente, enquanto o laço `while` é usado quando a condição de parada depende de uma condição que pode mudar durante a execução.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"O laço `for` é mais eficiente que o laço `while`, independente da situação.\"\n    }\n  ],\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.056808938785475126
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 245,
+    "totalTokenCount": 284,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 245
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"O que é um algoritmo?\",\n  \"options\": {\n    \"A\": \"Um programa de computador escrito em linguagem de máquina.\",\n    \"B\": \"Uma sequência finita de instruções bem definidas e não ambíguas, executadas em uma ordem específica para resolver um problema ou realizar uma tarefa.\",\n    \"C\": \"Um tipo de dado utilizado para armazenar informações em um banco de dados.\",\n    \"D\": \"Uma estrutura de dados utilizada para organizar informações de forma hierárquica.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069838756823357731
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 131,
+    "totalTokenCount": 170,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 131
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dolores Umbridge: políticas opressoras em Hogwarts em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes políticas implementadas por Dolores Umbridge em Hogwarts melhor exemplifica sua natureza opressora e o desejo de controlar a informação e o pensamento dos alunos?\",\n  \"options\": {\n    \"A\": \"Introdução de novos uniformes escolares.\",\n    \"B\": \"Aumento da quantidade de dever de casa.\",\n    \"C\": \"Estabelecimento do Exército de Dumbledore como organização ilegal e clandestina.\",\n    \"D\": \"Criação do Edito Contra o Uso Indevido de Magia e a consequente supressão da autodefesa mágica dos alunos.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"O Edito Contra o Uso Indevido de Magia permitiu a Umbridge silenciar qualquer forma de resistência ou expressão mágica dos alunos, criando um ambiente de medo e opressão que suprimia sua liberdade e capacidade de se defenderem. As outras opções, embora representassem aspectos negativos da gestão de Umbridge, não demonstram tão claramente sua natureza opressora e controle sobre a informação e o pensamento dos alunos como o Edito.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30013344219192067
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 243,
+    "totalTokenCount": 287,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 243
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Profecia de Harry e Voldemort: significado e impacto em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em \\\"Harry Potter e a Pedra Filosofal\\\", a profecia de Sibila Trelawney sobre a criança que teria o poder de derrotar Voldemort tem um significado e impacto profundos na narrativa. Qual das alternativas abaixo MELHOR resume esse significado e impacto?\",\n  \"alternativas\": {\n    \"A\": \"A profecia simplesmente estabelece Harry como o protagonista, sem influenciar diretamente as escolhas e ações dos personagens.\",\n    \"B\": \"A profecia torna-se um mero detalhe, sem grande relevância para o desenvolvimento da trama e o destino dos personagens.\",\n    \"C\": \"A profecia, embora ambígua, direciona as ações de Voldemort e de Dumbledore, moldando o conflito central e o destino de Harry.\",\n    \"D\": \"A profecia é um elemento secundário, servindo apenas para explicar a obsessão de Voldemort por Harry, sem influenciar significativamente o desenrolar da história.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23421239642844852
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 45,
+    "candidatesTokenCount": 227,
+    "totalTokenCount": 272,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 227
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Comensais da Morte: seguidores de Voldemort e suas ações em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual grupo de Comensais da Morte foi responsável por planejar e executar o assassinato de Minerva McGonagall em 1997, durante a Batalha de Hogwarts?\",\n  \"options\": {\n    \"A\": \"Os Inquisidores\",\n    \"B\": \"A Legião de Salazar\",\n    \"C\": \"Nenhum grupo específico, foi um ataque aleatório.\",\n    \"D\": \"Este evento não ocorreu na história.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Minerva McGonagall não foi assassinada em 1997 durante a Batalha de Hogwarts. Ela sobreviveu à batalha e continuou a lutar contra os Comensais da Morte.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30511115447819581
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 171,
+    "totalTokenCount": 217,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 171
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Coragem: atitudes de Neville Longbottom em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Em qual das situações a seguir Neville Longbottom demonstra maior coragem, considerando o contexto de Harry Potter?\",\n  \"alternativas\": {\n    \"A\": \"Quando se recusa a entregar a profecia a Sirius Black.\",\n    \"B\": \"Quando enfrenta a serpente gigante em sua primeira aula de Herbologia.\",\n    \"C\": \"Quando luta na Batalha de Hogwarts, mesmo com medo intenso.\",\n    \"D\": \"Quando decide não contar a Hermione sobre seu interesse romântico.\"\n  },\n  \"resposta_correta\": \"C\",\n  \"explicacao\": \"Embora todas as alternativas mostrem aspectos da personalidade de Neville, a Batalha de Hogwarts representa o ápice de sua coragem. Ele enfrenta um perigo mortal iminente e um medo extremo, mas luta mesmo assim pela causa que acredita.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.3811798095703125
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 43,
+    "candidatesTokenCount": 191,
+    "totalTokenCount": 234,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 191
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Testrálio: como são vistos e ligação com a morte em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em Harry Potter, os Testrálios são criaturas mágicas que só podem ser vistas por quem:\",\n  \"alternativas\": {\n    \"A\": \"Possui uma varinha de sabugueiro.\",\n    \"B\": \"Já presenciou a morte de alguém.\",\n    \"C\": \"Consegue falar a língua das serpentes.\",\n    \"D\": \"É descendente de uma família de bruxos famosos.\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1396618366241455
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 120,
+    "totalTokenCount": 166,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 120
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Comensais da Morte: seguidores de Voldemort e suas ações em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Salão Comunal da Grifinória: localização e segredos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+

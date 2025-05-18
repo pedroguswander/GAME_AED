@@ -431,7 +431,7 @@ void drawBoard() {
                     break;
 
                 case EVENT_QUESTION:
-                    drawQuestion(options, _questionTile);
+                    drawQuestion(_questionTile);
                     DrawTextEx(fontPlayerName , TextFormat("%s", _players[_currentPlayerIndex].name),
                      (Vector2) {540, 900}, 32, 2, _playerColors[_currentPlayerIndex]);
                     break;

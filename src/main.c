@@ -48,7 +48,7 @@ char *_current_topic = "Algoritmos e Estruturas de Dados"; //escolha o tópico
 bool _gotItRight = false;
 bool _quizLoaded = false;
 int _currentQuestion = 0;
-Question questions[5];
+Question questions[5] = {0};
 pthread_t loaderThread;
 bool _loadingFinished = false;
 const char *topics[] = {
@@ -124,6 +124,7 @@ int main() {
     for (int i = 0; i < 4; i++) {
         optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40};
         options[i].rect = optionRects[i];
+        options[i].color = RED;
         strcpy(options[i].answer, labels[i]);
     }
 
@@ -203,16 +204,18 @@ int main() {
         
         if (_menuOption == QUIZ_MODE) {
             if (_quizScreen == TOPIC_SELECTION_SCREEN && IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-                for (int i = 0; i < 4; i++) { //uptadeTopics
+                for (int i = 0; i < 4; i++) { //updateTopics
                     if (CheckCollisionPointRec(GetMousePosition(), topicButtons[i])) {
                         _current_topic = (char *)topics[i];
                         resetScore();
                         _currentQuestion = 0;
+                        createOptions();
                         _loadingFinished = false;
                         _quizScreen = LOADING_SCREEN;
                         
                         // Cria uma thread para carregar perguntas
                         pthread_create(&loaderThread, NULL, loadQuestionsThread, (void *)_current_topic);
+                        UpdateOptions(questions[_currentQuestion]);
                         break;
                     }
                 }
@@ -234,7 +237,6 @@ int main() {
                     }
                 }
             }
-
 
             else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
                 if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
@@ -260,26 +262,21 @@ int main() {
 
         BeginDrawing();
 
-        ClearBackground((Color){ 135, 206, 235, 255 });
+        float t = GetTime();
+        int r = 30 + 20 * sinf(t);
+        int g = 50 + 20 * sinf(t + 1.0f);
+        int b = 70 + 20 * sinf(t + 2.0f);
+        ClearBackground((Color){ r, g, b, 255 });
 
+        for (int i = 0; i < 50; i++) {
+            float y = (float)(screenHeight - fmod(GetTime() * 50 + i * 40, screenHeight));
+            float x = 100 + (i * 30) % screenWidth;
+            DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
+        }
 
         switch (_menuOption)
-{
+        {
             case MAIN_MENU: {
-                // Fundo animado com variação suave de cores
-                float t = GetTime();
-                int r = 30 + 20 * sinf(t);
-                int g = 50 + 20 * sinf(t + 1.0f);
-                int b = 70 + 20 * sinf(t + 2.0f);
-                ClearBackground((Color){ r, g, b, 255 });
-
-                // Bolhas subindo
-                for (int i = 0; i < 50; i++) {
-                    float y = (float)(screenHeight - fmod(GetTime() * 50 + i * 40, screenHeight));
-                    float x = 100 + (i * 30) % screenWidth;
-                    DrawCircle(x, y, 5, Fade(WHITE, 0.3f));
-                }
-
                 Vector2 textSizeTitulo = MeasureTextEx(titleFont, titulo, 80, 2);
                 DrawTextEx(titleFont, titulo, (Vector2){screenWidth/2 - textSizeTitulo.x/2, 80}, 80, 2, YELLOW);
 
@@ -322,20 +319,26 @@ int main() {
 
             case QUESTION_SCREEN:
                 drawScore(5);
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                drawQuestion(options, questions[_currentQuestion]);
+                DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
+                CLITERAL (Color) {240, 240, 240, 240});
+                drawQuestion(questions[_currentQuestion]);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case ANSWER_SCREEN:
+                //draQuestion
                 drawScore(5);
-                DrawText(TextFormat("Questão %d/%d", _currentQuestion + 1, 5), screenWidth - 150, 30, 20, LIGHTGRAY);
-                DrawText("Gabarito:", 50, 100, 28, YELLOW);
-                DrawText(questions[_currentQuestion].answer, 200, 100, 28, WHITE);
-                DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRight ? GREEN : RED);
+                DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
+                CLITERAL (Color) {240, 240, 240, 240});
+                DrawText("Gabarito:", 50, 900, 28, YELLOW);
+                DrawText(questions[_currentQuestion].answer, 200, 900, 28, WHITE);
+                DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 300, 900, 40, _gotItRight ? GREEN : RED);
                 DrawRectangleRec(nextQuestionButton, RED);
-                DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+                DrawText("CONTINUAR", 
+                        1920/2 - MeasureText("CONTINUAR", 16)/2,  // Centraliza horizontalmente
+                        1080/2 - 16/2,                           // Centraliza verticalmente
+                        16, WHITE);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
@@ -346,7 +349,10 @@ int main() {
                 DrawText(TextFormat("Pontuação Final: %d/5", getScore()),
                          screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
                 DrawRectangleRec(nextQuestionButton, GREEN);
-                DrawText("JOGAR NOVAMENTE", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+                DrawText("JOGAR NOVAMENTE",
+                        1920/2 - MeasureText("JOGAR NOVAMENTE", 16)/2,  // Centraliza horizontalmente
+                        1080/2 - 16/2,                           // Centraliza verticalmente
+                        16, WHITE);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
@@ -408,8 +414,10 @@ void checkIfAnswerIsRight(Option *options, Question question) {
         if (CheckCollisionPointRec(mouse, options[i].rect)) {
             if (strcmp(options[i].answer, question.answer) == 0) {
                 _gotItRight = true;
+                options[i].color = GREEN;
                 addScore(1);
             }
+
             return;
         }
     }

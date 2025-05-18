@@ -8,8 +8,8 @@
 #define PLAYER_TEXT_SIZE 32
 #define PLAYER_TEXT_SCALE 20
 
-int offset_x = 100;
-int start_y = 180;
+int offset_x = -100;
+int start_y = 220;
 
 Vector2 playerSpritePos = {100, 100};
 
@@ -18,20 +18,9 @@ Rectangle _rectDest = {0};
 
 void updateEndScreen()
 {
-    Rectangle menuButton = {
-        GetScreenWidth()/2 - MeasureText("MENU", 48)/2,
-        GetScreenHeight()/2 + 200,  // Posiciona abaixo do centro
-        (float)MeasureText("MENU", 48),
-        48
-    };
-
-    if (CheckCollisionPointRec(GetMousePosition(), menuButton))
+    if (GetKeyPressed() != 0 || IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
     {
-        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
-        {
-            _menuOption = MAIN_MENU; // Certifique-se que MAIN_MENU está definido em main_menu.h
-            TraceLog(LOG_INFO, "Mudando para menu principal"); // Debug
-        }
+        _menuOption = MAIN_MENU;
     }
 }
 
@@ -41,7 +30,7 @@ void drawEndScreen(Player player)
     int r = 30 + 20 * sinf(t);
     int g = 50 + 20 * sinf(t + 1.0f);
     int b = 70 + 20 * sinf(t + 2.0f);
-    ClearBackground((Color){ r, g, b, 255 });
+    ClearBackground((Color){ r, g, b, 255});
 
     _rectDest = (Rectangle){
         playerSpritePos.x,
@@ -52,29 +41,10 @@ void drawEndScreen(Player player)
     DrawTexturePro(player.sprite, _rectSrc, _rectDest, (Vector2){0, 0}, 0, WHITE);
 
     DrawText(TextFormat("%s venceu!!", player.name), GetScreenWidth()/2 + offset_x,
-    start_y, 64, player.color);
+    start_y, 80, player.color);
 
-    Rectangle menuButton = {
-        GetScreenWidth()/2 - 150,
-        GetScreenHeight()/2 + 250,
-        300,
-        80
-    };
-    
-    // Verifica se o mouse está sobre o botão
-    bool isHovered = CheckCollisionPointRec(GetMousePosition(), menuButton);
-    
-    // Cor do botão (muda quando hover)
-    Color btnColor = DARKGRAY;
-    Color textColor = WHITE;
-    
-    if (isHovered)
-    {
-        DrawRectangleRounded(menuButton, 0.5f, 10, btnColor);
-    }
-
-    DrawText("MENU", 
-             menuButton.x + menuButton.width/2 - MeasureText("MENU", 40)/2,
-             menuButton.y + menuButton.height/2 - 20, 
-             40, textColor);
+    DrawText("PRESSIONE QUALQUER TECLA PARA VOLTAR", 
+            GetScreenWidth()/2 - MeasureText("PRESSIONE QUALQUER TECLA PARA VOLTAR", 32)/2,
+            GetScreenHeight()/2 + 300,  // Posiciona abaixo do centro
+             40, CLITERAL (Color) {240, 240, 240, 240});
 }
