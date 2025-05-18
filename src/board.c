@@ -431,7 +431,7 @@ void drawBoard() {
                     break;
 
                 case EVENT_QUESTION:
-                    drawQuestion(_questionTile);
+                    drawQuestion(_questionTile, false);
                     DrawTextEx(fontPlayerName , TextFormat("%s", _players[_currentPlayerIndex].name),
                      (Vector2) {540, 900}, 32, 2, _playerColors[_currentPlayerIndex]);
                     break;
@@ -451,9 +451,6 @@ void drawBoard() {
             break;
 
         case END:
-            //DrawRectangleRec((Rectangle){0, 0, 1920, 1080}, Fade(PINK, 0.3f));
-            //DrawTextEx(fontPlayerName, TextFormat("%s venceu!!", _players[_currentPlayerIndex].name),
-            //(Vector2) {1920/2, 1080/2}, 20, 2, _players[_currentPlayerIndex].color);
             drawEndScreen(_players[_currentPlayerIndex]);
             break;
 

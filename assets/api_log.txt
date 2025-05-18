@@ -8379,3 +8379,2403 @@
 === JSON Enviado para a API ===
 {"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Salão Comunal da Grifinória: localização e segredos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sonserina: características e membros famosos (Draco, Snape, Voldemort) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações MELHOR representa as características frequentemente associadas à Casa Sonserina e seus membros famosos como Draco Malfoy, Severus Snape e Lord Voldemort?\",\n  \"options\": {\n    \"A\": \"Ambição, lealdade inabalável à justiça e compaixão pelos fracos.\",\n    \"B\": \"Inteligência astuta, ambição implacável e uma propensão para usar meios duvidosos para alcançar seus objetivos.\",\n    \"C\": \"Generosidade desmedida, coragem indomável e um forte senso de honra e justiça.\",\n    \"D\": \"Simplicidade, humildade e um profundo respeito pelas regras e tradições.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Sonserina é frequentemente associada à ambição, inteligência e astúcia, mesmo que isso envolva o uso de meios desonestos.  Draco Malfoy, Severus Snape e Lord Voldemort exemplificam essas características em diferentes graus.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20805797061404666
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 222,
+    "totalTokenCount": 271,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 222
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dementadores: guardas de Azkaban e efeitos nas pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, qual é o principal efeito dos Dementadores, os guardas de Azkaban, sobre as pessoas?\",\n  \"options\": {\n    \"A\": \"Transformam as pessoas em pedra.\",\n    \"B\": \"Drenam a felicidade e as boas lembranças, podendo levar à depressão profunda e até à morte.\",\n    \"C\": \"Confinam as pessoas em um sono profundo e eterno.\",\n    \"D\": \"Causam uma forte dor física, deixando cicatrizes profundas.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22092614454381607
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 136,
+    "totalTokenCount": 184,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 136
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Chapéu Seletor: como funciona e suas decisões polêmicas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, o Chapéu Seletor é um artefato mágico responsável por determinar a casa de cada aluno em Hogwarts.  Considerando seu funcionamento e as decisões polêmicas que toma, qual afirmação é a MAIS precisa?\",\n  \"options\": {\n    \"A\": \"O Chapéu Seletor baseia suas decisões exclusivamente nas características de personalidade inatas do aluno, ignorando completamente suas ambições e escolhas.\",\n    \"B\": \"O Chapéu Seletor é um objeto imparcial e objetivo, sempre escolhendo a casa que melhor se adapta às habilidades mágicas do aluno, sem levar em conta os desejos do próprio.\",\n    \"C\": \"Embora considere as características de personalidade e habilidades do aluno, o Chapéu Seletor também leva em conta os desejos e ambições do aluno, podendo até mesmo ceder a uma escolha firme e explícita, mesmo que não seja a mais óbvia.\",\n    \"D\": \"O Chapéu Seletor funciona aleatoriamente, distribuindo os alunos pelas casas sem qualquer critério objetivo ou subjetivo, garantindo a diversidade em cada uma delas.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O Chapéu Seletor, embora analise as características dos alunos, demonstra flexibilidade ao considerar suas vontades e preferências.  Ele sugere a casa mais adequada, mas permite que o aluno tenha a palavra final, desde que demonstre uma convicção forte o suficiente.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30809705010775862
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 319,
+    "totalTokenCount": 367,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 319
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Preconceito: tratamento a nascidos-trouxas e meio-gigantes em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em muitas sociedades mágicas fictícias, existe um preconceito arraigado contra nascidos-trouxas (crianças de pais não-mágicos) e meio-gigantes.  Qual das alternativas abaixo melhor descreve a natureza desse preconceito, considerando os aspectos de poder e pertencimento?\",\n  \"alternativas\": {\n    \"A\": \"Inveja da habilidade mágica inata dos nascidos-trouxas e a força física excepcional dos meio-gigantes, levando a tentativas de silenciamento.\",\n    \"B\": \"Medo da diferença e do desconhecido, alimentado pela crença na superioridade da linhagem sanguínea mágica pura e da pureza racial.\",\n    \"C\": \"Simpatia pela situação dos nascidos-trouxas e meio-gigantes, buscando formas de integração social e igualdade de oportunidades.\",\n    \"D\": \"Admiração pelo poder mágico dos nascidos-trouxas e a força dos meio-gigantes, com a busca de alianças estratégicas.\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32498619355351094
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 249,
+    "totalTokenCount": 299,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 249
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dementadores: guardas de Azkaban e efeitos nas pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o principal efeito dos Dementadores, guardas de Azkaban, sobre as pessoas?\",\n  \"alternativas\": {\n    \"A\": \"Transformação física em criaturas grotescas.\",\n    \"B\": \"Indução de sonhos vívidos e perturbadores.\",\n    \"C\": \"Drenagem da felicidade e dos bons sentimentos, culminando em desespero e depressão profunda.\",\n    \"D\": \"Petrificação imediata, com posterior mumificação.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19633372380183292
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 130,
+    "totalTokenCount": 178,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lord Voldemort: horcruxes e busca pela imortalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o principal objetivo de Lord Voldemort ao criar Horcruxes?\",\n  \"options\": {\n    \"A\": \"Aumentar seus poderes mágicos além dos limites naturais.\",\n    \"B\": \"Conceder imortalidade à sua linhagem sanguínea.\",\n    \"C\": \"Conquistar o controle sobre todas as criaturas mágicas.\",\n    \"D\": \"Alcançar a imortalidade, protegendo sua alma da destruição total.\",\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18076440154529008
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 122,
+    "totalTokenCount": 168,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 122
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Alvo Dumbledore: varinha das varinhas e plano contra Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a principal estratégia de Alvo Dumbledore para derrotar Lord Voldemort, considerando sua posse da Varinha das Varinhas e o conhecimento de suas Horcruxes?\",\n  \"options\": {\n    \"A\": \"Utilizar a Varinha das Varinhas para um duelo direto e imediato, eliminando Voldemort com um único feitiço.\",\n    \"B\": \"Destruir todas as Horcruxes de Voldemort em sequência, enfraquecendo-o gradativamente até sua derrota final.\",\n    \"C\": \"Isolar Voldemort completamente da sociedade mágica, impedindo-o de reunir aliados e recursos.\",\n    \"D\": \"Criar um exército poderoso de magos para confrontar Voldemort em uma batalha decisiva e aberta.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Embora Dumbledore utilizasse a Varinha das Varinhas, sua estratégia principal, reconhecendo a natureza imortal de Voldemort, era a destruição sistemática de suas Horcruxes.  Essa abordagem enfraqueceria significativamente Voldemort, tornando-o finalmente vulnerável à derrota.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32205011036770403
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 242,
+    "totalTokenCount": 289,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 242
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sacrifício: proteção de Lily Potter a Harry em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual ato de sacrifício supremo protegeu Harry Potter da maldição de Voldemort, tornando-o um horcruxo involuntário?\",\n  \"options\": {\n    \"A\": \"O sacrifício de Dumbledore, que se entregou a Voldemort para proteger a profecia.\",\n    \"B\": \"A proteção oferecida pelo feitiço Fidelius, lançado por Sirius Black.\",\n    \"C\": \"O ato de amor e auto-sacrifício de Lily Potter, que se interpôs entre Voldemort e seu filho.\",\n    \"D\": \"A lealdade incondicional de Snape, que protegeu Harry secretamente durante toda a sua vida.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30095665543167677
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 206,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Harry Potter: cicatriz em forma de raio e conexão com Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual é a característica física mais marcante de Harry Potter que o conecta diretamente a Lord Voldemort?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"Uma marca de nascença em forma de lua crescente.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"Olhos verdes brilhantes.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"Uma cicatriz em forma de raio na testa.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"Cabelo preto e espetado.\"\n    }\n  ],\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.062053686130546522
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 167,
+    "totalTokenCount": 214,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Hipogrifo: caso de Bicuço e julgamento em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"No caso de Bicuço, o julgamento do hipogrifo envolveu a discussão de diversos aspectos. Qual das alternativas abaixo melhor representa o ponto central da controvérsia legal em torno do julgamento de Bicuço?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"A culpabilidade de Bicuço em atacar Hagrid, considerando a natureza mágica e a possível falta de intenção maliciosa do hipogrifo.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"A legalidade da posse de criaturas mágicas perigosas como hipogrifos por parte de Hagrid, considerando a falta de autorização do Ministério da Magia.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"A competência do próprio sistema legal bruxo para julgar criaturas mágicas, questionando a imparcialidade do processo judicial.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"A validade do testemunho de Harry Potter, considerado uma prova parcial e tendenciosa em favor de Hagrid e Bicuço.\"\n    }\n  ],\n  \"answer\": \"A\",\n  \"explanation\": \"Embora os outros aspectos sejam relevantes ao caso, o cerne da discussão girava em torno da responsabilidade de Bicuço pelo ataque, considerando-se as circunstâncias e a natureza da criatura. A questão central era se Bicuço agiu por malícia ou em legítima defesa, influenciando a sentença final.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.35330293927873885
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 350,
+    "totalTokenCount": 397,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 350
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Nevoeiro: jornal sensacionalista e suas mentiras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Em \\\"O Nevoeiro\\\", o jornal sensacionalista desempenha um papel crucial na disseminação do medo e do pânico.  Qual das alternativas abaixo melhor descreve a principal função do jornal na trama?\",\n  \"alternativas\": {\n    \"A\": \"Informar a população com precisão sobre os eventos sobrenaturais ocorridos na cidade, buscando acalmar os ânimos.\",\n    \"B\": \"Proporcionar um espaço para debate e discussão sobre as origens e consequências do nevoeiro, fomentando o pensamento crítico.\",\n    \"C\": \"Exagerar os acontecimentos, distorcer a realidade e alimentar a histeria coletiva com notícias sensacionalistas e falsas.\",\n    \"D\": \"Manter a população informada de forma imparcial, apesar das dificuldades em cobrir eventos de natureza extraordinária.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27209527941717615
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 207,
+    "totalTokenCount": 253,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 207
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Relíquias da Morte: três objetos e lenda dos irmãos Peverell em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Na lenda dos Irmãos Peverell, contada em Relíquias da Morte, qual trio de objetos representa as Relíquias da Morte?\",\n  \"options\": {\n    \"A\": \"Varinha das Espinhos, Pedra da Ressurreição e Capa da Invisibilidade\",\n    \"B\": \"Espada de Godric Gryffindor, Taça de Helga Hufflepuff e Diadema de Rowena Ravenclaw\",\n    \"C\": \"Manto de Invisibilidade, Pedra da Ressurreição e Varinha das Varinhas (ou Varinha Mais Poderosa)\",\n    \"D\": \"Espelho de Ojes, Anel de Marvolo Gaunt e Medalhão de Salazar Slytherin\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16289184053065414
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 177,
+    "totalTokenCount": 227,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 177
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Pedro Pettigrew: traição aos Potter e forma de rato em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o papel de Pedro Pettigrew na traição de Lily e James Potter e qual a sua transformação subsequente?\",\n  \"options\": {\n    \"A\": \"Pettigrew alertou os Comensais da Morte sobre a localização dos Potters, transformando-se em um gato para escapar.\",\n    \"B\": \"Pettigrew lutou ao lado dos Potters contra os Comensais da Morte, mas foi morto durante a batalha.\",\n    \"C\": \"Pettigrew forneceu informações aos Comensais da Morte sobre a localização dos Potters, resultando em sua morte, e escapou transformando-se em um rato.\",\n    \"D\": \"Pettigrew não teve envolvimento na traição dos Potters, sendo falsamente incriminado após a batalha.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17648559255698293
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 194,
+    "totalTokenCount": 241,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 194
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dragões: tipos e desafio no Torneio Tribruxo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"No Torneio Tribruxo, qual tipo de dragão e qual o desafio apresentado aos campeões durante a primeira tarefa?\",\n  \"options\": {\n    \"A\": \"Dragão-de-cabeça-horrível, capturar um ovo de ouro.\",\n    \"B\": \"Dragão-comum-da-romênia, atravessar uma ponte em chamas.\",\n    \"C\": \"Dragão-de-cabeça-horrível, roubar um ovo de ouro.\",\n    \"D\": \"Dragão-húngaro-de-cauda-de-porrete, capturar um ovo de ouro.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A primeira tarefa do Torneio Tribruxo envolvia um Dragão-de-cabeça-horrível, e o desafio era roubar um ovo de ouro de seu ninho.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1872136056708377
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 209,
+    "totalTokenCount": 256,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 209
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Poções Polissuco: usos e casos famosos (Barty Crouch Jr.) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"A Poção Polissuco, capaz de transformar o bebedor em outra pessoa, teve um uso infame em qual dos seguintes casos?\",\n  \"options\": {\n    \"A\": \"Hermione Granger usou a poção para se infiltrar em uma reunião do Ministério da Magia durante a Primeira Guerra Bruxa.\",\n    \"B\": \"Severo Snape usou a poção para se disfarçar como um Comensal da Morte durante uma missão secreta.\",\n    \"C\": \"Barty Crouch Jr. usou a poção para se disfarçar como Alastor Moody e infiltrar-se em Hogwarts.\",\n    \"D\": \"Sirius Black usou a poção para se infiltrar na mansão dos Malfoy e resgatar Harry Potter.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Barty Crouch Jr. usou a Poção Polissuco para se transformar em Alastor Moody e se infiltrar em Hogwarts como professor de Defesa Contra as Artes das Trevas, influenciando diretamente os eventos do quarto ano de Harry Potter.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17909299889389349
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 245,
+    "totalTokenCount": 295,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 245
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Mapa do Maroto: criação e como revela pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"No universo de Harry Potter, o Mapa do Maroto foi criado por quatro alunos de Hogwarts.  Qual a característica principal que diferencia o Mapa do Maroto de um mapa comum e permite que ele revele a localização das pessoas dentro de Hogwarts?\",\n  \"alternativas\": {\n    \"A\": \"Utiliza uma tinta mágica que reage à presença de pessoas, mostrando seus nomes e posições.\",\n    \"B\": \"É feito com um pergaminho de pele de dragão, que possui propriedades mágicas intrínsecas de detecção de vida.\",\n    \"C\": \"Contém um feitiço de localização que rastreia pessoas através de seus pensamentos e intenções.\",\n    \"D\": \"É imbuído de um encantamento que detecta a magia residual deixada pelas pessoas ao se moverem.\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27434415817260743
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 200,
+    "totalTokenCount": 244,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 200
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Corvinal: símbolos e alunos brilhantes (Luna Lovegood) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual dos seguintes itens NÃO está associado à Casa Corvinal, considerando seus símbolos e a personalidade de uma de suas alunas mais brilhantes, Luna Lovegood?\",\n  \"alternativas\": {\n    \"A\": \"A águia, símbolo de sabedoria e inteligência.\",\n    \"B\": \"O animal fantástico, o Bicorno, que representa a criatividade e a imaginação.\",\n    \"C\": \"A cor azul, que simboliza lealdade e aprendizado.\",\n    \"D\": \"A cor vermelha, associada à coragem e à determinação (muito mais associada a Grifinória).\"\n  },\n  \"resposta_correta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28810194980951004
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 210,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Poções Polissuco: usos e casos famosos (Barty Crouch Jr.) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes usos de Poção Polissuco é considerado o caso mais famoso e de consequências mais devastadoras, retratado na saga Harry Potter?\",\n  \"alternatives\": {\n    \"A\": \"Hermione Granger se transformando em Bellatriz Lestrange para infiltrar-se em Malfoy Manor.\",\n    \"B\": \"Harry, Rony e Hermione usando a poção para se transformarem em alunos de Hogwarts para investigar a câmara secreta.\",\n    \"C\": \"Barty Crouch Jr. usando a poção para se transformar em Alastor Moody e infiltrar-se em Hogwarts.\",\n    \"D\": \"Os Comensais da Morte usando a poção para se disfarçarem em diversos personagens durante a Primeira Guerra Bruxa.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O uso da Poção Polissuco por Barty Crouch Jr. para se passar por Alastor Moody e manipular eventos em Hogwarts teve consequências catastróficas, incluindo a captura de Harry Potter e a manipulação do Torneio Tribruxo.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2603753981043081
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 244,
+    "totalTokenCount": 294,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 244
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Mapa do Maroto: criação e como revela pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"O Mapa do Maroto, presente na saga Harry Potter, foi criado por qual grupo de estudantes e qual sua principal função, além de mostrar a localização de pessoas dentro de Hogwarts?\",\n  \"alternativas\": {\n    \"A\": \"Os fundadores de Hogwarts (Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw e Helga Hufflepuff) para auxiliar na administração da escola.\",\n    \"B\": \"James Potter, Sirius Black, Remus Lupin e Pedro Pettigrew (os Marotos) para auxiliar na localização de pessoas e planejar travessuras.\",\n    \"C\": \"Filius Flitwick, Minerva McGonagall e Pomona Sprout para monitorar os alunos durante as aulas.\",\n    \"D\": \"Um grupo secreto de alunos da Sonserina, que o criaram para auxiliar em suas artimanhas.\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24450289224080993
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 207,
+    "totalTokenCount": 251,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 207
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Avada Kedavra: maldição da morte e consequências em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em Harry Potter, a maldição Avada Kedavra é conhecida por ser irreversível. Qual das seguintes alternativas melhor descreve as consequências diretas de um feitiço Avada Kedavra bem-sucedido?\",\n  \"alternativas\": {\n    \"A\": \"A vítima sofre intensa dor, mas sobrevive com ferimentos graves.\",\n    \"B\": \"A vítima é petrificada, podendo ser revivida com o uso de um antídoto específico.\",\n    \"C\": \"A vítima é morta instantaneamente, sem deixar vestígios de luta ou sofrimento visível.\",\n    \"D\": \"A vítima é transformada em um animal, dependendo da intenção do lançador da maldição.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15243427089003267
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 183,
+    "totalTokenCount": 229,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 183
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sonserina: características e membros famosos (Draco, Snape, Voldemort) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual das seguintes características NÃO é tipicamente associada à Sonserina e/ou a seus membros famosos como Draco Malfoy, Severus Snape e Lord Voldemort?\",\n  \"alternativas\": {\n    \"A\": \"Ambição\",\n    \"B\": \"Inteligência estratégica\",\n    \"C\": \"Compaixão e empatia desmedida\",\n    \"D\": \"Determinação e perseverança\"\n  },\n  \"resposta_correta\": \"C\",\n  \"explicacao\": \"Embora alguns personagens de Sonserina possam exibir traços de compaixão em momentos específicos, a casa é geralmente reconhecida por sua ambição, inteligência estratégica, determinação e às vezes crueldade. A compaixão desmedida não é uma característica associada à sua identidade.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21196722082189612
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 185,
+    "totalTokenCount": 234,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 185
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Câmara Secreta: lenda e revelação no segundo livro em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"Harry Potter e a Câmara Secreta\\\", qual criatura mítica é responsável por petrificar os alunos de Hogwarts?\",\n  \"options\": {\n    \"A\": \"Um Basilisco\",\n    \"B\": \"Um Lobisomem\",\n    \"C\": \"Um Centauro\",\n    \"D\": \"Um Grindylow\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0599030876159668
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 100,
+    "totalTokenCount": 147,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 100
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Preconceito: tratamento a nascidos-trouxas e meio-gigantes em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em muitas sociedades mágicas, existe preconceito contra nascidos-trouxas e meio-gigantes.  Considerando esse contexto, qual das alternativas melhor descreve o tipo de preconceito frequentemente vivenciado por esses grupos?\",\n  \"alternativas\": {\n    \"A\": \"Preconceito baseado em crenças religiosas, onde se considera que nascidos-trouxas e meio-gigantes são impuros.\",\n    \"B\": \"Preconceito baseado na cor da pele, onde se considera que nascidos-trouxas e meio-gigantes possuem tons de pele inferiores.\",\n    \"C\": \"Preconceito baseado na origem e na falta de conhecimento da magia ancestral, associando-os à ignorância e incapacidade mágica.\",\n    \"D\": \"Preconceito baseado em características físicas, como altura e força, gerando medo e insegurança nos demais.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24112150002429836
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 211,
+    "totalTokenCount": 261,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 211
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Batalha de Hogwarts: estratégias e mortes importantes em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Na Batalha de Hogwarts, qual estratégia demonstrou ser crucial para a vitória de Dumbledore's Army e seus aliados contra Lord Voldemort e seus Comensais da Morte, além de ter resultado em uma morte significativa?\",\n  \"options\": {\n    \"A\": \"O uso massivo da maldição Cruciatus para intimidar os Comensais da Morte, resultando na morte de Antonin Dolohov.\",\n    \"B\": \"A estratégia de defesa em círculo em torno de Hogwarts, que impediu a entrada de Voldemort e seus seguidores, culminando na morte de Bellatriz Lestrange.\",\n    \"C\": \"A utilização de uma poderosa magia de proteção coletiva, lançada por Minerva McGonagall, que neutralizou a maioria dos Comensais da Morte, e resultou na morte de Lucius Malfoy.\",\n    \"D\": \"A divisão das forças em grupos menores, atacando os Comensais da Morte por diferentes pontos da escola, levando a uma vitória decisiva e a morte de Severus Snape.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Embora a morte de Bellatriz Lestrange tenha sido significativa, a estratégia que realmente definiu o rumo da batalha foi a divisão das forças e os ataques simultâneos em diferentes frentes. A morte de Snape, embora dramática e impactante, também aconteceu como resultado desta estratégia, que confundiu e superou os Comensais da Morte. As outras alternativas são incorretas, pois não refletem as estratégias e mortes chaves da batalha.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.39800654108517247
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 337,
+    "totalTokenCount": 381,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 337
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Harry Potter: cicatriz em forma de raio e conexão com Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a característica física marcante de Harry Potter que o conecta diretamente a Lorde Voldemort?\",\n  \"options\": {\n    \"A\": \"Um sinal de nascença em forma de estrela na mão esquerda.\",\n    \"B\": \"Uma cicatriz em forma de raio na testa.\",\n    \"C\": \"Olhos verdes brilhantes e penetrantes.\",\n    \"D\": \"Cabelo preto e espetado.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11397265551383035
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 114,
+    "totalTokenCount": 161,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 114
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dementadores: guardas de Azkaban e efeitos nas pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o principal efeito dos Dementadores, guardas de Azkaban, nas pessoas?\",\n  \"options\": {\n    \"A\": \"Transformação em pedra.\",\n    \"B\": \"Petrificação.\",\n    \"C\": \"Drenagem de memórias felizes, causando depressão e desesperança.\",\n    \"D\": \"Indução de sonhos vívidos e perturbadores.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14397476791241848
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 109,
+    "totalTokenCount": 157,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 109
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Grifinória: valores e membros notáveis (Harry, Hermione, Rony) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Quais valores são mais fortemente associados à Casa Grifinória em Harry Potter, e exemplificados pelos membros notáveis Harry, Hermione e Ron?\",\n  \"opcoes\": [\n    {\n      \"letra\": \"A\",\n      \"texto\": \"Inteligência estratégica, ambição e lealdade discreta.\"\n    },\n    {\n      \"letra\": \"B\",\n      \"texto\": \"Pureza de sangue, tradição familiar e respeito às regras.\"\n    },\n    {\n      \"letra\": \"C\",\n      \"texto\": \"Coragem, audácia, determinação e amizade.\"\n    },\n    {\n      \"letra\": \"D\",\n      \"texto\": \"Intelectualismo, individualismo e busca pelo conhecimento secreto.\"\n    }\n  ],\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1007279668535505
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 196,
+    "totalTokenCount": 247,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 196
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Amizade: relação entre Harry, Rony e Hermione em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas melhor descreve a dinâmica da amizade entre Harry, Ron e Hermione em Harry Potter?\",\n  \"alternativas\": {\n    \"A\": \"Uma relação perfeitamente harmoniosa, sem conflitos ou desentendimentos.\",\n    \"B\": \"Uma amizade complexa, marcada por momentos de lealdade inabalável, mas também por desavenças e rivalidades ocasionais.\",\n    \"C\": \"Um relacionamento em que Harry e Hermione sempre se apoiam, enquanto Ron fica frequentemente à margem.\",\n    \"D\": \"Uma amizade superficial, baseada principalmente em conveniência e proximidade geográfica.\"\n  },\n  \"resposta_correta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19343644380569458
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 45,
+    "candidatesTokenCount": 160,
+    "totalTokenCount": 205,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 160
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Relíquias da Morte: três objetos e lenda dos irmãos Peverell em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Na lenda dos Irmãos Peverell, contada em Relíquias da Morte, quais são os três objetos criados pela Morte, representando Conquista, Fidelidade e Invisibilidade, respectivamente?\",\n  \"options\": {\n    \"A\": \"Manto da Invisibilidade, Pedra da Ressurreição, Varinha das Varinhas\",\n    \"B\": \"Varinha das Varinhas, Manto da Invisibilidade, Pedra da Ressurreição\",\n    \"C\": \"Pedra da Ressurreição, Varinha das Varinhas, Manto da Invisibilidade\",\n    \"D\": \"Manto da Invisibilidade, Pedra da Ressurreição, Espelho de Ojes\":\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"A lenda descreve a Morte oferecendo aos irmãos Peverell três objetos mágicos.  A ordem correta é: Manto da Invisibilidade (Conquista - não ser afetado pela Morte), Pedra da Ressurreição (Fidelidade - trazer de volta entes queridos) e Varinha das Varinhas (Invisibilidade - dominar a morte com o poder).\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20915655656294388
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 50,
+    "candidatesTokenCount": 264,
+    "totalTokenCount": 314,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 50
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 264
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Corvinal: símbolos e alunos brilhantes (Luna Lovegood) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dos seguintes itens NÃO está associado à Casa Corvinal, considerando seus símbolos e a personalidade de alunos brilhantes como Luna Lovegood?\",\n  \"options\": {\n    \"A\": \"A águia\",\n    \"B\": \"A lua\",\n    \"C\": \"A cor azul e prata\",\n    \"D\": \"A serpente\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"A águia, a lua e as cores azul e prata são símbolos da Corvinal.  A serpente está associada à Sonserina.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086975200570744579
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 139,
+    "totalTokenCount": 187,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 139
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Avada Kedavra: maldição da morte e consequências em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, a maldição Avada Kedavra causa a morte instantânea da vítima. Quais das seguintes consequências NÃO são diretamente associadas à maldição?\",\n  \"options\": {\n    \"A\": \"Morte imediata e sem dor aparente.\",\n    \"B\": \"Deixa a vítima com uma marca de queimadura escura.\",\n    \"C\": \"A vítima retorna como um espectro vingativo.\",\n    \"D\": \"A alma da vítima vai diretamente para o além.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora existam espectros em Harry Potter, a maldição Avada Kedavra não os cria diretamente.  A morte causada pela maldição é permanente e não permite o retorno como um espectro vingativo. As outras opções são consequências diretamente associadas à maldição.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27952144283274705
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 191,
+    "totalTokenCount": 237,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 191
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dualidade: luz e sombra em personagens como Snape e Dumbledore em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, Severus Snape e Albus Dumbledore representam uma complexa dualidade entre luz e sombra.  Qual alternativa melhor descreve essa dualidade em relação aos dois personagens?\",\n  \"options\": {\n    \"A\": \"Snape representa a luz pura, enquanto Dumbledore representa a escuridão absoluta, mostrando que o bem e o mal são entidades separadas e inabaláveis.\",\n    \"B\": \"Dumbledore representa a luz inabalável, e Snape a escuridão completa, sem espaço para nuances ou motivações complexas.\",\n    \"C\": \"Ambos são personagens complexos com ações ambíguas, onde Snape demonstra um exterior sombrio que esconde lealdade e sacrifício, enquanto Dumbledore, apesar de sua imagem benevolente, toma decisões moralmente questionáveis para alcançar seus objetivos.\",\n    \"D\": \"Snape é puramente mau, enquanto Dumbledore é puramente bom, suas ações refletem diretamente essa dicotomia simples e sem complexidades.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32156581372286364
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 226,
+    "totalTokenCount": 272,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 226
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Centauros: cultura e papel na Floresta Proibida em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Na cultura da Floresta Proibida, qual o papel mais comumente atribuído aos centauros?\",\n  \"options\": {\n    \"A\": \"Guardiões das entradas secretas da floresta, protegendo-a de intrusos.\",\n    \"B\": \"Mestres da magia, responsáveis pelos encantamentos que mantêm o equilíbrio ecológico.\",\n    \"C\": \"Guardiões da sabedoria antiga, ensinando os segredos da natureza aos poucos escolhidos.\",\n    \"D\": \"Caçadores implacáveis, responsáveis pelo controle populacional de criaturas perigosas.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora centauros possam ter aspectos de algumas outras alternativas, na maioria das narrativas fantásticas, eles são mais frequentemente retratados como sábios guardiões da natureza, compartilhando seu conhecimento com aqueles que demonstram respeito e merecimento.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32194753507288493
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 205,
+    "totalTokenCount": 251,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 205
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sacrifício: proteção de Lily Potter a Harry em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual ato de sacrifício demonstra a proteção de Lily Potter a Harry Potter, salvando-o da Maldição da Morte?\",\n  \"options\": {\n    \"A\": \"Lily confrontou Voldemort com uma varinha mágica poderosa, derrotando-o em um duelo.\",\n    \"B\": \"Lily lançou um feitiço de proteção inexplicável, criando um escudo mágico em torno de Harry.\",\n    \"C\": \"Lily se colocou entre Harry e Voldemort, absorvendo a maldição mortal.\",\n    \"D\": \"Lily implorou a Voldemort para poupar a vida de Harry, oferecendo sua própria vida em troca.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O ato de sacrifício de Lily Potter foi interpor-se entre Harry e Voldemort, absorvendo a maldição que Voldemort lançou.  Seu amor por Harry criou uma proteção mágica que o protegeu da Maldição da Morte.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2512644923010538
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 215,
+    "totalTokenCount": 259,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 215
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Rúbeo Hagrid: guarda-caça e criaturas mágicas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual criatura mágica Hagrid cria ilegalmente em sua cabana, levando a uma visita de funcionários do Ministério da Magia?\",\n  \"alternativas\": {\n    \"A\": \"Um hipogrifo\",\n    \"B\": \"Um centauro\",\n    \"C\": \"Um dragão\",\n    \"D\": \"Um acromantula\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14601368170518142
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 152,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Taca de Fogo: torneio tribruxo e seu papel no quarto livro em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"Harry Potter e o Cálice de Fogo\\\", qual é o papel central do Torneio Tribruxo na trama?\",\n  \"options\": {\n    \"A\": \"Serve como um mero concurso de magia, sem impacto significativo na narrativa principal.\",\n    \"B\": \"É um evento secundário que serve principalmente para mostrar as habilidades mágicas de Harry e seus amigos.\",\n    \"C\": \"Introduz Lord Voldemort e seu retorno ao poder, além de impulsionar o desenvolvimento da trama principal.\",\n    \"D\": \"É usado para aprofundar a rivalidade entre Harry e Draco Malfoy, culminando em um duelo final.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19491314147570118
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 161,
+    "totalTokenCount": 213,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 161
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lord Voldemort: horcruxes e busca pela imortalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Qual era o principal objetivo de Lord Voldemort ao criar Horcruxes?\",\n  \"alternativas\": {\n    \"A\": \"Aumentar seu poder mágico e habilidades ofensivas.\",\n    \"B\": \"Conquistar a fidelidade incondicional de seus Comensais da Morte.\",\n    \"C\": \"Obter imortalidade, tornando-se imune à morte.\",\n    \"D\": \"Destruir todas as varinhas mágicas do mundo, exceto a sua própria.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18301428609819553
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 134,
+    "totalTokenCount": 180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 134
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sonserina: características e membros famosos (Draco, Snape, Voldemort) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes características NÃO é tipicamente associada à Sonserina e/ou a seus membros famosos como Draco Malfoy, Severus Snape e Lord Voldemort?\",\n  \"alternativas\": {\n    \"A\": \"Ambição\",\n    \"B\": \"Inteligência estratégica\",\n    \"C\": \"Lealdade inabalável (mesmo que duvidosa)\",\n    \"D\": \"Bondade e compaixão desinteressada\"\n  },\n  \"resposta_correta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.08399647758120582
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 126,
+    "totalTokenCount": 175,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 126
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Taca de Fogo: torneio tribruxo e seu papel no quarto livro em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"Harry Potter e o Cálice de Fogo\\\", qual o papel central do Torneio Tribruxo na trama?\",\n  \"options\": {\n    \"A\": \"Serve como um simples concurso de magia, sem impacto significativo na história principal.\",\n    \"B\": \"É um evento secundário que permite a Harry demonstrar suas habilidades mágicas a seus amigos.\",\n    \"C\": \"Introduz Lord Voldemort de volta ao mundo mágico e desencadeia uma série de eventos cruciais para a narrativa geral da saga.\",\n    \"D\": \"Oferece a Harry a oportunidade de ganhar uma grande quantia de dinheiro para ajudar sua família.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24344321827829621
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 214,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Centauros: cultura e papel na Floresta Proibida em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Na mitologia grega, os centauros, habitantes da Floresta Proibida, tinham um papel e uma cultura complexos. Qual das alternativas melhor descreve a sua representação na maioria dos mitos?\",\n  \"alternativas\": {\n    \"A\": \"Criaturas exclusivamente malignas e violentas, dedicadas apenas a atos de crueldade e destruição.\",\n    \"B\": \"Seres pacíficos e sábios, guardiães da floresta e mestres de artes curativas e magia natural.\",\n    \"C\": \"Entidades ambíguas, com indivíduos capazes tanto de grande sabedoria e nobreza quanto de brutalidade e selvageria.\",\n    \"D\": \"Deuses menores que governavam a floresta, responsáveis por impor a ordem e a justiça sobre todas as outras criaturas.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.34796705149640939
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 198,
+    "totalTokenCount": 244,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 198
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Amizade: relação entre Harry, Rony e Hermione em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual característica melhor define a relação entre Harry, Rony e Hermione na saga Harry Potter?\",\n  \"alternativas\": {\n    \"A\": \"Uma rivalidade constante pela atenção de Harry, marcada por ciúmes e disputas.\",\n    \"B\": \"Uma amizade superficial, baseada apenas em circunstâncias e objetivos comuns.\",\n    \"C\": \"Uma amizade leal e duradoura, fundamentada em apoio mútuo, confiança e respeito, apesar das diferenças e conflitos.\",\n    \"D\": \"Uma relação complexa, onde a amizade é constantemente questionada por traição e desconfiança entre os três.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19544516669379342
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 45,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 207,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lord Voldemort: horcruxes e busca pela imortalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a principal motivação de Lord Voldemort para criar Horcruxes, e qual a sua relação com a busca pela imortalidade?\",\n  \"alternativas\": {\n    \"A\": \"Desejo de poder absoluto, sem relação direta com a imortalidade.\",\n    \"B\": \"Vingança contra seus inimigos, usando os Horcruxes como instrumentos de terror.\",\n    \"C\": \"Obsessão pela imortalidade física, onde cada Horcrux representa uma parte de sua alma para evitar a morte.\",\n    \"D\": \"Curiosidade mágica, experimentando um ritual complexo sem intenção específica de imortalidade.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24779253830144435
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 162,
+    "totalTokenCount": 208,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 162
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Hogwarts: fundação e história do castelo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Segundo a lenda, quem fundou o Castelo de Hogwarts?\",\n  \"options\": {\n    \"A\": \"Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw e Helga Hufflepuff\",\n    \"B\": \"Merlin, o Embruxador e seus quatro aprendizes\",\n    \"C\": \"Os fundadores da Ordem da Fênix original\",\n    \"D\": \"Um mago obscuro poderoso que foi derrotado por Godric Gryffindor\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"A lenda conta que Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw e Helga Hufflepuff fundaram Hogwarts juntos no século X.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12833488278272676
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 164,
+    "totalTokenCount": 206,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 164
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dragões: tipos e desafio no Torneio Tribruxo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"No Torneio Tribruxo, qual tipo de dragão e qual o desafio apresentado aos campeões na primeira tarefa?\",\n  \"options\": {\n    \"A\": \"Dragão-Chinês-Comum; capturar um ovo de ouro.\",\n    \"B\": \"Dragão-Cauda-de-Hortelã; resgatar um refém preso no topo de uma torre.\",\n    \"C\": \"Dragão-Húngaro-de-Cauda-de-Chifres; capturar um ovo de ouro.\",\n    \"D\": \"Dragão-Norueguês-de-Cristas; recuperar um item específico de uma caverna labiríntica.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Na primeira tarefa do Torneio Tribruxo em Harry Potter e o Cálice de Fogo, os campeões tiveram que enfrentar um Dragão-Húngaro-de-Cauda-de-Chifres e capturar um ovo de ouro de seu ninho.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17434537152707319
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 231,
+    "totalTokenCount": 278,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 231
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Severo Snape: lealdade dupla e memórias no Pensador em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, a complexa lealdade de Severo Snape e suas memórias escondidas no Pensador são pontos cruciais da trama.  Considerando esses aspectos, qual das afirmações a seguir é a MAIS precisa?\",\n  \"options\": {\n    \"A\": \"Snape era totalmente leal a Voldemort desde o início, usando sua posição em Hogwarts para sabotar Dumbledore e auxiliar os Comensais da Morte.\",\n    \"B\": \"Snape era completamente leal a Dumbledore, usando sua fachada de Comensal da Morte para proteger Harry secretamente, sem hesitar em sacrificar sua própria vida.\",\n    \"C\": \"Snape mantinha uma lealdade dividida, protegendo Harry enquanto secretamente alimentava informações para Voldemort, garantindo seu próprio bem-estar acima de qualquer outra coisa.\",\n    \"D\": \"Snape mantinha uma lealdade dividida, secretamente trabalhando para Dumbledore para proteger Harry e Lily Potter, enquanto mantinha uma fachada de lealdade a Voldemort para infiltrar a organização.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"A complexidade de Snape reside em sua lealdade dividida.  Ele realmente protegia Harry em nome do amor que sentia por Lily Potter, agindo sob as ordens de Dumbledore para garantir a segurança do menino.  Ele manteve sua fachada de Comensal da Morte para infiltrar-se na organização e fornecer informações valiosas a Dumbledore. As outras opções simplificam demais a natureza complexa e ambígua de sua lealdade.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.33975881857199
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 333,
+    "totalTokenCount": 380,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 333
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dementadores: guardas de Azkaban e efeitos nas pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual o principal efeito dos Dementadores, guardas de Azkaban, sobre as pessoas?\",\n  \"alternativas\": {\n    \"A\": \"Transformação em pedra.\",\n    \"B\": \"Drenagem de memórias e sentimentos positivos, levando à depressão e à desesperança.\",\n    \"C\": \"Petrificação parcial, causando dormência e paralisia.\",\n    \"D\": \"Indução de alucinações e delírios violentos.\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16260895584568832
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 132,
+    "totalTokenCount": 180,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 132
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Expecto Patronum: como conjurar e significado em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, o Expecto Patronum é um feitiço poderoso de defesa contra Dementadores.  Considerando sua conjuração e significado, qual das alternativas abaixo é a mais completa e precisa?\",\n  \"options\": {\n    \"A\": \"O Expecto Patronum é conjurado simplesmente dizendo as palavras mágicas em voz alta, focando na memória de um momento feliz. Sua função é apenas repelir os Dementadores.\",\n    \"B\": \"A conjuração requer uma forte memória de um momento feliz e intensa concentração, além da pronúncia correta das palavras mágicas.  Ele representa a felicidade, a esperança e a força interior do mago.\",\n    \"C\": \"O feitiço é conjurado pensando em um animal aleatório, e o animal resultante é irrelevante para a personalidade do mago.  Serve apenas para espantar seres escuros.\",\n    \"D\": \"A conjuração envolve a utilização de uma varinha especial e um ritual complexo.  O Patronus representa os medos do mago e funciona como um escudo contra a escuridão.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A alternativa B é a mais completa e precisa, pois destaca tanto a conjuração (memória feliz, concentração, palavras mágicas) quanto o significado profundo do Patronus (felicidade, esperança, força interior).\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.34731005058913933
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 305,
+    "totalTokenCount": 349,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 305
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Torneio Tribruxo: tarefas e manipulação por Barty Crouch Jr. em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"No Torneio Tribruxo, qual tarefa foi diretamente manipulada por Barty Crouch Jr. para favorecer Harry Potter, e qual a forma como ele o fez?\",\n  \"options\": {\n    \"A\": \"A primeira tarefa (dragões), Crouch Jr. substituiu os dragões por criaturas menos perigosas.\",\n    \"B\": \"A segunda tarefa (Lago Negro), Crouch Jr. enfeitiçou as criaturas aquáticas para que ajudassem Harry a encontrar as reféns.\",\n    \"C\": \"A terceira tarefa (Labirinto), Crouch Jr. plantou rastreadores no labirinto, levando Harry diretamente até a taça.\",\n    \"D\": \"A primeira tarefa (dragões), Crouch Jr. roubou os ovos de dragão e os substituiu por réplicas inofensivas.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Barty Crouch Jr., disfarçado de Moody, manipulou a terceira tarefa do Torneio Tribruxo plantando rastreadores no labirinto que levavam diretamente à taça. Isso permitiu que Harry chegasse à taça primeiro, mesmo que não tivesse as habilidades necessárias para navegar o labirinto.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23436342922084005
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 271,
+    "totalTokenCount": 322,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 271
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Rony Weasley: família Weasley e seu papel no trio em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em Harry Potter, qual é o melhor descritor do papel de Rony Weasley dentro do trio principal e da sua família?\",\n  \"alternativas\": {\n    \"A\": \"O membro mais inteligente e estrategista, fornecendo soluções complexas para os desafios do trio.\",\n    \"B\": \"O elemento cômico de alívio, cuja lealdade e bravura são secundárias à sua função de humor.\",\n    \"C\": \"O leal amigo e companheiro, fornecendo apoio emocional e prático ao trio, refletindo a importância da família e da lealdade em sua própria vida.\",\n    \"D\": \"O membro mais poderoso magicamente, frequentemente assumindo a liderança em situações de perigo devido à sua destreza mágica superior.\"\n  },\n  \"resposta_correta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.33796117660847114
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 45,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 233,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Salão Comunal da Grifinória: localização e segredos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a localização do Salão Comunal da Grifinória em Hogwarts e qual o segredo para acessá-lo?\",\n  \"options\": {\n    \"A\": \"Localizado na Torre Leste, o acesso se dá através de uma senha falada para um retrato da Senhora Gorda.\",\n    \"B\": \"Localizado nas masmorras, o acesso se dá através de um quebra-cabeça mágico envolvendo um leão e uma águia.\",\n    \"C\": \"Localizado na Torre Oeste, o acesso se dá através de uma série de alavancas escondidas atrás de uma estante.\",\n    \"D\": \"Localizado na Biblioteca, o acesso se dá através de um enigma proposto pelo fantasma da biblioteca.\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2121284183135814
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 177,
+    "totalTokenCount": 225,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 177
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Ordem da Fênix: membros e missões contra Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter e a Ordem da Fênix, qual membro da Ordem da Fênix NÃO participou diretamente da Batalha do Departamento de Mistérios?\",\n  \"options\": {\n    \"A\": \"Sirius Black\",\n    \"B\": \"Remus Lupin\",\n    \"C\": \"Nymphadora Tonks\",\n    \"D\": \"Alvo Dumbledore\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Embora Alvo Dumbledore fosse o líder da Ordem da Fênix e soubesse da missão, ele não participou diretamente da luta no Departamento de Mistérios. Ele se manteve no Castelo de Hogwarts, estrategicamente, para proteger os alunos.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11002572182497364
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 163,
+    "totalTokenCount": 210,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 163
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Mapa do Maroto: criação e como revela pessoas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"No universo de Harry Potter, o Mapa do Maroto foi criado por qual grupo de alunos e qual característica principal o mapa revela sobre as pessoas que se movem pelo castelo?\",\n  \"alternativas\": {\n    \"A\": \"James Potter, Sirius Black, Remus Lupin e Peter Pettigrew; revela apenas a localização exata das pessoas.\",\n    \"B\": \"James Potter, Sirius Black, Remus Lupin e Peter Pettigrew; revela a localização exata e a identidade das pessoas, além de seus pensamentos e sentimentos.\",\n    \"C\": \"Severo Snape, Lucius Malfoy, Bellatrix Lestrange e Narcissa Malfoy; revela apenas a localização exata das pessoas.\",\n    \"D\": \"Hermione Granger, Ron Weasley, Harry Potter e Gina Weasley; revela a localização exata e o nome das pessoas, mas não seus estados emocionais.\"\n  },\n  \"respostaCorreta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18014977865173046
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 207,
+    "totalTokenCount": 251,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 207
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Hogwarts: fundação e história do castelo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Segundo a lenda, Hogwarts foi fundado por quatro bruxos poderosos.  Qual destas afirmações sobre a fundação de Hogwarts é INCORRETA?\",\n  \"options\": {\n    \"A\": \"Godric Gryffindor, Salazar Slytherin, Rowena Ravenclaw e Helga Hufflepuff fundaram a escola juntos.\",\n    \"B\": \"Cada fundador escolheu os alunos que mais se pareciam com eles, estabelecendo as casas.\",\n    \"C\": \"A construção do castelo foi realizada inteiramente por magia, sem auxílio de trabalhadores trouxas.\",\n    \"D\": \"Os fundadores concordaram perfeitamente sobre todos os aspectos da administração da escola, sem nunca ter discordâncias.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Embora os fundadores tenham trabalhado juntos, eles frequentemente discordavam sobre a melhor maneira de educar os jovens bruxos e bruxas, especialmente sobre o assunto da admissão de alunos trouxas.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.25330743002235345
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 42,
+    "candidatesTokenCount": 218,
+    "totalTokenCount": 260,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 218
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Dragões: tipos e desafio no Torneio Tribruxo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"No Torneio Tribruxo, qual tipo de dragão e qual o desafio apresentado aos campeões na primeira tarefa?\",\n  \"options\": {\n    \"A\": \"Dragão-Chinês de Cauda-de-Fogo; Os campeões deveriam capturar um ovo de ouro.\",\n    \"B\": \"Dragão-Húngaro-de-Cauda-de-Chifres; Os campeões deveriam derrotar o dragão em combate direto.\",\n    \"C\": \"Dragão-Norueguês-de-Cristas; Os campeões deveriam recuperar um ovo de ouro do ninho do dragão.\",\n    \"D\": \"Dragão-Sueco-de-Costas-Longas; Os campeões deveriam domar o dragão usando magia de acalmar animais.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Na primeira tarefa do Torneio Tribruxo, os campeões enfrentaram um Dragão-Norueguês-de-Cristas e o desafio era capturar um ovo de ouro do seu ninho.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17380757485666581
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 248,
+    "totalTokenCount": 295,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 248
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Sonserina: características e membros famosos (Draco, Snape, Voldemort) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações melhor caracteriza a Casa Sonserina em Hogwarts e seus membros famosos como Draco Malfoy, Severus Snape e Lord Voldemort?\",\n  \"options\": {\n    \"A\": \"Sonserina valoriza a lealdade acima de tudo, mesmo que isso signifique desonestidade, e seus membros são tipicamente altruístas e compassivos.\",\n    \"B\": \"Sonserina é conhecida por sua ambição, astúcia e busca pelo poder, frequentemente exibindo traços de arrogância e manipulação, como visto em Draco, Snape e Voldemort.\",\n    \"C\": \"Sonserina prioriza a justiça e a bravura, seus membros são geralmente justos e honestos, apesar de sua reputação sombria.\",\n    \"D\": \"Sonserina preza pela inteligência e criatividade acima de qualquer outra qualidade, seus membros são frequentemente excêntricos e despreocupados com as consequências de suas ações.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21197035869312705
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 227,
+    "totalTokenCount": 276,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 227
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Testrálio: como são vistos e ligação com a morte em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em Harry Potter, os Testrálios são criaturas mágicas que possuem uma peculiaridade visual. Como são vistos e qual a sua ligação com a morte?\",\n  \"alternativas\": {\n    \"A\": \"São vistos por todos e representam a imortalidade da alma.\",\n    \"B\": \"São invisíveis para quem nunca testemunhou a morte e simbolizam a aceitação da vida após a morte.\",\n    \"C\": \"São vistos apenas por bruxos e bruxas e são criaturas amigáveis que guiam as almas para o além.\",\n    \"D\": \"São visíveis apenas para quem já presenciou a morte de alguém e representam a passagem para o mundo espiritual, carregando consigo a lembrança da perda.\"\n  },\n  \"respostaCorreta\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28429320051863388
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 185,
+    "totalTokenCount": 231,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 185
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Minerva McGonagall: habilidades como animago e liderança em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Minerva McGonagall demonstra várias habilidades e qualidades ao longo da série Harry Potter.  Qual das opções abaixo melhor representa uma combinação de suas habilidades como Animago e sua liderança em Hogwarts?\",\n  \"options\": {\n    \"A\": \"Sua habilidade de se transformar em um gato lhe permite espionar discretamente, mas sua liderança é fraca e indecisa, muitas vezes dependendo de Dumbledore.\",\n    \"B\": \"Sua transformação em gato a torna uma lutadora ineficaz, mas sua liderança firme e justa inspira respeito e obediência em todos os alunos.\",\n    \"C\": \"Sua habilidade de animago, combinada com seu talento estratégico e sua natureza corajosa e determinada, a torna uma líder eficaz e respeitada em momentos de crise.\",\n    \"D\": \"Ela raramente usa sua habilidade de animago, preferindo a liderança mais passiva e diplomática, evitando confrontos diretos.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.29571735057061027
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 223,
+    "totalTokenCount": 269,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 223
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Ordem da Fênix: membros e missões contra Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter e a Ordem da Fênix, qual membro da Ordem da Fênix NÃO participou diretamente da Batalha do Ministério da Magia?\",\n  \"options\": {\n    \"A\": \"Sirius Black\",\n    \"B\": \"Remus Lupin\",\n    \"C\": \"Nymphadora Tonks\",\n    \"D\": \"Alastor Moody (o verdadeiro)\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Alastor Moody verdadeiro foi morto por Wormtail antes dos eventos do quinto livro.  O Moody que participou da Ordem da Fênix e da Batalha do Ministério era na verdade Barty Crouch Jr. disfarçado.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10247157980327957
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 163,
+    "totalTokenCount": 210,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 163
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Nevoeiro: jornal sensacionalista e suas mentiras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"O Nevoeiro: jornal sensacionalista e suas mentiras\\\", qual característica principal do jornalismo sensacionalista é explorada e criticada pelo texto?\",\n  \"options\": {\n    \"A\": \"A busca incessante por fontes confiáveis e checagem rigorosa de fatos.\",\n    \"B\": \"A priorização da imparcialidade e do equilíbrio informativo, acima de tudo.\",\n    \"C\": \"A manipulação da informação, a fabricação de notícias e a exploração de emoções do público para aumentar a audiência.\",\n    \"D\": \"O uso de linguagem técnica e formal, garantindo a precisão e a clareza da informação.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O texto critica fortemente a prática do sensacionalismo na mídia, destacando a fabricação de notícias, a manipulação da informação e a exploração das emoções do público para alcançar maior audiência e lucro, em detrimento da verdade e da responsabilidade jornalística.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20423945797582901
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 229,
+    "totalTokenCount": 275,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 229
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Avada Kedavra: maldição da morte e consequências em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, a maldição Avada Kedavra causa a morte instantânea.  Quais são as consequências imediatas e observáveis dessa maldição sobre a vítima?\",\n  \"options\": {\n    \"A\": \"A vítima sofre uma transformação física visível, como o crescimento de chifres ou a mudança de cor da pele.\",\n    \"B\": \"A vítima explode em uma nuvem de pó fino e cinzas.\",\n    \"C\": \"A vítima fica petrificada, conservando sua aparência física até que um antídoto seja aplicado.\",\n    \"D\": \"A vítima cai morta instantaneamente, sem sinais visíveis de ferimentos externos, com a expressão facial geralmente congelada em um momento de choque ou terror.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28826742014173645
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 181,
+    "totalTokenCount": 227,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 181
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

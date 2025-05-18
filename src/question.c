@@ -3,6 +3,7 @@
 #include "prompt.h"
 #include <stdlib.h>
 #include <string.h>
+#include "score.h"
 
 Option _options[4];
 Rectangle optionRects_[4];
@@ -15,6 +16,7 @@ void createOptions()
         optionRects_[i] = (Rectangle){ 50, startOptionsRectY + i * 60, 800, 40};
         _options[i].rect = optionRects_[i];
         _options[i].color = RED;
+        _options[i].clicked = false;
         strcpy(_options[i].answer, labels_[i]);
     }
 }
@@ -31,7 +33,27 @@ void UpdateOptions(Question question)
             _options[i].color = RED;
         }
 
+        _options[i].clicked = false;
     }
+}
+
+bool checkIfAnsewered(Question question, bool *gotItRight) {
+    Vector2 mouse = GetMousePosition();
+    *gotItRight = false;
+
+    for (int i = 0; i < 4; i++) {
+        if (CheckCollisionPointRec(mouse, _options[i].rect)) {
+            if (strcmp(_options[i].answer, question.answer) == 0) {
+                *gotItRight = true;
+                addScore(1);
+            }
+
+            _options[i].clicked = 1;
+            return true;;
+        }
+    }
+
+    return false;
 }
 
 Question createQuestion(char *statement, char *optionA, char *optionB, char *optionC, char *optionD, char *answer)
@@ -57,7 +79,7 @@ void freeQuestion(Question question) {
     free(question.answer);
 }
 
-void drawQuestion(Question question)
+void drawQuestion(Question question, bool answered)
 {
     printf("\n================ PERGUNTA ================\n");
     printf("%s\n", question.statement);
@@ -69,9 +91,9 @@ void drawQuestion(Question question)
     DrawText(question.statement, 5, 10, 32, WHITE);
 
     for (int i = 0; i < 4; i++) { //funcao
-        Color rectColor = DARKGRAY;
+        Color hoverColor = DARKGRAY;
         if (CheckCollisionPointRec(GetMousePosition(), _options[i].rect)) {
-            rectColor = LIGHTGRAY;
+            hoverColor = LIGHTGRAY;
         }
     
         const char *optionText;
@@ -81,12 +103,24 @@ void drawQuestion(Question question)
             case 2: optionText = question.optionC; break;
             case 3: optionText = question.optionD; break;
         }
-        
-        DrawRectangleRec(_options[i].rect, _options[i].color);
+         
+        if (!answered) DrawRectangleRec(_options[i].rect, hoverColor);
+
+        else
+        {
+            if (_options[i].clicked)
+            {
+                DrawRectangleRec(_options[i].rect, _options[i].color);
+            }
+
+            if (strcmp(_options[i].answer, question.answer) == 0)
+            {
+                DrawRectangleRec(_options[i].rect, _options[i].color);
+            }
+
+        }
 
         DrawText(optionText, _options[i].rect.x + 10, _options[i].rect.y + 10, 20, WHITE);
-
-
     }
 }
 

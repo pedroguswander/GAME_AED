@@ -62,7 +62,7 @@ Font titleFont = {0};
 Font mainMenuFont = {0};
 const char *titulo = "MIND RUNNER";
 
-void checkIfAnswerIsRight(Option *options, Question question);
+
 void *loadQuestionsThread(void *arg);
 const char* getTileTopic(char *topic);
 
@@ -114,19 +114,8 @@ int main() {
         "Casa AED",
         "Casa INFRA SO"
     };
-    Rectangle nextQuestionButton = {screenWidth/4, screenHeight-100, 480, 320};
 
-    Option options[4];
-    char *labels[] = {"A", "B", "C", "D"};
-    Rectangle optionRects[4];
-    int startY = 100;
-
-    for (int i = 0; i < 4; i++) {
-        optionRects[i] = (Rectangle){ 50, startY + i * 60, 800, 40};
-        options[i].rect = optionRects[i];
-        options[i].color = RED;
-        strcpy(options[i].answer, labels[i]);
-    }
+    Rectangle nextQuestionButton = {screenWidth/2 - 240/2, screenHeight - 100, 240, 60};
 
     srand(time(NULL));
     Rectangle returnButton= { 20, 20, 150, 40 };
@@ -215,7 +204,7 @@ int main() {
                         
                         // Cria uma thread para carregar perguntas
                         pthread_create(&loaderThread, NULL, loadQuestionsThread, (void *)_current_topic);
-                        UpdateOptions(questions[_currentQuestion]);
+
                         break;
                     }
                 }
@@ -224,18 +213,13 @@ int main() {
             if (_quizScreen == LOADING_SCREEN)
             {
                 if (_loadingFinished) {
+                    UpdateOptions(questions[_currentQuestion]);
                     _quizScreen = QUESTION_SCREEN;
                 }
             }
 
             else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && _quizScreen == QUESTION_SCREEN) {
-                Vector2 mouse = GetMousePosition();
-                for (int i = 0; i < 4; i++) {
-                    if (CheckCollisionPointRec(mouse, options[i].rect)) {
-                        checkIfAnswerIsRight(options, questions[_currentQuestion]);
-                        break;
-                    }
-                }
+                if (checkIfAnsewered(questions[_currentQuestion], &_gotItRight)) _quizScreen = ANSWER_SCREEN;
             }
 
             else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), nextQuestionButton)) {
@@ -248,6 +232,7 @@ int main() {
                     if (_currentQuestion >= 5) {
                         _quizScreen = FINAL_SCORE_SCREEN;
                     } else {
+                        UpdateOptions(questions[_currentQuestion]);
                         _quizScreen = QUESTION_SCREEN;
                     }
                     _gotItRight = false;
@@ -321,24 +306,24 @@ int main() {
                 drawScore(5);
                 DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
                 CLITERAL (Color) {240, 240, 240, 240});
-                drawQuestion(questions[_currentQuestion]);
+                drawQuestion(questions[_currentQuestion], false);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case ANSWER_SCREEN:
-                //draQuestion
+                drawQuestion(questions[_currentQuestion], true);
                 drawScore(5);
                 DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
                 CLITERAL (Color) {240, 240, 240, 240});
-                DrawText("Gabarito:", 50, 900, 28, YELLOW);
-                DrawText(questions[_currentQuestion].answer, 200, 900, 28, WHITE);
-                DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", 300, 900, 40, _gotItRight ? GREEN : RED);
+                DrawText("Gabarito:", screenWidth/2 - 50, screenHeight/2, 28, YELLOW);
+                DrawText(questions[_currentQuestion].answer, screenWidth/2 + 80, screenHeight/2, 28, WHITE);
+                DrawText(_gotItRight ? "ACERTOU!" : "ERROU!", screenWidth/2 - 30, screenHeight/2 + 50, 40, _gotItRight ? GREEN : RED);
                 DrawRectangleRec(nextQuestionButton, RED);
                 DrawText("CONTINUAR", 
-                        1920/2 - MeasureText("CONTINUAR", 16)/2,  // Centraliza horizontalmente
-                        1080/2 - 16/2,                           // Centraliza verticalmente
-                        16, WHITE);
+                        nextQuestionButton.x + (nextQuestionButton.width - MeasureText("CONTINUAR", 20))/2,
+                        nextQuestionButton.y + (nextQuestionButton.height - 20)/2,
+                        20, WHITE);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
@@ -350,9 +335,9 @@ int main() {
                          screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
                 DrawRectangleRec(nextQuestionButton, GREEN);
                 DrawText("JOGAR NOVAMENTE",
-                        1920/2 - MeasureText("JOGAR NOVAMENTE", 16)/2,  // Centraliza horizontalmente
-                        1080/2 - 16/2,                           // Centraliza verticalmente
-                        16, WHITE);
+                        nextQuestionButton.x + (nextQuestionButton.width - MeasureText("JOGAR NOVAMENTE", 20))/2,
+                        nextQuestionButton.y + (nextQuestionButton.height - 20)/2,
+                        20, WHITE);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
@@ -405,23 +390,6 @@ int main() {
 
 }
 
-void checkIfAnswerIsRight(Option *options, Question question) {
-    Vector2 mouse = GetMousePosition();
-    _quizScreen = ANSWER_SCREEN;
-    _gotItRight = false;
-
-    for (int i = 0; i < 4; i++) {
-        if (CheckCollisionPointRec(mouse, options[i].rect)) {
-            if (strcmp(options[i].answer, question.answer) == 0) {
-                _gotItRight = true;
-                options[i].color = GREEN;
-                addScore(1);
-            }
-
-            return;
-        }
-    }
-}
 
 void *loadQuestionsThread(void *arg) {
     const char *topic = (const char *)arg;
