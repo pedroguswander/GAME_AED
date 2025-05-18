@@ -189,9 +189,9 @@ void createBoard() {
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
         _players[i] = (Player){
-            _tilesTAIL->prev->prev->prev->position,
+            _tilesHEAD->position,
             (Vector2){0, 0},
-            _tilesTAIL->prev->prev->prev,
+            _tilesHEAD,
             NULL,
             NULL,
             NULL,

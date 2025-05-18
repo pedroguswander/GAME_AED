@@ -12865,3 +12865,243 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de Bollywood em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme é conhecido por suas danças?\",\n  \"options\": {\n    \"A\": \"Dangal\",\n    \"B\": \"3 Idiots\",\n    \"C\": \"Dilwale Dulhania Le Jayenge\",\n    \"D\": \"Lagaan\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.038750884078797843
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 84,
+    "totalTokenCount": 135,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 84
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre capitais dos países em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a capital da Austrália?\",\n  \"options\": {\n    \"A\": \"Sydney\",\n    \"B\": \"Melbourne\",\n    \"C\": \"Canberra\",\n    \"D\": \"Perth\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0079952884051534868
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 72,
+    "totalTokenCount": 124,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 72
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um refrão em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"O que é um refrão em uma música?\",\n  \"alternativas\": {\n    \"A\": \"A introdução da música.\",\n    \"B\": \"A parte que se repete.\",\n    \"C\": \"O solo de um instrumento.\",\n    \"D\": \"A ponte entre estrofes.\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069758488959872841
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 151,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre instrumentos de percussão em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual instrumento NÃO é de percussão?\",\n  \"options\": {\n    \"A\": \"Pandeiro\",\n    \"B\": \"Violino\",\n    \"C\": \"Conga\",\n    \"D\": \"Xilofone\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.063147098203248611
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 53,
+    "candidatesTokenCount": 79,
+    "totalTokenCount": 132,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre instrumentos de corda em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual instrumento NÃO é de corda?\",\n  \"alternativas\": {\n    \"A\": \"Violino\",\n    \"B\": \"Violoncelo\",\n    \"C\": \"Trompete\",\n    \"D\": \"Guitarra\"\n  },\n  \"resposta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.051689304882967017
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 79,
+    "totalTokenCount": 130,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre curiosidades do Oscar em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme tem mais Oscars?\",\n  \"options\": {\n    \"A\": \"Ben-Hur\",\n    \"B\": \"O Senhor dos Anéis: O Retorno do Rei\",\n    \"C\": \"Titanic\",\n    \"D\": \"E o Vento Levou\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.047653855948612607
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 52,
+    "candidatesTokenCount": 87,
+    "totalTokenCount": 139,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 87
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
