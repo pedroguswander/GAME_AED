@@ -60,7 +60,7 @@ const char *topics[] = {
 
 Font titleFont = {0};
 Font mainMenuFont = {0};
-const char *titulo = "MIND RUNNER";
+const char *titulo = "MIND RUNNERS";
 
 
 void *loadQuestionsThread(void *arg);
@@ -202,7 +202,6 @@ int main() {
                         _loadingFinished = false;
                         _quizScreen = LOADING_SCREEN;
                         
-                        // Cria uma thread para carregar perguntas
                         pthread_create(&loaderThread, NULL, loadQuestionsThread, (void *)_current_topic);
 
                         break;
@@ -297,6 +296,7 @@ int main() {
                 break;
 
             case LOADING_SCREEN:
+                
                 DrawText("Carregando perguntas da IA...", screenWidth/2 - 200, screenHeight/2, 30, WHITE);
                 DrawRectangleRec(returnButton, DARKGRAY);
                 DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
@@ -379,10 +379,6 @@ int main() {
 
 
         EndDrawing();
-
-        if (_quizScreen == LOADING_SCREEN) {
-            pthread_join(loaderThread, NULL);
-        }
 
 }
     CloseWindow();

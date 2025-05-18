@@ -10779,3 +10779,1006 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre curtas-metragens famosos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual curta-metragem de animação, conhecido por sua atmosfera sombria e narrativa surreal, foi dirigido por Tim Burton e lançado em 1984?\",\n  \"options\": {\n    \"A\": \"Geri's Game\",\n    \"B\": \"Vincent\",\n    \"C\": \"Luxo Jr.\",\n    \"D\": \"The Wrong Trousers\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12081538609095982
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes do universo DC em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme do Universo DC apresentou pela primeira vez o Batman de Ben Affleck?\",\n  \"options\": {\n    \"A\": \"Batman vs Superman: A Origem da Justiça\",\n    \"B\": \"Liga da Justiça\",\n    \"C\": \"Esquadrão Suicida\",\n    \"D\": \"Batman: O Cavaleiro das Trevas\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048381768384026094
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 103,
+    "totalTokenCount": 142,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 103
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes com viagem no tempo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme apresenta uma narrativa complexa de viagem no tempo envolvendo múltiplas linhas temporais e paradoxos, onde o protagonista tenta impedir um assassinato que já aconteceu?\",\n  \"options\": {\n    \"A\": \"De Volta para o Futuro\",\n    \"B\": \"12 Macacos\",\n    \"C\": \"A Máquina do Tempo\",\n    \"D\": \"Efeito Borboleta\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11848567017411764
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 113,
+    "totalTokenCount": 152,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 113
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Natalie Portman e sua versatilidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Natalie Portman é reconhecida por sua impressionante versatilidade como atriz.  Qual das opções abaixo MELHOR exemplifica essa versatilidade, mostrando sua capacidade de transitar por diferentes gêneros e tipos de personagens?\",\n  \"options\": {\n    \"A\": \"Sua atuação em filmes de super-heróis como 'Thor' demonstra sua habilidade em cenas de ação.\",\n    \"B\": \"Seu papel em 'Cisne Negro' mostra sua amplitude dramática e capacidade física.\",\n    \"C\": \"Sua participação em 'V de Vingança' demonstra seu talento em filmes de ficção científica.\",\n    \"D\": \"Todas as alternativas acima demonstram, individualmente, aspectos de sua versatililidadde, mas não mostram a amplitude completa.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23894745525829295
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 41,
+    "candidatesTokenCount": 187,
+    "totalTokenCount": 228,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 187
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre o que é um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"O que é um algoritmo?\",\n  \"options\": {\n    \"A\": \"Um programa de computador escrito em linguagem de baixo nível.\",\n    \"B\": \"Uma sequência finita de instruções bem definidas, ordenadas e executáveis, que visa solucionar um problema ou executar uma tarefa.\",\n    \"C\": \"Um dispositivo físico que processa informações.\",\n    \"D\": \"Uma linguagem de programação específica para criar jogos.\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.152158443744366
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 156,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 117
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes de monstros gigantes em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual desses monstros gigantes é conhecido por seu raio atômico?\",\n  \"options\": {\n    \"A\": \"Godzilla\",\n    \"B\": \"King Kong\",\n    \"C\": \"Gamera\",\n    \"D\": \"Gojira\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.067220917230919941
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 79,
+    "totalTokenCount": 117,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes clássicos da Disney em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual desses filmes NÃO é considerado um filme clássico da Disney, produzido antes de 1960?\",\n  \"options\": {\n    \"A\": \"Branca de Neve e os Sete Anões\",\n    \"B\": \"Pinóquio\",\n    \"C\": \"A Bela Adormecida\",\n    \"D\": \"A Pequena Sereia\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.040243457612537205
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 105,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre personagens femininas icônicas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual dessas personagens femininas é amplamente considerada um ícone feminista na cultura popular, conhecida por sua independência e luta contra a opressão?\",\n  \"options\": {\n    \"A\": \"Cinderela\",\n    \"B\": \"Ariel (A Pequena Sereia)\",\n    \"C\": \"Mulher-Maravilha\",\n    \"D\": \"Branca de Neve\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A Mulher-Maravilha, com sua força, independência e luta pela justiça, é frequentemente citada como um ícone feminista.  As outras opções, embora personagens icônicas, não são tipicamente associadas ao mesmo nível de simbolismo feminista.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13243184770856584
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 168,
+    "totalTokenCount": 207,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 168
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre sistemas do corpo humano em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual sistema é responsável pela comunicação entre diferentes partes do corpo através de impulsos elétricos e químicos?\",\n  \"options\": {\n    \"A\": \"Sistema Respiratório\",\n    \"B\": \"Sistema Digestório\",\n    \"C\": \"Sistema Nervoso\",\n    \"D\": \"Sistema Cardiovascular\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.07036539224477914
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 91,
+    "totalTokenCount": 129,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 91
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes que viraram musicais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de animação da Disney recebeu uma adaptação para a Broadway que se tornou um grande sucesso?\",\n  \"options\": {\n    \"A\": \"O Rei Leão\",\n    \"B\": \"A Pequena Sereia\",\n    \"C\": \"A Bela e a Fera\",\n    \"D\": \"Toy Story\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.094440742414824821
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 138,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre segurança em sistemas operacionais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes opções NÃO é uma prática recomendada para melhorar a segurança de um sistema operacional?\",\n  \"options\": {\n    \"A\": \"Manter o sistema operacional e os softwares atualizados com as últimas correções de segurança.\",\n    \"B\": \"Utilizar senhas fortes e únicas para todas as contas de usuário.\",\n    \"C\": \"Desabilitar o firewall do sistema operacional para melhorar o desempenho.\",\n    \"D\": \"Instalar e manter um software antivírus atualizado.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Desabilitar o firewall reduz significativamente a segurança do sistema, deixando-o vulnerável a ataques externos.  As outras opções são práticas essenciais para uma boa segurança.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.048532317666446459
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 170,
+    "totalTokenCount": 209,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 170
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre gerenciamento de processos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das alternativas descreve melhor o objetivo principal do gerenciamento de processos de negócios (BPM)?\",\n  \"alternativas\": {\n    \"A\": \"Automatizar todas as tarefas manuais para reduzir custos operacionais.\",\n    \"B\": \"Criar uma estrutura rígida e imutável para execução de tarefas, garantindo total previsibilidade.\",\n    \"C\": \"Otimizar os processos de negócios para melhorar a eficiência, a eficácia e a satisfação do cliente.\",\n    \"D\": \"Implementar sistemas de informação complexos para monitorar cada etapa dos processos.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20736537260167739
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 153,
+    "totalTokenCount": 191,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 153
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre ferramentas de monitoramento em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes ferramentas NÃO é tipicamente utilizada para monitoramento de infraestrutura de TI?\",\n  \"options\": {\n    \"A\": \"Nagios\",\n    \"B\": \"Zabbix\",\n    \"C\": \"LibreOffice Calc\",\n    \"D\": \"Prometheus\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"LibreOffice Calc é um software de planilha eletrônica e não é projetado para monitoramento de infraestrutura de TI em tempo real. Nagios, Zabbix e Prometheus são ferramentas populares para esse propósito.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.066216595967610675
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 173,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 135
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre virtualização e containers em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações melhor descreve a principal diferença entre virtualização e containers?\",\n  \"options\": {\n    \"A\": \"A virtualização requer mais recursos de hardware do que containers.\",\n    \"B\": \"A virtualização emula todo um sistema operacional, enquanto containers compartilham o kernel do sistema operacional host.\",\n    \"C\": \"Containers são mais seguros do que máquinas virtuais porque são isolados pelo sistema operacional.\",\n    \"D\": \"A virtualização é mais adequada para aplicações de missão crítica, enquanto containers são usados apenas para desenvolvimento.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A virtualização cria uma máquina virtual completa, incluindo um sistema operacional completo, enquanto containers compartilham o kernel do sistema operacional host, resultando em menor consumo de recursos e maior portabilidade.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18344179112860498
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre gerenciamento de processos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das alternativas abaixo NÃO representa um benefício comum da adoção de um sistema de gerenciamento de processos?\",\n  \"options\": {\n    \"A\": \"Melhora na eficiência operacional, reduzindo desperdícios e retrabalhos.\",\n    \"B\": \"Aumento da previsibilidade e controle sobre os processos.\",\n    \"C\": \"Maior complexidade e aumento dos custos operacionais a curto prazo.\",\n    \"D\": \"Padronização dos processos, garantindo consistência e qualidade.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora a implementação de um sistema de gerenciamento de processos possa envolver custos iniciais e um período de adaptação, a longo prazo, ele tende a trazer eficiência e redução de custos. A complexidade pode ser um desafio inicial, mas uma boa implementação visa simplificar os processos e torná-los mais claros e eficientes.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22700348995519026
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 209,
+    "totalTokenCount": 247,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 209
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Elfos Domésticos: escravidão e caso do Dobby em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual aspecto da condição de Dobby como elfo doméstico melhor ilustra a natureza problemática da escravidão mágica dos elfos domésticos em Harry Potter?\",\n  \"options\": {\n    \"A\": \"Sua lealdade inabalável a Harry Potter, mesmo após ser liberto.\",\n    \"B\": \"Sua habilidade mágica limitada comparada aos outros elfos domésticos.\",\n    \"C\": \"Sua incapacidade de abandonar completamente a sua natureza servil, mesmo livre.\",\n    \"D\": \"Seu desejo de morrer para proteger Harry Potter, demonstrando extremo auto-sacrifício.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Embora todas as opções mostrem aspectos da experiência de Dobby, a opção C melhor representa a natureza problemática da escravidão dos elfos domésticos.  A incapacidade de Dobby de romper completamente com sua programação mental, mesmo após ser liberto, demonstra como a escravidão  afeta profundamente a sua identidade e autopercepção, tornando a liberdade incompleta e a emancipação difícil, mesmo após a quebra das correntes físicas.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.3782203518614477
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 245,
+    "totalTokenCount": 293,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 245
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Basilisco: monstro da Câmara Secreta e como foi derrotado em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"Em Harry Potter e a Câmara Secreta, como Harry Potter derrota o Basilisco?\",\n  \"alternativas\": {\n    \"A\": \"Usando a espada da Grifinória, que é feita de um metal mágico que mata Basiliscos.\",\n    \"B\": \"Lançando um feitiço de encantamento incrivelmente poderoso aprendido com o Professor Dumbledore.\",\n    \"C\": \"Usando a espada da Grifinória e aproveitando a vulnerabilidade do Basilisco em sua cauda.\",\n    \"D\": \"Usando uma poção especial criada pelo Professor Snape para enfraquecer e derrotar o monstro.\"\n  },\n  \"resposta_correta\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23072195342092802
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 49,
+    "candidatesTokenCount": 165,
+    "totalTokenCount": 214,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 165
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Harry Potter: cicatriz em forma de raio e conexão com Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual a característica física marcante de Harry Potter que o conecta diretamente a Lord Voldemort?\",\n  \"alternativas\": {\n    \"A\": \"Uma marca de nascença em forma de lua crescente.\",\n    \"B\": \"Uma cicatriz em forma de estrela na testa.\",\n    \"C\": \"Uma cicatriz em forma de raio na testa.\",\n    \"D\": \"Um sinal de nascença em forma de serpente no braço.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.069335437590076071
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 124,
+    "totalTokenCount": 171,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 124
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lufa-Lufa: lealdade e figuras importantes (Cedrico Diggory) em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual característica melhor representa a Casa Lufa-Lufa e está intimamente ligada à trajetória de Cedrico Diggory?\",\n  \"options\": {\n    \"A\": \"Ambição e busca pelo poder\",\n    \"B\": \"Inteligência e sede por conhecimento\",\n    \"C\": \"Lealdade e justiça\",\n    \"D\": \"Intrepidez e coragem impulsiva\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"Cedrico Diggory era um aluno exemplar de Lufa-Lufa, conhecido por sua lealdade a seus amigos e pela sua busca por justiça e fair play.  Sua lealdade inabalável e o respeito pelas regras demonstram os valores centrais da Casa.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.26316150399141536
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 172,
+    "totalTokenCount": 223,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 172
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Rúbeo Hagrid: guarda-caça e criaturas mágicas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual criatura mágica Hagrid tentou esconder em sua cabana em 'Harry Potter e a Pedra Filosofal'?\",\n  \"options\": {\n    \"A\": \"Um hipogrifo\",\n    \"B\": \"Um centauro\",\n    \"C\": \"Um dragão\",\n    \"D\": \"Um acromantula\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0703745715472163
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 48,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 146,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 48
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Hipogrifo: caso de Bicuço e julgamento em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"pergunta\": \"No caso de Bicuço, o julgamento do hipogrifo envolveu um dilema crucial. Considerando o sistema legal e as evidências apresentadas, qual foi o principal ponto de discórdia durante o julgamento?\",\n  \"alternativas\": {\n    \"A\": \"A natureza mágica de Bicuço e a impossibilidade de julgá-lo sob leis humanas.\",\n    \"B\": \"A falta de testemunhas imparciais capazes de descrever com precisão os eventos que levaram ao ataque.\",\n    \"C\": \"O conflito entre a interpretação literal da lei e a consideração das circunstâncias atenuantes do comportamento de Bicuço.\",\n    \"D\": \"A incapacidade de definir claramente a culpabilidade de Hagrid, dono de Bicuço, pela ação da criatura.\"\n  },\n  \"resposta_correta\": \"C\",\n  \"explicacao\": \"O julgamento de Bicuço girou em torno do conflito entre a lei (que previa a execução do hipogrifo por ter atacado Draco Malfoy) e a consideração das circunstâncias que levaram ao ataque (Draco tendo provocado Bicuço). Este dilema central expôs a complexidade de aplicar leis humanas em situações envolvendo criaturas mágicas e a necessidade de interpretar a justiça além da letra da lei.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.36029186312999789
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 47,
+    "candidatesTokenCount": 297,
+    "totalTokenCount": 344,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 297
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Bellatrix Lestrange: lealdade a Voldemort e crueldade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual característica melhor define Bellatrix Lestrange, considerando sua lealdade a Voldemort e sua crueldade?\",\n  \"alternatives\": [\n    {\"letter\": \"A\", \"text\": \"Ambição desmedida, buscando poder e influência acima de tudo.\"},\n    {\"letter\": \"B\", \"text\": \"Devoção cega e implacável a Voldemort, combinada com um sadismo extremo.\"},\n    {\"letter\": \"C\", \"text\": \"Inteligência estratégica e astúcia, utilizando sua crueldade como ferramenta táctica.\"},\n    {\"letter\": \"D\", \"text\": \"Arrependimento e remorso por seus atos, escondidos sob uma fachada de fanatismo.\"}\n  ],\n  \"correctAnswer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17836915152413504
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 175,
+    "totalTokenCount": 221,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 175
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Lord Voldemort: horcruxes e busca pela imortalidade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual era o principal objetivo de Lord Voldemort ao criar Horcruxes?\",\n  \"alternatives\": {\n    \"A\": \"Obter poder mágico ilimitado.\",\n    \"B\": \"Conquistar o controle sobre todas as criaturas mágicas.\",\n    \"C\": \"Alcançar a imortalidade, tornando-se invulnerável à morte.\",\n    \"D\": \"Destruir a Ordem da Fênix e seus membros.\"\n  },\n  \"answer\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11414843647419906
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 165,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 119
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Bellatrix Lestrange: lealdade a Voldemort e crueldade em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes afirmações melhor descreve a relação de Bellatrix Lestrange com Lord Voldemort e sua natureza?\",\n  \"options\": {\n    \"A\": \"Bellatrix era uma aliada oportunista de Voldemort, sua lealdade oscilando dependendo das circunstâncias e vantagens.\",\n    \"B\": \"Bellatrix admirava Voldemort por sua inteligência, mas sua lealdade era secundária a sua própria ambição de poder.\",\n    \"C\": \"Bellatrix era incrivelmente cruel, mas sua lealdade a Voldemort era superficial, frequentemente questionando suas ordens.\",\n    \"D\": \"Bellatrix era completamente e inabalavelmente leal a Voldemort, demonstrando uma crueldade implacável em seu nome.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.235918637722899
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 177,
+    "totalTokenCount": 223,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 177
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Nevoeiro: jornal sensacionalista e suas mentiras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"O Nevoeiro: jornal sensacionalista e suas mentiras\\\", qual característica melhor define a forma como o jornal manipulador utiliza as informações para influenciar a opinião pública?\",\n  \"options\": {\n    \"A\": \"Apresentação imparcial dos fatos, buscando o equilíbrio entre diferentes perspectivas.\",\n    \"B\": \"Utilização de dados estatísticos precisos e fontes confiáveis para sustentar suas narrativas.\",\n    \"C\": \"Distorção seletiva da realidade, omitindo informações relevantes e exagerando outras para criar narrativas sensacionalistas.\",\n    \"D\": \"Investigação profunda e análise crítica dos eventos, oferecendo ao público uma compreensão abrangente dos fatos.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"O jornal sensacionalista, como retratado no texto, opera por meio da manipulação de informações, omitindo ou distorcendo fatos para criar uma narrativa que gere impacto e atraia leitores, em detrimento da verdade e da isenção jornalística.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30357208251953127
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 230,
+    "totalTokenCount": 276,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 230
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Alvo Dumbledore: varinha das varinhas e plano contra Voldemort em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+

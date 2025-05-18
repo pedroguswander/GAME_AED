@@ -31,7 +31,7 @@ typedef enum {
 Font fontPlayerName = {0};
 
 Texture2D backgroundTexture;
-BoardState _boardState = WAITING_TO_END;
+BoardState _boardState = CAN_PLAY_TRANSITION;
 EventState _eventState = EVENT_NONE;
 
 Camera2D _boardCamera = {0};
@@ -56,7 +56,7 @@ Question _questionTile = {0};
 Option options[4];
 char *labels[] = {"A", "B", "C", "D"};
 Rectangle optionRects[4];
-Rectangle nextQuestionButton = {1920/4, 1080-100, 480, 320};
+Rectangle nextQuestionButton = {1920/2 - 240/2, 1080 - 100, 240, 60};
 
 char *_playersNames[] = {player1Name, player2Name};
 
@@ -64,7 +64,7 @@ int startY = 100;
 int _dice;
 int _targetTile = 0;
 int _acertou = 0;
-int _gotItRigth = 0;
+bool _gotItRigth = false;
 int _currentPlayerIndex = 0;
 float stepTimer = 0.0f;
 float stepDelay = 0.5f; 
@@ -100,13 +100,13 @@ const char* tileLabels[BOARD_SIZE] = {
 };
 
 void resetBoard() {
-    _boardState = WAITING_TO_END;
+    _boardState = CAN_PLAY_TRANSITION;
     _eventState = EVENT_NONE;
     _loadingFinishedBoard = false;
     _dice = 0;
     _targetTile = 0;
     _acertou = 0;
-    _gotItRigth = 0;
+    _gotItRigth = false;
     _currentPlayerIndex = 0;
     stepTimer = 0.0f;
     waitingToEndTimer = 0.0f;
@@ -160,7 +160,7 @@ void createBoard() {
 
     InitAudioDevice();
 
-    _boardState = WAITING_TO_END;
+    _boardState = CAN_PLAY_TRANSITION;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
@@ -331,6 +331,7 @@ void updateBoard() {
                     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
                         if (player->currentTile->type == QUESTION) {
                             _loadingFinishedBoard = false;
+                            createOptions();
                             pthread_create(&_loadThread, NULL, loadQuestionThread, player->currentTile);
                             _eventState = EVENT_LOADING;
                         } else if (player->currentTile->type == BOSS) { 
@@ -347,19 +348,14 @@ void updateBoard() {
                 case EVENT_LOADING:
                     if (_loadingFinishedBoard) {
                         pthread_join(_loadThread, NULL);
+                        UpdateOptions(_questionTile);
                         _eventState = EVENT_QUESTION;
                     }
                     break;
 
                 case EVENT_QUESTION:
                     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-                        Vector2 mouse = GetMousePosition();
-                        for (int i = 0; i < 4; i++) {
-                            if (CheckCollisionPointRec(mouse, options[i].rect)) {
-                                _gotItRigth = strcmp(options[i].answer, _questionTile.answer) == 0;
-                                _boardState = SHOW_ANSWER;
-                            }
-                        }
+                        if (checkIfAnsewered(_questionTile, &_gotItRigth)) _boardState = SHOW_ANSWER;
                     }
                     break;
 
@@ -409,12 +405,10 @@ void drawBoard() {
                     DrawText("Carregando pergunta...", GetScreenWidth()/2 - 150, GetScreenHeight()/2+300, 30, BLACK);
                     DrawTexture(backgroundTexture, 0, 0, Fade(WHITE, 0.3f));
 
-
                     DrawText(_players[_currentPlayerIndex].currentTile->topic,
                             GetScreenWidth()/2 - 100, GetScreenHeight()/2 - 40,
                             40, BLACK);
 
-                            
                     DrawText("Aperte clique para iniciar o quiz!!!", GetScreenWidth()/2 - 350,
                     GetScreenHeight()/2 - 300, 48, BLACK);
                     break;
@@ -433,7 +427,7 @@ void drawBoard() {
                 case EVENT_QUESTION:
                     drawQuestion(_questionTile, false);
                     DrawTextEx(fontPlayerName , TextFormat("%s", _players[_currentPlayerIndex].name),
-                     (Vector2) {540, 900}, 32, 2, _playerColors[_currentPlayerIndex]);
+                     (Vector2) {69, 900}, 64, 2, _playerColors[_currentPlayerIndex]);
                     break;
 
                 default:
@@ -443,18 +437,21 @@ void drawBoard() {
             break;
 
         case SHOW_ANSWER:
-            DrawText("Gabarito:", 50, 100, 28, YELLOW);
-            DrawText(_questionTile.answer, 200, 100, 28, WHITE);
-            DrawText(_gotItRigth ? "ACERTOU!" : "ERROU!", 50, 200, 40, _gotItRigth ? GREEN : RED);
-            DrawRectangleRec(nextQuestionButton, RED);
-            DrawText("CONTINUAR", nextQuestionButton.x + 5, nextQuestionButton.y + 5, 16, WHITE);
+            drawQuestion(_questionTile, true);
+            DrawText("Gabarito:", GetScreenWidth()/2 - 50, GetScreenHeight()/2, 28, YELLOW);
+            DrawText(_questionTile.answer, GetScreenWidth()/2 + 80, GetScreenHeight()/2, 28, WHITE);
+            DrawText(_gotItRigth ? "ACERTOU!" : "ERROU!", GetScreenWidth()/2 - 30, GetScreenHeight()/2 + 50, 40, GetScreenHeight()? GREEN : RED);
+            DrawRectangleRec(nextQuestionButton, BLUE);
+            DrawText("CONTINUAR", 
+                    nextQuestionButton.x + (nextQuestionButton.width - MeasureText("CONTINUAR", 20))/2,
+                    nextQuestionButton.y + (nextQuestionButton.height - 20)/2,
+                    20, WHITE);
             break;
 
         case END:
             drawEndScreen(_players[_currentPlayerIndex]);
             break;
 
-        
         case CAN_PLAY_TRANSITION:
             BeginMode2D(_boardCamera);
 

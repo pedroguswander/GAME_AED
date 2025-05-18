@@ -90,7 +90,7 @@ void drawQuestion(Question question, bool answered)
     printf("==========================================\n\n");
     DrawText(question.statement, 5, 10, 32, WHITE);
 
-    for (int i = 0; i < 4; i++) { //funcao
+    for (int i = 0; i < 4; i++) {
         Color hoverColor = DARKGRAY;
         if (CheckCollisionPointRec(GetMousePosition(), _options[i].rect)) {
             hoverColor = LIGHTGRAY;
@@ -103,9 +103,16 @@ void drawQuestion(Question question, bool answered)
             case 2: optionText = question.optionC; break;
             case 3: optionText = question.optionD; break;
         }
+        
+        // Calcular a largura do texto
+        int textWidth = MeasureText(optionText, 20);
+        
+        // Ajustar a largura do retângulo se necessário
+        if (textWidth + 20 > _options[i].rect.width) { // +20 para padding
+            _options[i].rect.width = textWidth + 20;
+        }
          
         if (!answered) DrawRectangleRec(_options[i].rect, hoverColor);
-
         else
         {
             if (_options[i].clicked)
@@ -117,7 +124,6 @@ void drawQuestion(Question question, bool answered)
             {
                 DrawRectangleRec(_options[i].rect, _options[i].color);
             }
-
         }
 
         DrawText(optionText, _options[i].rect.x + 10, _options[i].rect.y + 10, 20, WHITE);
