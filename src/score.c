@@ -94,7 +94,7 @@ ensureAssetsDirExists();
 PlayerScore* loadScores() {
     memset(players, 0, sizeof(players));
 
-    FILE *f = fopen("hall.txt", "r");
+    FILE *f = fopen("assets/hall.txt", "r");
     if (f == NULL) {
         return players; // Retorna array vazio se o arquivo não existir
     }
