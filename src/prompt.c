@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include "cJSON.h"
+//#include "cJSON.h"
 
 char* trim_whitespace(char *str)
 {

@@ -4,6 +4,16 @@
 #include <string.h>
 #include <stdlib.h>
 //#include "game.h"
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+void ensureAssetsDirExists() {
+    struct stat st = {0};
+    if (stat("assets", &st) == -1) {
+        mkdir("assets", 0700);
+    }
+}
 
 static int _score = 0;
 PlayerScore players[MAX_NUMBER_OF_PLAYERS] = {0};
@@ -37,11 +47,11 @@ void ordernarScore(int current_number_of_players)
 }
 
 void saveScore(char *name) {
-    // Carrega os scores existentes
-    int k = 0;
-    FILE *f = fopen("hall.txt", "r");
+ensureAssetsDirExists();
+ int k = 0;
+    FILE *f = fopen("assets/hall.txt", "a+");
     if (f != NULL) {
-        while (k < MAX_NUMBER_OF_PLAYERS && 
+        while (k < MAX_NUMBER_OF_PLAYERS &&
                fscanf(f, "%20s %d", players[k].nome, &players[k].score) == 2) {
             players[k].existe = 1;
             k++;
@@ -69,7 +79,7 @@ void saveScore(char *name) {
     }
 
     // Salva de volta no arquivo
-    f = fopen("hall.txt", "w");
+    f = fopen("assets/hall.txt", "w");
     if (f == NULL) {
         perror("Erro ao abrir o arquivo para escrita");
         return;
@@ -78,20 +88,19 @@ void saveScore(char *name) {
     for (int j = 0; j < k; j++) {
         fprintf(f, "%s %d\n", players[j].nome, players[j].score);
     }
-
-    fclose(f);
+	fclose(f);
 }
 
 PlayerScore* loadScores() {
     memset(players, 0, sizeof(players));
-    
-    FILE *f = fopen("hall.txt", "r");
+
+    FILE *f = fopen("assets/hall.txt", "r");
     if (f == NULL) {
         return players; // Retorna array vazio se o arquivo não existir
     }
 
     int count = 0;
-    while (count < MAX_NUMBER_OF_PLAYERS && 
+    while (count < MAX_NUMBER_OF_PLAYERS &&
            fscanf(f, "%20s %d", players[count].nome, &players[count].score) == 2) {
         players[count].existe = 1;
         count++;
