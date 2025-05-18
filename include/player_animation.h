@@ -10,7 +10,7 @@ void InitPlayerAnimation();
 void UpdatePlayerAnimation();
 void UnloadPlayerAnimation();
 void ChangePlayerWalkAnimationSprite();
-void setPlayerSpriteAnimation(Player *player);
+void setPlayerSpriteAnimation(Player *player, int index);
 void setSpriteToIdle(Player *player, int index);
 
 #endif

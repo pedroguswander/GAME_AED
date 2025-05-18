@@ -42,8 +42,8 @@ Tile *_tilesTAIL = NULL;
 
 Player _players[MAX_PLAYERS];
 Tile *tileBeforePlaying = NULL;
-#define COLOR_P1 CLITERAL (Color) {22, 147, 12, 255}
-#define COLOR_P2 CLITERAL (Color) {113, 27, 178, 255}
+#define COLOR_P2 CLITERAL (Color) {22, 147, 12, 255}
+#define COLOR_P1 CLITERAL (Color) {113, 27, 178, 255}
 Color _playerColors[] = {COLOR_P1, COLOR_P2};
 
 Rectangle _playerTextSrc = {0};
@@ -189,9 +189,9 @@ void createBoard() {
 
     for (int i = 0; i < MAX_PLAYERS; i++) {
         _players[i] = (Player){
-            _tilesHEAD->position,
+            _tilesTAIL->prev->prev->prev->position,
             (Vector2){0, 0},
-            _tilesHEAD,
+            _tilesTAIL->prev->prev->prev,
             NULL,
             NULL,
             NULL,
@@ -287,8 +287,7 @@ void updateBoard() {
                         diceRolled = false; // Reset para o próximo turno
                     }
                 } else if (IsKeyPressed(KEY_SPACE)) {
-                    // _dice = rand() % 6 + 1;
-                    _dice = 1;
+                    _dice = rand() % 6 + 1;
                     setDiceResult(_dice);
                     diceRolled = true;
                     diceRollTime = GetTime(); // Marca o momento em que o dado foi lançado
@@ -303,7 +302,7 @@ void updateBoard() {
             if (!movePlayer(player, true))
             {
                 UpdatePlayerAnimation();
-                setPlayerSpriteAnimation(player);
+                setPlayerSpriteAnimation(player, _currentPlayerIndex);
                 break;
             }
             
@@ -317,7 +316,7 @@ void updateBoard() {
             if (!movePlayer(player, false))
             {
                 UpdatePlayerAnimation();
-                setPlayerSpriteAnimation(player);
+                setPlayerSpriteAnimation(player, _currentPlayerIndex);
                 break;
             } 
 
@@ -466,7 +465,6 @@ void drawBoard() {
             BeginMode2D(_boardCamera);
 
                 DrawTexture(backgroundTexture, 0, 0, WHITE);
-                DrawCircle(_boardCamera.target.x, _boardCamera.target.y, 10, RED);
                 drawPlayer(&_players[_currentPlayerIndex]);
 
             EndMode2D();
@@ -491,17 +489,6 @@ void drawBoard() {
                 Player *p = &_players[i];
                 drawPlayer(p);
             }
-
-            if (_tilesHEAD) {
-                Tile *current = _tilesHEAD;
-                while (current) {
-                    DrawRectangleRec(current->rect, LIGHTGRAY);
-                    DrawRectangleLinesEx(current->rect, 2, DARKGRAY);
-                    DrawText(current->topic, current->rect.x + 10, current->rect.y + 40, 16, BLACK);
-                    current = current->next;
-                }
-            }
-
             break;
     }
 }
