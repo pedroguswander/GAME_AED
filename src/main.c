@@ -22,6 +22,9 @@
 
 #define MENU_OPTIONS_FONT_SIZE 64
 
+
+extern char player1Name[MAX_NAME_LENGTH];
+
 typedef enum {
     ROLL_DICE,
     ANSWER_QUESTION,
@@ -240,6 +243,7 @@ int main() {
                 if (_quizScreen == FINAL_SCORE_SCREEN) { //RESETAR!!
                     _quizScreen = TOPIC_SELECTION_SCREEN;
                     _menuOption = MAIN_MENU;
+printf("Nome capturado: %s\n", player1Name);
                         saveScore(player1Name);
                 } else if (_quizScreen == ANSWER_SCREEN) {
                     _currentQuestion++;

@@ -63,13 +63,18 @@ void showPlayerNameInputScreen(MenuOption option) {
         }
 
         if (IsKeyPressed(KEY_ENTER)) {
-            if (currentPlayer == 1 && option != QUIZ_MODE) {
+            if (option == QUIZ_MODE) {
                 strcpy(player1Name, inputText);
-                currentPlayer = 2;
-                inputText[0] = '\0'; // limpa campo
-            } else {
-                strcpy(player2Name, inputText);
                 nameEntered = true;
+            } else {
+                if (currentPlayer == 1) {
+                    strcpy(player1Name, inputText);
+                    currentPlayer = 2;
+                    inputText[0] = '\0'; // limpa campo
+                } else {
+                    strcpy(player2Name, inputText);
+                    nameEntered = true;
+                }
             }
         }
     }
