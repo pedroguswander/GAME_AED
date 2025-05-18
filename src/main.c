@@ -132,18 +132,9 @@ int main() {
             if (CheckCollisionPointRec(mouse, returnButton)) {
                 switch (_menuOption) {
                     case QUIZ_MODE:
-                        _menuOption = MAIN_MENU;
-                        _quizScreen = TOPIC_SELECTION_SCREEN;
-                        _currentQuestion = 0;
-                        resetScore();
-                        _gotItRight = false;
-                        _loadingFinished = false;
                         break;
 
                     case TABULEIRO_MODE:
-                        _menuOption = MAIN_MENU;
-                        freeBoard();
-                        createBoard();
                         break;
 
                     case HALL_OF_FAME:
@@ -295,15 +286,11 @@ printf("Nome capturado: %s\n", player1Name);
                     DrawRectangleRec(topicButtons[i], GRAY);
                     DrawText(topics[i], topicButtons[i].x + 10, topicButtons[i].y + 15, 20, BLACK);
                 }
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case LOADING_SCREEN:
                 
                 DrawText("Carregando perguntas da IA...", screenWidth/2 - 200, screenHeight/2, 30, WHITE);
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case QUESTION_SCREEN:
@@ -311,8 +298,6 @@ printf("Nome capturado: %s\n", player1Name);
                 DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
                 CLITERAL (Color) {240, 240, 240, 240});
                 drawQuestion(questions[_currentQuestion], false);
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case ANSWER_SCREEN:
@@ -328,8 +313,6 @@ printf("Nome capturado: %s\n", player1Name);
                         nextQuestionButton.x + (nextQuestionButton.width - MeasureText("CONTINUAR", 20))/2,
                         nextQuestionButton.y + (nextQuestionButton.height - 20)/2,
                         20, WHITE);
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case FINAL_SCORE_SCREEN:
@@ -338,12 +321,10 @@ printf("Nome capturado: %s\n", player1Name);
                 DrawText(TextFormat("Pontuação Final: %d/5", getScore()),
                          screenWidth/2 - MeasureText("Pontuação Final: 0/5", 30)/2, 200, 30, WHITE);
                 DrawRectangleRec(nextQuestionButton, GREEN);
-                DrawText("JOGAR NOVAMENTE",
-                        nextQuestionButton.x + (nextQuestionButton.width - MeasureText("JOGAR NOVAMENTE", 20))/2,
+                DrawText("VOLTAR AO MENU",
+                        nextQuestionButton.x + (nextQuestionButton.width - MeasureText("VOLTAR AO MENU", 20))/2,
                         nextQuestionButton.y + (nextQuestionButton.height - 20)/2,
                         20, WHITE);
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
         }
         break;
@@ -356,8 +337,6 @@ printf("Nome capturado: %s\n", player1Name);
 
     case TABULEIRO_MODE:
         drawBoard();
-        DrawRectangleRec(returnButton, DARKGRAY);
-        DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
         break;
 
     case CREDITS:
