@@ -14,6 +14,7 @@
 #include "rlgl.h"
 #include "main_menu.h"
 #include "player_names.h"
+#include "end_screen.h"
 
 #define BOARD_SIZE 15
 #define PLAYER1_TEXT_SIZE 32
@@ -27,10 +28,10 @@ typedef enum {
     EVENT_QUESTION,
 } EventState;
 
-Font font1 = {0};
+Font fontPlayerName = {0};
 
 Texture2D backgroundTexture;
-BoardState _boardState = CAN_PLAY;
+BoardState _boardState = WAITING_TO_END;
 EventState _eventState = EVENT_NONE;
 
 Camera2D _boardCamera = {0};
@@ -41,7 +42,9 @@ Tile *_tilesTAIL = NULL;
 
 Player _players[MAX_PLAYERS];
 Tile *tileBeforePlaying = NULL;
-Color _playerColors[] = {RED, BLUE};
+#define COLOR_P1 CLITERAL (Color) {22, 147, 12, 255}
+#define COLOR_P2 CLITERAL (Color) {113, 27, 178, 255}
+Color _playerColors[] = {COLOR_P1, COLOR_P2};
 
 Rectangle _playerTextSrc = {0};
 Rectangle _playerTextDest = {0};
@@ -97,7 +100,7 @@ const char* tileLabels[BOARD_SIZE] = {
 };
 
 void resetBoard() {
-    _boardState = CAN_PLAY;
+    _boardState = WAITING_TO_END;
     _eventState = EVENT_NONE;
     _loadingFinishedBoard = false;
     _dice = 0;
@@ -109,8 +112,8 @@ void resetBoard() {
     waitingToEndTimer = 0.0f;
     isWaiting = false;
     tileBeforePlaying = NULL;
-    _playerColors[0] = RED;
-    _playerColors[1] = BLUE;
+    _playerColors[0] = COLOR_P1;
+    _playerColors[1] = COLOR_P2;
     strcpy(_playersNames[0], player1Name);
     strcpy(_playersNames[1], player2Name);
 }
@@ -156,14 +159,15 @@ void createBoard() {
     resetBoard();
 
     InitAudioDevice();
-    //BeginMode2D(_boardCamera);
 
-    _boardState = CAN_PLAY_TRANSITION;
+    _boardState = WAITING_TO_END;
     _eventState = EVENT_NONE;
     _tilesHEAD = NULL;
     _tilesTAIL = NULL;
+
     backgroundTexture = LoadTexture("background-board-mode-1.png");
     victoyTheme = LoadSound("music/videoplayback.wav");
+    fontPlayerName = LoadFont("fonts/pixantiqua.png");
 
     InitPlayerAnimation();
     initDice();
@@ -200,7 +204,7 @@ void createBoard() {
             _playersNames[i],
         };
 
-        setSpriteToIdle(&_players[i]);
+        setSpriteToIdle(&_players[i], i);
     }
 
     _boardCamera = (Camera2D) {
@@ -304,7 +308,7 @@ void updateBoard() {
             }
             
             // Mantém o flip atual quando voltar para idle
-            setSpriteToIdle(player);
+            setSpriteToIdle(player, _currentPlayerIndex);
             _boardState = EVENT;
             _eventState = EVENT_DISPLAY_TOPIC;
             break;
@@ -317,7 +321,7 @@ void updateBoard() {
                 break;
             } 
 
-            setSpriteToIdle(player);
+            setSpriteToIdle(player, _currentPlayerIndex);
             finalizeTurn();
             break;
 
@@ -387,13 +391,7 @@ void updateBoard() {
             break;
 
         case END:
-            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
-            {
-                if (CheckCollisionPointRec(GetMousePosition(), (Rectangle) {0, 0, GetScreenWidth(), GetScreenHeight()}))
-                {
-                    _menuOption = MAIN_MENU;
-                }
-            }
+            updateEndScreen();
 
             PlaySound(victoyTheme);
             break;
@@ -434,8 +432,8 @@ void drawBoard() {
 
                 case EVENT_QUESTION:
                     drawQuestion(options, _questionTile);
-                    DrawText(TextFormat("P%d: %s", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name),
-                     540, 900, 32, _playerColors[_currentPlayerIndex]);
+                    DrawTextEx(fontPlayerName , TextFormat("%s", _players[_currentPlayerIndex].name),
+                     (Vector2) {540, 900}, 32, 2, _playerColors[_currentPlayerIndex]);
                     break;
 
                 default:
@@ -453,9 +451,10 @@ void drawBoard() {
             break;
 
         case END:
-            DrawRectangleRec((Rectangle){0, 0, 1920, 1080}, Fade(PINK, 0.3f));
-            DrawText(TextFormat("P%d - %s venceu!!", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name),
-                     1920/2, 1080/2, 20, _players[_currentPlayerIndex].color);
+            //DrawRectangleRec((Rectangle){0, 0, 1920, 1080}, Fade(PINK, 0.3f));
+            //DrawTextEx(fontPlayerName, TextFormat("%s venceu!!", _players[_currentPlayerIndex].name),
+            //(Vector2) {1920/2, 1080/2}, 20, 2, _players[_currentPlayerIndex].color);
+            drawEndScreen(_players[_currentPlayerIndex]);
             break;
 
         
@@ -479,9 +478,10 @@ void drawBoard() {
             EndMode2D();
 
             drawDice();
-            DrawText(TextFormat("P%d - %s - PRESSIONE SPACE PARA RODAR O DADO", _currentPlayerIndex+1,
-                _players[_currentPlayerIndex].name),
-                595, 509, 20, BLACK);
+            DrawTextEx(fontPlayerName, _players[_currentPlayerIndex].name, 
+                (Vector2){ 595, 509 }, 20, 2, _players[_currentPlayerIndex].color);
+            DrawText(" - PRESSIONE SPACE PARA RODAR O DADO ", 595 + MeasureText(_players[_currentPlayerIndex].name, 20), 509, 20, BLACK);
+
             break;
 
         default:
@@ -489,7 +489,9 @@ void drawBoard() {
             const char* msg = "MODO TABULEIRO - Pressione SPACE para rolar o dado";
             DrawText(msg, GetScreenWidth()/2 - MeasureText(msg, 20)/2, 20, 20, BLACK);
             DrawText(TextFormat("DADO %d", _dice), 961, 58, 20, DARKGRAY);
-            DrawText(TextFormat("Vez de P%d- %s", _currentPlayerIndex + 1, _players[_currentPlayerIndex].name), 540, 900, 20, BLACK);
+            DrawTextEx(fontPlayerName, "VEZ DE ", (Vector2) {540, 900}, 20, 2, BLACK);
+            DrawTextEx(fontPlayerName, _players[_currentPlayerIndex].name,
+                (Vector2){ 540 + MeasureText("VEZ DE ", 20), 900 }, 20, 2, _players[_currentPlayerIndex].color);
 
             for (int i = 0; i < MAX_PLAYERS; i++) {
                 Player *p = &_players[i];
@@ -566,13 +568,14 @@ void drawPlayer(Player *p)
     };
     DrawTexturePro(p->sprite, _playerTextSrc, _playerTextDest, (Vector2){0, 0}, 0, WHITE);
     
-    const char* playerLabel = TextFormat("P%d- %s", p->number, p->name);
+    const char* playerLabel = TextFormat("P%d: %s", p->number, p->name);
     int labelWidth = MeasureText(playerLabel, 20);
-    DrawText(playerLabel,
-             playerCenter.x - labelWidth/2,  
-             p->position.y - 20,             
-             10, 
-             p->color);
+    DrawTextEx(fontPlayerName,
+            playerLabel,
+            (Vector2){playerCenter.x - labelWidth/2, p->position.y - 20},          
+            10,
+            2,
+            p->color);
 }
 
 void freeBoard() {

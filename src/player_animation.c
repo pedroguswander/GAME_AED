@@ -33,6 +33,8 @@ Texture2D playerWalkFrontSheet[PLAYER_WALK_SHEET_SIZE];
 Texture2D playerWalkReverseSheet[PLAYER_WALK_SHEET_SIZE];
 
 Texture2D playerIdleSprite;
+Texture2D playerIdleSprite2;
+
 int currentSpriteIndex = 0;
 static float changeSpriteTimer = 15.0f/60;
 
@@ -76,9 +78,10 @@ void setPlayerSpriteAnimation(Player *player)
     }
 }
 
-void setSpriteToIdle(Player *player)
+void setSpriteToIdle(Player *player, int index)
 {
-    player->sprite = playerIdleSprite;
+    player->sprite = index? playerIdleSprite: playerIdleSprite2;
+    //player->sprite = playerIdleSprite;
 }
 
 void InitPlayerAnimation() {
@@ -101,6 +104,7 @@ void InitPlayerAnimation() {
     }
 
     playerIdleSprite = LoadTexture("player/hero-idle-front.png");
+    playerIdleSprite2 = LoadTexture("player2/hero-idle-front.png");
 }
 
 void UpdatePlayerAnimation() {

@@ -55,7 +55,7 @@ const char *topics[] = {
     "Algoritmos e Estruturas de Dados",
     "INFRA_SO",
     "POO",
-    "Historia do Brasil"
+    "Harry Potter",
     };
 
 Font titleFont = {0};
@@ -417,10 +417,12 @@ void checkIfAnswerIsRight(Option *options, Question question) {
 
 void *loadQuestionsThread(void *arg) {
     const char *topic = (const char *)arg;
-    const char (*themes)[100] = getThemesOfTopic(topic);
-    
+    Theme theme = topicToTheme(topic);
+
+    //const char (*themes)[100] = getThemesOfTopic(topic);
+
     for (int j = 0; j < 5; j++) {
-        questions[j] = addQuestion(topic, topicToTheme(themes[j]));
+        questions[j] = addQuestion(topic, theme);
     }
 
     _loadingFinished = true;

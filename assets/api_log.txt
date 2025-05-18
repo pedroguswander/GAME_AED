@@ -6013,3 +6013,963 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos sequenciais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes características NÃO é inerente a um algoritmo sequencial?\",\n  \"alternatives\": {\n    \"A\": \"Execução de instruções em ordem linear, uma após a outra.\",\n    \"B\": \"Utilização de estruturas de decisão (como if-else) para controlar o fluxo de execução.\",\n    \"C\": \"Ausência de loops ou iterações.\",\n    \"D\": \"Processo de execução previsível e determinístico, com resultado definido pela sequência de instruções.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Embora algoritmos sequenciais possam *incluir* estruturas de decisão, a característica *essencial* é a execução linear.  A presença de estruturas de decisão os diferencia dos algoritmos puramente sequenciais, que seriam, por definição, mais simples.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28501350321668262
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 226,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre variáveis em algoritmos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em algoritmos, qual das alternativas descreve melhor o conceito de variável?\",\n  \"options\": {\n    \"A\": \"Uma instrução que realiza uma operação específica.\",\n    \"B\": \"Um espaço reservado na memória do computador que armazena um valor, podendo ser alterado durante a execução do algoritmo.\",\n    \"C\": \"Um conjunto de instruções que executa uma tarefa específica.\",\n    \"D\": \"Um valor constante que não pode ser alterado durante a execução do algoritmo.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Uma variável é um local na memória que armazena um dado, podendo este dado ser modificado durante a execução do algoritmo.  As outras opções descrevem, respectivamente, uma instrução, uma função/procedimento e uma constante.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15219811771226965
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 184,
+    "totalTokenCount": 223,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 184
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre passos para criar um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quais são os passos mais apropriados para criar um algoritmo eficaz?\",\n  \"options\": {\n    \"A\": \"Definir a saída desejada, escolher uma linguagem de programação, escrever o código, testar o código.\",\n    \"B\": \"Escrever o código diretamente, testar o código, corrigir erros, definir a saída desejada.\",\n    \"C\": \"Definir o problema, criar um fluxograma ou pseudocódigo, implementar o algoritmo em uma linguagem de programação, testar e depurar o código.\",\n    \"D\": \"Escolher uma linguagem de programação, definir a entrada, escrever o código, testar e depurar o código.\"\n  },\n  \"answer\": \"C\",\n  \"explanation\": \"A criação de um algoritmo eficaz segue um processo iterativo, começando pela compreensão do problema. A construção de um fluxograma ou pseudocódigo permite visualizar a lógica antes da implementação em código, facilitando a detecção de erros e a melhoria do design. Testar e depurar são passos cruciais para garantir a correção e eficiência do algoritmo.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.20949423653738838
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 245,
+    "totalTokenCount": 284,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 245
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre variáveis em algoritmos em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em algoritmos, qual das seguintes opções melhor descreve o conceito de uma variável?\",\n  \"alternatives\": [\n    {\n      \"letter\": \"A\",\n      \"text\": \"Um valor fixo que não pode ser alterado durante a execução do algoritmo.\"\n    },\n    {\n      \"letter\": \"B\",\n      \"text\": \"Um espaço na memória do computador que armazena um valor que pode ser alterado durante a execução do algoritmo.\"\n    },\n    {\n      \"letter\": \"C\",\n      \"text\": \"Um comando que executa uma operação específica no algoritmo.\"\n    },\n    {\n      \"letter\": \"D\",\n      \"text\": \"Um tipo de dado específico, como inteiro ou string.\"\n    }\n  ],\n  \"correctAnswer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.092682324154838847
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 191,
+    "totalTokenCount": 230,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 191
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre funções simples e chamadas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Considere o código Python a seguir, que define uma função simples e a chama posteriormente.  Qual será o valor impresso na saída?\",\n  \"code\": \"def minha_funcao(x, y):\\n  return x + y\\n\\nresultado = minha_funcao(5, 3)\\nprint(resultado)\",\n  \"options\": {\n    \"A\": \"8\",\n    \"B\": \"2\",\n    \"C\": \"53\",\n    \"D\": \"undefined\"\n  },\n  \"answer\": \"A\",\n  \"explanation\": \"A função `minha_funcao` recebe dois argumentos (x e y) e retorna a sua soma.  Quando chamada com `minha_funcao(5, 3)`, ela calcula 5 + 3 = 8, e este valor é atribuído à variável `resultado`.  Finalmente, `print(resultado)` imprime o valor 8 na saída.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11306399432095614
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 220,
+    "totalTokenCount": 259,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 220
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre personagens principais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Quais personagens são considerados os protagonistas principais da história de 'O Senhor dos Anéis'?\",\n  \"alternativas\": {\n    \"A\": \"Sauron, Gandalf e Gollum\",\n    \"B\": \"Frodo, Sam, Aragorn e Gandalf\",\n    \"C\": \"Legolas, Gimli e Arwen\",\n    \"D\": \"Boromir, Faramir e Merry\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11560417672862178
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 36,
+    "candidatesTokenCount": 115,
+    "totalTokenCount": 151,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre casas de Hogwarts em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual das seguintes características melhor descreve um aluno da Sonserina?\",\n  \"alternativas\": {\n    \"A\": \"Inteligente, leal e aventureiro\",\n    \"B\": \"Ambicioso, astuto e determinado\",\n    \"C\": \"Justo, corajoso e leal\",\n    \"D\": \"Criativo, trabalhador e inteligente\"\n  },\n  \"respostaCorreta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19213824801974827
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 108,
+    "totalTokenCount": 145,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 108
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre magias mais poderosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em diversos sistemas de RPG e fantasia, algumas magias são consideradas mais poderosas que outras, geralmente devido ao seu alcance, impacto ou custo.  Considerando magias clássicas, qual das opções abaixo geralmente representa uma magia de poder excepcionalmente alto, frequentemente associada a consequências drásticas ou requisitos específicos?\",\n  \"options\": {\n    \"A\": \"Cura Menor\",\n    \"B\": \"Chama Ígnea\",\n    \"C\": \"Invocação de Tempestade\",\n    \"D\": \"Desejo\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"Magias de 'Desejo' são frequentemente retratadas como extremamente poderosas, capazes de conceder praticamente qualquer coisa desejada.  No entanto, elas costumam vir com um alto custo, seja em termos de energia mágica, consequências imprevistas ou sacrifícios significativos.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22306166024043642
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 203,
+    "totalTokenCount": 242,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 203
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre magias mais poderosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em diversos sistemas de RPG e fantasia, algumas magias são consideradas mais poderosas que outras, muitas vezes devido ao seu impacto e custo.  Considerando o impacto devastador e a dificuldade de conjuração, qual das seguintes magias seria tipicamente classificada como uma das MAIS poderosas?\",\n  \"alternativas\": {\n    \"A\": \"Cura Menor: Restaura uma pequena quantidade de pontos de vida.\",\n    \"B\": \"Bola de Fogo: Lança uma bola de fogo que causa dano moderado.\",\n    \"C\": \"Invocar Tempestade: Conjura uma poderosa tempestade com ventos furiosos e raios devastadores.\",\n    \"D\": \"Escudo de Energia: Cria um escudo mágico que absorve pequenos danos.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23841724096168398
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 191,
+    "totalTokenCount": 230,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 191
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre temas como amizade e coragem em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Mariana e Sofia são amigas inseparáveis. Um dia, presenciam um colega sendo intimidado por um grupo maior.  Qual atitude demonstra maior coragem e amizade ao mesmo tempo?\",\n  \"alternatives\": {\n    \"A\": \"Mariana e Sofia ignoram a situação para evitar problemas.\",\n    \"B\": \"Mariana tenta convencer Sofia a não se envolver, pois é muito arriscado.\",\n    \"C\": \"Sofia fica com medo e pede para Mariana não fazer nada, mas Mariana tenta ajudar o colega sozinha.\",\n    \"D\": \"Mariana e Sofia, juntas, se aproximam do grupo e pedem para eles pararem de intimidar o colega, mesmo com o risco de serem também alvo da agressão.\"\n  },\n  \"answer\": \"D\",\n  \"explanation\": \"A alternativa D demonstra tanto coragem (enfrentar um grupo maior) quanto amizade (apoiar o colega e agir juntas). As outras alternativas mostram falta de coragem ou de solidariedade entre as amigas.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.185643848619963
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 228,
+    "totalTokenCount": 268,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 228
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre casas de Hogwarts em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes características melhor descreve um aluno típico da Sonserina?\",\n  \"options\": {\n    \"A\": \"Gentil, leal e corajoso\",\n    \"B\": \"Ambicioso, astuto e determinado\",\n    \"C\": \"Inteligente, criativo e independente\",\n    \"D\": \"Trabalhador, justo e honesto\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.11843877468469008
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 37,
+    "candidatesTokenCount": 106,
+    "totalTokenCount": 143,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 106
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre magias mais poderosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em diversos sistemas de RPG e fantasia, algumas magias são consideradas mais poderosas que outras.  Considerando o poder destrutivo, alcance e impacto geral, qual das seguintes magias é tipicamente considerada a MAIS poderosa?\",\n  \"alternativas\": {\n    \"A\": \"Cura leve\",\n    \"B\": \"Chama de Gelo\",\n    \"C\": \"Destruição Planetária\",\n    \"D\": \"Invisibilidade\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.15535605899871341
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 126,
+    "totalTokenCount": 165,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 126
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre magias mais poderosas em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em muitos sistemas de RPG e fantasia, algumas magias são consideradas excepcionalmente poderosas, capazes de feitos extraordinários.  Considerando a natureza frequentemente destrutiva e de grande alcance dessas magias, qual das opções abaixo representa tipicamente uma magia de poder excepcionalmente alto?\",\n  \"options\": {\n    \"A\": \"Cura Menor: Restaura uma pequena quantidade de pontos de vida.\",\n    \"B\": \"Escudo de Fogo: Cria uma pequena barreira de fogo que absorve dano limitado.\",\n    \"C\": \"Conjuração de Insectos: Evoca uma pequena quantidade de insetos inofensivos.\",\n    \"D\": \"Destruição: Uma magia capaz de obliterar estruturas gigantescas e causar grande destruição em larga escala.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.26724506177400287
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 190,
+    "totalTokenCount": 229,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 190
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre segredos do castelo de Hogwarts em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual segredo sobre o Castelo de Hogwarts é comumente conhecido pelos alunos, mas raramente abordado abertamente pelos professores?\",\n  \"options\": {\n    \"A\": \"A existência da Câmara Secreta e seu monstro.\",\n    \"B\": \"A localização exata da Sala Precisa.\",\n    \"C\": \"O verdadeiro propósito da Floresta Proibida.\",\n    \"D\": \"A identidade do fundador da Sonserina.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Embora muitos alunos encontrem a Sala Precisa ao longo dos anos, sua localização exata é um segredo bem guardado, e os professores raramente falam diretamente sobre ela.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.25656075803389461
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 161,
+    "totalTokenCount": 201,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 161
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre vilões e suas motivações em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual a motivação principal do vilão Thanos em \\\"Avengers: Infinity War\\\"?\",\n  \"options\": {\n    \"A\": \"Conquistar o universo para si mesmo e governá-lo com punho de ferro.\",\n    \"B\": \"Vingar a morte de sua amada.\",\n    \"C\": \"Obter poder ilimitado para se tornar imortal.\",\n    \"D\": \"Equilibrar o universo, reduzindo a população pela metade para salvar os recursos.\"\n  },\n  \"answer\": \"D\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10097555071115494
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 128,
+    "totalTokenCount": 168,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 128
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre A Profecia de Harry e Voldemort: significado e impacto em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"A Profecia de Harry e Voldemort: significado e impacto\\\", qual dos seguintes aspectos melhor representa o impacto da profecia na vida de Harry Potter e Voldemort?\",\n  \"options\": {\n    \"A\": \"A profecia determinou completamente o destino de ambos, tornando-os meros peões do destino, incapazes de influenciar seus próprios caminhos.\",\n    \"B\": \"A profecia estabeleceu um conflito inevitável, mas ambos os personagens tiveram agências e fizeram escolhas que moldaram os eventos subsequentes.\",\n    \"C\": \"A profecia teve um impacto insignificante na vida de Voldemort, enquanto determinou completamente o futuro de Harry Potter.\",\n    \"D\": \"A profecia apenas influenciou a vida de Harry Potter, sem exercer qualquer influência sobre as ações ou motivações de Voldemort.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A profecia agiu como um catalisador para o conflito entre Harry e Voldemort, mas ambos os personagens tomaram decisões que influenciaram o curso da história.  Nenhum deles foi totalmente determinado pela profecia.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2898884355782505
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 45,
+    "candidatesTokenCount": 249,
+    "totalTokenCount": 294,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 249
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre O Nevoeiro: jornal sensacionalista e suas mentiras em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em \\\"O Nevoeiro: Jornal Sensacionalista e Suas Mentiras\\\", qual das seguintes características NÃO é tipicamente utilizada para manipular o leitor e espalhar desinformação?\",\n  \"options\": {\n    \"A\": \"Sensacionalismo exacerbado e uso de linguagem emotiva.\",\n    \"B\": \"Apresentação de fatos verificados e fontes confiáveis.\",\n    \"C\": \"Utilização de títulos chamativos e imagens impactantes.\",\n    \"D\": \"Apresentação de informações fora de contexto ou deturpadas.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Jornais sensacionalistas, como o retratado na obra, caracterizam-se pela manipulação da informação, recorrendo a técnicas como sensacionalismo, linguagem emotiva, títulos chamativos, imagens impactantes e deturpação de fatos. A apresentação de fatos verificados e fontes confiáveis é o oposto dessa prática.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17862988393241114
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 46,
+    "candidatesTokenCount": 218,
+    "totalTokenCount": 264,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 218
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Feitiço de Desarmamento (Expelliarmus): marca registrada de Harry em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual o feitiço de desarmamento característico de Harry Potter, frequentemente usado por ele em duelos?\",\n  \"options\": {\n    \"A\": \"Stupefy\",\n    \"B\": \"Expelliarmus\",\n    \"C\": \"Sectumsempra\",\n    \"D\": \"Crucio\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.07143951952457428
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 96,
+    "totalTokenCount": 147,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 96
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Fuga de Gringotes: roubo da taça de Helga Hufflepuff em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Em \\\"Fuga de Gringotes: roubo da taça de Helga Hufflepuff\\\", qual é o principal obstáculo que Newt Scamander e seus companheiros enfrentam durante a fuga do banco?\",\n  \"alternativas\": {\n    \"A\": \"Um dragão extremamente feroz que guarda o cofre onde a taça está localizada.\",\n    \"B\": \"Uma legião de goblins furiosos determinados a impedi-los de escapar.\",\n    \"C\": \"Um labirinto complexo e cheio de armadilhas mágicas dentro do banco.\",\n    \"D\": \"Uma maldição poderosa que protege a taça e os arredores imediatos.\"\n  },\n  \"respostaCorreta\": \"C\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.1871796776266659
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 51,
+    "candidatesTokenCount": 170,
+    "totalTokenCount": 221,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 51
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 170
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre Expecto Patronum: como conjurar e significado em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Em Harry Potter, o Expecto Patronum é um feitiço de defesa contra as trevas.  Sobre sua conjuração e significado, qual alternativa está CORRETA?\",\n  \"options\": {\n    \"A\": \"O Patronus é conjurado pensando em um momento feliz e pronunciando a palavra 'Expecto Patronum' com firmeza. Ele representa a força da memória e a capacidade de superar traumas.\",\n    \"B\": \"O Patronus é conjurado imaginando um animal qualquer e repetindo 'Expecto Patronum' três vezes. Representa a bravura inata do bruxo.\",\n    \"C\": \"O Patronus é conjurado com um movimento de varinha específico e a invocação 'Expecto Patronum', sem a necessidade de visualizar algo específico. Representa o poder mágico bruto do conjurador.\",\n    \"D\": \"O Patronus é conjurado focando na raiva e no medo, canalizando essas emoções para criar a criatura. Ele representa a fúria e a capacidade de se defender com violência.\"\n  },\n  \"answer\": \"A\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.34733257216480579
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 44,
+    "candidatesTokenCount": 247,
+    "totalTokenCount": 291,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 247
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre passos para criar um algoritmo em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Quais são os passos CORRETOS para criar um algoritmo eficiente, em ordem sequencial?\",\n  \"options\": {\n    \"A\": \"1. Codificação; 2. Testes; 3. Definição do problema; 4. Projeto do algoritmo; 5. Documentação.\",\n    \"B\": \"1. Definição do problema; 2. Projeto do algoritmo; 3. Codificação; 4. Testes; 5. Documentação.\",\n    \"C\": \"1. Projeto do algoritmo; 2. Definição do problema; 3. Codificação; 4. Documentação; 5. Testes.\",\n    \"D\": \"1. Documentação; 2. Definição do problema; 3. Projeto do algoritmo; 4. Codificação; 5. Testes.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"A criação de um algoritmo segue uma sequência lógica: primeiro, define-se o problema a ser resolvido; depois, projeta-se o algoritmo, definindo os passos para a solução; em seguida, codifica-se o algoritmo em uma linguagem de programação; testa-se a solução para garantir seu funcionamento correto; finalmente, documenta-se o algoritmo para facilitar a compreensão e manutenção.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.0979850470614271
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 294,
+    "totalTokenCount": 333,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 294
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre quimica do dia a dia em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Qual dos seguintes processos cotidianos NÃO envolve uma reação química?\",\n  \"alternativas\": {\n    \"A\": \"Queimar um pedaço de madeira\",\n    \"B\": \"Ferver água para fazer café\",\n    \"C\": \"Assar um bolo\",\n    \"D\": \"Dissolver açúcar em água\"\n  },\n  \"respostaCorreta\": \"B\",\n  \"explicacao\": \"Ferver água é um processo físico, onde apenas a temperatura e o estado físico da água mudam.  Os outros exemplos envolvem reações químicas que alteram a composição da matéria.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13246136495511826
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 40,
+    "candidatesTokenCount": 146,
+    "totalTokenCount": 186,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 146
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre os filmes de Quentin Tarantino em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme de Quentin Tarantino apresenta uma narrativa não-linear que se desenvolve entre dois períodos distintos, mostrando a violência e a brutalidade de uma gangue de criminosos e a busca por vingança de um ex-soldado?\",\n  \"options\": {\n    \"A\": \"Pulp Fiction\",\n    \"B\": \"Kill Bill: Volume 1\",\n    \"C\": \"Bastardos Inglórios\",\n    \"D\": \"Django Livre\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Kill Bill: Volume 1 apresenta uma estrutura de narrativa não-linear, alternando entre o presente, onde a Noiva busca vingança, e o passado, que mostra sua vida como membro do Esquadrão da Noiva Mortal.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.25635385513305664
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 39,
+    "candidatesTokenCount": 176,
+    "totalTokenCount": 215,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 176
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre algoritmos sequenciais em formato JSON com enunciado, 4 alternativas (A, B, C, D) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual das seguintes características NÃO é inerente a um algoritmo sequencial?\",\n  \"options\": {\n    \"A\": \"Execução de instruções em ordem linear, uma após a outra.\",\n    \"B\": \"Presença de estruturas de controle de fluxo como loops ou condicionais.\",\n    \"C\": \"Sequência de passos bem definida e previsível.\",\n    \"D\": \"Independência da ordem de execução das instruções para o resultado final.\"\n  },\n  \"answer\": \"B\",\n  \"explanation\": \"Algoritmos sequenciais executam instruções em ordem linear.  Embora possam conter operações complexas, a *ausência* de estruturas de controle de fluxo (como loops ou condicionais) é uma característica definidora.  A presença dessas estruturas indica algoritmos mais complexos que não são puramente sequenciais.\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17228157162048657
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 38,
+    "candidatesTokenCount": 193,
+    "totalTokenCount": 231,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 193
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+

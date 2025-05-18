@@ -220,6 +220,7 @@ const char* subthemes_general_knowledge[] = {
 
 const int subthemes_general_knowledge_count = sizeof(subthemes_general_knowledge) / sizeof(subthemes_general_knowledge[0]);
 
+// Subtópicos para "Algoritmos e Estruturas de Dados" (já existente)
 const char* subthemes_aed[] = {
     "o que é um algoritmo",
     "passos para criar um algoritmo",
@@ -232,9 +233,91 @@ const char* subthemes_aed[] = {
     "conceito de função",
     "funções simples e chamadas"
 };
-
-
 const int subthemes_aed_count = sizeof(subthemes_aed) / sizeof(subthemes_aed[0]);
+
+// Subtópicos para "INFRA_SO" (Infraestrutura de Software/Sistemas Operacionais)
+const char* subthemes_infra_so[] = {
+    "o que é um sistema operacional",
+    "gerenciamento de processos",
+    "gerenciamento de memória",
+    "sistemas de arquivos",
+    "virtualização e containers",
+    "redes e protocolos básicos",
+    "segurança em sistemas operacionais",
+    "shell scripting",
+    "ferramentas de monitoramento"
+};
+const int subthemes_infra_so_count = sizeof(subthemes_infra_so) / sizeof(subthemes_infra_so[0]);
+
+// Subtópicos para "POO" (Programação Orientada a Objetos)
+const char* subthemes_poo[] = {
+    "conceitos de classes e objetos",
+    "encapsulamento",
+    "herança",
+    "polimorfismo",
+    "interfaces e classes abstratas",
+    "métodos construtores e destrutores",
+    "sobrecarga de métodos",
+    "princípios SOLID",
+    "design patterns básicos"
+};
+const int subthemes_poo_count = sizeof(subthemes_poo) / sizeof(subthemes_poo[0]);
+
+// Subtópicos para "Harry Potter" (como exemplo de tema não técnico)
+const char* subthemes_harry_potter[] = {
+    "Hogwarts: fundação e história do castelo",
+    "Grifinória: valores e membros notáveis (Harry, Hermione, Rony)",
+    "Sonserina: características e membros famosos (Draco, Snape, Voldemort)",
+    "Corvinal: símbolos e alunos brilhantes (Luna Lovegood)",
+    "Lufa-Lufa: lealdade e figuras importantes (Cedrico Diggory)",
+    "O Chapéu Seletor: como funciona e suas decisões polêmicas",
+    "O Salão Comunal da Grifinória: localização e segredos",
+    "A Câmara Secreta: lenda e revelação no segundo livro",
+    "Harry Potter: cicatriz em forma de raio e conexão com Voldemort",
+    "Hermione Granger: habilidades mágicas e origem trouxa",
+    "Rony Weasley: família Weasley e seu papel no trio",
+    "Alvo Dumbledore: varinha das varinhas e plano contra Voldemort",
+    "Severo Snape: lealdade dupla e memórias no Pensador",
+    "Lord Voldemort: horcruxes e busca pela imortalidade",
+    "Draco Malfoy: redenção e conflitos morais",
+    "Minerva McGonagall: habilidades como animago e liderança",
+    "Rúbeo Hagrid: guarda-caça e criaturas mágicas",
+    "Bellatrix Lestrange: lealdade a Voldemort e crueldade",
+    "Dolores Umbridge: políticas opressoras em Hogwarts",
+    "Comensais da Morte: seguidores de Voldemort e suas ações",
+    "Pedro Pettigrew: traição aos Potter e forma de rato",
+    "Basilisco: monstro da Câmara Secreta e como foi derrotado",
+    "Dementadores: guardas de Azkaban e efeitos nas pessoas",
+    "Expecto Patronum: como conjurar e significado",
+    "Avada Kedavra: maldição da morte e consequências",
+    "Wingardium Leviosa: primeiro feitiço aprendido por Hermione",
+    "Feitiço de Desarmamento (Expelliarmus): marca registrada de Harry",
+    "Poções Polissuco: usos e casos famosos (Barty Crouch Jr.)",
+    "Mapa do Maroto: criação e como revela pessoas",
+    "Varinhas: materiais e núcleos (Fênix, Dragão, Unicórnio)",
+    "Pedra Filosofal: criação e propósito de Nicolas Flamel",
+    "Relíquias da Morte: três objetos e lenda dos irmãos Peverell",
+    "Horcruxes: o que são e como foram destruídos",
+    "A Taca de Fogo: torneio tribruxo e seu papel no quarto livro",
+    "O Nevoeiro: jornal sensacionalista e suas mentiras",
+    "Torneio Tribruxo: tarefas e manipulação por Barty Crouch Jr.",
+    "Batalha de Hogwarts: estratégias e mortes importantes",
+    "Fuga de Gringotes: roubo da taça de Helga Hufflepuff",
+    "A Ordem da Fênix: membros e missões contra Voldemort",
+    "A Profecia de Harry e Voldemort: significado e impacto",
+    "Hipogrifo: caso de Bicuço e julgamento",
+    "Testrálio: como são vistos e ligação com a morte",
+    "Elfos Domésticos: escravidão e caso do Dobby",
+    "Dragões: tipos e desafio no Torneio Tribruxo",
+    "Centauros: cultura e papel na Floresta Proibida",
+    "Amizade: relação entre Harry, Rony e Hermione",
+    "Coragem: atitudes de Neville Longbottom",
+    "Preconceito: tratamento a nascidos-trouxas e meio-gigantes",
+    "Sacrifício: proteção de Lily Potter a Harry",
+    "Dualidade: luz e sombra em personagens como Snape e Dumbledore"
+};
+
+const int subthemes_harry_potter_count = sizeof(subthemes_harry_potter) / sizeof(subthemes_harry_potter[0]);
 
 const char* get_random_subtheme(Theme theme) {
     printf("get_random_subtheme chamado com tema: %d\n", theme);
@@ -260,6 +343,18 @@ const char* get_random_subtheme(Theme theme) {
             index = rand() % subthemes_aed_count;
             printf("Tema AED, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_aed[index]);
             return subthemes_aed[index];
+        case THEME_SO:
+            index = rand() % subthemes_infra_so_count;
+            printf("Tema SO, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_infra_so[index]);
+            return subthemes_infra_so[index];
+        case THEME_POO:
+            index = rand() % subthemes_poo_count;
+            printf("Tema POO, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_poo[index]);
+            return subthemes_poo[index];
+        case THEME_HARRY_POTTER:
+            index = rand() % subthemes_harry_potter_count;
+            printf("Tema HARRY_POTTER, índice selecionado: %d, subtema: \"%s\"\n", index, subthemes_harry_potter[index]);
+            return subthemes_harry_potter[index];
         default:
             printf("AVISO: Tema inválido (%d) passado para get_random_subtheme. Retornando NULL.\n", theme);
             return NULL;
