@@ -8,7 +8,10 @@ typedef enum {
     THEME_FILMES,
     THEME_CONHECIMENTOS_GERAIS,
     THEME_AED,
-    THEME_COUNT
+    THEME_SO,
+    THEME_POO,
+    THEME_HARRY_POTTER,
+    THEME_COUNT,
 } Theme;
 
 const char* get_random_subtheme(Theme theme);

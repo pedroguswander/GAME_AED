@@ -69,7 +69,15 @@ Theme topicToTheme(const char *topic) {
     if (strcmp(topic, "Músicas") == 0) return THEME_MUSICA;
     if (strcmp(topic, "Filmes") == 0) return THEME_FILMES;
     if (strcmp(topic, "Conhecimentos Gerais") == 0) return THEME_CONHECIMENTOS_GERAIS;
-    if (strcmp(topic, "Boss Node AED") == 0) return THEME_AED;
+    if (strcmp(topic, "Boss Node AED") == 0 || strcmp(topic, "Algoritmos e Estruturas de Dados") == 0) return THEME_AED;
+    if (strcmp(topic, "Harry Potter") == 0) return THEME_HARRY_POTTER;
+    if (strcmp(topic, "INFRA_SO") == 0) return THEME_SO;
+    if (strcmp(topic, "POO") == 0) return THEME_POO;
     if (strcmp(topic, "Final") == 0) return THEME_FILMES;
+    // temas do quiz
+
+    //if (strcmp(topic, "POO") == 0) return POO_THEMES;
+
     return THEME_COUNT; // valor padrão para erro
 }
+

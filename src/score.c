@@ -104,5 +104,5 @@ PlayerScore* loadScores() {
 void drawScore(int numberOfQuestions)
 {
     const char *_scoreText = TextFormat("SCORE: %d/%d", _score, numberOfQuestions);
-    DrawText(_scoreText, 400, 400, 16, WHITE);
+    DrawText(_scoreText, 69, 900, 64, CLITERAL (Color) {240, 240, 240, 240});
 }
