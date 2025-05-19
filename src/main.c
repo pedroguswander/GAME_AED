@@ -311,8 +311,6 @@ printf("Nome capturado: %s\n", player1Name);
                 DrawText(TextFormat("QUESTION %d/%d", _currentQuestion + 1, 5), screenWidth -600, 900, 64,
                 CLITERAL (Color) {240, 240, 240, 240});
                 drawQuestion(questions[_currentQuestion], false);
-                DrawRectangleRec(returnButton, DARKGRAY);
-                DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
                 break;
 
             case ANSWER_SCREEN:
@@ -356,8 +354,6 @@ printf("Nome capturado: %s\n", player1Name);
 
     case TABULEIRO_MODE:
         drawBoard();
-        DrawRectangleRec(returnButton, DARKGRAY);
-        DrawText("Voltar", returnButton.x + 20, returnButton.y + 10, 20, WHITE);
         break;
 
     case CREDITS:

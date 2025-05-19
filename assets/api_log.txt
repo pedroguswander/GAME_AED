@@ -13105,3 +13105,83 @@
 }
 
 
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre filmes que foram rebootados em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"question\": \"Qual filme teve um reboot recente?\",\n  \"options\": {\n    \"A\": \"E.T.\",\n    \"B\": \"O Rei Leão\",\n    \"C\": \"Psicose\",\n    \"D\": \"Tubarão\"\n  },\n  \"answer\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.050140723204001404
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 78,
+    "totalTokenCount": 132,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 78
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
+=== JSON Enviado para a API ===
+{"contents":[{"parts":[{"text":"Crie uma questão de múltipla escolha sobre diferença entre ritmo e melodia em formato JSON com enunciado (máximo 90 caracteres), 4 alternativas (A, B, C, D, máximo 60 caracteres cada) e a resposta correta."}]}]}
+
+=== Resposta bruta da API ===
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"enunciado\": \"Ritmo e melodia: qual a principal diferença?\",\n  \"alternativas\": {\n    \"A\": \"Duração das notas\",\n    \"B\": \"Altura das notas\",\n    \"C\": \"Harmonia dos acordes\",\n    \"D\": \"Intensidade sonora\"\n  },\n  \"resposta\": \"B\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.086835802925957578
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 54,
+    "candidatesTokenCount": 90,
+    "totalTokenCount": 144,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 90
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-flash-latest"
+}
+
+
