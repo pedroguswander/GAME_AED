@@ -4,6 +4,8 @@
 
 ---
 
+## Link da gameplay
+
 ## 🧠 Sobre o Jogo
 
 O **MIND RUNNER** é um jogo de perguntas e respostas em estilo tabuleiro para dois jogadores. Cada jogador rola um dado para se mover por casas temáticas (Matemática, Músicas, Filmes, etc). Ao cair numa casa, responde a uma pergunta com 4 alternativas. O objetivo é chegar até a última casa respondendo corretamente.
